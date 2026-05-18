@@ -20,6 +20,18 @@ For the full development-process handoff, including methods used, staged deliver
 DEVELOPMENT_RECORD.md
 ```
 
+For the critical triage of the external review recommendations, including which suggestions were adopted, adapted, deferred, or rejected, read:
+
+```text
+docs/PRO_REVIEW_CRITICAL_ASSESSMENT_2026-05-18.md
+```
+
+Project-local Codex skills live under:
+
+```text
+.codex/skills/
+```
+
 ## Main Unity Entry Point
 
 Open this repository as a Unity project and load:

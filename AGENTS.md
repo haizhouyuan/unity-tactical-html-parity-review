@@ -54,6 +54,85 @@ When Unity MCP is available:
 
 Prefer using Unity MCP tools for Console, scene, GameObject, asset, script, editor, and command operations. If MCP is unavailable, create safe `Assets/Editor/` menu tools that perform the required Editor actions.
 
+## Tactical Unity / HTML Parity Rules
+
+This repository is a Unity recreation and review export of an existing HTML/Three.js tactical prototype. Do not claim completion from visual inspection alone.
+
+Primary scene:
+
+- `Assets/Scenes/TacticalPrototype.unity`
+
+HTML baseline:
+
+- `reference/html_baseline_final_packet/index.html`
+
+Core rules:
+
+- HTML tactical parity passing is not the same as production visual completion.
+- A generated or imported asset is not production-ready unless it is imported successfully, material/PBR validated, semantically correct for its class, bound to a gameplay entity, visible from the actual player camera, involved in a gameplay event, and recorded in a JSON gate/report.
+- Contact sheets, fixed showcase cameras, standalone GLBs, filenames, and hash manifests are diagnostic only.
+- `full_visual_asset_gate_passed=false` means the broader visual/asset goal is still open.
+
+## Unity MCP Discipline
+
+Use MCP as transport, not as the design brain.
+
+Preferred loop:
+
+1. Read `AGENTS.md` and the relevant docs report.
+2. Read Unity Console through MCP.
+3. Check whether Unity is compiling or updating.
+4. Run one deterministic `AI Tools/...` menu command.
+5. Read Console again.
+6. Read the generated JSON report.
+7. Summarize changed files, menu commands, reports, screenshots, and remaining risks.
+
+Avoid:
+
+- long chains of tiny GameObject edits through MCP;
+- repeated refresh while Unity is compiling;
+- direct large edits to `.unity` or `.prefab` YAML;
+- installing multiple Unity MCP bridges in the active project;
+- promoting assets based only on filenames, contact sheets, or showcase scenes.
+
+If Unity is compile/reload locked for more than 2 minutes:
+
+1. Stop polling.
+2. Save if possible.
+3. Ask for or perform a clean Unity restart.
+4. Wait for compile/update idle.
+5. Read Console.
+6. Run exactly one gate.
+
+## Evidence Gates
+
+After tactical gameplay changes, run:
+
+- `AI Tools/Run Tactical Acceptance Pipeline`
+
+After player-view visual changes, capture:
+
+- `Assets/Screenshots/tactical_html_replica_current_player_pov_verified.png`
+
+After asset promotion changes, update:
+
+- `docs/REALIFIED_ASSET_GAMEPLAY_PROMOTION_LEDGER.json`
+- `docs/PROMOTED_ASSET_PLAYER_CAMERA_VISIBILITY_GATE.json`
+- `docs/TACTICAL_ACCEPTANCE_PIPELINE_REPORT.json`
+
+Use these available deterministic menu commands as stable workflow entry points:
+
+- `AI Tools/Open Tactical Playable Scene`
+- `AI Tools/Run Tactical Preflight`
+- `AI Tools/Run Tactical Acceptance Pipeline`
+- `AI Tools/Capture Tactical Verified Player POV Screenshot`
+- `AI Tools/Write Promoted Asset Player Camera Visibility Gate`
+- `AI Tools/Validate Realified Import And Materials`
+- `AI Tools/Run Game Feel Evidence Gate`
+- `AI Tools/Run Unity MCP Smoke Check`
+
+Do not add or run a generic `Promote One Asset Class To Gameplay` command without a mission-specific class, because promotion requires explicit semantic, player-camera, and gameplay-event evidence.
+
 ## Coding Style
 
 - Use simple, readable C#.
