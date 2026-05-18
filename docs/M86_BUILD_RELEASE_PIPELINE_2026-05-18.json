@@ -1,0 +1,27 @@
+{
+  "schema": "m86_build_release_pipeline_snapshot_v1",
+  "timestamp_utc": "2026-05-18T10:20:00Z",
+  "status": "complete",
+  "acceptance_report": "docs/TACTICAL_ACCEPTANCE_PIPELINE_REPORT.json",
+  "m86_report": "docs/M86_BUILD_RELEASE_GATE.json",
+  "launch_smoke_report": "docs/M86_LAUNCH_SMOKE.json",
+  "visual_launch_smoke_report": "docs/M86_LAUNCH_VISUAL_SMOKE.json",
+  "visual_launch_screenshot": "Assets/Screenshots/M86BuildRelease/01_build_launch_smoke_screen.png",
+  "build_target": "StandaloneOSX",
+  "build_result": "Succeeded",
+  "build_total_errors": 0,
+  "build_total_warnings": 345,
+  "app_bundle_exists": true,
+  "app_executable_exists": true,
+  "app_directory_size_bytes": 501932730,
+  "launch_smoke_passed": true,
+  "visual_launch_smoke_passed": true,
+  "build_artifact_committed_to_git": false,
+  "full_visual_asset_gate_passed": false,
+  "known_limitations": [
+    "Builds/ is ignored, so the generated app bundle is local-only and not committed.",
+    "The visual launch smoke screenshot includes desktop foreground content and is not gameplay-quality evidence.",
+    "The full visual asset gate remains false.",
+    "The built player still needs a clean manual or AI-playtester route capture."
+  ]
+}

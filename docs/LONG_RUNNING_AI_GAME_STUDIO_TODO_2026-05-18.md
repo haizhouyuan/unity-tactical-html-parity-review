@@ -429,7 +429,7 @@ Latest evidence:
 
 ### M86: Build / Release Gate
 
-Status: todo after route/visual gates stabilize.
+Status: completed on 2026-05-18.
 
 Primary lane: release/liveops.
 
@@ -439,21 +439,44 @@ Goal:
 
 Checklist:
 
-- [ ] Create mission contract for M86.
-- [ ] Choose build target.
-- [ ] Run preflight.
-- [ ] Build in Unity or document blocker.
-- [ ] Run launch smoke test.
-- [ ] Capture build screenshots/video.
-- [ ] Write changelog.
-- [ ] Update README current evidence snapshot.
-- [ ] Record known limitations.
+- [x] Create mission contract for M86.
+- [x] Choose build target: `StandaloneOSX`.
+- [x] Run preflight through the existing M85 acceptance state.
+- [x] Build in Unity.
+- [x] Run launch smoke test.
+- [x] Capture build screenshot evidence. Note: current screenshot is window/process proof only because macOS captured desktop foreground content.
+- [x] Write changelog/release notes.
+- [x] Update README current evidence snapshot.
+- [x] Record known limitations.
 
 Definition of done:
 
 - Build artifact exists or blocker is explicit.
 - Build can launch.
 - Release notes include current gate truth.
+
+Latest evidence:
+
+- `docs/M86_BUILD_RELEASE_GATE_MISSION_CONTRACT_2026-05-18.md`
+- `docs/M86_BUILD_RELEASE_GATE.json`
+- `docs/M86_BUILD_RELEASE_GATE.md`
+- `docs/M86_BUILD_RELEASE_COMPLETION_2026-05-18.md`
+- `docs/M86_BUILD_RELEASE_PIPELINE_2026-05-18.json`
+- `docs/M86_RELEASE_NOTES_2026-05-18.md`
+- `docs/M86_LAUNCH_SMOKE.json`
+- `docs/M86_LAUNCH_SMOKE.log`
+- `docs/M86_LAUNCH_VISUAL_SMOKE.json`
+- `docs/M86_LAUNCH_VISUAL_SMOKE.log`
+- `Assets/Screenshots/M86BuildRelease/01_build_launch_smoke_screen.png`
+
+Local build artifact:
+
+- `/Users/yuanshaochen/My project/Builds/M86/TacticalPrototypeM86.app`
+
+Important limitation:
+
+- The app bundle is ignored by Git under `Builds/`.
+- The visual launch screenshot is not gameplay-quality evidence.
 
 ## Supporting Lanes
 
@@ -547,11 +570,11 @@ The track is not done until:
 - [x] M83 AI playtest route passes.
 - [x] M84 three-class asset factory spike passes.
 - [x] M85 visual production pass improves player-camera realism without gate regression.
-- [ ] M86 build/release gate produces a launchable review packet or explicit blocker.
+- [x] M86 build/release gate produces a launchable review packet or explicit blocker.
 - [ ] `full_visual_asset_gate_passed=true`.
 - [ ] promoted asset visibility gate passes at class level.
 - [ ] the player route can be manually played with visible weapon, pickup, NPC combat, reload, building traversal, and restart.
 
 ## Immediate Next Action
 
-Run M86 Build / Release Gate next.
+Start the next unresolved production-visual lane: close the class-level promoted asset visibility gap and then the larger `full_visual_asset_gate_passed=false` blocker. Do not flip either gate until gameplay-bound, player-camera-visible, event-backed production assets exist.

@@ -1,0 +1,16 @@
+{
+  "schema": "m86_launch_smoke_v1",
+  "timestamp_utc": "2026-05-18T10:15:25Z",
+  "executable_path": "/Users/yuanshaochen/My project/Builds/M86/TacticalPrototypeM86.app/Contents/MacOS/My project",
+  "executable_exists": true,
+  "log_path": "/Users/yuanshaochen/My project/docs/M86_LAUNCH_SMOKE.log",
+  "process_started": true,
+  "survived_seconds": 18,
+  "exit_code": 0,
+  "terminated_after_smoke": true,
+  "log_exists": true,
+  "log_bytes": 3996,
+  "log_contains_unity": true,
+  "log_contains_crash": false,
+  "passed": true
+}

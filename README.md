@@ -56,6 +56,8 @@ docs/M81_BUILDING_INTEGRITY_COMPLETION_2026-05-18.md
 docs/M82_WEAPON_FEEL_COMPLETION_2026-05-18.md
 docs/M83_AI_PLAYTEST_ROUTE_COMPLETION_2026-05-18.md
 docs/M84_THREE_CLASS_ASSET_FACTORY_SPIKE_COMPLETION_2026-05-18.md
+docs/M85_VISUAL_PRODUCTION_PASS_COMPLETION_2026-05-18.md
+docs/M86_BUILD_RELEASE_COMPLETION_2026-05-18.md
 docs/M0_6_COMMUNITY_UNITY_MCP_SKILL_VERIFICATION_2026-05-18.md
 docs/COMMUNITY_UNITY_MCP_CODEX_SKILL_PLAN.md
 ```
@@ -101,18 +103,20 @@ At export time, the local pipeline reported:
 - `ai_playtest_route_gate_passed: true`
 - `m84_three_class_asset_factory_spike_passed: true`
 - `m85_visual_production_passed: true`
+- `m86_build_release_gate_passed: true` as a separate build/release report in `docs/M86_BUILD_RELEASE_GATE.json`
 - `html_tactical_parity_gate_passed: true`
 - `all_required_current_gates_passed: true`
 - `full_visual_asset_gate_passed: false`
 - `realified_asset_gameplay_production_promoted_assets: 1`
 
-The important warning is still the last two lines: only one realified asset has production gameplay promotion evidence, and the full visual asset gate remains false. M84 separately proves one weapon, one approved container, and one approved medkit through gameplay-bound promotion evidence. M85 adds a scoped player-camera visual production pass with wet-route details, decals, clutter, lighting, and before/after screenshots. Neither M84 nor M85 makes the failed Realified non-weapon batch production-ready or claims final PUBG-like visual quality.
+The important warning is still the last two lines: only one realified asset has production gameplay promotion evidence, and the full visual asset gate remains false. M84 separately proves one weapon, one approved container, and one approved medkit through gameplay-bound promotion evidence. M85 adds a scoped player-camera visual production pass with wet-route details, decals, clutter, lighting, and before/after screenshots. M86 proves a local macOS build can be produced and launch-smoked. None of M84, M85, or M86 makes the failed Realified non-weapon batch production-ready or claims final PUBG-like visual quality.
 
 ## Known Gaps
 
 - First-person weapon visibility, fire/reload feedback, hit marker, recoil evidence, and third-person mount now have a passing hero-weapon gate, but the authored animation and final weapon art quality are still not commercial-grade.
 - Most realified assets are not yet promoted into gameplay entities. M84 intentionally keeps failed Realified non-weapon assets quarantined while promoting semantic-approved container and medkit equivalents for the three-class spike.
 - M85 improves player-camera visual density and weathered scene detail, but it deliberately preserves `full_visual_asset_gate_passed=false` because final humanoid, generated asset classes, and commercial-grade visual review remain open.
+- M86 produces a local macOS review build under ignored `Builds/M86/`, but the committed visual launch screenshot is only window/process evidence and not clean gameplay-quality evidence.
 - Character and environment assets still need stronger production-quality replacements.
 - The Unity version still lags the HTML baseline in many interaction and feedback details.
 - Some assets are present in `Assets/HtmlTacticalAssets/` but are not yet visible or active in the actual player route.

@@ -1,0 +1,13 @@
+{
+  "schema": "m86_launch_visual_smoke_v1",
+  "timestamp_utc": "2026-05-18T10:16:18Z",
+  "executable_path": "/Users/yuanshaochen/My project/Builds/M86/TacticalPrototypeM86.app/Contents/MacOS/My project",
+  "screenshot_path": "/Users/yuanshaochen/My project/Assets/Screenshots/M86BuildRelease/01_build_launch_smoke_screen.png",
+  "log_path": "/Users/yuanshaochen/My project/docs/M86_LAUNCH_VISUAL_SMOKE.log",
+  "process_started": true,
+  "screenshot_exists": true,
+  "screenshot_bytes": 2728622,
+  "survived_seconds": 9,
+  "terminated_after_capture": true,
+  "passed": true
+}
