@@ -32,6 +32,16 @@ For the broader AI game-development operating-system strategy triage, including 
 docs/AI_GAME_DEV_OS_STRATEGY_TRIAGE_2026-05-18.md
 ```
 
+For the AI-native game development operating rules that future agents should follow, read:
+
+```text
+docs/AI_GAME_STUDIO_OS.md
+docs/AI_CLOSED_LOOP_PIPELINE.md
+docs/PLAYER_INTENT_LOG.md
+docs/MISSION_TEMPLATE.md
+docs/ASSET_PROMOTION_STANDARD.md
+```
+
 Project-local Codex skills live under:
 
 ```text
