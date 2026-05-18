@@ -20,6 +20,21 @@ player idea
 
 This document defines the operating model for future Codex/Kimi/Gemini/MiniMax missions. It does not declare the game complete.
 
+## Current Repository Role
+
+The current public repo is a review/export repository for a Unity recreation of an HTML/Three.js tactical prototype.
+
+The repo already has several operating-system components:
+
+- `AGENTS.md` with project rules.
+- `.codex/skills/` with focused project skills.
+- `Assets/Editor/TacticalWorkflowTools.cs` with report-oriented Unity menu commands.
+- `docs/TACTICAL_ACCEPTANCE_PIPELINE_REPORT.json` and related gate reports.
+- Asset promotion ledgers and visibility gates.
+- HTML baseline packet under `reference/html_baseline_final_packet/`.
+
+This OS document does not replace those artifacts. It defines how future work should use them together.
+
 ## Current Product Truth
 
 The current Unity project has useful route evidence, but the production visual goal is still open.
@@ -84,6 +99,56 @@ Mission contracts should select one primary lane and, if necessary, one reviewer
 7. Do not broaden a mission into unrelated systems.
 8. Do not overwrite acceptance report values by hand.
 9. Every significant gameplay or asset claim needs JSON evidence and, where visual, player-camera evidence.
+
+## Operating Principles
+
+### Player Intent Is First-Class Data
+
+Player feedback should not be treated as disposable chat context. It should be captured, interpreted, linked to a mission, and closed with evidence.
+
+Examples:
+
+- "The gun looks wrong" becomes a weapon visual fidelity mission.
+- "The player cannot enter the first floor" becomes a building integrity mission.
+- "NPC bullets appear to pass through containers" becomes a cover/line-of-sight proof mission.
+- "This weapon should match a reference image" becomes an asset reference and semantic review mission.
+
+### Mission Scope Beats Broad Autonomy
+
+Every AI implementation pass must have scope, out-of-scope items, allowed files, forbidden changes, evidence requirements, and rollback notes.
+
+Do not mix these in one mission:
+
+- workflow/process changes;
+- gameplay changes;
+- asset generation/import;
+- asset promotion;
+- visual polish;
+- build/release changes.
+
+If a mission discovers a larger issue, record a follow-up mission instead of broadening the current mission.
+
+### HTML Parity Is Not Visual Completion
+
+HTML tactical parity passing means the Unity prototype covers expected tactical behaviors. It does not mean production visual quality is complete.
+
+Future agents must preserve this distinction:
+
+- tactical/current gates may pass;
+- full visual asset gate may still fail;
+- semantic category review may still fail;
+- production-promoted gameplay assets may still be too few.
+
+### Evidence Is The Unit Of Completion
+
+Each mission should leave behind reviewable evidence:
+
+- JSON report;
+- screenshot or video path when visual/gameplay proof is required;
+- Console status if Unity was used;
+- menu command run;
+- changed files;
+- remaining risks.
 
 ## Active Workflow
 

@@ -11,6 +11,7 @@ The goal is to make every task auditable: what problem it solves, what it is all
 ```yaml
 mission_id: M000
 title: ""
+status: proposed | active | completed | blocked | rolled_back
 primary_lane: creative_direction | technical_direction | gameplay_engineering | asset_pipeline | visual_direction | qa_playtest | evidence_audit | release_liveops
 review_lane: ""
 
@@ -42,6 +43,12 @@ forbidden_changes:
   - acceptance report values by hand
   - unrelated gameplay systems
 
+allowed_tools:
+  - Codex
+  - Unity Editor
+  - Unity MCP
+  - other scoped tools
+
 unity_menu_commands:
   - ""
 
@@ -62,6 +69,13 @@ rollback_plan:
 
 follow_up_missions:
   - ""
+
+final_report_must_include:
+  - changed files
+  - commands run
+  - evidence paths
+  - Console status if Unity was used
+  - unresolved risks
 ```
 
 ## Mission Rules
@@ -116,6 +130,26 @@ Required checks:
 - Console read before and after;
 - exactly one primary gate command;
 - no new Console compile errors.
+
+### M0.5 active session verification mission
+
+Allowed:
+
+- generated readiness reports;
+- command logs;
+- no gameplay/script/scene/package changes.
+
+Required checks:
+
+- active Unity project is this checkout;
+- compile/update idle;
+- Console read through MCP or documented fallback;
+- `AI Tools/Run Tactical Preflight` runs;
+- `docs/TACTICAL_PREFLIGHT_REPORT.json` exists;
+- `AI Tools/Run Unity MCP Smoke Check` runs;
+- `docs/UNITY_MCP_SMOKE_REPORT_LATEST.json` exists.
+
+If this mission fails, do not proceed to M81/M82. Repair Unity/MCP session state first.
 
 ### Gameplay mission
 
@@ -190,3 +224,4 @@ Avoid these:
 - running many MCP commands while Unity is compiling;
 - adding tools or packages in a gameplay mission;
 - creating a large architecture before the next playable gate.
+- saying a repo-level static change was Unity-verified when the active Unity menu did not run.

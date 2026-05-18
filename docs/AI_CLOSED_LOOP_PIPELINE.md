@@ -11,14 +11,15 @@ The loop exists to prevent the recurring failure mode where an agent creates fil
 ```text
 1. Player feedback
 2. Intent capture
-3. Mission contract
-4. Implementation
-5. Unity editor command
-6. MCP transport execution
-7. JSON report and screenshot evidence
-8. Semantic and visual review
-9. Promote, quarantine, or rollback
-10. Retro and next mission
+3. Design interpretation
+4. Mission contract
+5. Implementation or asset generation
+6. Unity editor command
+7. MCP transport execution
+8. JSON report and screenshot/video evidence
+9. Semantic and visual review
+10. Promote, quarantine, or rollback
+11. Retro and next mission
 ```
 
 No step may claim completion by skipping the evidence stage.
@@ -55,7 +56,20 @@ Classify the input:
 
 Each captured intent should name required evidence.
 
-## Step 3: Mission Contract
+## Step 3: Design Interpretation
+
+Before implementation, decide whether the request is:
+
+- a bug;
+- a gameplay design change;
+- a visual fidelity request;
+- a toolchain/process improvement;
+- a reference asset request;
+- a deferred idea.
+
+Design interpretation prevents the agent from turning every request into broad code changes.
+
+## Step 4: Mission Contract
 
 Every non-trivial task becomes a mission contract using `docs/MISSION_TEMPLATE.md`.
 
@@ -71,7 +85,7 @@ The mission must state:
 - what JSON and screenshot evidence is required;
 - the rollback plan.
 
-## Step 4: Implementation
+## Step 5: Implementation Or Asset Generation
 
 Implementation should be narrow:
 
@@ -81,7 +95,7 @@ Implementation should be narrow:
 - update schemas before reports only when the mission requires it;
 - do not change report values manually.
 
-## Step 5: Unity Editor Command
+## Step 6: Unity Editor Command
 
 Unity operations should be exposed as `AI Tools/...` menu commands.
 
@@ -100,7 +114,22 @@ Rules:
 - wait for compile/update idle before invoking commands;
 - if a newly added menu is invisible, treat the active Unity session as stale and run M0.5 recovery, not more gameplay work.
 
-## Step 6: MCP Transport Execution
+## Step 7: Gate Execution
+
+Choose the smallest relevant gate.
+
+Examples:
+
+- workflow readiness: `AI Tools/Run Tactical Preflight`;
+- MCP readiness: `AI Tools/Run Unity MCP Smoke Check`;
+- building problems: future `AI Tools/Run Building Integrity Gate`;
+- weapon feel: future `AI Tools/Run Weapon Feel Gate`;
+- playability route: future `AI Tools/Run AI Playtest Route`;
+- asset proof: promoted asset visibility/material/import gates.
+
+Do not run broad gates to hide a narrow failure. Narrow gates should fail loudly when their exact responsibility is not met.
+
+## Step 8: MCP Transport Execution
 
 MCP should perform short transport operations:
 
@@ -112,7 +141,7 @@ MCP should perform short transport operations:
 
 MCP should not be used as a long-lived design loop that makes dozens of tiny GameObject edits.
 
-## Step 7: Evidence
+## Step 9: Evidence
 
 Required evidence depends on mission type.
 
@@ -145,7 +174,16 @@ Documentation missions:
 - secret scan;
 - no Unity scene/package/script changes.
 
-## Step 8: Semantic And Visual Review
+Evidence should live in predictable paths when possible:
+
+```text
+docs/gates/
+Assets/Screenshots/
+docs/REALIFIED_ASSET_GAMEPLAY_PROMOTION_LEDGER.json
+docs/PROMOTED_ASSET_PLAYER_CAMERA_VISIBILITY_GATE.json
+```
+
+## Step 10: Semantic And Visual Review
 
 Generated or imported assets need review beyond import success.
 
@@ -159,7 +197,7 @@ Review questions:
 
 If semantic review fails, the asset goes to quarantine or remains a candidate.
 
-## Step 9: Promote, Quarantine, Or Roll Back
+## Step 11: Promote, Quarantine, Or Roll Back
 
 Promotion requires the full `docs/ASSET_PROMOTION_STANDARD.md`.
 
@@ -170,7 +208,7 @@ Outcomes:
 - `rollback`: change regresses gameplay, scene, console, or gate.
 - `defer`: idea is valid but needs a later mission.
 
-## Step 10: Retro And Next Mission
+## Step 12: Retro And Next Mission
 
 Every mission closeout should answer:
 
@@ -179,6 +217,8 @@ Every mission closeout should answer:
 - What remains unproven?
 - Which false completion path was prevented?
 - What is the next smallest useful mission?
+
+Do not let lessons remain inside chat only. Add durable notes when the lesson affects future agents.
 
 ## Failure Handling
 
@@ -202,6 +242,50 @@ If assets look wrong:
 1. do not bind them to gameplay;
 2. mark semantic/category failure;
 3. preserve them as candidates only if useful for diagnostics.
+
+## Anti-Patterns
+
+### Fake Completion By Existence
+
+Bad:
+
+```text
+The GLB exists, so the asset is done.
+```
+
+Good:
+
+```text
+The GLB is imported, semantically correct, gameplay-bound, visible from player camera, and participates in a gameplay event.
+```
+
+### Fake Completion By Screenshot
+
+Bad:
+
+```text
+The contact sheet looks good, so the asset is production-ready.
+```
+
+Good:
+
+```text
+The asset appears in actual gameplay from the player camera and the visibility gate records the screenshot.
+```
+
+### Broadening A Mission Mid-Flight
+
+Bad:
+
+```text
+While fixing the ladder, also rewrite the gun system and UI.
+```
+
+Good:
+
+```text
+Record weapon/UI issues as follow-up missions and keep the ladder mission isolated.
+```
 
 ## Done Definition
 

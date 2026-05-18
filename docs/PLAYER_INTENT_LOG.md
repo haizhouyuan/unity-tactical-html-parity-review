@@ -43,6 +43,43 @@ linked_screenshots:
 notes: ""
 ```
 
+## Field Guidance
+
+### `source`
+
+Use the real source of feedback:
+
+- `child`: direct player feedback from the child tester.
+- `parent`: project owner or product framing.
+- `reviewer`: human or AI reviewer feedback.
+- `agent`: Codex, ChatGPT, Kimi, Gemini, MiniMax, or another coding/research agent.
+- `playtest`: deterministic route or future AI playtest.
+
+### `raw_quote`
+
+Preserve the original wording when it is useful and safe for the public repo. If the raw wording is too private or too conversational, store a sanitized paraphrase and keep the interpreted need precise.
+
+### `interpreted_need`
+
+Translate feedback into an actionable development need.
+
+Examples:
+
+- "gun looks wrong" -> third-person weapon mount or first-person framing needs evidence.
+- "cannot enter building" -> building collision, floor support, or ladder route needs a gate.
+- "enemy shoots through cover" -> line-of-sight and blocker collision need proof.
+
+### `evidence_required`
+
+Do not leave this vague.
+
+Good examples:
+
+- player-camera screenshot showing weapon mount correctness;
+- AI playtest route JSON proving player can enter first floor and climb;
+- cover line-of-sight report proving NPC shot is blocked by container;
+- asset promotion ledger entry proving gameplay binding and event participation.
+
 ## Status Meanings
 
 - `todo`: accepted as real work, not started.
@@ -100,6 +137,8 @@ These are normalized starter intents derived from the current public review stat
 | INTENT-003 | parent/playtest | visual | high | Generated tactical assets must appear in the actual player route, not only in contact sheets or showcase views. | todo | M84 Asset Factory Spike |
 | INTENT-004 | reviewer | toolchain | high | The active Unity session must be verified before relying on new `AI Tools/...` menu commands. | todo | M0.5 Active Unity Session Verification |
 | INTENT-005 | reviewer | process | medium | Future AI tasks must use mission contracts and evidence gates instead of broad prompts. | in_progress | M0 Docs-only OS Pass |
+| INTENT-006 | parent/playtest | gameplay | high | NPC line-of-sight and cover checks must include containers and other gameplay blockers, not only walls. | todo | M81 Building Integrity Gate |
+| INTENT-007 | parent/reference | asset | medium | Reference-driven weapon assets must pass semantic comparison and gameplay binding before they count as progress. | todo | M84 Asset Factory Spike |
 
 ## Append New Entries Below
 

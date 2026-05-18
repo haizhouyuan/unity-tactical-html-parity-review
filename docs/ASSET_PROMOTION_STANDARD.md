@@ -77,7 +77,25 @@ Completion credit:
 
 - technical readiness only.
 
-### Stage 3: Semantic-ready
+### Stage 3: Material/PBR-ready
+
+Definition:
+
+- The asset has usable material data for the claim being made.
+
+Required evidence:
+
+- albedo/base color present or justified;
+- roughness/metallic or equivalent material settings recorded;
+- normal map present or no-normal justification;
+- transparency/emission rules where relevant;
+- material sidecar or import report exists.
+
+Completion credit:
+
+- material readiness only.
+
+### Stage 4: Semantic-ready
 
 Definition:
 
@@ -100,7 +118,7 @@ Completion credit:
 
 - can be considered for gameplay binding, but not production-promoted.
 
-### Stage 4: Gameplay-bound
+### Stage 5: Gameplay-bound
 
 Definition:
 
@@ -123,7 +141,7 @@ Completion credit:
 
 - partial gameplay integration.
 
-### Stage 5: Player-camera-visible
+### Stage 6: Player-camera-visible
 
 Definition:
 
@@ -139,7 +157,7 @@ Completion credit:
 
 - visual gameplay proof.
 
-### Stage 6: Gameplay-event-proven
+### Stage 7: Gameplay-event-proven
 
 Definition:
 
@@ -147,12 +165,14 @@ Definition:
 
 Examples:
 
-- weapon fires or reloads;
-- loot is picked up;
-- cover blocks shots;
-- enemy takes damage or attacks;
-- ladder/building collider changes route outcome;
-- armor/helmet affects state.
+| Asset class | Required event examples |
+| --- | --- |
+| Weapon | fire, reload, ammo change, hit, recoil, muzzle flash |
+| Loot | pickup, inventory/health/ammo state change |
+| Container/Cover | blocks player/NPC line of sight or shots |
+| Helmet/Armor | equip state or damage reduction |
+| NPC/Enemy | spawn, aim, fire, take damage, die |
+| Building/Door/Ladder | route enter, climb, floor transition, fall/support behavior |
 
 Required evidence:
 
@@ -164,7 +184,7 @@ Completion credit:
 
 - eligible for production promotion.
 
-### Stage 7: Production-promoted
+### Stage 8: Production-promoted
 
 Definition:
 
