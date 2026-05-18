@@ -42,6 +42,12 @@ docs/MISSION_TEMPLATE.md
 docs/ASSET_PROMOTION_STANDARD.md
 ```
 
+For the long-running execution checklist from M0.5 through build/release and asset-factory work, read:
+
+```text
+docs/LONG_RUNNING_AI_GAME_STUDIO_TODO_2026-05-18.md
+```
+
 Project-local Codex skills live under:
 
 ```text
