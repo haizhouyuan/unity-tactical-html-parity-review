@@ -92,6 +92,7 @@ At export time, the local pipeline reported:
 - `playable_route_gate_passed: true`
 - `gameplay_proof_gate_passed: true`
 - `building_integrity_gate_passed: true`
+- `weapon_feel_gate_passed: true`
 - `html_tactical_parity_gate_passed: true`
 - `all_required_current_gates_passed: true`
 - `full_visual_asset_gate_passed: false`
@@ -101,7 +102,7 @@ The important warning is the last line: only one realified asset has production 
 
 ## Known Gaps
 
-- First-person weapon visibility exists, but weapon polish and animation are still weak.
+- First-person weapon visibility, fire/reload feedback, hit marker, recoil evidence, and third-person mount now have a passing hero-weapon gate, but the authored animation and final weapon art quality are still not commercial-grade.
 - Most realified assets are not yet promoted into gameplay entities.
 - Character and environment assets still need stronger production-quality replacements.
 - The Unity version still lags the HTML baseline in many interaction and feedback details.

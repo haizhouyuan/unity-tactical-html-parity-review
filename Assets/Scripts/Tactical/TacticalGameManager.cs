@@ -722,6 +722,7 @@ public class TacticalGameManager : MonoBehaviour
     {
         var flash = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         flash.name = "Muzzle Flash";
+        RemovePhysicsCollider(flash);
         flash.transform.position = position;
         flash.transform.localScale = Vector3.one * 0.08f;
         flash.GetComponent<Renderer>().material.color = new Color(1f, 0.66f, 0.20f, 0.82f);
@@ -732,6 +733,7 @@ public class TacticalGameManager : MonoBehaviour
     {
         var impact = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         impact.name = "Impact Spark";
+        RemovePhysicsCollider(impact);
         impact.transform.position = position;
         impact.transform.localScale = Vector3.one * 0.14f;
         impact.GetComponent<Renderer>().material.color = color;
@@ -742,6 +744,7 @@ public class TacticalGameManager : MonoBehaviour
     {
         var casing = GameObject.CreatePrimitive(PrimitiveType.Capsule);
         casing.name = "Ejected Casing";
+        RemovePhysicsCollider(casing);
         casing.transform.position = position;
         casing.transform.localScale = new Vector3(0.028f, 0.070f, 0.028f);
         casing.GetComponent<Renderer>().material.color = new Color(0.70f, 0.55f, 0.25f);
@@ -750,6 +753,15 @@ public class TacticalGameManager : MonoBehaviour
         body.linearVelocity = direction.normalized * 1.4f;
         body.angularVelocity = Random.insideUnitSphere * 14f;
         Destroy(casing, 0.85f);
+    }
+
+    private static void RemovePhysicsCollider(GameObject obj)
+    {
+        var collider = obj.GetComponent<Collider>();
+        if (collider != null)
+        {
+            Destroy(collider);
+        }
     }
 
     private void EnsureSfx()

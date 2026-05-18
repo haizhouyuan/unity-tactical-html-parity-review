@@ -1,0 +1,51 @@
+{
+  "copied": [
+    "docs/WEAPON_FEEL_GATE.json",
+    "docs/TACTICAL_ACCEPTANCE_PIPELINE_REPORT.json",
+    "docs/TACTICAL_GAMEPLAY_PROOF_GATE.json",
+    "docs/HTML_TACTICAL_PARITY_GATE.json",
+    "docs/TACTICAL_PLAYABLE_ROUTE_GATE.json",
+    "docs/TACTICAL_PLAYER_POV_GATE.json",
+    "docs/BUILDING_INTEGRITY_GATE.json",
+    "Assets/Screenshots/WeaponFeel/01_first_person_ads_rifle.png",
+    "Assets/Screenshots/WeaponFeel/04_third_person_weapon_mount.png",
+    "Assets/Screenshots/WeaponFeel/03_first_person_reload_state.png",
+    "Assets/Screenshots/WeaponFeel/02_first_person_fire_feedback.png",
+    "Assets/Screenshots/BuildingIntegrity/03_cover_block_probe.png",
+    "Assets/Screenshots/BuildingIntegrity/02_building_a_first_floor_inside.png",
+    "Assets/Screenshots/BuildingIntegrity/02b_ladder_upper_floor.png",
+    "Assets/Screenshots/BuildingIntegrity/01_building_a_door_entry_start.png",
+    "Assets/Editor/WeaponFeelGate.cs.meta"
+  ],
+  "docs/WEAPON_FEEL_GATE.json": {
+    "passed": true,
+    "details": "rayPreview=NPC Enemy 9@1.31:enemy=True|South Compound Wall@3.12:enemy=False|North Compound Wall@129.12:enemy=False; fire mag 30->29 enemyHp 90.0->66.0 muzzle 3->4 casing 3->4 tracer 6->7 sfx 27->29 recoil 0.209; reload mag 29->30 reserve 90->89 events 1 offset 0.109; thirdPerson active=rifle renderers=1 tinted=1; fpRenderers=34 fpSourceRenderers=1 active=rifle hero=True;",
+    "enemy_hit": true,
+    "weapon_feedback_spawned": true,
+    "third_person_weapon_mount": true
+  },
+  "docs/BUILDING_INTEGRITY_GATE.json": {
+    "passed": true,
+    "details": "spawnOutsideBuilding=True; doorwayRay blocked=False; entryCapsule blocked=False; firstFloorEntry inside=True routeClear=True distance=0.00; A Floor 1 supportHit=A Floor 1 distance=3.22; ladder floor 1->3 y=9.24 inside=True; A Floor 3 supportHit=A Floor 3 distance=3.22; roof centerSupported=True edgeImmediateRoof=False; containerRay blocked=True hit=Container 1; openShot hp=96.2; coverShot hp=100.0;"
+  },
+  "docs/TACTICAL_ACCEPTANCE_PIPELINE_REPORT.json": {
+    "status": "complete",
+    "building_integrity_gate_passed": true,
+    "weapon_feel_gate_passed": true,
+    "gameplay_proof_gate_passed": true,
+    "html_tactical_parity_gate_passed": true,
+    "all_required_current_gates_passed": true,
+    "approved_incremental_asset_gate_passed": true,
+    "visual_polish_gate_passed": true,
+    "console_errors": 0,
+    "console_warnings": 0
+  },
+  "docs/TACTICAL_GAMEPLAY_PROOF_GATE.json": {
+    "passed": true,
+    "details": "lobbyCameraDist 34.88 zClear True; manualStart camera FirstPerson weapon pistol hero True pistolRenderers 16 required>=12; pickupCount 38->37 pistolReserve 45->83 richness 1.60; fireMag 15->14 enemyHp 90.0->57.0 tracers 3->4; reload mag 14->15 reserve 83->82; playerHp 100.0->88.0; enemyRangedHp 100.0->92.4 enemyTracers 4->5 enemySfx 18->20; healHp 42.0->75.0 firstAid 1->0; spawnEnemies 10->11; ladder upY 5.14 camUpY 6.66 downY 1.04 camDist 1.53; environmentFlow spawn True(8) buildingA True(40) warehouse True(14) container True(6) nearbyLoot 8 floor 1->3; deathHp 0.0 deathPanel True restartHp 100.0; camera third 13.20 first 0.19 ads 3.79 heights 2.05/1.25/0.75 jump True vy 5.10; fpWeaponSwitch 4/4 active dmr; tpWeaponSwitch 4/4 npcWeaponVisuals 11/11; skinVisual 霓虹电音 fpTint 0 fpPbrPreserved 34 tpTint 1 tracerChanged True; sfxEvents 23->25 clips 10 source True; characterMotion 12/12; fpPolish active rifle hero True select/shot/reload 1/1/1 offset 0.125 reloadOffset 0.096 recoil 0.187; characterAnimationState 12/12 named 12; characterProceduralLimb 12/12 rigged 12; characterAuthoredClip 12/12 library 12;",
+    "weapon_feedback_spawned": true
+  },
+  "docs/HTML_TACTICAL_PARITY_GATE.json": {
+    "passed": true
+  }
+}

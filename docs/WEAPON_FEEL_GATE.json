@@ -1,0 +1,24 @@
+{
+  "schema": "weapon_feel_gate_v1",
+  "timestamp_utc": "2026-05-18T08:30:05.0975830Z",
+  "application_is_playing": true,
+  "passed": true,
+  "hero_weapon_id": "rifle",
+  "application_ready": true,
+  "first_person_weapon_visible": true,
+  "ads_readable": true,
+  "fire_ammo_mutation": true,
+  "enemy_hit": true,
+  "weapon_feedback_spawned": true,
+  "recoil_polish_evidence": true,
+  "reload_state_mutation": true,
+  "third_person_weapon_mount": true,
+  "screenshot_count": 4,
+  "screenshots": [
+    { "label": "01_first_person_ads_rifle", "path": "Assets/Screenshots/WeaponFeel/01_first_person_ads_rifle.png", "note": "First-person ADS rifle visibility" },
+    { "label": "02_first_person_fire_feedback", "path": "Assets/Screenshots/WeaponFeel/02_first_person_fire_feedback.png", "note": "First-person fire, hit, recoil, muzzle, tracer, and casing feedback" },
+    { "label": "03_first_person_reload_state", "path": "Assets/Screenshots/WeaponFeel/03_first_person_reload_state.png", "note": "First-person reload state mutation" },
+    { "label": "04_third_person_weapon_mount", "path": "Assets/Screenshots/WeaponFeel/04_third_person_weapon_mount.png", "note": "Third-person rifle mount visibility" }
+  ],
+  "details": "rayPreview=NPC Enemy 9@1.31:enemy=True|South Compound Wall@3.12:enemy=False|North Compound Wall@129.12:enemy=False; fire mag 30->29 enemyHp 90.0->66.0 muzzle 3->4 casing 3->4 tracer 6->7 sfx 27->29 recoil 0.209; reload mag 29->30 reserve 90->89 events 1 offset 0.109; thirdPerson active=rifle renderers=1 tinted=1; fpRenderers=34 fpSourceRenderers=1 active=rifle hero=True;"
+}

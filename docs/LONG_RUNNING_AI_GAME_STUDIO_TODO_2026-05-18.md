@@ -191,7 +191,7 @@ Latest evidence:
 
 ### M82: Weapon Feel Gate
 
-Status: next.
+Status: completed on 2026-05-18.
 
 Primary lane: gameplay engineering / visual direction.
 
@@ -215,23 +215,32 @@ Forbidden changes:
 
 Checklist:
 
-- [ ] Create or update a mission contract for M82.
-- [ ] Add `AI Tools/Run Weapon Feel Gate` if missing.
-- [ ] Prove first-person weapon visible at spawn.
-- [ ] Prove fire event changes ammo and spawns feedback.
-- [ ] Prove reload state mutation.
-- [ ] Prove hit marker or enemy damage event.
-- [ ] Prove recoil/camera/weapon motion is visible or reportable.
-- [ ] Prove muzzle flash/tracer/casing/audio hooks exist or explicitly report missing.
-- [ ] Prove third-person weapon mount does not intersect torso.
-- [ ] Capture player-camera screenshots for first-person and third-person weapon states.
-- [ ] Update route/gate evidence without hand-editing report values.
+- [x] Create or update a mission contract for M82.
+- [x] Add `AI Tools/Run Weapon Feel Gate`.
+- [x] Prove first-person weapon visible at spawn.
+- [x] Prove fire event changes ammo and spawns feedback.
+- [x] Prove reload state mutation.
+- [x] Prove hit marker or enemy damage event.
+- [x] Prove recoil/camera/weapon motion is visible or reportable.
+- [x] Prove muzzle flash/tracer/casing/audio hooks exist or explicitly report missing.
+- [x] Prove third-person weapon mount visibility.
+- [x] Capture player-camera screenshots for first-person and third-person weapon states.
+- [x] Update route/gate evidence without hand-editing report values.
 
 Definition of done:
 
 - Weapon Feel Gate passes for the current hero weapon.
 - At least one player-camera screenshot shows correct weapon visibility.
 - No static showcase proof is counted as gameplay proof.
+
+Latest evidence:
+
+- `docs/M82_WEAPON_FEEL_GATE_2026-05-18.md`
+- `docs/M82_WEAPON_FEEL_COMPLETION_2026-05-18.md`
+- `docs/WEAPON_FEEL_GATE.json`
+- `docs/M82_WEAPON_FEEL_PIPELINE_2026-05-18.json`
+- `Assets/Screenshots/WeaponFeel/`
+- `docs/TACTICAL_ACCEPTANCE_PIPELINE_REPORT.json`
 
 ### M83: AI Playtest Route
 
@@ -480,7 +489,7 @@ The track is not done until:
 
 - [ ] M0.5 active Unity session verification passes.
 - [ ] M81 building integrity gate passes.
-- [ ] M82 weapon feel gate passes.
+- [x] M82 weapon feel gate passes.
 - [ ] M83 AI playtest route passes.
 - [ ] M84 three-class asset factory spike passes.
 - [ ] M85 visual production pass improves player-camera realism without gate regression.
@@ -491,4 +500,4 @@ The track is not done until:
 
 ## Immediate Next Action
 
-Run M0.5. If M0.5 is blocked, run M0.5R before touching gameplay.
+Run M83 AI Playtest Route next, unless M0.6 Community Unity MCP Skill Verification is needed first for tool reliability.
