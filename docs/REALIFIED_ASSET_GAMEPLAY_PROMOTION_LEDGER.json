@@ -1,14 +1,14 @@
 {
   "schema": "realified_asset_gameplay_promotion_ledger_v1",
-  "timestamp_utc": "2026-05-18T04:14:03.5489070Z",
+  "timestamp_utc": "2026-05-18T17:35:40.7316100Z",
   "import_gate_path": "docs/REALIFIED_IMPORT_MATERIAL_GATE.json",
   "category_review_path": "docs/REALIFIED_CATEGORY_NEMOTRON_REVIEWS.json",
   "route_gate_path": "docs/TACTICAL_PLAYABLE_ROUTE_GATE.json",
   "gameplay_gate_path": "docs/TACTICAL_GAMEPLAY_PROOF_GATE.json",
   "summary": {
     "asset_count": 12,
-    "technical_semantic_scene_partial_assets": 3,
-    "production_promoted_assets": 1,
+    "technical_semantic_scene_partial_assets": 5,
+    "production_promoted_assets": 3,
     "any_production_promoted": true
   },
   "assets": [
@@ -102,13 +102,13 @@
       "expected_file": "RS_08_loot_ammo_LOD0.glb",
       "imported": true,
       "technical_ready": true,
-      "semantic_category_match": false,
-      "gameplay_scene_instances": 0,
-      "gameplay_entity_scene_evidence": false,
-      "player_camera_realified_asset_evidence": false,
-      "asset_specific_gameplay_event_evidence": false,
-      "production_promoted": false,
-      "blockers": ["semantic_category_mismatch_or_failed_review", "no_gameplay_entity_scene_evidence", "no_player_camera_visible_realified_asset_evidence", "no_asset_specific_gameplay_event_evidence"]
+      "semantic_category_match": true,
+      "gameplay_scene_instances": 88,
+      "gameplay_entity_scene_evidence": true,
+      "player_camera_realified_asset_evidence": true,
+      "asset_specific_gameplay_event_evidence": true,
+      "production_promoted": true,
+      "blockers": []
     },
     {
       "asset_id": "medkit",
@@ -116,13 +116,13 @@
       "expected_file": "RS_09_loot_medkit_LOD0.glb",
       "imported": true,
       "technical_ready": true,
-      "semantic_category_match": false,
-      "gameplay_scene_instances": 0,
-      "gameplay_entity_scene_evidence": false,
-      "player_camera_realified_asset_evidence": false,
-      "asset_specific_gameplay_event_evidence": false,
-      "production_promoted": false,
-      "blockers": ["semantic_category_mismatch_or_failed_review", "no_gameplay_entity_scene_evidence", "no_player_camera_visible_realified_asset_evidence", "no_asset_specific_gameplay_event_evidence"]
+      "semantic_category_match": true,
+      "gameplay_scene_instances": 68,
+      "gameplay_entity_scene_evidence": true,
+      "player_camera_realified_asset_evidence": true,
+      "asset_specific_gameplay_event_evidence": true,
+      "production_promoted": true,
+      "blockers": []
     },
     {
       "asset_id": "container",

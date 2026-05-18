@@ -1,6 +1,6 @@
 {
   "schema": "html_tactical_parity_gate_v1",
-  "timestamp_utc": "2026-05-18T08:30:04.7355580Z",
+  "timestamp_utc": "2026-05-18T17:35:41.0676010Z",
   "passed": true,
   "lobby_death_restart_parity": true,
   "settings_and_skin_parity": true,
@@ -12,7 +12,7 @@
   "glb_import_scene_replacement_parity": true,
   "evidence_validation_parity": true,
   "active_glb_instances": 112,
-  "active_glb_renderers": 2547,
+  "active_glb_renderers": 2627,
   "route_screenshot_count": 19,
   "category_failed_scene_instances": 0,
   "full_visual_asset_gate_passed": false,

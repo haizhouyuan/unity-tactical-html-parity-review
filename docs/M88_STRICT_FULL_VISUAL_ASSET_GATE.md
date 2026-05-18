@@ -1,6 +1,6 @@
 # M88 Strict Full Visual Asset Gate
 
-Generated: 2026-05-18T16:38:53.7278340Z
+Generated: 2026-05-18T17:35:51.0712280Z
 
 - Passed: `False`
 - Current policy: this gate must remain false until all strict production visual checks pass.
@@ -16,7 +16,7 @@ Generated: 2026-05-18T16:38:53.7278340Z
 | `character_authored_clip_animation_passed` | True | Character authored clip evidence exists. |
 | `true_skinned_humanoid_import_passed` | True | Approved player/enemy GLBs include skinned/animation import evidence. |
 | `m92_weapon_production_feel_passed` | True | M92 weapon feel production metrics pass in play mode. |
-| `legacy_realified_batch_visibility_gate_passed` | False | Legacy Realified batch visibility gate passes. |
+| `legacy_realified_batch_visibility_gate_passed` | True | Legacy Realified batch visibility gate passes. |
 | `generated_batch_class_promotion_passed` | False | Generated batch class promotion reaches all required classes. |
 | `final_weapon_art_review_passed` | False | Manual/VLM review must confirm final weapon art quality, not just functional visibility. |
 | `final_humanoid_art_review_passed` | False | Manual/VLM review must confirm final humanoid/gear quality, not just intermediate tactical detail kits. |

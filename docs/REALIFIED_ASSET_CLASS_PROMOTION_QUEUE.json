@@ -1,6 +1,6 @@
 {
   "schema": "realified_asset_class_promotion_queue_v1",
-  "timestamp_utc": "2026-05-18T04:14:02.4063210Z",
+  "timestamp_utc": "2026-05-18T17:35:39.4720910Z",
   "import_gate_path": "docs/REALIFIED_IMPORT_MATERIAL_GATE.json",
   "category_review_path": "docs/REALIFIED_CATEGORY_NEMOTRON_REVIEWS.json",
   "route_gate_path": "docs/TACTICAL_PLAYABLE_ROUTE_GATE.json",
@@ -8,7 +8,7 @@
     "class_count": 5,
     "technically_ready_classes": 3,
     "semantic_passed_classes": 0,
-    "gameplay_scene_evidence_classes": 1,
+    "gameplay_scene_evidence_classes": 2,
     "production_promoted_classes": 0,
     "any_production_promoted": false,
     "all_classes_promoted": false,
@@ -69,11 +69,11 @@
       "technical_ready_asset_count": 2,
       "semantic_contact_sheet_rendered": true,
       "semantic_allowed": false,
-      "gameplay_scene_evidence_present": false,
-      "gameplay_scene_evidence_instances": 0,
+      "gameplay_scene_evidence_present": true,
+      "gameplay_scene_evidence_instances": 156,
       "production_promoted": false,
       "promotion_state": "candidate_imported_blocked",
-      "blockers": ["semantic_category_review_failed", "gameplay_scene_evidence_missing_or_partial"]
+      "blockers": ["semantic_category_review_failed"]
     },
     {
       "category": "environment_prop",

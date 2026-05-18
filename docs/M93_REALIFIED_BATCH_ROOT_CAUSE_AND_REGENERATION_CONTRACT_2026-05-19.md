@@ -46,7 +46,27 @@ Evidence:
 - refreshed import/material gate: `docs/REALIFIED_IMPORT_MATERIAL_GATE.json`
 - local Nemotron semantic review: `docs/M93_CORRECTED_LOOT_NEMOTRON_REVIEW.json`
 
-This is intentionally recorded as a corrected fallback slice. It does not claim that the original AI Realified batch is fixed, does not override the older stale failed review for unrelated classes, and does not promote the loot class until gameplay binding, player-camera pickup evidence, and promotion ledger evidence exist.
+This is intentionally recorded as a corrected fallback slice. It does not claim that the original AI Realified batch is fixed and does not override the older stale failed review for unrelated classes.
+
+## Gameplay Binding Update
+
+The corrected loot slice is now bound into the playable Unity route:
+
+- `TacticalPrototypeTools` binds `TacticalLootKind.Ammo` to `RS_08_loot_ammo_LOD0.glb`.
+- `TacticalPrototypeTools` binds `TacticalLootKind.Medkit` to `RS_09_loot_medkit_LOD0.glb`.
+- `TACTICAL_PLAYABLE_ROUTE_GATE.json` records:
+  - `realified_loot_class_route_evidence: true`
+  - `realified_ammo_loot_route_evidence: true`
+  - `realified_medkit_loot_route_evidence: true`
+- `REALIFIED_ASSET_GAMEPLAY_PROMOTION_LEDGER.json` now records three production-promoted assets:
+  - `hero_rifle`
+  - `ammo`
+  - `medkit`
+- `PROMOTED_ASSET_PLAYER_CAMERA_VISIBILITY_GATE.json` now passes with two production-promoted classes visible from player-camera evidence:
+  - `weapon`
+  - `loot`
+
+This closes the M93 corrected-loot gameplay promotion slice only. It does not close final full visual completion.
 
 ## What Not To Do
 
@@ -94,6 +114,8 @@ M93 can pass a loot-class slice when all are true:
 - pickup state changes after interacting with the item;
 - promotion ledger records the class as production-promoted or explicitly approved-equivalent;
 - M88 still remains false unless final weapon art, final humanoid art, and all generated-batch requirements also pass.
+
+Current status for this loot-class slice: passed for corrected ammo/medkit fallback assets.
 
 ## Next Agent Contract
 

@@ -29,8 +29,8 @@ Current exported evidence says:
 - `ai_playtest_route_gate_passed=true`
 - `full_visual_asset_gate_passed=false`
 - `category_semantic_review_passed=false`
-- `realified_asset_gameplay_production_promoted_assets=1`
-- `promoted_asset_visibility_gate_passed=false`
+- `realified_asset_gameplay_production_promoted_assets=3`
+- `promoted_asset_visibility_gate_passed=true`
 
 Interpretation:
 
@@ -39,7 +39,8 @@ Interpretation:
 - Production visual assets are still the main unfinished goal.
 - M0 docs are complete.
 - M91 external-input built-player route evidence now exists and passes.
-- Next executable work returns to the M88 strict visual blockers unless a new toolchain/release gate is prioritized.
+- M93 now promotes the corrected Realified ammo and medkit loot through route pickup evidence, but the strict full visual gate remains false.
+- Next executable work returns to the remaining M88 strict visual blockers: final weapon art review, final humanoid art review, and the rest of generated-batch class promotion.
 
 ## Master Queue
 
@@ -810,7 +811,7 @@ Return to the M88 strict visual blockers: final weapon art review, final humanoi
 
 ### M93: Realified Batch Root Cause / Regeneration Contract
 
-Status: root cause documented; corrected loot fallback assets generated; Unity contact-sheet/import evidence refreshed; local Nemotron semantic review passes for the corrected loot contact sheet; gameplay promotion is still open.
+Status: root cause documented; corrected loot fallback assets generated; Unity contact-sheet/import evidence refreshed; local Nemotron semantic review passes for the corrected loot contact sheet; corrected ammo and medkit are now bound into gameplay and promoted from route evidence.
 
 Primary lane: asset pipeline / visual direction / evidence audit.
 
@@ -820,9 +821,9 @@ Current finding:
 - This is not a Unity binding problem; it is an upstream asset-generation/category problem.
 - See `docs/M93_REALIFIED_BATCH_ROOT_CAUSE_AND_REGENERATION_CONTRACT_2026-05-19.md`.
 
-Next executable slice:
+Completed executable slice:
 
-- Continue the corrected `loot` slice through gameplay binding -> player-camera pickup evidence -> promotion ledger update from evidence only.
+- Corrected `loot` slice now runs through gameplay binding -> player-camera pickup evidence -> promotion ledger update from evidence only.
 
 Checklist:
 
@@ -832,9 +833,9 @@ Checklist:
 - [x] Import the corrected asset into Unity with material sidecars.
 - [x] Refresh Unity contact-sheet evidence for the corrected loot class.
 - [x] Run semantic contact-sheet review for the corrected loot class.
-- [ ] Bind one corrected loot asset into gameplay.
-- [ ] Capture player-camera pickup evidence.
-- [ ] Update promotion ledger from evidence only.
+- [x] Bind corrected loot assets into gameplay.
+- [x] Capture player-camera pickup evidence.
+- [x] Update promotion ledger from evidence only.
 
 Current evidence:
 
@@ -844,3 +845,14 @@ Current evidence:
 - Contact-sheet report: `docs/REALIFIED_CATEGORY_CONTACT_SHEETS.json`
 - Import/material gate: `docs/REALIFIED_IMPORT_MATERIAL_GATE.json`
 - Local Nemotron semantic review: `docs/M93_CORRECTED_LOOT_NEMOTRON_REVIEW.json`
+- Player route evidence: `docs/TACTICAL_PLAYABLE_ROUTE_GATE.json`
+  - `realified_ammo_loot_route_evidence=true`
+  - `realified_medkit_loot_route_evidence=true`
+- Gameplay promotion ledger: `docs/REALIFIED_ASSET_GAMEPLAY_PROMOTION_LEDGER.json`
+  - `production_promoted_assets=3`
+  - promoted assets include `hero_rifle`, `ammo`, and `medkit`
+- Promoted asset visibility gate: `docs/PROMOTED_ASSET_PLAYER_CAMERA_VISIBILITY_GATE.json`
+  - `passed=true`
+  - `production_promoted_classes=2`
+  - `visible_promoted_classes=2`
+- Completion note: `docs/M93_CORRECTED_LOOT_GAMEPLAY_PROMOTION_COMPLETION_2026-05-18.md`

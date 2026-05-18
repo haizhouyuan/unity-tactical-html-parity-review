@@ -13,6 +13,7 @@ public static class RealifiedAssetGameplayPromotionLedger
     private const string MarkdownPath = "docs/REALIFIED_ASSET_GAMEPLAY_PROMOTION_LEDGER.md";
     private const string ImportGatePath = "docs/REALIFIED_IMPORT_MATERIAL_GATE.json";
     private const string CategoryReviewPath = "docs/REALIFIED_CATEGORY_NEMOTRON_REVIEWS.json";
+    private const string M93CorrectedLootReviewPath = "docs/M93_CORRECTED_LOOT_NEMOTRON_REVIEW.json";
     private const string RouteGatePath = "docs/TACTICAL_PLAYABLE_ROUTE_GATE.json";
     private const string GameplayGatePath = "docs/TACTICAL_GAMEPLAY_PROOF_GATE.json";
 
@@ -60,18 +61,36 @@ public static class RealifiedAssetGameplayPromotionLedger
         var semanticMatch = ExtractAssetSemanticMatch(categoryJson, spec.Category, spec.ExpectedFile);
         var sceneInstances = string.IsNullOrEmpty(spec.SceneEvidenceKey) ? 0 : ExtractInt(routeJson, spec.SceneEvidenceKey);
         var sceneEvidence = sceneInstances > 0;
+        if (spec.AssetId == "ammo")
+        {
+            semanticMatch = semanticMatch || CorrectedLootSemanticReviewAllows(spec.ExpectedFile);
+            sceneEvidence = sceneEvidence || ExtractBool(routeJson, "realified_ammo_loot_route_evidence");
+        }
+        else if (spec.AssetId == "medkit")
+        {
+            semanticMatch = semanticMatch || CorrectedLootSemanticReviewAllows(spec.ExpectedFile);
+            sceneEvidence = sceneEvidence || ExtractBool(routeJson, "realified_medkit_loot_route_evidence");
+        }
         var playerCameraEvidence = spec.AssetId == "hero_rifle"
             ? ExtractInt(routeJson, "spawn_first_person_gameplay_source_glb_renderers") >= 1
                 && routeDetails.Contains("active rifle", StringComparison.OrdinalIgnoreCase)
                 && ExtractDetailInt(routeDetails, "fpSourceGlbRenderers") >= 1
             : spec.AssetId == "sidearm"
                 ? ExtractInt(routeJson, "spawn_first_person_gameplay_source_glb_renderers") >= 1
+                : spec.AssetId == "ammo"
+                    ? ExtractBool(routeJson, "realified_ammo_loot_route_evidence")
+                    : spec.AssetId == "medkit"
+                        ? ExtractBool(routeJson, "realified_medkit_loot_route_evidence")
                 : false;
         var gameplayEventEvidence = spec.RequiresFireEvent
             ? ExtractBool(routeJson, "fire_state_mutation")
                 && ExtractBool(gameplayJson, "fire_ammo_and_enemy_hit")
                 && routeDetails.Contains("active rifle", StringComparison.OrdinalIgnoreCase)
-            : false;
+            : spec.AssetId == "ammo"
+                ? ExtractBool(routeJson, "realified_ammo_loot_route_evidence") && ExtractBool(routeJson, "pickup_state_mutation")
+                : spec.AssetId == "medkit"
+                    ? ExtractBool(routeJson, "realified_medkit_loot_route_evidence") && ExtractBool(routeJson, "pickup_state_mutation")
+                    : false;
         var productionPromoted = imported
             && technicalReady
             && semanticMatch
@@ -135,6 +154,22 @@ public static class RealifiedAssetGameplayPromotionLedger
             "\\{(?=[^{}]*\\\"expected_file\\\"\\s*:\\s*\\\"" + Regex.Escape(expectedFile) + "\\\")(?<item>[^{}]*)\\}",
             RegexOptions.Singleline);
         return match.Success && ExtractBool(match.Groups["item"].Value, "category_match");
+    }
+
+    private static bool CorrectedLootSemanticReviewAllows(string expectedFile)
+    {
+        var json = ReadText(M93CorrectedLootReviewPath);
+        if (string.IsNullOrEmpty(json) || !ExtractBool(json, "promotion_allowed_for_corrected_loot_semantics"))
+        {
+            return false;
+        }
+
+        var match = Regex.Match(json,
+            "\\{(?=[^{}]*\\\"expected_file\\\"\\s*:\\s*\\\"" + Regex.Escape(expectedFile) + "\\\")(?<item>[^{}]*)\\}",
+            RegexOptions.Singleline);
+        return match.Success
+            && ExtractBool(match.Groups["item"].Value, "category_match")
+            && Regex.IsMatch(match.Groups["item"].Value, "\\\"visible_category\\\"\\s*:\\s*\\\"loot\\\"");
     }
 
     private static string ExtractReviewBody(string json, string category)

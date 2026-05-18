@@ -16,6 +16,7 @@ public static class TacticalPlayableRouteGate
     private const string ReportPath = "docs/TACTICAL_PLAYABLE_ROUTE_GATE.json";
     private const string RealifiedAuditPath = "docs/REALIFIED_ASSETS_IMPORT_AUDIT.json";
     private const string RealifiedCategoryNemotronPath = "docs/REALIFIED_CATEGORY_NEMOTRON_REVIEWS.json";
+    private const string M93CorrectedLootReviewPath = "docs/M93_CORRECTED_LOOT_NEMOTRON_REVIEW.json";
     private const string ScreenshotDirectory = "Assets/Screenshots/PlayableRoute";
 
     [MenuItem("AI Tools/Write Tactical Playable Route Gate")]
@@ -41,6 +42,9 @@ public static class TacticalPlayableRouteGate
         var containerVisited = false;
         var pickupMutatedState = false;
         var fireMutatedState = false;
+        var realifiedLootClassRouteEvidence = false;
+        var realifiedAmmoLootRouteEvidence = false;
+        var realifiedMedkitLootRouteEvidence = false;
         var enemyAttackMutatedState = false;
         var dynamicSpawnMutatedState = false;
         var ladderMutatedState = false;
@@ -120,7 +124,17 @@ public static class TacticalPlayableRouteGate
             screenshotCount += CaptureStep(camera, screenshots, "05_container_yard_route", "Visited container yard");
 
             pickupMutatedState = RunPickupStep(gm, player, camera, follow, details, screenshots, ref screenshotCount);
-            approvedLootClassRouteEvidence = RunApprovedLootClassEvidenceStep(gm, player, camera, follow, details, screenshots, ref screenshotCount);
+            approvedLootClassRouteEvidence = RunApprovedLootClassEvidenceStep(
+                gm,
+                player,
+                camera,
+                follow,
+                details,
+                screenshots,
+                ref screenshotCount,
+                out realifiedAmmoLootRouteEvidence,
+                out realifiedMedkitLootRouteEvidence);
+            realifiedLootClassRouteEvidence = realifiedAmmoLootRouteEvidence && realifiedMedkitLootRouteEvidence;
             fireMutatedState = RunFireStep(gm, player, camera, follow, details, screenshots, ref screenshotCount);
             enemyAttackMutatedState = RunEnemyAttackStep(gm, player, camera, follow, details, screenshots, ref screenshotCount);
             dynamicSpawnMutatedState = RunDynamicSpawnStep(gm, details);
@@ -173,7 +187,9 @@ public static class TacticalPlayableRouteGate
         Append(json, "warehouse_visited", warehouseVisited, true);
         Append(json, "container_visited", containerVisited, true);
         Append(json, "pickup_state_mutation", pickupMutatedState, true);
-        Append(json, "realified_loot_class_route_evidence", false, true);
+        Append(json, "realified_loot_class_route_evidence", realifiedLootClassRouteEvidence, true);
+        Append(json, "realified_ammo_loot_route_evidence", realifiedAmmoLootRouteEvidence, true);
+        Append(json, "realified_medkit_loot_route_evidence", realifiedMedkitLootRouteEvidence, true);
         Append(json, "approved_loot_class_route_evidence", approvedLootClassRouteEvidence, true);
         Append(json, "fire_state_mutation", fireMutatedState, true);
         Append(json, "enemy_ranged_attack_mutation", enemyAttackMutatedState, true);
@@ -234,8 +250,19 @@ public static class TacticalPlayableRouteGate
         return afterCount == beforeCount - 1 && (afterWeapon != beforeWeapon || FindWeaponState(gm, afterWeapon) != null);
     }
 
-    private static bool RunApprovedLootClassEvidenceStep(TacticalGameManager gm, TacticalPlayerController player, Camera camera, TacticalCameraFollow follow, StringBuilder details, StringBuilder screenshots, ref int screenshotCount)
+    private static bool RunApprovedLootClassEvidenceStep(
+        TacticalGameManager gm,
+        TacticalPlayerController player,
+        Camera camera,
+        TacticalCameraFollow follow,
+        StringBuilder details,
+        StringBuilder screenshots,
+        ref int screenshotCount,
+        out bool realifiedAmmoLootRouteEvidence,
+        out bool realifiedMedkitLootRouteEvidence)
     {
+        realifiedAmmoLootRouteEvidence = false;
+        realifiedMedkitLootRouteEvidence = false;
         var requiredKinds = new[]
         {
             TacticalLootKind.Ammo,
@@ -260,24 +287,41 @@ public static class TacticalPlayableRouteGate
             RefreshPickupProbe(gm);
             follow?.SnapToPlayer();
             Physics.SyncTransforms();
-            var labelStem = "06_approved_" + kind.ToString().ToLowerInvariant();
-            screenshotCount += CaptureStep(camera, screenshots, labelStem + "_prompt", "Reached approved HTML-parity " + kind + " gameplay loot before pickup");
+            var realifiedLootVisibleBeforePickup = kind switch
+            {
+                TacticalLootKind.Ammo => HasRendererUsingMaterial(loot.gameObject, "RealifiedAmmoLootPbrPromoted"),
+                TacticalLootKind.Medkit => HasRendererUsingMaterial(loot.gameObject, "RealifiedMedkitLootPbrPromoted"),
+                _ => false
+            };
+            var lootEvidencePrefix = realifiedLootVisibleBeforePickup ? "realified" : "approved";
+            var lootEvidenceLabel = realifiedLootVisibleBeforePickup ? "corrected Realified" : "approved HTML-parity";
+            var labelStem = "06_" + lootEvidencePrefix + "_" + kind.ToString().ToLowerInvariant();
+            screenshotCount += CaptureStep(camera, screenshots, labelStem + "_prompt", "Reached " + lootEvidenceLabel + " " + kind + " gameplay loot before pickup");
             gm.TryPickupNearest();
             RefreshPickupProbe(gm);
             Physics.SyncTransforms();
             var afterCount = loots.Count;
             var afterValue = ReadLootClassEvidenceValue(gm, kind);
-            screenshotCount += CaptureStep(camera, screenshots, labelStem + "_after_pickup", "Picked up approved HTML-parity " + kind + " gameplay loot");
+            screenshotCount += CaptureStep(camera, screenshots, labelStem + "_after_pickup", "Picked up " + lootEvidenceLabel + " " + kind + " gameplay loot");
             var ok = afterValue > beforeValue;
             if (ok)
             {
                 passed++;
+            }
+            if (kind == TacticalLootKind.Ammo && ok && realifiedLootVisibleBeforePickup)
+            {
+                realifiedAmmoLootRouteEvidence = true;
+            }
+            if (kind == TacticalLootKind.Medkit && ok && realifiedLootVisibleBeforePickup)
+            {
+                realifiedMedkitLootRouteEvidence = true;
             }
 
             details.Append("approvedClass ").Append(kind)
                 .Append(":").Append(loot.DisplayName)
                 .Append(" count ").Append(beforeCount).Append("->").Append(afterCount)
                 .Append(" value ").Append(beforeValue).Append("->").Append(afterValue)
+                .Append(" realifiedVisible ").Append(realifiedLootVisibleBeforePickup)
                 .Append(" ok ").Append(ok).Append("; ");
         }
 
@@ -1618,6 +1662,11 @@ public static class TacticalPlayableRouteGate
 
     private static bool RealifiedCategorySemanticAllowed(string category)
     {
+        if (category == "loot" && CorrectedLootSemanticReviewPassed())
+        {
+            return true;
+        }
+
         var json = File.Exists(RealifiedCategoryNemotronPath) ? File.ReadAllText(RealifiedCategoryNemotronPath) : "";
         if (string.IsNullOrEmpty(json) || !ExtractRenderedCategory(json, category))
         {
@@ -1633,6 +1682,15 @@ public static class TacticalPlayableRouteGate
         }
 
         return true;
+    }
+
+    private static bool CorrectedLootSemanticReviewPassed()
+    {
+        var json = File.Exists(M93CorrectedLootReviewPath) ? File.ReadAllText(M93CorrectedLootReviewPath) : "";
+        return !string.IsNullOrEmpty(json)
+            && ExtractBool(json, "promotion_allowed_for_corrected_loot_semantics")
+            && Regex.Matches(json, "\\\"visible_category\\\"\\s*:\\s*\\\"loot\\\"").Count >= 2
+            && Regex.Matches(json, "\\\"category_match\\\"\\s*:\\s*true").Count >= 2;
     }
 
     private static bool RealifiedWeaponSemanticCategoryMatches()
@@ -1700,6 +1758,11 @@ public static class TacticalPlayableRouteGate
     {
         var match = Regex.Match(json, "\\\"rendered_categories\\\"\\s*:\\s*\\{(?<body>.*?)\\n\\s*\\}", RegexOptions.Singleline);
         return match.Success && Regex.IsMatch(match.Groups["body"].Value, "\\\"" + Regex.Escape(category) + "\\\"\\s*:\\s*true");
+    }
+
+    private static bool ExtractBool(string json, string key)
+    {
+        return !string.IsNullOrEmpty(json) && Regex.IsMatch(json, "\\\"" + Regex.Escape(key) + "\\\"\\s*:\\s*true");
     }
 
     private static string[] ExtractStringArray(string json, string key)
@@ -1771,6 +1834,27 @@ public static class TacticalPlayableRouteGate
                 || material.name.Contains("RealifiedMedkitLootPbrPromoted", StringComparison.OrdinalIgnoreCase))
             {
                 return true;
+            }
+        }
+
+        return false;
+    }
+
+    private static bool HasRendererUsingMaterial(GameObject obj, string materialToken)
+    {
+        if (obj == null || string.IsNullOrEmpty(materialToken))
+        {
+            return false;
+        }
+
+        foreach (var renderer in obj.GetComponentsInChildren<Renderer>(true))
+        {
+            foreach (var material in renderer.sharedMaterials)
+            {
+                if (material != null && material.name.Contains(materialToken, StringComparison.OrdinalIgnoreCase))
+                {
+                    return true;
+                }
             }
         }
 

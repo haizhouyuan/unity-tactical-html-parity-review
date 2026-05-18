@@ -1651,10 +1651,10 @@ This scene is the Unity-side HTML tactical game replica pass. It is intentionall
     {
         return kind switch
         {
-            TacticalLootKind.Ammo => ApprovedAmmoLootGlbPath,
+            TacticalLootKind.Ammo => RealifiedAmmoLootGlbPath,
             TacticalLootKind.Bandage => "models/loot_bandage_final.glb",
             TacticalLootKind.FirstAid => "models/loot_firstaid_final.glb",
-            TacticalLootKind.Medkit => ApprovedMedicalLootGlbPath,
+            TacticalLootKind.Medkit => RealifiedMedkitLootGlbPath,
             TacticalLootKind.Revive => "models/loot_revive_final.glb",
             TacticalLootKind.Vest => ApprovedVestLootGlbPath,
             TacticalLootKind.Helmet => ApprovedHelmetLootGlbPath,

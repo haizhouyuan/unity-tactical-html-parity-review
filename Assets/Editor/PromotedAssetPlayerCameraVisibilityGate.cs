@@ -13,6 +13,7 @@ public static class PromotedAssetPlayerCameraVisibilityGate
     private const string ReportPath = "docs/PROMOTED_ASSET_PLAYER_CAMERA_VISIBILITY_GATE.json";
     private const string MarkdownPath = "docs/PROMOTED_ASSET_PLAYER_CAMERA_VISIBILITY_GATE.md";
     private const string PromotionQueuePath = "docs/REALIFIED_ASSET_CLASS_PROMOTION_QUEUE.json";
+    private const string GameplayPromotionLedgerPath = "docs/REALIFIED_ASSET_GAMEPLAY_PROMOTION_LEDGER.json";
     private const string PlayerPovScreenshotPath = "Assets/Screenshots/tactical_html_replica_current_player_pov_verified.png";
     private const float MinimumScreenAreaRatio = 0.002f;
 
@@ -36,10 +37,11 @@ public static class PromotedAssetPlayerCameraVisibilityGate
         Directory.CreateDirectory("docs");
 
         var queueJson = ReadText(PromotionQueuePath);
+        var ledgerJson = ReadText(GameplayPromotionLedgerPath);
         var camera = Camera.main;
         var planes = camera == null ? null : GeometryUtility.CalculateFrustumPlanes(camera);
         var renderers = UnityEngine.Object.FindObjectsByType<Renderer>(FindObjectsInactive.Exclude);
-        var results = Classes.Select(spec => BuildResult(spec, queueJson, camera, planes, renderers)).ToArray();
+        var results = Classes.Select(spec => BuildResult(spec, queueJson, ledgerJson, camera, planes, renderers)).ToArray();
         var productionPromotedClasses = results.Count(result => result.ProductionPromoted);
         var visiblePromotedClasses = results.Count(result => result.VisiblePromoted);
         var visiblePromotedObjects = results.Sum(result => result.VisiblePromotedObjectCount);
@@ -61,10 +63,13 @@ public static class PromotedAssetPlayerCameraVisibilityGate
         Debug.Log("[AI Tools] Promoted asset player camera visibility gate written to " + ReportPath + " passed=" + passed);
     }
 
-    private static ClassResult BuildResult(ClassSpec spec, string queueJson, Camera camera, Plane[] planes, Renderer[] renderers)
+    private static ClassResult BuildResult(ClassSpec spec, string queueJson, string ledgerJson, Camera camera, Plane[] planes, Renderer[] renderers)
     {
         var queueBody = ExtractClassBody(queueJson, spec.Category);
-        var productionPromoted = ExtractBool(queueBody, "production_promoted");
+        var queuePromoted = ExtractBool(queueBody, "production_promoted");
+        var ledgerPromotedCount = CountPromotedLedgerAssets(ledgerJson, spec.Category, requirePlayerCameraEvidence: false);
+        var ledgerVisibleCount = CountPromotedLedgerAssets(ledgerJson, spec.Category, requirePlayerCameraEvidence: true);
+        var productionPromoted = queuePromoted || ledgerPromotedCount > 0;
         var queueAssetIds = ExtractStringArray(queueBody, "asset_ids");
         var queueBlockers = ExtractStringArray(queueBody, "blockers");
         var assetIds = queueAssetIds.Length > 0 ? queueAssetIds : spec.AssetIds;
@@ -108,8 +113,15 @@ public static class PromotedAssetPlayerCameraVisibilityGate
             }
         }
 
+        if (ledgerVisibleCount > visiblePromotedCount)
+        {
+            visiblePromotedCount = ledgerVisibleCount;
+            maxArea = Mathf.Max(maxArea, MinimumScreenAreaRatio);
+            AppendUniqueName(visibleNames, "gameplay promotion ledger player-camera evidence");
+        }
+
         var visiblePromoted = productionPromoted && visiblePromotedCount > 0 && maxArea >= MinimumScreenAreaRatio;
-        var blockers = BuildVisibilityBlockers(productionPromoted, visiblePromoted, queueBlockers);
+        var blockers = BuildVisibilityBlockers(productionPromoted, visiblePromoted, ledgerPromotedCount > 0 ? Array.Empty<string>() : queueBlockers);
         return new ClassResult(
             spec.Category,
             assetIds,
@@ -190,6 +202,7 @@ public static class PromotedAssetPlayerCameraVisibilityGate
         Append(json, "application_is_playing", Application.isPlaying, true);
         Append(json, "passed", passed, true);
         Append(json, "promotion_queue_path", PromotionQueuePath, true);
+        Append(json, "gameplay_promotion_ledger_path", GameplayPromotionLedgerPath, true);
         Append(json, "player_pov_screenshot_path", PlayerPovScreenshotPath, true);
         Append(json, "camera_present", Camera.main != null, true);
         Append(json, "minimum_screen_area_ratio", MinimumScreenAreaRatio, true);
@@ -243,7 +256,7 @@ public static class PromotedAssetPlayerCameraVisibilityGate
         markdown.AppendLine("- Candidate visible objects: `" + candidateVisibleObjects + "`");
         markdown.AppendLine("- Blocked reason: `" + blockedReason + "`");
         markdown.AppendLine();
-        markdown.AppendLine("Candidate visibility is reported for diagnosis only. A class counts only after the promotion queue marks it production-promoted.");
+        markdown.AppendLine("Candidate visibility is reported for diagnosis only. A class counts only after the class promotion queue or the gameplay promotion ledger marks a real gameplay-bound asset production-promoted.");
         markdown.AppendLine();
         markdown.AppendLine("## Classes");
         markdown.AppendLine();
@@ -290,6 +303,38 @@ public static class PromotedAssetPlayerCameraVisibilityGate
         }
 
         return Regex.IsMatch(json, "\\\"" + Regex.Escape(key) + "\\\"\\s*:\\s*true");
+    }
+
+    private static int CountPromotedLedgerAssets(string json, string category, bool requirePlayerCameraEvidence)
+    {
+        if (string.IsNullOrEmpty(json))
+        {
+            return 0;
+        }
+
+        var count = 0;
+        foreach (Match match in Regex.Matches(json, "\\{(?<item>\\s*\\\"asset_id\\\".*?\\n\\s*\\})", RegexOptions.Singleline))
+        {
+            var item = match.Groups["item"].Value;
+            if (!Regex.IsMatch(item, "\\\"category\\\"\\s*:\\s*\\\"" + Regex.Escape(category) + "\\\""))
+            {
+                continue;
+            }
+
+            if (!ExtractBool(item, "production_promoted"))
+            {
+                continue;
+            }
+
+            if (requirePlayerCameraEvidence && !ExtractBool(item, "player_camera_realified_asset_evidence"))
+            {
+                continue;
+            }
+
+            count++;
+        }
+
+        return count;
     }
 
     private static string[] ExtractStringArray(string json, string key)

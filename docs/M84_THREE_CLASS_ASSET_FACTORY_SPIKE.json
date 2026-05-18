@@ -1,6 +1,6 @@
 {
   "schema": "m84_three_class_asset_factory_spike_v1",
-  "timestamp_utc": "2026-05-18T09:36:52.0019420Z",
+  "timestamp_utc": "2026-05-18T17:35:42.0317650Z",
   "application_is_playing": true,
   "passed": true,
   "application_ready": true,
@@ -8,13 +8,13 @@
   "promoted_asset_count": 3,
   "exact_target_set_passed": true,
   "realified_nonweapon_quarantine_respected": true,
-  "realified_nonweapon_quarantine_note": "RS_09_loot_medkit and RS_10_prop_container remain blocked by current semantic review; M84 promotes approved semantic equivalents instead of overriding failed Realified reviews.",
+  "realified_nonweapon_quarantine_note": "M84 now promotes the corrected M93 Realified medkit only after local corrected-loot semantic review and player-route pickup evidence. RS_10_prop_container remains blocked by current Realified semantic review, so M84 still uses an approved semantic container equivalent.",
   "screenshot_count": 3,
-  "promoted_asset_ids": ["hero_rifle", "approved_container_v1", "medical_loot_v1"],
+  "promoted_asset_ids": ["hero_rifle", "approved_container_v1", "medkit"],
   "screenshots": [
     { "label": "M84 weapon: hero rifle visible from the gameplay player camera", "path": "Assets/Screenshots/M84AssetFactory/01_weapon_hero_rifle_player_camera.png" },
     { "label": "M84 environment prop: approved container visible from player camera", "path": "Assets/Screenshots/M84AssetFactory/02_container_gameplay_cover_player_camera.png" },
-    { "label": "M84 loot: approved medical loot visible before gameplay pickup", "path": "Assets/Screenshots/M84AssetFactory/03_medkit_loot_player_camera_before_pickup.png" }
+    { "label": "M84 loot: corrected Realified medkit visible before gameplay pickup", "path": "Assets/Screenshots/M84AssetFactory/03_medkit_loot_player_camera_before_pickup.png" }
   ],
   "assets": [
     {
@@ -56,21 +56,21 @@
       "production_promoted": true
     },
     {
-      "asset_id": "medical_loot_v1",
+      "asset_id": "medkit",
       "category": "loot",
-      "source_pipeline": "approved_semantic_loot_asset",
-      "expected_file": "Assets/HtmlTacticalAssets/ApprovedAssets/medical_loot_v1.glb",
+      "source_pipeline": "m93_corrected_realified_loot_asset",
+      "expected_file": "Assets/HtmlTacticalAssets/RealifiedAssets/RS_09_loot_medkit_LOD0.glb",
       "imported": true,
       "material_ready": true,
-      "pbr_texture_map_count": 0,
+      "pbr_texture_map_count": 5,
       "technical_ready": true,
       "semantic_category_match": true,
       "gameplay_scene_instances": 4,
       "gameplay_entity_scene_evidence": true,
       "player_camera_visible": true,
       "asset_specific_gameplay_event_evidence": true,
-      "max_screen_area_ratio": 0.002098,
-      "event_note": "medkit pickup inventory mutation",
+      "max_screen_area_ratio": 0.0015,
+      "event_note": "corrected Realified medkit pickup inventory mutation",
       "blockers": [],
       "production_promoted": true
     }

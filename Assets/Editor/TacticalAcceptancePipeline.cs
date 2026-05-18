@@ -245,9 +245,9 @@ public static class TacticalAcceptancePipeline
         TacticalPlayerPovGate.CaptureVerifiedScreenshot();
         TacticalPlayerPovGate.WriteReport();
         BuildingIntegrityGate.WriteReport();
-        PromotedAssetPlayerCameraVisibilityGate.WriteReport();
         TacticalGameplayProofGate.WriteReport();
         RealifiedAssetGameplayPromotionLedger.WriteLedger();
+        PromotedAssetPlayerCameraVisibilityGate.WriteReport();
         HtmlTacticalParityGate.WriteReport();
         WeaponFeelGate.WriteReport();
         AiPlaytestRouteGate.WriteReport();

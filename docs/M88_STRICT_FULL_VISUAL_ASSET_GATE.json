@@ -1,6 +1,6 @@
 {
   "schema": "m88_strict_full_visual_asset_gate_v1",
-  "timestamp_utc": "2026-05-18T16:38:53.7273150Z",
+  "timestamp_utc": "2026-05-18T17:35:51.0707820Z",
   "passed": false,
   "full_visual_asset_gate_currently_remains_false": true,
   "route_report_path": "docs/TACTICAL_PLAYABLE_ROUTE_GATE.json",
@@ -58,7 +58,7 @@
     },
     {
       "key": "legacy_realified_batch_visibility_gate_passed",
-      "passed": false,
+      "passed": true,
       "meaning": "Legacy Realified batch visibility gate passes."
     },
     {

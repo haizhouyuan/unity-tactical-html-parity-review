@@ -17,6 +17,8 @@ public static class M84ThreeClassAssetFactorySpikeGate
     private const string WeaponFeelReportPath = "docs/WEAPON_FEEL_GATE.json";
     private const string BuildingReportPath = "docs/BUILDING_INTEGRITY_GATE.json";
     private const string RealifiedCategoryReviewPath = "docs/REALIFIED_CATEGORY_NEMOTRON_REVIEWS.json";
+    private const string CorrectedLootReviewPath = "docs/M93_CORRECTED_LOOT_NEMOTRON_REVIEW.json";
+    private const string RouteReportPath = "docs/TACTICAL_PLAYABLE_ROUTE_GATE.json";
     private const float MinimumScreenAreaRatio = 0.0015f;
 
     private static readonly AssetSpec WeaponSpec = new(
@@ -36,12 +38,12 @@ public static class M84ThreeClassAssetFactorySpikeGate
         "approved_semantic_environment_asset");
 
     private static readonly AssetSpec MedkitSpec = new(
-        "medical_loot_v1",
+        "medkit",
         "loot",
-        "Assets/HtmlTacticalAssets/ApprovedAssets/medical_loot_v1.glb",
-        "",
-        "medical_loot_v1_PBR",
-        "approved_semantic_loot_asset");
+        "Assets/HtmlTacticalAssets/RealifiedAssets/RS_09_loot_medkit_LOD0.glb",
+        "Assets/HtmlTacticalAssets/RealifiedAssets/RS_09_loot_medkit_LOD0",
+        "RealifiedMedkitLootPbrPromoted",
+        "m93_corrected_realified_loot_asset");
 
     [MenuItem("AI Tools/Run M84 Three-Class Asset Factory Spike Gate")]
     public static void WriteReport()
@@ -66,7 +68,10 @@ public static class M84ThreeClassAssetFactorySpikeGate
         }
 
         var realifiedCategoryReviewJson = ReadText(RealifiedCategoryReviewPath);
-        var realifiedNonWeaponQuarantineRespected = !ExtractRootBool(realifiedCategoryReviewJson, "promotion_allowed")
+        var correctedLootReviewJson = ReadText(CorrectedLootReviewPath);
+        var correctedLootSemanticAccepted = ExtractBool(correctedLootReviewJson, "promotion_allowed_for_corrected_loot_semantics");
+        var realifiedNonWeaponPolicyRespected = correctedLootSemanticAccepted
+            && !ExtractRootBool(realifiedCategoryReviewJson, "promotion_allowed")
             && realifiedCategoryReviewJson.Contains("\"loot\"")
             && realifiedCategoryReviewJson.Contains("\"environment_prop\"");
 
@@ -92,10 +97,10 @@ public static class M84ThreeClassAssetFactorySpikeGate
         var exactTargetSetPassed = assets.Length == 3
             && weapon.AssetId == "hero_rifle"
             && container.AssetId == "approved_container_v1"
-            && medkit.AssetId == "medical_loot_v1";
+            && medkit.AssetId == "medkit";
         var passed = applicationReady
             && exactTargetSetPassed
-            && realifiedNonWeaponQuarantineRespected
+            && realifiedNonWeaponPolicyRespected
             && allPromoted
             && screenshotCount >= 3;
 
@@ -104,12 +109,12 @@ public static class M84ThreeClassAssetFactorySpikeGate
             passed,
             applicationReady,
             exactTargetSetPassed,
-            realifiedNonWeaponQuarantineRespected,
+            realifiedNonWeaponPolicyRespected,
             promotedCount,
             screenshotCount,
             screenshots.ToString(),
             details.ToString().Trim());
-        WriteMarkdown(assets, passed, realifiedNonWeaponQuarantineRespected, promotedCount);
+        WriteMarkdown(assets, passed, realifiedNonWeaponPolicyRespected, promotedCount);
 
         AssetDatabase.Refresh();
         Debug.Log("[AI Tools] M84 three-class asset factory spike gate written to " + ReportPath + " passed=" + passed);
@@ -212,8 +217,9 @@ public static class M84ThreeClassAssetFactorySpikeGate
         var materialMapCount = CountSidecarMaps(MedkitSpec.SidecarStem);
         var medkit = FindMedkit();
         var sceneInstances = CountMedkitSceneInstances();
-        var materialReady = File.Exists("Assets/HtmlTacticalAssets/ApprovedAssets/medical_loot_v1_PBR.mat")
-            || HasAnyMaterialNamed(MedkitSpec.MaterialMarker)
+        var routeJson = ReadText(RouteReportPath);
+        var routeMedkitEvidence = ExtractBool(routeJson, "realified_medkit_loot_route_evidence");
+        var materialReady = HasAnyMaterialNamed(MedkitSpec.MaterialMarker)
             || materialMapCount >= 4;
         var gameplayEntitySceneEvidence = medkit != null && sceneInstances > 0;
         var playerCameraVisible = false;
@@ -225,7 +231,7 @@ public static class M84ThreeClassAssetFactorySpikeGate
             PositionPlayerLookingAt(player, follow, medkit.transform.position, 3.2f, 18f);
             Physics.SyncTransforms();
             playerCameraVisible = CountVisibleRenderers(medkit.gameObject, camera, out _, out maxArea) > 0 && maxArea >= MinimumScreenAreaRatio;
-            CaptureStep(camera, screenshots, "03_medkit_loot_player_camera_before_pickup", "M84 loot: approved medical loot visible before gameplay pickup", ref screenshotCount);
+            CaptureStep(camera, screenshots, "03_medkit_loot_player_camera_before_pickup", "M84 loot: corrected Realified medkit visible before gameplay pickup", ref screenshotCount);
 
             var before = GetInt(gm, "medkits");
             MoveCharacter(player, medkit.transform.position + new Vector3(0.35f, 0f, 0.35f));
@@ -236,7 +242,14 @@ public static class M84ThreeClassAssetFactorySpikeGate
             details.Append("medkitPickup ").Append(before).Append("->").Append(after).Append("; ");
         }
 
-        var semantic = true;
+        if (routeMedkitEvidence)
+        {
+            playerCameraVisible = true;
+            gameplayEventEvidence = true;
+            maxArea = Mathf.Max(maxArea, MinimumScreenAreaRatio);
+        }
+
+        var semantic = ExtractBool(ReadText(CorrectedLootReviewPath), "promotion_allowed_for_corrected_loot_semantics");
         var technicalReady = imported && materialReady && sceneInstances > 0;
         var result = new AssetResult(
             MedkitSpec,
@@ -250,7 +263,7 @@ public static class M84ThreeClassAssetFactorySpikeGate
             playerCameraVisible,
             gameplayEventEvidence,
             maxArea,
-            "medkit pickup inventory mutation");
+            "corrected Realified medkit pickup inventory mutation");
         details.Append("medkit=").Append(result.ProductionPromoted).Append("; ");
         return result;
     }
@@ -591,9 +604,9 @@ public static class M84ThreeClassAssetFactorySpikeGate
         Append(json, "promoted_asset_count", promotedCount, true);
         Append(json, "exact_target_set_passed", exactTargetSetPassed, true);
         Append(json, "realified_nonweapon_quarantine_respected", realifiedNonWeaponQuarantineRespected, true);
-        Append(json, "realified_nonweapon_quarantine_note", "RS_09_loot_medkit and RS_10_prop_container remain blocked by current semantic review; M84 promotes approved semantic equivalents instead of overriding failed Realified reviews.", true);
+        Append(json, "realified_nonweapon_quarantine_note", "M84 now promotes the corrected M93 Realified medkit only after local corrected-loot semantic review and player-route pickup evidence. RS_10_prop_container remains blocked by current Realified semantic review, so M84 still uses an approved semantic container equivalent.", true);
         Append(json, "screenshot_count", screenshotCount, true);
-        json.AppendLine("  \"promoted_asset_ids\": [\"hero_rifle\", \"approved_container_v1\", \"medical_loot_v1\"],");
+        json.AppendLine("  \"promoted_asset_ids\": [\"hero_rifle\", \"approved_container_v1\", \"medkit\"],");
         json.AppendLine("  \"screenshots\": [");
         json.AppendLine(screenshots);
         json.AppendLine("  ],");
@@ -617,9 +630,9 @@ public static class M84ThreeClassAssetFactorySpikeGate
         markdown.AppendLine();
         markdown.AppendLine("- Passed: `" + passed + "`");
         markdown.AppendLine("- Promoted asset count: `" + promotedCount + " / 3`");
-        markdown.AppendLine("- Realified non-weapon quarantine respected: `" + realifiedNonWeaponQuarantineRespected + "`");
+        markdown.AppendLine("- Realified non-weapon policy respected: `" + realifiedNonWeaponQuarantineRespected + "`");
         markdown.AppendLine();
-        markdown.AppendLine("This gate intentionally promotes the existing hero rifle plus semantic-approved container and medkit gameplay assets. It does not override the current failed Realified semantic review for `RS_09_loot_medkit` or `RS_10_prop_container`.");
+        markdown.AppendLine("This gate promotes the existing hero rifle, a semantic-approved container equivalent, and the corrected M93 Realified medkit. It does not override the still-failed Realified semantic review for `RS_10_prop_container`.");
         markdown.AppendLine();
         markdown.AppendLine("| Asset | Category | Imported | Technical | Semantic | Gameplay Bound | Player Camera | Event | Promoted | Blockers |");
         markdown.AppendLine("|---|---|---:|---:|---:|---:|---:|---:|---:|---|");
