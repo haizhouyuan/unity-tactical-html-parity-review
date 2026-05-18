@@ -1,6 +1,6 @@
 {
   "schema": "m85_visual_production_pass_v1",
-  "timestamp_utc": "2026-05-18T17:35:42.5706620Z",
+  "timestamp_utc": "2026-05-18T23:39:47.1627500Z",
   "application_is_playing": true,
   "passed": true,
   "application_ready": true,
@@ -35,29 +35,29 @@
       "label": "M85 after: first-person hero rifle over wet tactical road",
       "path": "Assets/Screenshots/M85VisualProduction/01_after_first_person_weapon_wet_route.png",
       "exists": true,
-      "file_bytes": 1346250,
-      "average_luma": 0.410769
+      "file_bytes": 1354179,
+      "average_luma": 0.410501
     },
     {
       "label": "M85 after: container cover, rain, puddles, decals, and yard lighting",
       "path": "Assets/Screenshots/M85VisualProduction/02_after_container_cover_rain_lights.png",
       "exists": true,
-      "file_bytes": 1308791,
-      "average_luma": 0.358196
+      "file_bytes": 1313540,
+      "average_luma": 0.357318
     },
     {
       "label": "M85 after: building entry with grime, mud scuffs, and route-readable doorway",
       "path": "Assets/Screenshots/M85VisualProduction/03_after_building_entry_grime_route.png",
       "exists": true,
-      "file_bytes": 1673717,
-      "average_luma": 0.229089
+      "file_bytes": 1670902,
+      "average_luma": 0.228455
     },
     {
       "label": "M85 after: enemy character silhouette under gameplay lighting",
       "path": "Assets/Screenshots/M85VisualProduction/04_after_enemy_character_lighting_route.png",
       "exists": true,
-      "file_bytes": 649416,
-      "average_luma": 0.443815
+      "file_bytes": 641436,
+      "average_luma": 0.443931
     }
   ],
   "full_visual_asset_gate_intentionally_not_overridden": true,

@@ -1,6 +1,6 @@
 {
   "schema": "realified_asset_class_promotion_queue_v1",
-  "timestamp_utc": "2026-05-18T17:35:39.4720910Z",
+  "timestamp_utc": "2026-05-18T23:39:43.8816380Z",
   "import_gate_path": "docs/REALIFIED_IMPORT_MATERIAL_GATE.json",
   "category_review_path": "docs/REALIFIED_CATEGORY_NEMOTRON_REVIEWS.json",
   "route_gate_path": "docs/TACTICAL_PLAYABLE_ROUTE_GATE.json",

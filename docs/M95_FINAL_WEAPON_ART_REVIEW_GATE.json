@@ -1,0 +1,168 @@
+{
+  "schema": "m95_final_weapon_art_review_gate_v1",
+  "timestamp_utc": "2026-05-18T23:39:47.6738710Z",
+  "passed": false,
+  "policy": "Strict final weapon art readiness. M92 feel evidence is necessary but not sufficient; final quality cannot be claimed from renderer counts or contact sheets alone.",
+  "weapon_feel_gate_path": "docs/WEAPON_FEEL_GATE.json",
+  "approval_path": "docs/M95_FINAL_WEAPON_ART_REVIEW_APPROVAL.json",
+  "m91_gate_path": "docs/M91_EXTERNAL_INPUT_BUILT_PLAYER_GATE.json",
+  "m91_route_path": "docs/M91ExternalInputBuiltPlayerRoute/M91_EXTERNAL_INPUT_BUILT_PLAYER_ROUTE.json",
+  "playable_route_path": "docs/TACTICAL_PLAYABLE_ROUTE_GATE.json",
+  "acceptance_report_path": "docs/TACTICAL_ACCEPTANCE_PIPELINE_REPORT.json",
+  "glb_pbr_visual_review_path": "docs/UNITY_GLB_PBR_VISUAL_REVIEW.json",
+  "contact_sheet_only_warning_present": true,
+  "checks": [
+    {
+      "key": "weapon_feel_gate_passed",
+      "passed": true,
+      "meaning": "M92 weapon feel gate passed in play mode."
+    },
+    {
+      "key": "first_person_weapon_framing_passed",
+      "passed": true,
+      "meaning": "First-person rifle framing and ADS readability are supported by screenshot evidence."
+    },
+    {
+      "key": "third_person_npc_mount_passed",
+      "passed": true,
+      "meaning": "Third-person/NPC rifle mount has quality and pulse evidence."
+    },
+    {
+      "key": "ads_reload_fire_feedback_passed",
+      "passed": true,
+      "meaning": "ADS, reload, fire, recoil, muzzle/tracer/casing, hit, and ammo mutation evidence all exist."
+    },
+    {
+      "key": "material_pbr_sidecar_present",
+      "passed": true,
+      "meaning": "Hero rifle GLB, PBR material, and basecolor/normal/metallic/roughness/AO sidecars exist."
+    },
+    {
+      "key": "visible_screenshot_evidence_paths_exist",
+      "passed": true,
+      "meaning": "Required first-person, fire, reload, third-person, and external-input route screenshots exist on disk."
+    },
+    {
+      "key": "playable_route_weapon_evidence_passed",
+      "passed": true,
+      "meaning": "Playable route evidence includes external-input built-player weapon use and gameplay-bound weapon polish."
+    },
+    {
+      "key": "explicit_final_weapon_art_review_approval",
+      "passed": false,
+      "meaning": "Final weapon art approval must come from docs/M95_FINAL_WEAPON_ART_REVIEW_APPROVAL.json, not renderer/material counts."
+    },
+    {
+      "key": "placeholder_procedural_block_risk_cleared",
+      "passed": false,
+      "meaning": "Placeholder/procedural-block risk must be cleared by final review and not by contact-sheet-only evidence."
+    }
+  ],
+  "blockers": ["explicit_final_weapon_art_review_approval: Final weapon art approval must come from docs/M95_FINAL_WEAPON_ART_REVIEW_APPROVAL.json, not renderer/material counts.", "placeholder_procedural_block_risk_cleared: Placeholder/procedural-block risk must be cleared by final review and not by contact-sheet-only evidence."],
+  "evidence_paths": [
+    {
+      "path": "docs/WEAPON_FEEL_GATE.json",
+      "exists": true
+    },
+    {
+      "path": "docs/M95_FINAL_WEAPON_ART_REVIEW_APPROVAL.json",
+      "exists": false
+    },
+    {
+      "path": "docs/M91_EXTERNAL_INPUT_BUILT_PLAYER_GATE.json",
+      "exists": true
+    },
+    {
+      "path": "docs/M91ExternalInputBuiltPlayerRoute/M91_EXTERNAL_INPUT_BUILT_PLAYER_ROUTE.json",
+      "exists": true
+    },
+    {
+      "path": "docs/TACTICAL_PLAYABLE_ROUTE_GATE.json",
+      "exists": true
+    },
+    {
+      "path": "docs/TACTICAL_ACCEPTANCE_PIPELINE_REPORT.json",
+      "exists": true
+    },
+    {
+      "path": "docs/UNITY_GLB_PBR_VISUAL_REVIEW.json",
+      "exists": true
+    },
+    {
+      "path": "Assets/HtmlTacticalAssets/RealifiedAssets/hero_rifle_LOD0.glb",
+      "exists": true
+    },
+    {
+      "path": "Assets/HtmlTacticalAssets/RealifiedAssets/hero_rifle_LOD0_PBR.mat",
+      "exists": true
+    },
+    {
+      "path": "Assets/HtmlTacticalAssets/RealifiedAssets/hero_rifle_LOD0_basecolor.png",
+      "exists": true
+    },
+    {
+      "path": "Assets/HtmlTacticalAssets/RealifiedAssets/hero_rifle_LOD0_normal.png",
+      "exists": true
+    },
+    {
+      "path": "Assets/HtmlTacticalAssets/RealifiedAssets/hero_rifle_LOD0_metallic.png",
+      "exists": true
+    },
+    {
+      "path": "Assets/HtmlTacticalAssets/RealifiedAssets/hero_rifle_LOD0_roughness.png",
+      "exists": true
+    },
+    {
+      "path": "Assets/HtmlTacticalAssets/RealifiedAssets/hero_rifle_LOD0_ao.png",
+      "exists": true
+    },
+    {
+      "path": "Assets/Screenshots/WeaponFeel/01_first_person_ads_rifle.png",
+      "exists": true
+    },
+    {
+      "path": "Assets/Screenshots/WeaponFeel/02_first_person_fire_feedback.png",
+      "exists": true
+    },
+    {
+      "path": "Assets/Screenshots/WeaponFeel/03_first_person_reload_state.png",
+      "exists": true
+    },
+    {
+      "path": "Assets/Screenshots/WeaponFeel/04_third_person_weapon_mount.png",
+      "exists": true
+    },
+    {
+      "path": "/Users/yuanshaochen/My project/docs/M91ExternalInputBuiltPlayerRoute/00_lobby_before_external_input.png",
+      "exists": true
+    },
+    {
+      "path": "/Users/yuanshaochen/My project/docs/M91ExternalInputBuiltPlayerRoute/01_after_start_input.png",
+      "exists": true
+    },
+    {
+      "path": "/Users/yuanshaochen/My project/docs/M91ExternalInputBuiltPlayerRoute/03_after_pickup_input.png",
+      "exists": true
+    },
+    {
+      "path": "/Users/yuanshaochen/My project/docs/M91ExternalInputBuiltPlayerRoute/02_after_movement_input.png",
+      "exists": true
+    },
+    {
+      "path": "/Users/yuanshaochen/My project/docs/M91ExternalInputBuiltPlayerRoute/04_after_fire_input.png",
+      "exists": true
+    },
+    {
+      "path": "/Users/yuanshaochen/My project/docs/M91ExternalInputBuiltPlayerRoute/06_after_enemy_interaction_input.png",
+      "exists": true
+    },
+    {
+      "path": "/Users/yuanshaochen/My project/docs/M91ExternalInputBuiltPlayerRoute/05_after_reload_input.png",
+      "exists": true
+    },
+    {
+      "path": "/Users/yuanshaochen/My project/docs/M91ExternalInputBuiltPlayerRoute/07_after_death_or_restart_input.png",
+      "exists": true
+    }
+  ]
+}

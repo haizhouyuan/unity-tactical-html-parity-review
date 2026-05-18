@@ -19,6 +19,10 @@ public static class TacticalAcceptancePipeline
     private const string AiPlaytestReportPath = "docs/AI_PLAYTEST_ROUTE_GATE.json";
     private const string M84AssetFactorySpikeReportPath = "docs/M84_THREE_CLASS_ASSET_FACTORY_SPIKE.json";
     private const string M85VisualProductionReportPath = "docs/M85_VISUAL_PRODUCTION_PASS.json";
+    private const string M88StrictFullVisualAssetGatePath = "docs/M88_STRICT_FULL_VISUAL_ASSET_GATE.json";
+    private const string M94GeneratedBatchClassPromotionGatePath = "docs/M94_GENERATED_BATCH_CLASS_PROMOTION_GATE.json";
+    private const string M95FinalWeaponArtReviewGatePath = "docs/M95_FINAL_WEAPON_ART_REVIEW_GATE.json";
+    private const string M96FinalHumanoidArtReviewGatePath = "docs/M96_FINAL_HUMANOID_ART_REVIEW_GATE.json";
     private const string HtmlParityReportPath = "docs/HTML_TACTICAL_PARITY_GATE.json";
     private const string RealifiedImportMaterialGatePath = "docs/REALIFIED_IMPORT_MATERIAL_GATE.json";
     private const string RealifiedPromotionQueuePath = "docs/REALIFIED_ASSET_CLASS_PROMOTION_QUEUE.json";
@@ -253,7 +257,11 @@ public static class TacticalAcceptancePipeline
         AiPlaytestRouteGate.WriteReport();
         M84ThreeClassAssetFactorySpikeGate.WriteReport();
         M85VisualProductionPassGate.WriteReport();
-        AppendNote("playable route, player POV, promoted asset visibility, gameplay proof, HTML parity, weapon feel, AI playtest, M84 asset factory spike, and M85 visual production gates ran");
+        M94GeneratedBatchClassPromotionGate.Run();
+        M95FinalWeaponArtReviewGate.Run();
+        M96FinalHumanoidArtReviewGate.Run();
+        M88StrictFullVisualAssetGate.Run();
+        AppendNote("playable route, player POV, promoted asset visibility, gameplay proof, HTML parity, weapon feel, AI playtest, M84 asset factory spike, M85 visual production, M94 batch promotion, M95 weapon art, M96 humanoid art, and M88 strict full visual gates ran");
         WritePipelineReport("gates_ran");
         SetStage(Stage.WaitStoppedAfterGates);
         EditorApplication.isPlaying = false;
@@ -318,6 +326,10 @@ public static class TacticalAcceptancePipeline
         var aiPlaytest = ReadGate(AiPlaytestReportPath);
         var m84AssetFactorySpike = ReadGate(M84AssetFactorySpikeReportPath);
         var m85VisualProduction = ReadGate(M85VisualProductionReportPath);
+        var m88StrictFullVisualAsset = ReadGate(M88StrictFullVisualAssetGatePath);
+        var m94GeneratedBatchClassPromotion = ReadGate(M94GeneratedBatchClassPromotionGatePath);
+        var m95FinalWeaponArtReview = ReadGate(M95FinalWeaponArtReviewGatePath);
+        var m96FinalHumanoidArtReview = ReadGate(M96FinalHumanoidArtReviewGatePath);
         var htmlParity = ReadGate(HtmlParityReportPath);
         var routeJson = ReadText(RouteReportPath);
         var htmlParityJson = ReadText(HtmlParityReportPath);
@@ -333,9 +345,23 @@ public static class TacticalAcceptancePipeline
         var sourceTraceJson = ReadText(RealifiedSourceTracePath);
         var htmlBaselineCategorySheetJson = ReadText(HtmlBaselineCategorySheetPath);
         var htmlBaselineCategoryNemotronJson = ReadText(HtmlBaselineCategoryNemotronPath);
-        var allGatesPassed = playerPov.Passed && gameplay.Passed && route.Passed && buildingIntegrity.Passed && weaponFeel.Passed && aiPlaytest.Passed && m84AssetFactorySpike.Passed && m85VisualProduction.Passed && htmlParity.Passed;
         var visualPolishPassed = ExtractBool(routeJson, "visual_polish_gate_passed");
         var incrementalAssetsPassed = ExtractBool(routeJson, "approved_incremental_asset_gate_passed");
+        var gameplayParityGatesPassed = playerPov.Passed
+            && gameplay.Passed
+            && route.Passed
+            && buildingIntegrity.Passed
+            && weaponFeel.Passed
+            && aiPlaytest.Passed
+            && m84AssetFactorySpike.Passed
+            && m85VisualProduction.Passed
+            && htmlParity.Passed
+            && incrementalAssetsPassed
+            && visualPolishPassed;
+        var strictVisualGatesPassed = m88StrictFullVisualAsset.Passed
+            && m94GeneratedBatchClassPromotion.Passed
+            && m95FinalWeaponArtReview.Passed
+            && m96FinalHumanoidArtReview.Passed;
         var fullVisualPassed = ExtractBool(routeJson, "full_visual_asset_gate_passed");
         var semanticReviewPassed = ExtractRootBool(nemotronJson, "promotion_allowed");
         var categorySemanticReviewPassed = ExtractRootBool(categoryNemotronJson, "promotion_allowed");
@@ -377,11 +403,18 @@ public static class TacticalAcceptancePipeline
         Append(report, "ai_playtest_route_gate_passed", aiPlaytest.Passed, true);
         Append(report, "m84_three_class_asset_factory_spike_passed", m84AssetFactorySpike.Passed, true);
         Append(report, "m85_visual_production_passed", m85VisualProduction.Passed, true);
+        Append(report, "m88_strict_full_visual_asset_gate_passed", m88StrictFullVisualAsset.Passed, true);
+        Append(report, "m94_generated_batch_class_promotion_passed", m94GeneratedBatchClassPromotion.Passed, true);
+        Append(report, "m95_final_weapon_art_review_passed", m95FinalWeaponArtReview.Passed, true);
+        Append(report, "m96_final_humanoid_art_review_passed", m96FinalHumanoidArtReview.Passed, true);
         Append(report, "html_tactical_parity_gate_passed", htmlParity.Passed, true);
         Append(report, "approved_incremental_asset_gate_passed", incrementalAssetsPassed, true);
         Append(report, "visual_polish_gate_passed", visualPolishPassed, true);
         Append(report, "full_visual_asset_gate_passed", fullVisualPassed, true);
-        Append(report, "all_required_current_gates_passed", allGatesPassed && incrementalAssetsPassed && visualPolishPassed, true);
+        Append(report, "gameplay_parity_gates_passed", gameplayParityGatesPassed, true);
+        Append(report, "strict_visual_gates_passed", strictVisualGatesPassed, true);
+        Append(report, "all_required_current_gates_include_strict_visual_gates", true, true);
+        Append(report, "all_required_current_gates_passed", gameplayParityGatesPassed && strictVisualGatesPassed, true);
         Append(report, "semantic_review_passed", semanticReviewPassed, true);
         Append(report, "semantic_review_current_for_audit", semanticReviewCurrent, true);
         Append(report, "category_contact_sheet_count", ExtractInt(categorySheetJson, "category_count"), true);
@@ -420,7 +453,7 @@ public static class TacticalAcceptancePipeline
         Append(report, "realified_asset_gameplay_production_promoted_assets", ExtractNestedInt(assetGameplayPromotionJson, "summary", "production_promoted_assets"), true);
         Append(report, "realified_asset_gameplay_any_production_promoted", ExtractNestedBool(assetGameplayPromotionJson, "summary", "any_production_promoted"), true);
         Append(report, "promoted_asset_player_camera_visibility_path", PromotedAssetVisibilityGatePath, true);
-        Append(report, "promoted_asset_visibility_gate_passed", ExtractBool(promotedAssetVisibilityJson, "passed"), true);
+        Append(report, "promoted_asset_visibility_gate_passed", ExtractRootBool(promotedAssetVisibilityJson, "passed"), true);
         Append(report, "promoted_asset_visibility_production_promoted_classes", ExtractNestedInt(promotedAssetVisibilityJson, "summary", "production_promoted_classes"), true);
         Append(report, "promoted_asset_visibility_visible_promoted_classes", ExtractNestedInt(promotedAssetVisibilityJson, "summary", "visible_promoted_classes"), true);
         Append(report, "promoted_asset_visibility_visible_promoted_objects", ExtractNestedInt(promotedAssetVisibilityJson, "summary", "visible_promoted_objects"), true);
@@ -444,6 +477,10 @@ public static class TacticalAcceptancePipeline
         Append(report, "ai_playtest_route_gate_path", AiPlaytestReportPath, true);
         Append(report, "m84_three_class_asset_factory_spike_path", M84AssetFactorySpikeReportPath, true);
         Append(report, "m85_visual_production_pass_path", M85VisualProductionReportPath, true);
+        Append(report, "m88_strict_full_visual_asset_gate_path", M88StrictFullVisualAssetGatePath, true);
+        Append(report, "m94_generated_batch_class_promotion_gate_path", M94GeneratedBatchClassPromotionGatePath, true);
+        Append(report, "m95_final_weapon_art_review_gate_path", M95FinalWeaponArtReviewGatePath, true);
+        Append(report, "m96_final_humanoid_art_review_gate_path", M96FinalHumanoidArtReviewGatePath, true);
         Append(report, "html_tactical_parity_gate_path", HtmlParityReportPath, true);
         Append(report, "promoted_asset_visibility_gate_path", PromotedAssetVisibilityGatePath, true);
         Append(report, "realified_audit_path", RealifiedAuditPath, true);
@@ -472,7 +509,7 @@ public static class TacticalAcceptancePipeline
         }
 
         var json = File.ReadAllText(path);
-        return new GateResult(true, ExtractBool(json, "passed"));
+        return new GateResult(true, ExtractRootBool(json, "passed"));
     }
 
     private static bool ExtractBool(string json, string key)
@@ -487,13 +524,7 @@ public static class TacticalAcceptancePipeline
 
     private static bool ExtractRootBool(string json, string key)
     {
-        if (string.IsNullOrEmpty(json))
-        {
-            return false;
-        }
-
-        var match = Regex.Match(json, "\\\"" + Regex.Escape(key) + "\\\"\\s*:\\s*(?<value>true|false)");
-        return match.Success && match.Groups["value"].Value == "true";
+        return JsonGateReader.RootBool(json, key);
     }
 
     private static int ExtractInt(string json, string key)

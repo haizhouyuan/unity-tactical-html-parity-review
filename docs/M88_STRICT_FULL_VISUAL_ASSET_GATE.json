@@ -1,15 +1,24 @@
 {
   "schema": "m88_strict_full_visual_asset_gate_v1",
-  "timestamp_utc": "2026-05-18T17:35:51.0707820Z",
+  "timestamp_utc": "2026-05-18T23:39:48.0043740Z",
   "passed": false,
   "full_visual_asset_gate_currently_remains_false": true,
+  "player_pov_report_path": "docs/TACTICAL_PLAYER_POV_GATE.json",
+  "gameplay_proof_report_path": "docs/TACTICAL_GAMEPLAY_PROOF_GATE.json",
   "route_report_path": "docs/TACTICAL_PLAYABLE_ROUTE_GATE.json",
   "acceptance_report_path": "docs/TACTICAL_ACCEPTANCE_PIPELINE_REPORT.json",
+  "acceptance_report_used_for_current_gate_pass": false,
+  "building_integrity_report_path": "docs/BUILDING_INTEGRITY_GATE.json",
+  "ai_playtest_report_path": "docs/AI_PLAYTEST_ROUTE_GATE.json",
+  "m84_report_path": "docs/M84_THREE_CLASS_ASSET_FACTORY_SPIKE.json",
   "m85_report_path": "docs/M85_VISUAL_PRODUCTION_PASS.json",
   "m87_report_path": "docs/M87_CLASS_LEVEL_PRODUCTION_VISIBILITY_GATE.json",
   "m91_gate_path": "docs/M91_EXTERNAL_INPUT_BUILT_PLAYER_GATE.json",
   "m91_route_path": "docs/M91ExternalInputBuiltPlayerRoute/M91_EXTERNAL_INPUT_BUILT_PLAYER_ROUTE.json",
   "weapon_feel_gate_path": "docs/WEAPON_FEEL_GATE.json",
+  "m94_generated_batch_class_promotion_gate_path": "docs/M94_GENERATED_BATCH_CLASS_PROMOTION_GATE.json",
+  "m95_final_weapon_art_review_gate_path": "docs/M95_FINAL_WEAPON_ART_REVIEW_GATE.json",
+  "m96_final_humanoid_art_review_gate_path": "docs/M96_FINAL_HUMANOID_ART_REVIEW_GATE.json",
   "checks": [
     {
       "key": "gameplay_route_passed",
@@ -19,7 +28,7 @@
     {
       "key": "all_required_current_gates_passed",
       "passed": true,
-      "meaning": "Current gameplay/parity gates pass."
+      "meaning": "Current gameplay/parity gates pass in this same gate run."
     },
     {
       "key": "m85_visual_production_passed",
@@ -64,17 +73,17 @@
     {
       "key": "generated_batch_class_promotion_passed",
       "passed": false,
-      "meaning": "Generated batch class promotion reaches all required classes."
+      "meaning": "Generated batch class promotion reaches all required classes through M94."
     },
     {
       "key": "final_weapon_art_review_passed",
       "passed": false,
-      "meaning": "Manual/VLM review must confirm final weapon art quality, not just functional visibility."
+      "meaning": "M95 must confirm final weapon art quality, not just functional visibility."
     },
     {
       "key": "final_humanoid_art_review_passed",
       "passed": false,
-      "meaning": "Manual/VLM review must confirm final humanoid/gear quality, not just intermediate tactical detail kits."
+      "meaning": "M96 must confirm final humanoid/gear quality, not just intermediate tactical detail kits."
     },
     {
       "key": "clean_built_player_gameplay_capture_passed",

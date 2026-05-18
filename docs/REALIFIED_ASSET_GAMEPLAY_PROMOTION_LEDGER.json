@@ -1,6 +1,6 @@
 {
   "schema": "realified_asset_gameplay_promotion_ledger_v1",
-  "timestamp_utc": "2026-05-18T17:35:40.7316100Z",
+  "timestamp_utc": "2026-05-18T23:39:45.1797320Z",
   "import_gate_path": "docs/REALIFIED_IMPORT_MATERIAL_GATE.json",
   "category_review_path": "docs/REALIFIED_CATEGORY_NEMOTRON_REVIEWS.json",
   "route_gate_path": "docs/TACTICAL_PLAYABLE_ROUTE_GATE.json",
