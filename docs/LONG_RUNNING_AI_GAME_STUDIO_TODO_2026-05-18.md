@@ -510,6 +510,38 @@ Important limitation:
 
 - This closes class-level route visibility for approved-equivalent/gameplay-bound assets. It does not rescue the failed Realified batch and does not claim final PUBG-like visual quality.
 
+### M88: Strict Full Visual Asset Gate Audit
+
+Status: completed as a blocker audit on 2026-05-18. The gate intentionally remains failed.
+
+Primary lane: evidence audit / visual direction.
+
+Goal:
+
+- Make the strict `full_visual_asset_gate_passed=false` blocker explicit and executable instead of leaving it as a vague warning.
+
+Checklist:
+
+- [x] Add `AI Tools/Run M88 Strict Full Visual Asset Gate`.
+- [x] Verify route, M85, M87, approved incremental assets, first-person weapon polish, and character clip/skinned evidence.
+- [x] Keep `full_visual_asset_gate_currently_remains_false=true`.
+- [x] Identify remaining strict blockers without hand-editing acceptance values.
+
+Latest evidence:
+
+- `docs/M88_STRICT_FULL_VISUAL_ASSET_GATE.json`
+- `docs/M88_STRICT_FULL_VISUAL_ASSET_GATE.md`
+- `docs/M88_STRICT_FULL_VISUAL_ASSET_GATE_COMPLETION_2026-05-18.md`
+- `docs/M88_STRICT_FULL_VISUAL_ASSET_GATE_PIPELINE_2026-05-18.json`
+
+Remaining blockers:
+
+- `legacy_realified_batch_visibility_gate_passed=false`
+- `generated_batch_class_promotion_passed=false`
+- `final_weapon_art_review_passed=false`
+- `final_humanoid_art_review_passed=false`
+- `clean_built_player_gameplay_capture_passed=false`
+
 ## Supporting Lanes
 
 ### S1: Unity MCP / Toolchain Reliability
@@ -604,9 +636,10 @@ The track is not done until:
 - [x] M85 visual production pass improves player-camera realism without gate regression.
 - [x] M86 build/release gate produces a launchable review packet or explicit blocker.
 - [x] promoted asset visibility gate passes at class level through M87 approved-equivalent route evidence.
+- [x] M88 strict full visual gate blocker audit exists.
 - [ ] `full_visual_asset_gate_passed=true`.
 - [ ] the player route can be manually played with visible weapon, pickup, NPC combat, reload, building traversal, and restart.
 
 ## Immediate Next Action
 
-Start the larger `full_visual_asset_gate_passed=false` blocker. Do not flip it until final humanoid art, final weapon art review, and generated class-by-class production promotion are genuinely strong enough.
+Start one M88 blocker. Recommended first: clean built-player gameplay route capture, because it verifies the released app rather than only the Unity Editor route.

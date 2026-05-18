@@ -59,6 +59,7 @@ docs/M84_THREE_CLASS_ASSET_FACTORY_SPIKE_COMPLETION_2026-05-18.md
 docs/M85_VISUAL_PRODUCTION_PASS_COMPLETION_2026-05-18.md
 docs/M86_BUILD_RELEASE_COMPLETION_2026-05-18.md
 docs/M87_CLASS_LEVEL_PRODUCTION_VISIBILITY_COMPLETION_2026-05-18.md
+docs/M88_STRICT_FULL_VISUAL_ASSET_GATE_COMPLETION_2026-05-18.md
 docs/M0_6_COMMUNITY_UNITY_MCP_SKILL_VERIFICATION_2026-05-18.md
 docs/COMMUNITY_UNITY_MCP_CODEX_SKILL_PLAN.md
 ```
@@ -106,6 +107,7 @@ At export time, the local pipeline reported:
 - `m85_visual_production_passed: true`
 - `m86_build_release_gate_passed: true` as a separate build/release report in `docs/M86_BUILD_RELEASE_GATE.json`
 - `m87_class_level_production_visibility_passed: true` as a separate approved-equivalent route gate in `docs/M87_CLASS_LEVEL_PRODUCTION_VISIBILITY_GATE.json`
+- `m88_strict_full_visual_asset_gate_passed: false` in `docs/M88_STRICT_FULL_VISUAL_ASSET_GATE.json`
 - `html_tactical_parity_gate_passed: true`
 - `all_required_current_gates_passed: true`
 - `full_visual_asset_gate_passed: false`
@@ -120,6 +122,7 @@ The important warning is still the last two lines: only one realified asset has 
 - M85 improves player-camera visual density and weathered scene detail, but it deliberately preserves `full_visual_asset_gate_passed=false` because final humanoid, generated asset classes, and commercial-grade visual review remain open.
 - M86 produces a local macOS review build under ignored `Builds/M86/`, but the committed visual launch screenshot is only window/process evidence and not clean gameplay-quality evidence.
 - M87 closes the route-level class visibility accounting gap with approved-equivalent assets, while preserving the failed legacy Realified batch visibility gate.
+- M88 makes the strict full-visual blockers explicit: final weapon art review, final humanoid art review, generated batch class promotion, and clean built-player gameplay capture are still open.
 - Character and environment assets still need stronger production-quality replacements.
 - The Unity version still lags the HTML baseline in many interaction and feedback details.
 - Some assets are present in `Assets/HtmlTacticalAssets/` but are not yet visible or active in the actual player route.

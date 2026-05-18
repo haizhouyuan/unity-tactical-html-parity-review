@@ -1,0 +1,25 @@
+{
+  "schema": "m88_strict_full_visual_asset_gate_pipeline_snapshot_v1",
+  "timestamp_utc": "2026-05-18T10:39:45Z",
+  "status": "complete_blocked",
+  "m88_report": "docs/M88_STRICT_FULL_VISUAL_ASSET_GATE.json",
+  "passed": false,
+  "passing_checks": [
+    "gameplay_route_passed",
+    "all_required_current_gates_passed",
+    "m85_visual_production_passed",
+    "m87_class_level_visibility_passed",
+    "approved_incremental_assets_passed",
+    "first_person_weapon_polish_passed",
+    "character_authored_clip_animation_passed",
+    "true_skinned_humanoid_import_passed"
+  ],
+  "remaining_blockers": [
+    "legacy_realified_batch_visibility_gate_passed",
+    "generated_batch_class_promotion_passed",
+    "final_weapon_art_review_passed",
+    "final_humanoid_art_review_passed",
+    "clean_built_player_gameplay_capture_passed"
+  ],
+  "next_executable_slice": "Choose one strict blocker and produce evidence. Recommended first: clean built-player gameplay route capture, because it verifies the released app rather than only the Unity Editor route."
+}

@@ -1,0 +1,78 @@
+{
+  "schema": "m88_strict_full_visual_asset_gate_v1",
+  "timestamp_utc": "2026-05-18T10:39:43.1585490Z",
+  "passed": false,
+  "full_visual_asset_gate_currently_remains_false": true,
+  "route_report_path": "docs/TACTICAL_PLAYABLE_ROUTE_GATE.json",
+  "acceptance_report_path": "docs/TACTICAL_ACCEPTANCE_PIPELINE_REPORT.json",
+  "m85_report_path": "docs/M85_VISUAL_PRODUCTION_PASS.json",
+  "m87_report_path": "docs/M87_CLASS_LEVEL_PRODUCTION_VISIBILITY_GATE.json",
+  "checks": [
+    {
+      "key": "gameplay_route_passed",
+      "passed": true,
+      "meaning": "Playable route evidence exists."
+    },
+    {
+      "key": "all_required_current_gates_passed",
+      "passed": true,
+      "meaning": "Current gameplay/parity gates pass."
+    },
+    {
+      "key": "m85_visual_production_passed",
+      "passed": true,
+      "meaning": "Scoped player-camera visual production pass exists."
+    },
+    {
+      "key": "m87_class_level_visibility_passed",
+      "passed": true,
+      "meaning": "Five route-level approved-equivalent asset classes have visibility/event evidence."
+    },
+    {
+      "key": "approved_incremental_assets_passed",
+      "passed": true,
+      "meaning": "Approved incremental gameplay-bound assets exist."
+    },
+    {
+      "key": "first_person_weapon_polish_passed",
+      "passed": true,
+      "meaning": "First-person weapon polish route evidence exists."
+    },
+    {
+      "key": "character_authored_clip_animation_passed",
+      "passed": true,
+      "meaning": "Character authored clip evidence exists."
+    },
+    {
+      "key": "true_skinned_humanoid_import_passed",
+      "passed": true,
+      "meaning": "Approved player/enemy GLBs include skinned/animation import evidence."
+    },
+    {
+      "key": "legacy_realified_batch_visibility_gate_passed",
+      "passed": false,
+      "meaning": "Legacy Realified batch visibility gate passes."
+    },
+    {
+      "key": "generated_batch_class_promotion_passed",
+      "passed": false,
+      "meaning": "Generated batch class promotion reaches all required classes."
+    },
+    {
+      "key": "final_weapon_art_review_passed",
+      "passed": false,
+      "meaning": "Manual/VLM review must confirm final weapon art quality, not just functional visibility."
+    },
+    {
+      "key": "final_humanoid_art_review_passed",
+      "passed": false,
+      "meaning": "Manual/VLM review must confirm final humanoid/gear quality, not just intermediate tactical detail kits."
+    },
+    {
+      "key": "clean_built_player_gameplay_capture_passed",
+      "passed": false,
+      "meaning": "Built-player route capture must show weapon, pickup, NPC combat, reload, traversal, and restart from the built app."
+    }
+  ],
+  "next_executable_slice": "Do not flip full_visual_asset_gate until final weapon art review, final humanoid art review, generated batch class promotion, and clean built-player route capture are all true."
+}
