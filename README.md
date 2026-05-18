@@ -26,6 +26,12 @@ For the critical triage of the external review recommendations, including which 
 docs/PRO_REVIEW_CRITICAL_ASSESSMENT_2026-05-18.md
 ```
 
+For the broader AI game-development operating-system strategy triage, including what is already implemented locally and what should be adopted, adapted, or deferred, read:
+
+```text
+docs/AI_GAME_DEV_OS_STRATEGY_TRIAGE_2026-05-18.md
+```
+
 Project-local Codex skills live under:
 
 ```text
