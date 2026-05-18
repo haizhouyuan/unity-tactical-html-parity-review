@@ -12,6 +12,14 @@ The goal is not to present this as finished. The goal is to expose the Unity pro
 - `docs/` - current acceptance reports, parity gates, asset audits, and work logs.
 - `reference/html_baseline_final_packet/` - the original HTML/Three.js final packet used as the parity baseline.
 
+## Development Record
+
+For the full development-process handoff, including methods used, staged deliverables, pivots, mistakes, current gates, and next recommended patches, read:
+
+```text
+DEVELOPMENT_RECORD.md
+```
+
 ## Main Unity Entry Point
 
 Open this repository as a Unity project and load:
