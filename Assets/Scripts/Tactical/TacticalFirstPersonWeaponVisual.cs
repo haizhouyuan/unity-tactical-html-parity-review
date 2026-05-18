@@ -30,6 +30,15 @@ public class TacticalFirstPersonWeaponVisual : MonoBehaviour
     private Vector3 lastPolishOffset;
     private Vector3 lastReloadOffset;
     private float lastRecoilKick;
+    private float recoilSideKick;
+    private float recoilRollKick;
+    private float peakRecoilKickObserved;
+    private float peakPoseMagnitudeObserved;
+    private float reloadPoseMagnitudeObserved;
+    private float selectRaiseMagnitudeObserved;
+    private float lastAdsStability;
+    private float lastMovementSwayMagnitude;
+    private float lastPoseMagnitude;
     private int shotPolishEvents;
     private int reloadPolishEvents;
     private int selectPolishEvents;
@@ -43,6 +52,15 @@ public class TacticalFirstPersonWeaponVisual : MonoBehaviour
     public Vector3 LastPolishOffset => lastPolishOffset;
     public Vector3 LastReloadOffset => lastReloadOffset;
     public float LastRecoilKick => lastRecoilKick;
+    public float PeakRecoilKickObserved => peakRecoilKickObserved;
+    public float PeakPoseMagnitudeObserved => peakPoseMagnitudeObserved;
+    public float ReloadPoseMagnitudeObserved => reloadPoseMagnitudeObserved;
+    public float SelectRaiseMagnitudeObserved => selectRaiseMagnitudeObserved;
+    public float LastAdsStability => lastAdsStability;
+    public float LastMovementSwayMagnitude => lastMovementSwayMagnitude;
+    public float LastPoseMagnitude => lastPoseMagnitude;
+    public float RecoilSideKick => recoilSideKick;
+    public float RecoilRollKick => recoilRollKick;
     public int ShotPolishEvents => shotPolishEvents;
     public int ReloadPolishEvents => reloadPolishEvents;
     public int SelectPolishEvents => selectPolishEvents;
@@ -55,8 +73,11 @@ public class TacticalFirstPersonWeaponVisual : MonoBehaviour
 
     public void NotifyShot(TacticalWeaponSpec spec)
     {
-        var weaponRecoil = spec == null ? 0.12f : Mathf.Clamp(spec.recoil * 5.5f, 0.08f, 0.24f);
+        var weaponRecoil = spec == null ? 0.12f : Mathf.Max(spec.visualRecoilKick, Mathf.Clamp(spec.recoil * 5.5f, 0.08f, 0.24f));
         recoilKick = Mathf.Clamp(recoilKick + weaponRecoil, 0f, 0.32f);
+        recoilSideKick = Mathf.Clamp(recoilSideKick + Random.Range(-0.040f, 0.040f), -0.075f, 0.075f);
+        recoilRollKick = Mathf.Clamp(recoilRollKick + Random.Range(-3.2f, 3.2f), -5.0f, 5.0f);
+        peakRecoilKickObserved = Mathf.Max(peakRecoilKickObserved, recoilKick);
         shotPolishEvents++;
     }
 
@@ -64,12 +85,14 @@ public class TacticalFirstPersonWeaponVisual : MonoBehaviour
     {
         reloadDuration = Mathf.Max(0.2f, duration);
         reloadBlend = 1f;
+        reloadPoseMagnitudeObserved = Mathf.Max(reloadPoseMagnitudeObserved, 0.10f);
         reloadPolishEvents++;
     }
 
     public void NotifyWeaponSelected()
     {
         selectBlend = 1f;
+        selectRaiseMagnitudeObserved = Mathf.Max(selectRaiseMagnitudeObserved, 0.08f);
         selectPolishEvents++;
     }
 
@@ -79,6 +102,10 @@ public class TacticalFirstPersonWeaponVisual : MonoBehaviour
         recoilKick = Mathf.Clamp01(recoil01) * 0.22f;
         reloadBlend = Mathf.Clamp01(reload01);
         ApplyPolishPose(ads);
+        peakRecoilKickObserved = Mathf.Max(peakRecoilKickObserved, recoilKick);
+        reloadPoseMagnitudeObserved = Mathf.Max(reloadPoseMagnitudeObserved, lastReloadOffset.magnitude);
+        peakPoseMagnitudeObserved = Mathf.Max(peakPoseMagnitudeObserved, lastPoseMagnitude);
+        selectRaiseMagnitudeObserved = Mathf.Max(selectRaiseMagnitudeObserved, selectBlend * 0.08f);
     }
 
     private void Awake()
@@ -160,6 +187,8 @@ public class TacticalFirstPersonWeaponVisual : MonoBehaviour
         var ads = player != null && player.IsAds;
         swayPhase += dt * (ads ? 2.2f : 3.8f);
         recoilKick = Mathf.MoveTowards(recoilKick, 0f, dt * 4.8f);
+        recoilSideKick = Mathf.MoveTowards(recoilSideKick, 0f, dt * 6.2f);
+        recoilRollKick = Mathf.MoveTowards(recoilRollKick, 0f, dt * 7.4f);
         reloadBlend = Mathf.MoveTowards(reloadBlend, 0f, dt / reloadDuration);
         selectBlend = Mathf.MoveTowards(selectBlend, 0f, dt * 5.5f);
         ApplyPolishPose(ads);
@@ -172,23 +201,45 @@ public class TacticalFirstPersonWeaponVisual : MonoBehaviour
             return;
         }
 
-        var swayStrength = ads ? 0.32f : 1f;
+        var movementSpeed01 = 0f;
+        if (player != null)
+        {
+            var controller = player.GetComponent<CharacterController>();
+            if (controller != null)
+            {
+                movementSpeed01 = Mathf.Clamp01(controller.velocity.magnitude / 7.5f);
+            }
+        }
+
+        var swayStrength = ads ? 0.18f : 1f;
         var stride = Mathf.Sin(swayPhase);
         var idleOffset = new Vector3(stride * 0.008f * swayStrength, Mathf.Cos(swayPhase * 0.7f) * 0.006f * swayStrength, 0f);
-        var recoilOffset = new Vector3(0.012f * recoilKick, -0.035f * recoilKick, -0.24f * recoilKick);
-        lastReloadOffset = new Vector3(-0.035f * reloadBlend, -0.11f * reloadBlend, 0.055f * reloadBlend);
-        var selectOffset = new Vector3(0f, -0.025f * selectBlend, -0.045f * selectBlend);
-        lastPolishOffset = idleOffset + recoilOffset + lastReloadOffset + selectOffset;
+        var movementOffset = new Vector3(
+            Mathf.Sin(swayPhase * 1.25f) * 0.014f * movementSpeed01 * swayStrength,
+            Mathf.Cos(swayPhase * 1.75f) * 0.012f * movementSpeed01 * swayStrength,
+            Mathf.Sin(swayPhase * 0.85f) * 0.010f * movementSpeed01 * swayStrength);
+        lastMovementSwayMagnitude = idleOffset.magnitude + movementOffset.magnitude;
+        var recoilOffset = new Vector3(recoilSideKick + 0.016f * recoilKick, -0.038f * recoilKick, -0.30f * recoilKick);
+        lastReloadOffset = new Vector3(-0.050f * reloadBlend, -0.155f * reloadBlend, 0.080f * reloadBlend);
+        var selectOffset = new Vector3(0.010f * selectBlend, -0.045f * selectBlend, -0.080f * selectBlend);
+        lastPolishOffset = idleOffset + movementOffset + recoilOffset + lastReloadOffset + selectOffset;
+        lastPoseMagnitude = lastPolishOffset.magnitude;
         lastRecoilKick = recoilKick;
+        peakPoseMagnitudeObserved = Mathf.Max(peakPoseMagnitudeObserved, lastPoseMagnitude);
+        reloadPoseMagnitudeObserved = Mathf.Max(reloadPoseMagnitudeObserved, lastReloadOffset.magnitude);
+        selectRaiseMagnitudeObserved = Mathf.Max(selectRaiseMagnitudeObserved, selectOffset.magnitude);
+        lastAdsStability = ads ? Mathf.Clamp01(1f - lastMovementSwayMagnitude / 0.055f) : Mathf.Clamp01(0.55f - movementSpeed01 * 0.15f);
 
         var reloadPitch = 18f * reloadBlend;
         var reloadRoll = 8f * reloadBlend;
         var selectYaw = -3.5f * selectBlend;
         var recoilPitch = -7f * recoilKick;
+        var recoilYaw = recoilSideKick * 36f;
+        var recoilRoll = recoilRollKick;
         var idleRoll = stride * 1.2f * swayStrength;
 
         activeWeaponRoot.localPosition = activePose.baseLocalPosition + lastPolishOffset;
-        activeWeaponRoot.localRotation = activePose.baseLocalRotation * Quaternion.Euler(reloadPitch + recoilPitch, selectYaw, reloadRoll + idleRoll);
+        activeWeaponRoot.localRotation = activePose.baseLocalRotation * Quaternion.Euler(reloadPitch + recoilPitch, selectYaw + recoilYaw, reloadRoll + idleRoll + recoilRoll);
         activeWeaponRoot.localScale = activePose.baseLocalScale * (1f + selectBlend * 0.018f);
     }
 

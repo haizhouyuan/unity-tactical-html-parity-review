@@ -50,6 +50,11 @@ public class TacticalGameManager : MonoBehaviour
     private AudioClip footstepSfx;
     private AudioClip damageSfx;
     private int sfxEventCount;
+    private int muzzleFlashEventCount;
+    private int casingEventCount;
+    private int tracerEventCount;
+    private int impactEventCount;
+    private int thirdPersonShotVisualEventCount;
     private TacticalFirstPersonWeaponVisual firstPersonWeaponVisual;
     private readonly Dictionary<string, TacticalWeaponState> weapons = new();
     private readonly List<TacticalEnemy> enemies = new();
@@ -97,6 +102,11 @@ public class TacticalGameManager : MonoBehaviour
     public int SfxEventCount => sfxEventCount;
     public bool HasSfxAudioSource => sfxSource != null;
     public int SfxClipCount => CountSfxClips();
+    public int MuzzleFlashEventCount => muzzleFlashEventCount;
+    public int CasingEventCount => casingEventCount;
+    public int TracerEventCount => tracerEventCount;
+    public int ImpactEventCount => impactEventCount;
+    public int ThirdPersonShotVisualEventCount => thirdPersonShotVisualEventCount;
     public float EnemyStrengthMultiplier => npcStrengthSlider == null ? 0.85f : npcStrengthSlider.value;
     public float LootRichnessMultiplier => lootRichnessSlider == null ? 1.10f : lootRichnessSlider.value;
 
@@ -325,6 +335,7 @@ public class TacticalGameManager : MonoBehaviour
         state.lastShotTime = Time.time;
         state.magazine--;
         NotifyFirstPersonWeaponShot(state.spec);
+        NotifyThirdPersonWeaponShot(state.spec);
         PlayGunSfx(state.spec.id);
 
         var anyHit = false;
@@ -422,6 +433,7 @@ public class TacticalGameManager : MonoBehaviour
 
         currentWeaponId = weaponId;
         NotifyFirstPersonWeaponSelected();
+        NotifyThirdPersonWeaponSelected();
         ShowMessage("切换武器：" + state.spec.displayName);
         UpdateHud();
     }
@@ -460,6 +472,31 @@ public class TacticalGameManager : MonoBehaviour
         if (visual != null)
         {
             visual.NotifyWeaponSelected();
+        }
+    }
+
+    private void NotifyThirdPersonWeaponShot(TacticalWeaponSpec spec)
+    {
+        foreach (var visual in FindObjectsByType<TacticalThirdPersonWeaponVisual>(FindObjectsInactive.Include))
+        {
+            visual.ForceRefresh();
+            if (visual.FollowCurrentWeapon || visual.ActiveWeaponId == spec.id)
+            {
+                visual.NotifyShot(spec);
+                thirdPersonShotVisualEventCount++;
+            }
+        }
+    }
+
+    private void NotifyThirdPersonWeaponSelected()
+    {
+        foreach (var visual in FindObjectsByType<TacticalThirdPersonWeaponVisual>(FindObjectsInactive.Include))
+        {
+            if (visual.FollowCurrentWeapon)
+            {
+                visual.NotifyWeaponSelected();
+                visual.ForceRefresh();
+            }
         }
     }
 
@@ -599,6 +636,7 @@ public class TacticalGameManager : MonoBehaviour
 
     public void SpawnTracer(Vector3 start, Vector3 end, Color color)
     {
+        tracerEventCount++;
         var obj = new GameObject("Tracer");
         var line = obj.AddComponent<LineRenderer>();
         line.positionCount = 2;
@@ -720,6 +758,7 @@ public class TacticalGameManager : MonoBehaviour
 
     private void SpawnMuzzleFlash(Vector3 position)
     {
+        muzzleFlashEventCount++;
         var flash = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         flash.name = "Muzzle Flash";
         RemovePhysicsCollider(flash);
@@ -731,6 +770,7 @@ public class TacticalGameManager : MonoBehaviour
 
     private void SpawnImpact(Vector3 position, Color color)
     {
+        impactEventCount++;
         var impact = GameObject.CreatePrimitive(PrimitiveType.Sphere);
         impact.name = "Impact Spark";
         RemovePhysicsCollider(impact);
@@ -742,6 +782,7 @@ public class TacticalGameManager : MonoBehaviour
 
     private void SpawnCasing(Vector3 position, Vector3 direction)
     {
+        casingEventCount++;
         var casing = GameObject.CreatePrimitive(PrimitiveType.Capsule);
         casing.name = "Ejected Casing";
         RemovePhysicsCollider(casing);

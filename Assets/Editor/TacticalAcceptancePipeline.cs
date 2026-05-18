@@ -314,6 +314,7 @@ public static class TacticalAcceptancePipeline
         var route = ReadGate(RouteReportPath);
         var buildingIntegrity = ReadGate(BuildingIntegrityReportPath);
         var weaponFeel = ReadGate(WeaponFeelReportPath);
+        var weaponFeelJson = ReadText(WeaponFeelReportPath);
         var aiPlaytest = ReadGate(AiPlaytestReportPath);
         var m84AssetFactorySpike = ReadGate(M84AssetFactorySpikeReportPath);
         var m85VisualProduction = ReadGate(M85VisualProductionReportPath);
@@ -360,6 +361,19 @@ public static class TacticalAcceptancePipeline
         Append(report, "playable_route_gate_passed", route.Passed, true);
         Append(report, "building_integrity_gate_passed", buildingIntegrity.Passed, true);
         Append(report, "weapon_feel_gate_passed", weaponFeel.Passed, true);
+        Append(report, "m92_weapon_production_passed", ExtractBool(weaponFeelJson, "m92_weapon_production_passed"), true);
+        Append(report, "m92_first_person_pose_quality_passed", ExtractBool(weaponFeelJson, "first_person_pose_quality_passed"), true);
+        Append(report, "m92_recoil_peak_observed", ExtractBool(weaponFeelJson, "recoil_peak_observed"), true);
+        Append(report, "m92_recoil_peak_value", ExtractDouble(weaponFeelJson, "recoil_peak_value"), true);
+        Append(report, "m92_reload_pose_magnitude_observed", ExtractBool(weaponFeelJson, "reload_pose_magnitude_observed"), true);
+        Append(report, "m92_reload_pose_magnitude_value", ExtractDouble(weaponFeelJson, "reload_pose_magnitude_value"), true);
+        Append(report, "m92_ads_stability_observed", ExtractBool(weaponFeelJson, "ads_stability_observed"), true);
+        Append(report, "m92_ads_stability_value", ExtractDouble(weaponFeelJson, "ads_stability_value"), true);
+        Append(report, "m92_shot_feedback_event_count", ExtractInt(weaponFeelJson, "shot_feedback_event_count"), true);
+        Append(report, "m92_third_person_mount_quality_passed", ExtractBool(weaponFeelJson, "third_person_mount_quality_passed"), true);
+        Append(report, "m92_third_person_mount_quality_score", ExtractDouble(weaponFeelJson, "third_person_mount_quality_score"), true);
+        Append(report, "m92_third_person_fire_pulse_events", ExtractInt(weaponFeelJson, "third_person_fire_pulse_events"), true);
+        Append(report, "m92_missing_feedback_hooks", ExtractStringArray(weaponFeelJson, "missing_feedback_hooks"), true);
         Append(report, "ai_playtest_route_gate_passed", aiPlaytest.Passed, true);
         Append(report, "m84_three_class_asset_factory_spike_passed", m84AssetFactorySpike.Passed, true);
         Append(report, "m85_visual_production_passed", m85VisualProduction.Passed, true);
@@ -504,6 +518,19 @@ public static class TacticalAcceptancePipeline
 
         var objectMatch = Regex.Match(json, "\\\"" + Regex.Escape(objectKey) + "\\\"\\s*:\\s*\\{(?<body>.*?)\\n\\s*\\}", RegexOptions.Singleline);
         return objectMatch.Success ? ExtractInt(objectMatch.Groups["body"].Value, key) : 0;
+    }
+
+    private static double ExtractDouble(string json, string key)
+    {
+        if (string.IsNullOrEmpty(json))
+        {
+            return 0d;
+        }
+
+        var match = Regex.Match(json, "\\\"" + Regex.Escape(key) + "\\\"\\s*:\\s*(?<value>-?\\d+(?:\\.\\d+)?)");
+        return match.Success && double.TryParse(match.Groups["value"].Value, NumberStyles.Float, CultureInfo.InvariantCulture, out var value)
+            ? value
+            : 0d;
     }
 
     private static bool ExtractNestedBool(string json, string objectKey, string key)

@@ -22,6 +22,11 @@ Update this file whenever a PRO delegation run exposes a new failure mode.
 - AppleScript keyboard/mouse events were not reliable enough for the M91 built-player route. Use lower-level OS input injection or a proven external input driver when W/mouse/left-click signals must be observed by the Unity player.
 - Route telemetry must avoid false negatives from late timeout overwrites. Once a final pass report is written, do not let timeout cleanup overwrite it with a failed report.
 - When proving restart/death in an external-input route, direct death may be slow or disruptive. A valid route-specific proxy can be external restart input after enough gameplay progress, but the report must clearly name what was observed.
+- PRO zip metadata can be internally inconsistent. In M92 the downloaded zip's actual SHA256 did not match the included `zip_sha256.txt`, so verify the artifact hash and inspect contents independently before trusting the package metadata.
+- PRO `git apply --check` can pass on a reconstructed touched-file workspace while failing on the real repository due to context drift. Split the patch by file, apply clean hunks mechanically, and manually merge only the failed files with narrow diffs.
+- ChatGPT's visible activity/sidebar can show stale earlier work from the same conversation. Trust the main answer, downloaded filenames, and patch contents; do not infer the current task from a stale activity label.
+- Unity gates that require runtime objects may write a structurally valid failure report when executed outside Play Mode. For M92, the first direct `AI Tools/Run Weapon Feel Gate` run had all metrics at zero because `application_is_playing=false`; enter Play Mode or use the acceptance pipeline before treating the gate as meaningful.
+- Acceptance-pipeline summaries must preserve important numeric metrics from child reports. If the child gate contains values such as recoil peak, reload pose magnitude, ADS stability, shot feedback count, and third-person mount score, mirror them into the pipeline report instead of only carrying booleans.
 
 ## Additions From Future Runs
 

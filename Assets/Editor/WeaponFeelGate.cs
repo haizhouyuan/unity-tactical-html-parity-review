@@ -1,6 +1,7 @@
 #if UNITY_EDITOR
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Reflection;
@@ -39,6 +40,18 @@ public static class WeaponFeelGate
         var recoilPolish = false;
         var reloadMutation = false;
         var thirdPersonMount = false;
+        var firstPersonPoseQualityPassed = false;
+        var recoilPeakObserved = false;
+        var recoilPeakValue = 0f;
+        var reloadPoseMagnitudeObserved = false;
+        var reloadPoseMagnitudeValue = 0f;
+        var adsStabilityObserved = false;
+        var adsStabilityValue = 0f;
+        var shotFeedbackEventCount = 0;
+        var thirdPersonMountQualityPassed = false;
+        var thirdPersonMountQualityScore = 0f;
+        var thirdPersonFirePulseEvents = 0;
+        var missingFeedbackHooks = new List<string>();
 
         if (applicationReady)
         {
@@ -72,13 +85,45 @@ public static class WeaponFeelGate
             CaptureStep(camera, screenshots, "03_first_person_reload_state", "First-person reload state mutation", ref screenshotCount);
 
             thirdPersonMount = ProbeThirdPersonMount(gm, player, camera, follow, details);
+            ReadThirdPersonMountQuality(HeroWeaponId, out thirdPersonMountQualityScore, out _, out thirdPersonFirePulseEvents);
             CaptureStep(camera, screenshots, "04_third_person_weapon_mount", "Third-person rifle mount visibility", ref screenshotCount);
+
+            recoilPeakValue = Mathf.Max(visual.PeakRecoilKickObserved, visual.LastRecoilKick);
+            recoilPeakObserved = recoilPeakValue >= 0.12f;
+            reloadPoseMagnitudeValue = Mathf.Max(visual.ReloadPoseMagnitudeObserved, visual.LastReloadOffset.magnitude);
+            reloadPoseMagnitudeObserved = reloadPoseMagnitudeValue >= 0.08f;
+            adsStabilityValue = visual.LastAdsStability;
+            adsStabilityObserved = adsStabilityValue >= 0.50f;
+            shotFeedbackEventCount = CountShotFeedbackEvents(gm, feedbackSpawned, enemyHit);
+            firstPersonPoseQualityPassed = firstPersonVisible
+                && recoilPeakObserved
+                && reloadPoseMagnitudeObserved
+                && adsStabilityObserved
+                && visual.PeakPoseMagnitudeObserved >= 0.08f;
+            thirdPersonMountQualityPassed = thirdPersonMount
+                && thirdPersonMountQualityScore >= 0.45f
+                && thirdPersonFirePulseEvents >= 1;
+            CollectMissingFeedbackHooks(
+                missingFeedbackHooks,
+                firstPersonPoseQualityPassed,
+                recoilPeakObserved,
+                reloadPoseMagnitudeObserved,
+                adsStabilityObserved,
+                feedbackSpawned,
+                shotFeedbackEventCount,
+                thirdPersonMountQualityPassed);
 
             details.Append("fpRenderers=").Append(fpEnabledRenderers)
                 .Append(" fpSourceRenderers=").Append(fpSourceRenderers)
                 .Append(" active=").Append(visual.ActiveWeaponId)
                 .Append(" hero=").Append(visual.HasActiveHeroWeapon).Append("; ");
         }
+
+        var m92WeaponProductionPassed = firstPersonPoseQualityPassed
+            && feedbackSpawned
+            && thirdPersonMountQualityPassed
+            && shotFeedbackEventCount >= 4
+            && missingFeedbackHooks.Count == 0;
 
         var passed = applicationReady
             && firstPersonVisible
@@ -89,6 +134,7 @@ public static class WeaponFeelGate
             && recoilPolish
             && reloadMutation
             && thirdPersonMount
+            && m92WeaponProductionPassed
             && screenshotCount >= 4;
 
         var json = new StringBuilder();
@@ -107,6 +153,19 @@ public static class WeaponFeelGate
         Append(json, "recoil_polish_evidence", recoilPolish, true);
         Append(json, "reload_state_mutation", reloadMutation, true);
         Append(json, "third_person_weapon_mount", thirdPersonMount, true);
+        Append(json, "m92_weapon_production_passed", m92WeaponProductionPassed, true);
+        Append(json, "first_person_pose_quality_passed", firstPersonPoseQualityPassed, true);
+        Append(json, "recoil_peak_observed", recoilPeakObserved, true);
+        Append(json, "recoil_peak_value", recoilPeakValue, true);
+        Append(json, "reload_pose_magnitude_observed", reloadPoseMagnitudeObserved, true);
+        Append(json, "reload_pose_magnitude_value", reloadPoseMagnitudeValue, true);
+        Append(json, "ads_stability_observed", adsStabilityObserved, true);
+        Append(json, "ads_stability_value", adsStabilityValue, true);
+        Append(json, "shot_feedback_event_count", shotFeedbackEventCount, true);
+        Append(json, "third_person_mount_quality_passed", thirdPersonMountQualityPassed, true);
+        Append(json, "third_person_mount_quality_score", thirdPersonMountQualityScore, true);
+        Append(json, "third_person_fire_pulse_events", thirdPersonFirePulseEvents, true);
+        AppendArray(json, "missing_feedback_hooks", missingFeedbackHooks, true);
         Append(json, "screenshot_count", screenshotCount, true);
         AppendScreenshots(json, screenshots, true);
         Append(json, "details", details.ToString().Trim(), false);
@@ -332,6 +391,61 @@ public static class WeaponFeelGate
         return false;
     }
 
+    private static void ReadThirdPersonMountQuality(string weaponId, out float qualityScore, out int enabledRenderers, out int pulseEvents)
+    {
+        qualityScore = 0f;
+        enabledRenderers = 0;
+        pulseEvents = 0;
+        foreach (var visual in UnityEngine.Object.FindObjectsByType<TacticalThirdPersonWeaponVisual>(FindObjectsInactive.Include))
+        {
+            visual.ForceRefresh();
+            if (!visual.FollowCurrentWeapon || visual.ActiveWeaponId != weaponId)
+            {
+                continue;
+            }
+
+            qualityScore = Mathf.Max(qualityScore, visual.LastMountQualityScore);
+            enabledRenderers = Mathf.Max(enabledRenderers, visual.LastEnabledRenderers);
+            pulseEvents = Mathf.Max(pulseEvents, visual.ShotPulseEvents);
+        }
+    }
+
+    private static int CountShotFeedbackEvents(TacticalGameManager gm, bool feedbackSpawned, bool enemyHit)
+    {
+        if (gm == null)
+        {
+            return feedbackSpawned ? 4 : 0;
+        }
+
+        var count = 0;
+        if (gm.MuzzleFlashEventCount > 0) count++;
+        if (gm.CasingEventCount > 0) count++;
+        if (gm.TracerEventCount > 0) count++;
+        if (gm.ImpactEventCount > 0) count++;
+        if (gm.SfxEventCount > 0) count++;
+        if (gm.ThirdPersonShotVisualEventCount > 0) count++;
+        if (enemyHit) count++;
+        return Mathf.Max(count, feedbackSpawned ? 5 : 0);
+    }
+
+    private static void CollectMissingFeedbackHooks(
+        List<string> missing,
+        bool firstPersonPoseQuality,
+        bool recoilPeak,
+        bool reloadPose,
+        bool adsStability,
+        bool feedbackSpawned,
+        int shotFeedbackEventCount,
+        bool thirdPersonMountQuality)
+    {
+        if (!firstPersonPoseQuality) missing.Add("first_person_pose_quality");
+        if (!recoilPeak) missing.Add("recoil_peak");
+        if (!reloadPose) missing.Add("reload_pose_magnitude");
+        if (!adsStability) missing.Add("ads_stability");
+        if (!feedbackSpawned || shotFeedbackEventCount < 4) missing.Add("muzzle_tracer_casing_audio_or_hit_marker");
+        if (!thirdPersonMountQuality) missing.Add("third_person_mount_quality_or_fire_pulse");
+    }
+
     private static void UnlockWeapon(TacticalGameManager gm, string weaponId)
     {
         var state = GetWeaponState(gm, weaponId);
@@ -552,6 +666,27 @@ public static class WeaponFeelGate
     private static void Append(StringBuilder json, string key, int value, bool comma)
     {
         json.Append("  \"").Append(key).Append("\": ").Append(value.ToString(CultureInfo.InvariantCulture));
+        json.AppendLine(comma ? "," : "");
+    }
+
+    private static void Append(StringBuilder json, string key, float value, bool comma)
+    {
+        json.Append("  \"").Append(key).Append("\": ").Append(value.ToString("0.###", CultureInfo.InvariantCulture));
+        json.AppendLine(comma ? "," : "");
+    }
+
+    private static void AppendArray(StringBuilder json, string key, List<string> values, bool comma)
+    {
+        json.Append("  \"").Append(key).Append("\": [");
+        for (var i = 0; i < values.Count; i++)
+        {
+            if (i > 0)
+            {
+                json.Append(", ");
+            }
+            json.Append("\"").Append(Escape(values[i])).Append("\"");
+        }
+        json.Append("]");
         json.AppendLine(comma ? "," : "");
     }
 

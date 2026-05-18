@@ -21,6 +21,11 @@ public class TacticalWeaponSpec
     public bool automatic;
     public bool unlockedAtStart;
     public Color color;
+    public float visualRecoilKick;
+    public float visualReloadPoseMagnitude;
+    public float visualSelectRaiseMagnitude;
+    public float visualSwayScale;
+    public float visualAdsStability;
 
     public TacticalWeaponSpec(
         string id,
@@ -60,6 +65,11 @@ public class TacticalWeaponSpec
         this.automatic = automatic;
         this.unlockedAtStart = unlockedAtStart;
         this.color = color;
+        visualRecoilKick = Mathf.Clamp(recoil * 6.2f, 0.08f, 0.30f);
+        visualReloadPoseMagnitude = Mathf.Clamp(reloadTime * 0.11f, 0.09f, 0.24f);
+        visualSelectRaiseMagnitude = Mathf.Clamp(0.08f + cooldown * 0.10f, 0.08f, 0.18f);
+        visualSwayScale = Mathf.Clamp(0.7f + hipSpread * 8f, 0.75f, 1.45f);
+        visualAdsStability = Mathf.Clamp01(1f - adsSpread * 22f);
     }
 }
 

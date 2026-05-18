@@ -1,9 +1,9 @@
 {
   "schema": "tactical_acceptance_pipeline_v1",
-  "timestamp_utc": "2026-05-18T10:02:20.4353200Z",
+  "timestamp_utc": "2026-05-18T16:29:07.6026240Z",
   "status": "complete",
   "stage": "WaitStoppedAfterGates",
-  "elapsed_seconds": 28.47,
+  "elapsed_seconds": 30.737,
   "application_is_playing": false,
   "editor_is_compiling": false,
   "editor_is_updating": false,
@@ -15,6 +15,19 @@
   "playable_route_gate_passed": true,
   "building_integrity_gate_passed": true,
   "weapon_feel_gate_passed": true,
+  "m92_weapon_production_passed": true,
+  "m92_first_person_pose_quality_passed": true,
+  "m92_recoil_peak_observed": true,
+  "m92_recoil_peak_value": 0.32,
+  "m92_reload_pose_magnitude_observed": true,
+  "m92_reload_pose_magnitude_value": 0.181,
+  "m92_ads_stability_observed": true,
+  "m92_ads_stability_value": 0.979,
+  "m92_shot_feedback_event_count": 7,
+  "m92_third_person_mount_quality_passed": true,
+  "m92_third_person_mount_quality_score": 0.75,
+  "m92_third_person_fire_pulse_events": 4,
+  "m92_missing_feedback_hooks": "",
   "ai_playtest_route_gate_passed": true,
   "m84_three_class_asset_factory_spike_passed": true,
   "m85_visual_production_passed": true,
@@ -95,5 +108,5 @@
   "playable_route_screenshot_directory": "Assets/Screenshots/PlayableRoute",
   "first_person_fire_screenshot_path": "Assets/Screenshots/PlayableRoute/08_fire_hit_first_person.png",
   "realified_contact_sheet_path": "Assets/Screenshots/glb_pbr_textured_contact_sheet.png",
-  "notes": "10:01:51 stage -> GenerateScene\n10:01:51 pipeline started\n10:01:52 console cleared\n10:01:52 asset database refresh requested\n10:01:53 realified import/material gate ran\n10:02:01 tactical scene generated\n10:02:02 realified category contact sheets rendered\n10:02:02 HTML baseline category contact sheets rendered\n10:02:02 stage -> WaitCompileIdle\n10:02:03 editor compile/update idle\n10:02:03 stage -> EnterPlayMode\n10:02:03 requested play mode start\n10:02:03 stage -> WaitPlayModeReady\n10:02:12 play mode ready\n10:02:12 stage -> RunGates\n10:02:19 playable route, player POV, promoted asset visibility, gameplay proof, HTML parity, weapon feel, AI playtest, M84 asset factory spike, and M85 visual production gates ran\n10:02:19 stage -> WaitStoppedAfterGates\n10:02:20 play mode stopped after gates"
+  "notes": "16:28:36 stage -> GenerateScene\n16:28:36 pipeline started\n16:28:41 console cleared\n16:28:41 asset database refresh requested\n16:28:42 realified import/material gate ran\n16:28:51 tactical scene generated\n16:28:52 realified category contact sheets rendered\n16:28:53 HTML baseline category contact sheets rendered\n16:28:53 stage -> WaitCompileIdle\n16:28:53 editor compile/update idle\n16:28:53 stage -> EnterPlayMode\n16:28:53 requested play mode start\n16:28:53 stage -> WaitPlayModeReady\n16:29:00 play mode ready\n16:29:00 stage -> RunGates\n16:29:06 playable route, player POV, promoted asset visibility, gameplay proof, HTML parity, weapon feel, AI playtest, M84 asset factory spike, and M85 visual production gates ran\n16:29:07 stage -> WaitStoppedAfterGates\n16:29:07 play mode stopped after gates"
 }

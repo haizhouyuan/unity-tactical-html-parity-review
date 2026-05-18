@@ -64,6 +64,8 @@ docs/M89_BUILT_PLAYER_CLEAN_CAPTURE_COMPLETION_2026-05-18.md
 docs/M90_BUILT_PLAYER_RUNTIME_ROUTE_CAPTURE_COMPLETION_2026-05-18.md
 docs/M91_EXTERNAL_INPUT_BUILT_PLAYER_ROUTE_MISSION_CONTRACT_2026-05-18.md
 docs/M91_EXTERNAL_INPUT_BUILT_PLAYER_ROUTE_COMPLETION_2026-05-18.md
+docs/M92_WEAPON_PRODUCTION_PASS_MISSION_CONTRACT_2026-05-18.md
+docs/M92_WEAPON_PRODUCTION_PASS_COMPLETION_TEMPLATE_2026-05-18.md
 docs/M0_6_COMMUNITY_UNITY_MCP_SKILL_VERIFICATION_2026-05-18.md
 docs/COMMUNITY_UNITY_MCP_CODEX_SKILL_PLAN.md
 ```
@@ -133,6 +135,7 @@ The important warning is still the last two lines: only one realified asset has 
 - M89 improves built-player foreground launch evidence, but `clean_built_player_gameplay_capture_passed` remains open until an input-driven built-player route proves start, movement, pickup, fire/reload, NPC interaction, and restart/death behavior.
 - M90 proves the same built-player gameplay route from the macOS app through a runtime recorder, but `external_input_driven=false`; external keyboard/mouse automation or manual human route evidence remains a separate optional proof.
 - M91 proves the same built-player route through external keyboard/mouse automation with `passed=true`, `external_input_driven=true`, and `built_player=true` in `docs/M91ExternalInputBuiltPlayerRoute/M91_EXTERNAL_INPUT_BUILT_PLAYER_ROUTE.json`.
+- M92 weapon production pass is prepared as a scoped code patch only. It must be locally applied and verified through Unity before any `m92_weapon_production_passed=true` claim is valid.
 - Character and environment assets still need stronger production-quality replacements.
 - The Unity version still lags the HTML baseline in many interaction and feedback details.
 - Some assets are present in `Assets/HtmlTacticalAssets/` but are not yet visible or active in the actual player route.
