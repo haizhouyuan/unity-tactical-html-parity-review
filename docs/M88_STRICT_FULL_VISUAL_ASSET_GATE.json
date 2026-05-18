@@ -1,12 +1,15 @@
 {
   "schema": "m88_strict_full_visual_asset_gate_v1",
-  "timestamp_utc": "2026-05-18T10:39:43.1585490Z",
+  "timestamp_utc": "2026-05-18T16:38:53.7273150Z",
   "passed": false,
   "full_visual_asset_gate_currently_remains_false": true,
   "route_report_path": "docs/TACTICAL_PLAYABLE_ROUTE_GATE.json",
   "acceptance_report_path": "docs/TACTICAL_ACCEPTANCE_PIPELINE_REPORT.json",
   "m85_report_path": "docs/M85_VISUAL_PRODUCTION_PASS.json",
   "m87_report_path": "docs/M87_CLASS_LEVEL_PRODUCTION_VISIBILITY_GATE.json",
+  "m91_gate_path": "docs/M91_EXTERNAL_INPUT_BUILT_PLAYER_GATE.json",
+  "m91_route_path": "docs/M91ExternalInputBuiltPlayerRoute/M91_EXTERNAL_INPUT_BUILT_PLAYER_ROUTE.json",
+  "weapon_feel_gate_path": "docs/WEAPON_FEEL_GATE.json",
   "checks": [
     {
       "key": "gameplay_route_passed",
@@ -49,6 +52,11 @@
       "meaning": "Approved player/enemy GLBs include skinned/animation import evidence."
     },
     {
+      "key": "m92_weapon_production_feel_passed",
+      "passed": true,
+      "meaning": "M92 weapon feel production metrics pass in play mode."
+    },
+    {
       "key": "legacy_realified_batch_visibility_gate_passed",
       "passed": false,
       "meaning": "Legacy Realified batch visibility gate passes."
@@ -70,8 +78,8 @@
     },
     {
       "key": "clean_built_player_gameplay_capture_passed",
-      "passed": false,
-      "meaning": "Built-player route capture must show weapon, pickup, NPC combat, reload, traversal, and restart from the built app."
+      "passed": true,
+      "meaning": "M91 external-input built-player route shows weapon, pickup, NPC combat, reload, traversal, and restart from the built app."
     }
   ],
   "next_executable_slice": "Do not flip full_visual_asset_gate until final weapon art review, final humanoid art review, generated batch class promotion, and clean built-player route capture are all true."

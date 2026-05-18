@@ -14,6 +14,9 @@ public static class M88StrictFullVisualAssetGate
     private const string AcceptancePath = "docs/TACTICAL_ACCEPTANCE_PIPELINE_REPORT.json";
     private const string M85Path = "docs/M85_VISUAL_PRODUCTION_PASS.json";
     private const string M87Path = "docs/M87_CLASS_LEVEL_PRODUCTION_VISIBILITY_GATE.json";
+    private const string M91RoutePath = "docs/M91ExternalInputBuiltPlayerRoute/M91_EXTERNAL_INPUT_BUILT_PLAYER_ROUTE.json";
+    private const string M91GatePath = "docs/M91_EXTERNAL_INPUT_BUILT_PLAYER_GATE.json";
+    private const string WeaponFeelPath = "docs/WEAPON_FEEL_GATE.json";
     private const string LegacyVisibilityPath = "docs/PROMOTED_ASSET_PLAYER_CAMERA_VISIBILITY_GATE.json";
 
     [MenuItem("AI Tools/Run M88 Strict Full Visual Asset Gate")]
@@ -25,7 +28,23 @@ public static class M88StrictFullVisualAssetGate
         var acceptance = ReadText(AcceptancePath);
         var m85 = ReadText(M85Path);
         var m87 = ReadText(M87Path);
+        var m91Route = ReadText(M91RoutePath);
+        var m91Gate = ReadText(M91GatePath);
+        var weaponFeel = ReadText(WeaponFeelPath);
         var legacy = ReadText(LegacyVisibilityPath);
+        var cleanBuiltPlayerCapturePassed = ExtractBool(m91Gate, "passed")
+            && ExtractBool(m91Route, "passed")
+            && ExtractBool(m91Route, "external_input_driven")
+            && ExtractBool(m91Route, "built_player")
+            && ExtractBool(m91Route, "start_input_observed")
+            && ExtractBool(m91Route, "movement_state_changed")
+            && ExtractBool(m91Route, "pickup_state_changed")
+            && ExtractBool(m91Route, "ammo_state_changed")
+            && ExtractBool(m91Route, "reload_state_changed")
+            && ExtractBool(m91Route, "enemy_interaction_observed")
+            && ExtractBool(m91Route, "death_or_restart_observed")
+            && ExtractBool(m91Route, "first_person_weapon_visible")
+            && ExtractInt(m91Route, "screenshot_count") >= 8;
 
         var checks = new[]
         {
@@ -37,11 +56,12 @@ public static class M88StrictFullVisualAssetGate
             new Check("first_person_weapon_polish_passed", ExtractNestedBool(route, "asset_quality", "first_person_weapon_polish_passed"), "First-person weapon polish route evidence exists."),
             new Check("character_authored_clip_animation_passed", ExtractNestedBool(route, "asset_quality", "character_authored_clip_animation_passed"), "Character authored clip evidence exists."),
             new Check("true_skinned_humanoid_import_passed", ExtractNestedBool(route, "asset_quality", "true_skinned_humanoid_import_passed"), "Approved player/enemy GLBs include skinned/animation import evidence."),
+            new Check("m92_weapon_production_feel_passed", ExtractBool(weaponFeel, "m92_weapon_production_passed"), "M92 weapon feel production metrics pass in play mode."),
             new Check("legacy_realified_batch_visibility_gate_passed", ExtractBool(legacy, "passed"), "Legacy Realified batch visibility gate passes."),
             new Check("generated_batch_class_promotion_passed", ExtractNestedInt(acceptance, "summary", "realified_promotion_production_promoted_classes") >= 5 || ExtractInt(acceptance, "realified_promotion_production_promoted_classes") >= 5, "Generated batch class promotion reaches all required classes."),
             new Check("final_weapon_art_review_passed", false, "Manual/VLM review must confirm final weapon art quality, not just functional visibility."),
             new Check("final_humanoid_art_review_passed", false, "Manual/VLM review must confirm final humanoid/gear quality, not just intermediate tactical detail kits."),
-            new Check("clean_built_player_gameplay_capture_passed", false, "Built-player route capture must show weapon, pickup, NPC combat, reload, traversal, and restart from the built app.")
+            new Check("clean_built_player_gameplay_capture_passed", cleanBuiltPlayerCapturePassed, "M91 external-input built-player route shows weapon, pickup, NPC combat, reload, traversal, and restart from the built app.")
         };
 
         var requiredPassed = true;
@@ -116,6 +136,9 @@ public static class M88StrictFullVisualAssetGate
         Append(json, "acceptance_report_path", AcceptancePath, true);
         Append(json, "m85_report_path", M85Path, true);
         Append(json, "m87_report_path", M87Path, true);
+        Append(json, "m91_gate_path", M91GatePath, true);
+        Append(json, "m91_route_path", M91RoutePath, true);
+        Append(json, "weapon_feel_gate_path", WeaponFeelPath, true);
         json.AppendLine("  \"checks\": [");
         for (var i = 0; i < checks.Length; i++)
         {

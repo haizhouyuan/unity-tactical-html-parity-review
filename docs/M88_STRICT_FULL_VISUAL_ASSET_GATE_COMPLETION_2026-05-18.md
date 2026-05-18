@@ -21,6 +21,8 @@ M88 completed as a strict blocker audit. It intentionally did not pass.
 - `first_person_weapon_polish_passed`
 - `character_authored_clip_animation_passed`
 - `true_skinned_humanoid_import_passed`
+- `m92_weapon_production_feel_passed`
+- `clean_built_player_gameplay_capture_passed`
 
 ## Remaining Strict Blockers
 
@@ -28,8 +30,7 @@ M88 completed as a strict blocker audit. It intentionally did not pass.
 - `generated_batch_class_promotion_passed: false`
 - `final_weapon_art_review_passed: false`
 - `final_humanoid_art_review_passed: false`
-- `clean_built_player_gameplay_capture_passed: false`
 
 ## Interpretation
 
-The prototype has strong route-level and approved-equivalent evidence now, but it still should not claim final PUBG-like visual completion. The next executable work should target one of the remaining strict blockers instead of changing report values by hand.
+The prototype has strong route-level, approved-equivalent, external-input built-player, and weapon-feel evidence now, but it still should not claim final PUBG-like visual completion. The next executable work should target one of the remaining strict blockers instead of changing report values by hand.

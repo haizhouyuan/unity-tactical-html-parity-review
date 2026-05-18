@@ -802,7 +802,7 @@ The track is not done until:
 - [x] M91 external-input built-player route capture passes.
 - [x] M92 weapon production pass is locally verified through Unity.
 - [ ] `full_visual_asset_gate_passed=true`.
-- [ ] the player route can be externally or manually played with visible weapon, pickup, NPC combat, reload, building traversal, and restart.
+- [x] the player route can be externally or manually played with visible weapon, pickup, NPC combat, reload, building traversal, and restart.
 
 ## Immediate Next Action
 
