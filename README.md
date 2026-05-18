@@ -72,6 +72,12 @@ docs/M0_6_COMMUNITY_UNITY_MCP_SKILL_VERIFICATION_2026-05-18.md
 docs/COMMUNITY_UNITY_MCP_CODEX_SKILL_PLAN.md
 ```
 
+For the next ChatGPT Pro batch-production request, including M94-M96 patch requirements plus batch reference images, contact sheets, prompts, and manifest rules, read:
+
+```text
+docs/CHATGPT_PRO_M94_M96_BATCH_PATCH_AND_IMAGE_REQUEST_2026-05-19.md
+```
+
 Project-local Codex skills live under:
 
 ```text
