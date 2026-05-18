@@ -807,3 +807,30 @@ The track is not done until:
 ## Immediate Next Action
 
 Return to the M88 strict visual blockers: final weapon art review, final humanoid art review, and generated batch class promotion. M91 closed the external-input route evidence gap and M92 closed the scoped weapon-feel production pass, but neither closes final production visual quality.
+
+### M93: Realified Batch Root Cause / Regeneration Contract
+
+Status: root cause documented; regeneration not yet executed.
+
+Primary lane: asset pipeline / visual direction / evidence audit.
+
+Current finding:
+
+- Realified non-weapon category contact sheets show weapon-shaped meshes under character and loot labels.
+- This is not a Unity binding problem; it is an upstream asset-generation/category problem.
+- See `docs/M93_REALIFIED_BATCH_ROOT_CAUSE_AND_REGENERATION_CONTRACT_2026-05-19.md`.
+
+Next executable slice:
+
+- Regenerate or replace one non-weapon class first, preferably `loot`, through quarantine -> semantic review -> import/material validation -> gameplay binding -> player-camera pickup evidence.
+
+Checklist:
+
+- [x] Document that the current Realified batch cannot be promoted by ledger edits.
+- [ ] Inspect the asset-generation prompts/manifests for the mislabeled non-weapon assets.
+- [ ] Regenerate or replace one loot-class asset with category-correct geometry.
+- [ ] Run semantic contact-sheet review for the corrected loot class.
+- [ ] Import the corrected asset into Unity with material sidecars.
+- [ ] Bind one corrected loot asset into gameplay.
+- [ ] Capture player-camera pickup evidence.
+- [ ] Update promotion ledger from evidence only.
