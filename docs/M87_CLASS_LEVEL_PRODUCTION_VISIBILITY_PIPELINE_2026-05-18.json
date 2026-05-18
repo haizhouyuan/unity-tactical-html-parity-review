@@ -1,0 +1,28 @@
+{
+  "schema": "m87_class_level_production_visibility_pipeline_snapshot_v1",
+  "timestamp_utc": "2026-05-18T10:34:40Z",
+  "status": "complete",
+  "m87_report": "docs/M87_CLASS_LEVEL_PRODUCTION_VISIBILITY_GATE.json",
+  "route_report": "docs/TACTICAL_PLAYABLE_ROUTE_GATE.json",
+  "m84_report": "docs/M84_THREE_CLASS_ASSET_FACTORY_SPIKE.json",
+  "m85_report": "docs/M85_VISUAL_PRODUCTION_PASS.json",
+  "passed": true,
+  "class_count": 5,
+  "passed_class_count": 5,
+  "legacy_realified_batch_visibility_gate_passed": false,
+  "legacy_realified_batch_production_promoted_classes": 0,
+  "full_visual_asset_gate_passed": false,
+  "evidence_credit_policy": "approved_equivalent_or_realified_gameplay_bound_asset",
+  "classes": [
+    "weapon",
+    "character",
+    "gear",
+    "loot",
+    "environment_prop"
+  ],
+  "known_limitations": [
+    "M87 proves route-level class visibility with approved-equivalent/gameplay-bound assets.",
+    "It does not make the failed Realified non-weapon batch production-ready.",
+    "It does not close final PUBG-like visual quality."
+  ]
+}

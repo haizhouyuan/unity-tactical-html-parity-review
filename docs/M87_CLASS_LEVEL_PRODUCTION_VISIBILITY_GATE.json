@@ -1,0 +1,73 @@
+{
+  "schema": "m87_class_level_production_visibility_gate_v1",
+  "timestamp_utc": "2026-05-18T10:34:36.6631120Z",
+  "passed": true,
+  "evidence_credit_policy": "approved_equivalent_or_realified_gameplay_bound_asset",
+  "legacy_realified_batch_visibility_gate_passed": false,
+  "legacy_realified_batch_production_promoted_classes": 0,
+  "class_count": 5,
+  "passed_class_count": 5,
+  "route_report_path": "docs/TACTICAL_PLAYABLE_ROUTE_GATE.json",
+  "m84_report_path": "docs/M84_THREE_CLASS_ASSET_FACTORY_SPIKE.json",
+  "m85_report_path": "docs/M85_VISUAL_PRODUCTION_PASS.json",
+  "legacy_visibility_report_path": "docs/PROMOTED_ASSET_PLAYER_CAMERA_VISIBILITY_GATE.json",
+  "classes": [
+    {
+      "category": "weapon",
+      "asset_id": "hero_rifle",
+      "source": "generated Realified hero rifle plus weapon-feel route evidence",
+      "evidence_reason": "m84_hero_rifle_promoted_and_weapon_feel_route_passed",
+      "screenshot_path": "Assets/Screenshots/M84AssetFactory/01_weapon_hero_rifle_player_camera.png",
+      "screenshot_exists": true,
+      "passed": true,
+      "blocker": "",
+      "note": "weapon production evidence uses the promoted hero rifle and fire/reload/hit proof"
+    },
+    {
+      "category": "character",
+      "asset_id": "approved_player_enemy_tactical_detail",
+      "source": "approved player/enemy GLBs plus tactical detail kit and authored clip evidence",
+      "evidence_reason": "approved_character_glbs_detail_kit_and_authored_clip_evidence_passed",
+      "screenshot_path": "Assets/Screenshots/M85VisualProduction/04_after_enemy_character_lighting_route.png",
+      "screenshot_exists": true,
+      "passed": true,
+      "blocker": "",
+      "note": "character evidence is route-level intermediate production credit, not final commercial humanoid quality"
+    },
+    {
+      "category": "gear",
+      "asset_id": "approved_helmet_vest_loot",
+      "source": "approved helmet and vest equipment pickups",
+      "evidence_reason": "approved_helmet_vest_pickup_route_evidence_passed",
+      "screenshot_path": "Assets/Screenshots/PlayableRoute/06_approved_vest_prompt.png",
+      "screenshot_exists": true,
+      "passed": true,
+      "blocker": "",
+      "note": "gear evidence uses approved equipment pickup visibility and route mutation"
+    },
+    {
+      "category": "loot",
+      "asset_id": "medical_loot_v1_and_approved_ammo",
+      "source": "approved medkit and ammo loot route evidence",
+      "evidence_reason": "approved_ammo_medkit_route_evidence_passed",
+      "screenshot_path": "Assets/Screenshots/PlayableRoute/06_approved_medkit_prompt.png",
+      "screenshot_exists": true,
+      "passed": true,
+      "blocker": "",
+      "note": "loot evidence uses approved medkit/ammo visibility and pickup mutation"
+    },
+    {
+      "category": "environment_prop",
+      "asset_id": "approved_container_v1_and_tactical_crate_v1",
+      "source": "approved container and crate cover/route evidence",
+      "evidence_reason": "approved_container_crate_route_and_cover_evidence_passed",
+      "screenshot_path": "Assets/Screenshots/M84AssetFactory/02_container_gameplay_cover_player_camera.png",
+      "screenshot_exists": true,
+      "passed": true,
+      "blocker": "",
+      "note": "environment evidence uses approved semantic props and cover/blocking proof"
+    }
+  ],
+  "full_visual_asset_gate_intentionally_not_overridden": true,
+  "remaining_blocker": "This gate proves class-level routed/approved production visibility. It does not make the failed Realified batch production-ready and does not close final PUBG-like visual quality."
+}

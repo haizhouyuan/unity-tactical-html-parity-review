@@ -478,6 +478,38 @@ Important limitation:
 - The app bundle is ignored by Git under `Builds/`.
 - The visual launch screenshot is not gameplay-quality evidence.
 
+### M87: Class-Level Production Visibility Reconciliation
+
+Status: completed on 2026-05-18.
+
+Primary lane: evidence audit / visual direction.
+
+Goal:
+
+- Close the accounting gap between the old Realified batch visibility gate and the actual route-level approved-equivalent assets now used in gameplay.
+
+Checklist:
+
+- [x] Add `AI Tools/Run M87 Class-Level Production Visibility Gate`.
+- [x] Prove `weapon` class with `hero_rifle` player-camera and fire/reload/hit evidence.
+- [x] Prove `character` class with approved player/enemy GLBs, tactical detail kit, and authored clip evidence.
+- [x] Prove `gear` class with approved helmet/vest pickup route evidence.
+- [x] Prove `loot` class with approved medkit/ammo pickup route evidence.
+- [x] Prove `environment_prop` class with approved container/crate player-camera and cover/blocking evidence.
+- [x] Preserve `legacy_realified_batch_visibility_gate_passed=false`.
+- [x] Preserve `full_visual_asset_gate_passed=false`.
+
+Latest evidence:
+
+- `docs/M87_CLASS_LEVEL_PRODUCTION_VISIBILITY_GATE.json`
+- `docs/M87_CLASS_LEVEL_PRODUCTION_VISIBILITY_GATE.md`
+- `docs/M87_CLASS_LEVEL_PRODUCTION_VISIBILITY_COMPLETION_2026-05-18.md`
+- `docs/M87_CLASS_LEVEL_PRODUCTION_VISIBILITY_PIPELINE_2026-05-18.json`
+
+Important limitation:
+
+- This closes class-level route visibility for approved-equivalent/gameplay-bound assets. It does not rescue the failed Realified batch and does not claim final PUBG-like visual quality.
+
 ## Supporting Lanes
 
 ### S1: Unity MCP / Toolchain Reliability
@@ -571,10 +603,10 @@ The track is not done until:
 - [x] M84 three-class asset factory spike passes.
 - [x] M85 visual production pass improves player-camera realism without gate regression.
 - [x] M86 build/release gate produces a launchable review packet or explicit blocker.
+- [x] promoted asset visibility gate passes at class level through M87 approved-equivalent route evidence.
 - [ ] `full_visual_asset_gate_passed=true`.
-- [ ] promoted asset visibility gate passes at class level.
 - [ ] the player route can be manually played with visible weapon, pickup, NPC combat, reload, building traversal, and restart.
 
 ## Immediate Next Action
 
-Start the next unresolved production-visual lane: close the class-level promoted asset visibility gap and then the larger `full_visual_asset_gate_passed=false` blocker. Do not flip either gate until gameplay-bound, player-camera-visible, event-backed production assets exist.
+Start the larger `full_visual_asset_gate_passed=false` blocker. Do not flip it until final humanoid art, final weapon art review, and generated class-by-class production promotion are genuinely strong enough.
