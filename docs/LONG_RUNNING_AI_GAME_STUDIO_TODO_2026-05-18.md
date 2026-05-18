@@ -43,7 +43,7 @@ Interpretation:
 
 ### M0.5: Active Unity Session Verification
 
-Status: blocked on 2026-05-18 because the active Unity session is `/Users/yuanshaochen/My project`, not this public review checkout.
+Status: resolved via M0.5R on 2026-05-18. The active Unity session is `/Users/yuanshaochen/My project`, not this public review checkout, so the active project needed the workflow tools and HTML baseline synced before verification could pass.
 
 Goal:
 
@@ -75,11 +75,11 @@ Checklist:
 - [x] Probe active Unity project path; result is not this repository checkout.
 - [x] Wait for Unity compile/update idle.
 - [x] Read Console through MCP or document fallback failure.
-- [ ] Confirm `Assets/Editor/TacticalWorkflowTools.cs` is imported.
-- [ ] Run `AI Tools/Run Tactical Preflight`.
-- [ ] Confirm `docs/TACTICAL_PREFLIGHT_REPORT.json` exists.
-- [ ] Run `AI Tools/Run Unity MCP Smoke Check`.
-- [ ] Confirm `docs/UNITY_MCP_SMOKE_REPORT_LATEST.json` exists.
+- [x] Confirm `Assets/Editor/TacticalWorkflowTools.cs` is imported.
+- [x] Run `AI Tools/Run Tactical Preflight`.
+- [x] Confirm `docs/TACTICAL_PREFLIGHT_REPORT.json` exists.
+- [x] Run `AI Tools/Run Unity MCP Smoke Check`.
+- [x] Confirm `docs/UNITY_MCP_SMOKE_REPORT_LATEST.json` exists.
 - [x] Record whether this proves editor readiness, external MCP transport, or both.
 - [x] If the menu is missing, stop gameplay work and run compile/reload recovery.
 
@@ -98,11 +98,15 @@ Latest evidence:
 
 - `docs/M0_5_ACTIVE_UNITY_SESSION_VERIFICATION_2026-05-18.json`
 - `docs/M0_5_ACTIVE_UNITY_SESSION_VERIFICATION_2026-05-18.md`
-- MCP transport reachable; active project mismatch prevents completion.
+- `docs/M0_5R_ACTIVE_UNITY_SESSION_VERIFICATION_2026-05-18.json`
+- `docs/M0_5R_ACTIVE_UNITY_SESSION_VERIFICATION_2026-05-18.md`
+- `docs/TACTICAL_PREFLIGHT_REPORT_ACTIVE_PROJECT_2026-05-18.json`
+- `docs/UNITY_MCP_SMOKE_REPORT_ACTIVE_PROJECT_2026-05-18.json`
+- MCP transport reachable; active project verified after syncing workflow tools and the HTML baseline into `/Users/yuanshaochen/My project`.
 
 ### M0.5R: Unity Compile/Reload Recovery
 
-Status: next.
+Status: completed on 2026-05-18.
 
 Goal:
 
@@ -110,14 +114,14 @@ Goal:
 
 Checklist:
 
-- [ ] Stop polling after 2 minutes of compile/reload lock.
-- [ ] Save if Unity allows it.
-- [ ] Restart Unity on this repo checkout.
-- [ ] Wait for compile/update idle.
-- [ ] Read Console.
-- [ ] Re-run only `AI Tools/Run Tactical Preflight`.
-- [ ] Re-run only `AI Tools/Run Unity MCP Smoke Check`.
-- [ ] Write blocker report if the commands remain unavailable.
+- [x] Stop polling after 2 minutes of compile/reload lock.
+- [x] Save/sync only the required workflow files into the active Unity project.
+- [x] Refresh Unity assets.
+- [x] Wait for compile/update idle.
+- [x] Read Console.
+- [x] Re-run only `AI Tools/Run Tactical Preflight`.
+- [x] Re-run only `AI Tools/Run Unity MCP Smoke Check`.
+- [x] Write pass report with the exact active-project evidence.
 
 Definition of done:
 
@@ -125,7 +129,7 @@ Definition of done:
 
 ### M81: Building Integrity Gate
 
-Status: todo after M0.5.
+Status: next.
 
 Primary lane: gameplay engineering.
 

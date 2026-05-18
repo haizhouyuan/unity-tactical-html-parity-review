@@ -1,0 +1,21 @@
+{
+  "schema": "tactical_preflight_v1",
+  "timestamp_utc": "2026-05-18T06:11:26.5811050Z",
+  "passed": true,
+  "active_scene": "Assets/Scenes/TacticalPrototype.unity",
+  "tactical_scene_exists": true,
+  "html_baseline_exists": true,
+  "editor_is_compiling": false,
+  "editor_is_updating": false,
+  "application_is_playing": false,
+  "console_errors": 0,
+  "console_warnings": 1,
+  "community_mcp_package_present": true,
+  "official_unity_ai_assistant_present": true,
+  "acceptance_report_exists": true,
+  "latest_all_required_current_gates_passed": true,
+  "latest_full_visual_asset_gate_passed": false,
+  "latest_asset_gameplay_production_promoted_assets": 1,
+  "latest_visible_promoted_classes": 0,
+  "note": "Preflight checks editor readiness and report state. It does not prove gameplay completion."
+}

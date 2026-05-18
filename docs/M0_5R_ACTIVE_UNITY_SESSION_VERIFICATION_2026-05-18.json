@@ -1,0 +1,147 @@
+{
+  "timestamp_utc": "2026-05-18T06:11:27Z",
+  "mcp_url": "http://127.0.0.1:8080/mcp",
+  "server_info": {
+    "name": "mcp-for-unity-server",
+    "version": "3.3.1"
+  },
+  "active_project_root_expected": "/Users/yuanshaochen/My project",
+  "active_project_root_probe_raw": {
+    "jsonrpc": "2.0",
+    "id": 2,
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":\"{\\\"projectRoot\\\":\\\"/Users/yuanshaochen/My project\\\",\\\"isCompiling\\\":false,\\\"isUpdating\\\":false,\\\"isPlaying\\\":false}\",\"compiler\":\"roslyn\"}}"
+        }
+      ],
+      "structuredContent": {
+        "success": true,
+        "message": "Code executed successfully.",
+        "data": {
+          "result": "{\"projectRoot\":\"/Users/yuanshaochen/My project\",\"isCompiling\":false,\"isUpdating\":false,\"isPlaying\":false}",
+          "compiler": "roslyn"
+        }
+      },
+      "isError": false
+    }
+  },
+  "synced_files": [
+    "/Users/yuanshaochen/My project/Assets/Editor/TacticalWorkflowTools.cs",
+    "/Users/yuanshaochen/My project/Assets/Editor/TacticalWorkflowTools.cs.meta",
+    "/Users/yuanshaochen/My project/reference/html_baseline_final_packet/index.html"
+  ],
+  "preflight_mtime_before": 1779084273.2846065,
+  "preflight_mtime_after": 1779084686.5816958,
+  "preflight_report_updated": true,
+  "execute_preflight_raw": {
+    "jsonrpc": "2.0",
+    "id": 3,
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\":true,\"message\":\"Attempted to execute menu item: 'AI Tools/Run Tactical Preflight'. Check Unity logs for confirmation or errors.\",\"error\":null,\"data\":null,\"hint\":null}"
+        }
+      ],
+      "structuredContent": {
+        "success": true,
+        "message": "Attempted to execute menu item: 'AI Tools/Run Tactical Preflight'. Check Unity logs for confirmation or errors.",
+        "error": null,
+        "data": null,
+        "hint": null
+      },
+      "isError": false
+    }
+  },
+  "preflight_report": {
+    "schema": "tactical_preflight_v1",
+    "timestamp_utc": "2026-05-18T06:11:26.5811050Z",
+    "passed": true,
+    "active_scene": "Assets/Scenes/TacticalPrototype.unity",
+    "tactical_scene_exists": true,
+    "html_baseline_exists": true,
+    "editor_is_compiling": false,
+    "editor_is_updating": false,
+    "application_is_playing": false,
+    "console_errors": 0,
+    "console_warnings": 1,
+    "community_mcp_package_present": true,
+    "official_unity_ai_assistant_present": true,
+    "acceptance_report_exists": true,
+    "latest_all_required_current_gates_passed": true,
+    "latest_full_visual_asset_gate_passed": false,
+    "latest_asset_gameplay_production_promoted_assets": 1,
+    "latest_visible_promoted_classes": 0,
+    "note": "Preflight checks editor readiness and report state. It does not prove gameplay completion."
+  },
+  "smoke_mtime_before": 1779084273.4744704,
+  "smoke_mtime_after": 1779084686.8778179,
+  "smoke_report_updated": true,
+  "execute_smoke_raw": {
+    "jsonrpc": "2.0",
+    "id": 4,
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\":true,\"message\":\"Attempted to execute menu item: 'AI Tools/Run Unity MCP Smoke Check'. Check Unity logs for confirmation or errors.\",\"error\":null,\"data\":null,\"hint\":null}"
+        }
+      ],
+      "structuredContent": {
+        "success": true,
+        "message": "Attempted to execute menu item: 'AI Tools/Run Unity MCP Smoke Check'. Check Unity logs for confirmation or errors.",
+        "error": null,
+        "data": null,
+        "hint": null
+      },
+      "isError": false
+    }
+  },
+  "smoke_report": {
+    "schema": "unity_mcp_smoke_report_v2",
+    "timestamp_utc": "2026-05-18T06:11:26.8774780Z",
+    "passed": true,
+    "transport_checked_by_this_command": false,
+    "transport_note": "This in-Editor command verifies project/editor readiness. MCP transport is proven only when an external client invokes this command and reads this report.",
+    "community_mcp_package_present": true,
+    "expected_http_endpoint": "http://127.0.0.1:8080/mcp",
+    "editor_is_compiling": false,
+    "editor_is_updating": false,
+    "application_is_playing": false,
+    "console_errors": 0,
+    "console_warnings": 1,
+    "active_scene": "Assets/Scenes/TacticalPrototype.unity"
+  },
+  "console_after_excerpt": {
+    "jsonrpc": "2.0",
+    "id": 5,
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\":true,\"message\":\"Retrieved 8 log entries.\",\"data\":[\"Account API did not become accessible within 30 seconds. This may be due to network issues or editor focus.\",\"<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [ExecuteMenuItem] Handling menu item command\",\"[AI Tools] Tactical preflight report written to docs/TACTICAL_PREFLIGHT_REPORT.json passed=False\",\"<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [ExecuteMenuItem] Handling menu item command\",\"[AI Tools] Unity MCP smoke report written to docs/UNITY_MCP_SMOKE_REPORT_LATEST.json passed=True\",\"<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [ExecuteMenuItem] Handling menu item command\",\"[AI Tools] Tactical preflight report written to docs/TACTICAL_PREFLIGHT_REPORT.json passed=True\",\"<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [ExecuteMenuItem] Handling menu item command\"]}"
+        }
+      ],
+      "structuredContent": {
+        "success": true,
+        "message": "Retrieved 8 log entries.",
+        "data": [
+          "Account API did not become accessible within 30 seconds. This may be due to network issues or editor focus.",
+          "<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [ExecuteMenuItem] Handling menu item command",
+          "[AI Tools] Tactical preflight report written to docs/TACTICAL_PREFLIGHT_REPORT.json passed=False",
+          "<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [ExecuteMenuItem] Handling menu item command",
+          "[AI Tools] Unity MCP smoke report written to docs/UNITY_MCP_SMOKE_REPORT_LATEST.json passed=True",
+          "<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [ExecuteMenuItem] Handling menu item command",
+          "[AI Tools] Tactical preflight report written to docs/TACTICAL_PREFLIGHT_REPORT.json passed=True",
+          "<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [ExecuteMenuItem] Handling menu item command"
+        ]
+      },
+      "isError": false
+    }
+  },
+  "errors": [],
+  "m0_5r_active_unity_session_verified": true,
+  "note": "This verifies the active Unity project at /Users/yuanshaochen/My project after syncing missing editor workflow tools and the HTML baseline reference from the public review repo."
+}

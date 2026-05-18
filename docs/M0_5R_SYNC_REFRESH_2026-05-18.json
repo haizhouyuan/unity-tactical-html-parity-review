@@ -1,0 +1,96 @@
+{
+  "timestamp_utc": "2026-05-18T06:03:10Z",
+  "steps": [],
+  "errors": [],
+  "server_info": {
+    "name": "mcp-for-unity-server",
+    "version": "3.3.1"
+  },
+  "refresh": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":\"refreshed:True:False\",\"compiler\":\"roslyn\"}}"
+      }
+    ],
+    "structuredContent": {
+      "success": true,
+      "message": "Code executed successfully.",
+      "data": {
+        "result": "refreshed:True:False",
+        "compiler": "roslyn"
+      }
+    },
+    "isError": false
+  },
+  "status_polls": [
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":\"true,false\",\"compiler\":\"roslyn\"}}"
+        }
+      ],
+      "structuredContent": {
+        "success": true,
+        "message": "Code executed successfully.",
+        "data": {
+          "result": "true,false",
+          "compiler": "roslyn"
+        }
+      },
+      "isError": false
+    },
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":\"true,false\",\"compiler\":\"roslyn\"}}"
+        }
+      ],
+      "structuredContent": {
+        "success": true,
+        "message": "Code executed successfully.",
+        "data": {
+          "result": "true,false",
+          "compiler": "roslyn"
+        }
+      },
+      "isError": false
+    },
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":\"true,false\",\"compiler\":\"roslyn\"}}"
+        }
+      ],
+      "structuredContent": {
+        "success": true,
+        "message": "Code executed successfully.",
+        "data": {
+          "result": "true,false",
+          "compiler": "roslyn"
+        }
+      },
+      "isError": false
+    },
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":\"false,false\",\"compiler\":\"roslyn\"}}"
+        }
+      ],
+      "structuredContent": {
+        "success": true,
+        "message": "Code executed successfully.",
+        "data": {
+          "result": "false,false",
+          "compiler": "roslyn"
+        }
+      },
+      "isError": false
+    }
+  ]
+}

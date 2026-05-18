@@ -1,0 +1,15 @@
+{
+  "schema": "unity_mcp_smoke_report_v2",
+  "timestamp_utc": "2026-05-18T06:11:26.8774780Z",
+  "passed": true,
+  "transport_checked_by_this_command": false,
+  "transport_note": "This in-Editor command verifies project/editor readiness. MCP transport is proven only when an external client invokes this command and reads this report.",
+  "community_mcp_package_present": true,
+  "expected_http_endpoint": "http://127.0.0.1:8080/mcp",
+  "editor_is_compiling": false,
+  "editor_is_updating": false,
+  "application_is_playing": false,
+  "console_errors": 0,
+  "console_warnings": 1,
+  "active_scene": "Assets/Scenes/TacticalPrototype.unity"
+}
