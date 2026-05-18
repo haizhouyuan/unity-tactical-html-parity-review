@@ -649,7 +649,7 @@ Important limitation:
 
 ### M92: Weapon Production Pass / Weapon Feel Production Upgrade
 
-Status: patch prepared by PRO, pending local Unity application and verification.
+Status: verified locally through Unity and pushed as commit `ca22c09`.
 
 Primary lane: gameplay engineering / visual direction / evidence audit.
 
@@ -678,14 +678,20 @@ Forbidden changes:
 
 Local verification checklist:
 
-- [ ] Apply `m92_weapon_production_pass.patch`.
-- [ ] Refresh Unity and confirm no compile errors.
-- [ ] Run `AI Tools/Run Weapon Feel Gate`.
-- [ ] Confirm `docs/WEAPON_FEEL_GATE.json` includes `m92_weapon_production_passed`.
-- [ ] Confirm first-person pose quality, recoil peak, reload pose magnitude, ADS stability, and third-person mount quality fields are present.
-- [ ] Run `AI Tools/Run Tactical Acceptance Pipeline`.
-- [ ] Confirm `docs/TACTICAL_ACCEPTANCE_PIPELINE_REPORT.json` summarizes M92 fields.
-- [ ] Do not mark `full_visual_asset_gate_passed=true` unless the real strict gate proves it.
+- [x] Apply `m92_weapon_production_pass.patch`.
+- [x] Refresh Unity and confirm no compile errors.
+- [x] Run `AI Tools/Run Weapon Feel Gate`.
+- [x] Confirm `docs/WEAPON_FEEL_GATE.json` includes `m92_weapon_production_passed`.
+- [x] Confirm first-person pose quality, recoil peak, reload pose magnitude, ADS stability, and third-person mount quality fields are present.
+- [x] Run `AI Tools/Run Tactical Acceptance Pipeline`.
+- [x] Confirm `docs/TACTICAL_ACCEPTANCE_PIPELINE_REPORT.json` summarizes M92 fields.
+- [x] Do not mark `full_visual_asset_gate_passed=true` unless the real strict gate proves it.
+
+Verification evidence:
+
+- `docs/WEAPON_FEEL_GATE.json`: `passed=true`, `m92_weapon_production_passed=true`, `shot_feedback_event_count=7`, `screenshot_count=4`.
+- `docs/TACTICAL_ACCEPTANCE_PIPELINE_REPORT.json`: `all_required_current_gates_passed=true`, `stage=WaitStoppedAfterGates`, `m92_weapon_production_passed=true`, `m92_recoil_peak_value=0.32`.
+- Unity Console error readback: 0 errors after pipeline run.
 
 Prepared docs:
 
@@ -794,10 +800,10 @@ The track is not done until:
 - [x] M89 built-player foreground launch capture exists.
 - [x] M90 built-player runtime gameplay route capture exists.
 - [x] M91 external-input built-player route capture passes.
-- [ ] M92 weapon production pass is locally verified through Unity.
+- [x] M92 weapon production pass is locally verified through Unity.
 - [ ] `full_visual_asset_gate_passed=true`.
 - [ ] the player route can be externally or manually played with visible weapon, pickup, NPC combat, reload, building traversal, and restart.
 
 ## Immediate Next Action
 
-Verify M92 locally through Unity before moving on. After M92 is either verified or explicitly blocked, return to the M88 strict visual blockers: final weapon art review, final humanoid art review, and generated batch class promotion. M91 closed the external-input route evidence gap, but it did not close final production visual quality.
+Return to the M88 strict visual blockers: final weapon art review, final humanoid art review, and generated batch class promotion. M91 closed the external-input route evidence gap and M92 closed the scoped weapon-feel production pass, but neither closes final production visual quality.
