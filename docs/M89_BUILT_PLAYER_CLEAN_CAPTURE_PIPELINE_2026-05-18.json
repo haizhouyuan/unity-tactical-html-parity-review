@@ -1,0 +1,40 @@
+{
+  "schema": "m89_built_player_clean_capture_pipeline_v1",
+  "date": "2026-05-18",
+  "mission_id": "M89",
+  "title": "Built Player Clean Capture",
+  "source_build": {
+    "app_path": "/Users/yuanshaochen/My project/Builds/M86/TacticalPrototypeM86.app",
+    "executable_path": "/Users/yuanshaochen/My project/Builds/M86/TacticalPrototypeM86.app/Contents/MacOS/My project"
+  },
+  "steps": [
+    {
+      "step": "launch_built_player",
+      "status": "passed",
+      "evidence": "docs/M89_BUILT_PLAYER_CLEAN_CAPTURE.json"
+    },
+    {
+      "step": "attempt_frontmost_window",
+      "status": "attempted",
+      "evidence": "docs/M89_BUILT_PLAYER_CLEAN_CAPTURE.json"
+    },
+    {
+      "step": "capture_foreground_screenshot",
+      "status": "passed",
+      "evidence": "Assets/Screenshots/M89BuiltPlayerCapture/01_built_player_frontmost_capture.png"
+    },
+    {
+      "step": "capture_player_log",
+      "status": "passed",
+      "evidence": "docs/M89_BUILT_PLAYER_CLEAN_CAPTURE.log"
+    },
+    {
+      "step": "input_driven_gameplay_route",
+      "status": "not_attempted",
+      "evidence": null
+    }
+  ],
+  "passed": true,
+  "counts_as_clean_built_player_gameplay_capture": false,
+  "limitation": "M89 improves built-player launch/window evidence only. It is not an input-driven gameplay route capture."
+}

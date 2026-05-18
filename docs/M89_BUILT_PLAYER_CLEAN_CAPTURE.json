@@ -1,0 +1,15 @@
+{
+  "schema": "m89_built_player_clean_capture_v1",
+  "timestamp_utc": "2026-05-18T10:43:04Z",
+  "app_path": "/Users/yuanshaochen/My project/Builds/M86/TacticalPrototypeM86.app",
+  "executable_path": "/Users/yuanshaochen/My project/Builds/M86/TacticalPrototypeM86.app/Contents/MacOS/My project",
+  "process_started": true,
+  "screenshot_path": "/Users/yuanshaochen/My project/Assets/Screenshots/M89BuiltPlayerCapture/01_built_player_frontmost_capture.png",
+  "screenshot_exists": true,
+  "screenshot_bytes": 2416818,
+  "log_path": "/Users/yuanshaochen/My project/docs/M89_BUILT_PLAYER_CLEAN_CAPTURE.log",
+  "log_bytes": 2330,
+  "frontmost_attempt_log": "",
+  "passed": true,
+  "limitation": "This is a clean built-player foreground capture attempt, not a complete route capture with input-driven pickup/combat/reload/restart evidence."
+}

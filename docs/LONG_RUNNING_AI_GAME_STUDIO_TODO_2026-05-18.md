@@ -542,6 +542,37 @@ Remaining blockers:
 - `final_humanoid_art_review_passed=false`
 - `clean_built_player_gameplay_capture_passed=false`
 
+### M89: Built Player Clean Capture
+
+Status: completed as launch/window evidence on 2026-05-18. This does not close the gameplay-route blocker.
+
+Primary lane: release/liveops / evidence audit.
+
+Goal:
+
+- Improve the weak M86 built-player visual smoke by launching the macOS app and capturing a cleaner foreground screenshot.
+
+Checklist:
+
+- [x] Launch `/Users/yuanshaochen/My project/Builds/M86/TacticalPrototypeM86.app`.
+- [x] Attempt to bring the built app to the foreground.
+- [x] Capture a foreground screenshot.
+- [x] Capture the player log.
+- [x] Redact local IP addresses from the committed log.
+- [x] Record that this is not an input-driven gameplay route.
+
+Latest evidence:
+
+- `docs/M89_BUILT_PLAYER_CLEAN_CAPTURE.json`
+- `docs/M89_BUILT_PLAYER_CLEAN_CAPTURE.log`
+- `docs/M89_BUILT_PLAYER_CLEAN_CAPTURE_COMPLETION_2026-05-18.md`
+- `docs/M89_BUILT_PLAYER_CLEAN_CAPTURE_PIPELINE_2026-05-18.json`
+- `Assets/Screenshots/M89BuiltPlayerCapture/01_built_player_frontmost_capture.png`
+
+Important limitation:
+
+- M89 is cleaner built-player launch/window evidence, not route evidence. The strict blocker `clean_built_player_gameplay_capture_passed=false` remains open.
+
 ## Supporting Lanes
 
 ### S1: Unity MCP / Toolchain Reliability
@@ -637,9 +668,10 @@ The track is not done until:
 - [x] M86 build/release gate produces a launchable review packet or explicit blocker.
 - [x] promoted asset visibility gate passes at class level through M87 approved-equivalent route evidence.
 - [x] M88 strict full visual gate blocker audit exists.
+- [x] M89 built-player foreground launch capture exists.
 - [ ] `full_visual_asset_gate_passed=true`.
 - [ ] the player route can be manually played with visible weapon, pickup, NPC combat, reload, building traversal, and restart.
 
 ## Immediate Next Action
 
-Start one M88 blocker. Recommended first: clean built-player gameplay route capture, because it verifies the released app rather than only the Unity Editor route.
+Continue the built-player evidence lane with M90: an input-driven gameplay route capture or blocker report. M90 should prove start, movement, pickup, fire/reload, NPC interaction, and restart/death behavior from the built macOS app, not only from Unity Editor or a launch window screenshot.
