@@ -1,0 +1,116 @@
+{
+  "timestamp_utc": "2026-05-18T05:57:56Z",
+  "mcp_url": "http://127.0.0.1:8080/mcp",
+  "steps": [],
+  "errors": [],
+  "session_id": "e92e725e96e1436c8a33fa289674dfea",
+  "server_info": {
+    "name": "mcp-for-unity-server",
+    "version": "3.3.1"
+  },
+  "tools_count": 43,
+  "tool_names": [
+    "apply_text_edits",
+    "batch_execute",
+    "create_script",
+    "debug_request_context",
+    "delete_script",
+    "execute_code",
+    "execute_custom_tool",
+    "execute_menu_item",
+    "find_gameobjects",
+    "find_in_file",
+    "get_sha",
+    "get_test_job",
+    "manage_animation",
+    "manage_asset",
+    "manage_build",
+    "manage_camera",
+    "manage_components",
+    "manage_editor",
+    "manage_gameobject",
+    "manage_graphics",
+    "manage_material",
+    "manage_packages",
+    "manage_physics",
+    "manage_prefabs",
+    "manage_probuilder",
+    "manage_profiler",
+    "manage_scene",
+    "manage_script",
+    "manage_script_capabilities",
+    "manage_scriptable_object",
+    "manage_shader",
+    "manage_texture",
+    "manage_tools",
+    "manage_ui",
+    "manage_vfx",
+    "read_console",
+    "refresh_unity",
+    "run_tests",
+    "script_apply_edits",
+    "set_active_instance",
+    "unity_docs",
+    "unity_reflect",
+    "validate_script"
+  ],
+  "console_before_excerpt": "{\"content\": [{\"type\": \"text\", \"text\": \"{\\\"success\\\":true,\\\"message\\\":\\\"Retrieved 4 log entries.\\\",\\\"data\\\":[{\\\"type\\\":\\\"Warning\\\",\\\"message\\\":\\\"Account API did not become accessible within 30 seconds. This may be due to network issues or editor focus.\\\",\\\"file\\\":\\\"./Library/PackageCache/com.unity.ai.assistant@667f49aff9c0/Modules/Unity.AI.Toolkit.Accounts/Services/States/ApiAccessibleState.cs\\\",\\\"line\\\":32,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Log\\\",\\\"message\\\":\\\"<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [ExecuteMenuItem] Handling menu item command\\\",\\\"file\\\":\\\"./Library/PackageCache/com.coplaydev.unity-mcp@13fb3ee12774/Editor/Helpers/McpLog.cs\\\",\\\"line\\\":40,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Error\\\",\\\"message\\\":\\\"ExecuteMenuItem failed because there is no menu named 'AI Tools/Run Tactical Preflight'\\\",\\\"file\\\":\\\"/Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs\\\",\\\"line\\\":35,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Error\\\",\\\"message\\\":\\\"<b><color=#cc3333>MCP-FOR-UNITY</color></b>: [MenuItemExecutor] Failed to execute menu item 'AI Tools/Run Tactical Preflight'. It might be invalid, disabled, or context-dependent.\\\",\\\"file\\\":\\\"./Library/PackageCache/com.coplaydev.unity-mcp@13fb3ee12774/Editor/Helpers/McpLog.cs\\\",\\\"line\\\":50,\\\"stackTrace\\\":null}]}\"}], \"structuredContent\": {\"success\": true, \"message\": \"Retrieved 4 log entries.\", \"data\": [{\"type\": \"Warning\", \"message\": \"Account API did not become accessible within 30 seconds. This may be due to network issues or editor focus.\", \"file\": \"./Library/PackageCache/com.unity.ai.assistant@667f49aff9c0/Modules/Unity.AI.Toolkit.Accounts/Services/States/ApiAccessibleState.cs\", \"line\": 32, \"stackTrace\": null}, {\"type\": \"Log\", \"message\": \"<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [ExecuteMenuItem] Handling menu item command\", \"file\": \"./Library/PackageCache/com.coplaydev.unity-mcp@13fb3ee12774/Editor/Helpers/McpLog.cs\", \"line\": 40, \"stackTrace\": null}, {\"type\": \"Error\", \"message\": \"ExecuteMenuItem failed because there is no menu named 'AI Tools/Run Tactical Preflight'\", \"file\": \"/Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs\", \"line\": 35, \"stackTrace\": null}, {\"type\": \"Error\", \"message\": \"<b><color=#cc3333>MCP-FOR-UNITY</color></b>: [MenuItemExecutor] Failed to execute menu item 'AI Tools/Run Tactical Preflight'. It might be invalid, disabled, or context-dependent.\", \"file\": \"./Library/PackageCache/com.coplaydev.unity-mcp@13fb3ee12774/Editor/Helpers/McpLog.cs\", \"line\": 50, \"stackTrace\": null}]}, \"isError\": false}",
+  "project_probe_raw": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":\"{\\\"dataPath\\\":\\\"/Users/yuanshaochen/My project/Assets\\\",\\\"projectRoot\\\":\\\"/Users/yuanshaochen/My project\\\",\\\"isCompiling\\\":false,\\\"isUpdating\\\":false,\\\"isPlaying\\\":false}\",\"compiler\":\"roslyn\"}}"
+      }
+    ],
+    "structuredContent": {
+      "success": true,
+      "message": "Code executed successfully.",
+      "data": {
+        "result": "{\"dataPath\":\"/Users/yuanshaochen/My project/Assets\",\"projectRoot\":\"/Users/yuanshaochen/My project\",\"isCompiling\":false,\"isUpdating\":false,\"isPlaying\":false}",
+        "compiler": "roslyn"
+      }
+    },
+    "isError": false
+  },
+  "execute_preflight_raw": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"success\":false,\"message\":null,\"error\":\"Failed to execute menu item 'AI Tools/Run Tactical Preflight'. It might be invalid, disabled, or context-dependent.\",\"data\":null,\"hint\":null}"
+      }
+    ],
+    "structuredContent": {
+      "success": false,
+      "message": null,
+      "error": "Failed to execute menu item 'AI Tools/Run Tactical Preflight'. It might be invalid, disabled, or context-dependent.",
+      "data": null,
+      "hint": null
+    },
+    "isError": false
+  },
+  "local_preflight_exists_after": false,
+  "local_preflight_mtime_before": 0,
+  "local_preflight_mtime_after": 0,
+  "execute_smoke_raw": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\"success\":false,\"message\":null,\"error\":\"Failed to execute menu item 'AI Tools/Run Unity MCP Smoke Check'. It might be invalid, disabled, or context-dependent.\",\"data\":null,\"hint\":null}"
+      }
+    ],
+    "structuredContent": {
+      "success": false,
+      "message": null,
+      "error": "Failed to execute menu item 'AI Tools/Run Unity MCP Smoke Check'. It might be invalid, disabled, or context-dependent.",
+      "data": null,
+      "hint": null
+    },
+    "isError": false
+  },
+  "local_smoke_exists_after": true,
+  "local_smoke_mtime_before": 1779030942.0,
+  "local_smoke_mtime_after": 1779030942.0,
+  "console_after_excerpt": "{\"content\": [{\"type\": \"text\", \"text\": \"{\\\"success\\\":true,\\\"message\\\":\\\"Retrieved 10 log entries.\\\",\\\"data\\\":[{\\\"type\\\":\\\"Warning\\\",\\\"message\\\":\\\"Account API did not become accessible within 30 seconds. This may be due to network issues or editor focus.\\\",\\\"file\\\":\\\"./Library/PackageCache/com.unity.ai.assistant@667f49aff9c0/Modules/Unity.AI.Toolkit.Accounts/Services/States/ApiAccessibleState.cs\\\",\\\"line\\\":32,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Log\\\",\\\"message\\\":\\\"<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [ExecuteMenuItem] Handling menu item command\\\",\\\"file\\\":\\\"./Library/PackageCache/com.coplaydev.unity-mcp@13fb3ee12774/Editor/Helpers/McpLog.cs\\\",\\\"line\\\":40,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Error\\\",\\\"message\\\":\\\"ExecuteMenuItem failed because there is no menu named 'AI Tools/Run Tactical Preflight'\\\",\\\"file\\\":\\\"/Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs\\\",\\\"line\\\":35,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Error\\\",\\\"message\\\":\\\"<b><color=#cc3333>MCP-FOR-UNITY</color></b>: [MenuItemExecutor] Failed to execute menu item 'AI Tools/Run Tactical Preflight'. It might be invalid, disabled, or context-dependent.\\\",\\\"file\\\":\\\"./Library/PackageCache/com.coplaydev.unity-mcp@13fb3ee12774/Editor/Helpers/McpLog.cs\\\",\\\"line\\\":50,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Log\\\",\\\"message\\\":\\\"<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [ExecuteMenuItem] Handling menu item command\\\",\\\"file\\\":\\\"./Library/PackageCache/com.coplaydev.unity-mcp@13fb3ee12774/Editor/Helpers/McpLog.cs\\\",\\\"line\\\":40,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Error\\\",\\\"message\\\":\\\"ExecuteMenuItem failed because there is no menu named 'AI Tools/Run Tactical Preflight'\\\",\\\"file\\\":\\\"/Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs\\\",\\\"line\\\":35,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Error\\\",\\\"message\\\":\\\"<b><color=#cc3333>MCP-FOR-UNITY</color></b>: [MenuItemExecutor] Failed to execute menu item 'AI Tools/Run Tactical Preflight'. It might be invalid, disabled, or context-dependent.\\\",\\\"file\\\":\\\"./Library/PackageCache/com.coplaydev.unity-mcp@13fb3ee12774/Editor/Helpers/McpLog.cs\\\",\\\"line\\\":50,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Log\\\",\\\"message\\\":\\\"<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [ExecuteMenuItem] Handling menu item command\\\",\\\"file\\\":\\\"./Library/PackageCache/com.coplaydev.unity-mcp@13fb3ee12774/Editor/Helpers/McpLog.cs\\\",\\\"line\\\":40,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Error\\\",\\\"message\\\":\\\"ExecuteMenuItem failed because there is no menu named 'AI Tools/Run Unity MCP Smoke Check'\\\",\\\"file\\\":\\\"/Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs\\\",\\\"line\\\":35,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Error\\\",\\\"message\\\":\\\"<b><color=#cc3333>MCP-FOR-UNITY</color></b>: [MenuItemExecutor] Failed to execute menu item 'AI Tools/Run Unity MCP Smoke Check'. It might be invalid, disabled, or context-dependent.\\\",\\\"file\\\":\\\"./Library/PackageCache/com.coplaydev.unity-mcp@13fb3ee12774/Editor/Helpers/McpLog.cs\\\",\\\"line\\\":50,\\\"stackTrace\\\":null}]}\"}], \"structuredContent\": {\"success\": true, \"message\": \"Retrieved 10 log entries.\", \"data\": [{\"type\": \"Warning\", \"message\": \"Account API did not become accessible within 30 seconds. This may be due to network issues or editor focus.\", \"file\": \"./Library/PackageCache/com.unity.ai.assistant@667f49aff9c0/Modules/Unity.AI.Toolkit.Accounts/Services/States/ApiAccessibleState.cs\", \"line\": 32, \"stackTrace\": null}, {\"type\": \"Log\", \"message\": \"<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [ExecuteMenuItem] Handling menu item command\", \"file\": \"./Library/PackageCache/com.coplaydev.unity-mcp@13fb3ee12774/Editor/Helpers/McpLog.cs\", \"line\": 40, \"stackTrace\": null}, {\"type\": \"Error\", \"message\": \"ExecuteMenuItem failed because there is no menu named 'AI Tools/Run Tactical Preflight'\", \"file\": \"/Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs\", \"line\": 35, \"stackTrace\": null}, {\"type\": \"Error\", \"message\": \"<b><color=#cc3333>MCP-FOR-UNITY</color></b>: [MenuItemExecutor] Failed to execute menu item 'AI Tools/Run Tactical Preflight'. It might be invalid, disabled, or context-dependent.\", \"file\": \"./Library/PackageCache/com.coplaydev.unity-mcp@13fb3ee12774/Editor/Helpers/McpLog.cs\", \"line\": 50, \"stackTrace\": null}, {\"type\": \"Log\", \"message\": \"<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [ExecuteMenuItem] Handling menu item command\", \"file\": \"./Library/PackageCache/com.coplaydev.unity-mcp@13fb3ee12774/Editor/Helpers/McpLog.cs\", \"line\": 40, \"stackTrace\": null}, {\"type\": \"Error\", \"message\": \"ExecuteMenuItem failed because there is no menu named 'AI Tools/Run Tactical Preflight'\", \"file\": \"/Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs\", \"line\": 35, \"stackTrace\": null}, {\"type\": \"Error\", \"message\": \"<b><color=#cc3333>MCP-FOR-UNITY</color></b>: [MenuItemExecutor] Failed to execute menu item 'AI Tools/Run Tactical Preflight'. It might be invalid, disabled, or context-dependent.\", \"file\": \"./Library/PackageCache/com.coplaydev.unity-mcp@13fb3ee12774/Editor/Helpers/McpLog.cs\", \"line\": 50, \"stackTrace\": null}, {\"type\": \"Log\", \"message\": \"<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [ExecuteMenuItem] Handling menu item command\", \"file\": \"./Library/PackageCache/com.coplaydev.unity-mcp@13fb3ee12774/Editor/Helpers/McpLog.cs\", \"line\": 40, \"stackTrace\": null}, {\"type\": \"Error\", \"message\": \"ExecuteMenuItem failed because there is no menu named 'AI Tools/Run Unity MCP Smoke Check'\", \"file\": \"/Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs\", \"line\": 35, \"stackTrace\": null}, {\"type\": \"Error\", \"message\": \"<b><color=#cc3333>MCP-FOR-UNITY</color></b>: [MenuItemExecutor] Failed to execute menu item 'AI Tools/Run Unity MCP Smoke Check'. It might be invalid, disabled, or context-dependent.\", \"file\": \"./Library/PackageCache/com.coplaydev.unity-mcp@13fb3ee12774/Editor/Helpers/McpLog.cs\", \"line\": 50, \"stackTrace\": null}]}, \"isError\": false}",
+  "active_project_contains_current_repo_path": false,
+  "m0_5_passed_for_current_repo": false
+}

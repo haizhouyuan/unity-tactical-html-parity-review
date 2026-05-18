@@ -1,0 +1,20 @@
+{
+  "timestamp_utc": "2026-05-18T05:56:46.898828+00:00",
+  "mcp_url": "http://127.0.0.1:8080/mcp",
+  "execute_acceptance": false,
+  "one_button_acceptance": false,
+  "errors": [],
+  "session_id": "9ed37741f7714f949069b0e14c6e6dad",
+  "protocol_version": "2025-06-18",
+  "server_name": "mcp-for-unity-server",
+  "server_version": "3.3.1",
+  "tools_count": 43,
+  "required_tools": {
+    "read_console": true,
+    "execute_menu_item": true,
+    "manage_editor": true,
+    "tools_list": true
+  },
+  "read_console_ok": true,
+  "read_console_response_excerpt": "{\"content\": [{\"type\": \"text\", \"text\": \"{\\\"success\\\":true,\\\"message\\\":\\\"Retrieved 4 log entries.\\\",\\\"data\\\":[{\\\"type\\\":\\\"Warning\\\",\\\"message\\\":\\\"Account API did not become accessible within 30 seconds. This may be due to network issues or editor focus.\\\",\\\"file\\\":\\\"./Library/PackageCache/com.unity.ai.assistant@667f49aff9c0/Modules/Unity.AI.Toolkit.Accounts/Services/States/ApiAccessibleState.cs\\\",\\\"line\\\":32,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Log\\\",\\\"message\\\":\\\"<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [ExecuteMenuItem] Handling menu item command\\\",\\\"file\\\":\\\"./Library/PackageCache/com.coplaydev.unity-mcp@13fb3ee12774/Editor/Helpers/McpLog.cs\\\",\\\"line\\\":40,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Error\\\",\\\"message\\\":\\\"ExecuteMenuItem failed because there is no menu named 'AI Tools/Run Tactical Preflight'\\\",\\\"file\\\":\\\"/Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs\\\",\\\"line\\\":35,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Error\\\",\\\"message\\\":\\\"<b><color=#cc3333>MCP-FOR-UNITY</color></b>: [MenuItemExecutor] Failed to execute menu item 'AI Tools/Run Tactical Preflight'. It might be invalid, disabled, or context-dependent.\\\",\\\"file\\\":\\\"./Library/PackageCache/com.coplaydev.unity-mcp@13fb3ee12774/Editor/Helpers/McpLog.cs\\\",\\\"line\\\":50,\\\"stackTrace\\\":null}]}\"}], \"structuredContent\": {\"success\": true, \"message\": \"Retrieved 4 log entries.\", \"data\": [{\"type\": \"Warning\", \"message\": \"Account API did not become accessible within 30 seconds. This may be due to network issues or editor focus.\", \"file\": \"./Library/PackageCache/com.unity.ai.assistant@667f49aff9c0/Modules/Unity.AI.Toolkit.Accounts/Services/States/ApiAccessibleState.cs\", \"line\": 32, \"stackTrace\": null}, {\"type\": \"Log\", \"message\": \"<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [ExecuteMenuItem] Handling menu item command\", \"file\": \"./Library/PackageCache/com.coplaydev.unity-mcp@13fb3ee12774/Editor/Helpers/McpLog.cs\", \"line\": 40, \"stackTrace\": null}, {\"type\": \"Error\", \"message\": \"ExecuteMenuItem failed because"
+}

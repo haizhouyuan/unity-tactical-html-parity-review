@@ -43,7 +43,7 @@ Interpretation:
 
 ### M0.5: Active Unity Session Verification
 
-Status: todo.
+Status: blocked on 2026-05-18 because the active Unity session is `/Users/yuanshaochen/My project`, not this public review checkout.
 
 Goal:
 
@@ -72,16 +72,16 @@ Forbidden changes:
 
 Checklist:
 
-- [ ] Confirm active Unity project path is this repository checkout.
-- [ ] Wait for Unity compile/update idle.
-- [ ] Read Console through MCP or document fallback failure.
+- [x] Probe active Unity project path; result is not this repository checkout.
+- [x] Wait for Unity compile/update idle.
+- [x] Read Console through MCP or document fallback failure.
 - [ ] Confirm `Assets/Editor/TacticalWorkflowTools.cs` is imported.
 - [ ] Run `AI Tools/Run Tactical Preflight`.
 - [ ] Confirm `docs/TACTICAL_PREFLIGHT_REPORT.json` exists.
 - [ ] Run `AI Tools/Run Unity MCP Smoke Check`.
 - [ ] Confirm `docs/UNITY_MCP_SMOKE_REPORT_LATEST.json` exists.
-- [ ] Record whether this proves editor readiness, external MCP transport, or both.
-- [ ] If the menu is missing, stop gameplay work and run compile/reload recovery.
+- [x] Record whether this proves editor readiness, external MCP transport, or both.
+- [x] If the menu is missing, stop gameplay work and run compile/reload recovery.
 
 Definition of done:
 
@@ -94,9 +94,15 @@ Next if blocked:
 
 - M0.5R Unity compile/reload recovery.
 
+Latest evidence:
+
+- `docs/M0_5_ACTIVE_UNITY_SESSION_VERIFICATION_2026-05-18.json`
+- `docs/M0_5_ACTIVE_UNITY_SESSION_VERIFICATION_2026-05-18.md`
+- MCP transport reachable; active project mismatch prevents completion.
+
 ### M0.5R: Unity Compile/Reload Recovery
 
-Status: todo if M0.5 fails.
+Status: next.
 
 Goal:
 
