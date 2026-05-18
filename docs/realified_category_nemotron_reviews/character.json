@@ -1,0 +1,49 @@
+{
+  "overall_verdict": "fail",
+  "summary": "Two weapon assets visible, but expected character categories, causing category mismatch and promotion blocker.",
+  "items": [
+    {
+      "grid_index": 1,
+      "expected_file": "RS_04_player_tactical_LOD0.glb",
+      "expected_category": "character",
+      "visible_category": "weapon",
+      "category_match": false,
+      "confidence": "high",
+      "reason": "Visible object is a rifle, not a character."
+    },
+    {
+      "grid_index": 2,
+      "expected_file": "RS_05_enemy_tactical_LOD0.glb",
+      "expected_category": "character",
+      "visible_category": "weapon",
+      "category_match": false,
+      "confidence": "high",
+      "reason": "Visible object is a rifle, not a character."
+    }
+  ],
+  "promotion_allowed": false,
+  "promotion_blockers": [
+    "category mismatch (visible weapon vs expected character)",
+    "expected_assets_not_technically_promotable: RS_04_player_tactical_LOD0.glb, RS_05_enemy_tactical_LOD0.glb",
+    "missing_normal_texture",
+    "missing_occlusion_or_ao_texture",
+    "missing_tangent_attribute",
+    "textured_probe_not_production (missing normalTexture, occlusionTexture/AO, TANGENT)"
+  ],
+  "review_timestamp_utc": "2026-05-17T19:25:45.002719+00:00",
+  "deterministic_guard_applied": true,
+  "technical_blockers": [
+    "expected_assets_not_technically_promotable: RS_04_player_tactical_LOD0.glb, RS_05_enemy_tactical_LOD0.glb",
+    "missing_normal_texture",
+    "missing_occlusion_or_ao_texture",
+    "missing_tangent_attribute"
+  ],
+  "raw_model_output": "<think>\nWe need to parse the context. The user says: \"You are reviewing a Unity contact sheet of AI-generated GLB assets. The grid is ordered left-to-right, top-to-bottom. Compare each visible object against the expected file/category list below.\"\n\nWe have expected assets list with two entries:\n\ngrid_index 1: expected_file \"RS_04_player_tactical_LOD0.glb\", expected_category \"character\", technical_status \"textured_probe_not_production\", technical_reasons list.\n\ngrid_index 2: expected_file \"RS_05_enemy_tactical_LOD0.glb\", expected_category \"character\", same technical status.\n\nSo expected categories are both \"character\". The visible objects: there are two weapons (rifle-like). The grid is left-to-right, top-to-bottom. So grid_index 1 is left object (blue/teal rifle). grid_index 2 is right object (pink/red rifle). Both appear to be weapons (rifles). The expected category is \"character\". But the visible category is \"weapon\". According to instructions: \"if character, gear, loot, container, or crate items visibly look like rifle/weapon silhouettes, mark category_match=false.\" So category_match should be false for both items because they are weapons but expected category is character. Also need to set visible_category to appropriate category: \"weapon\". So visible_category = \"weapon\". category_match = false.\n\nConfidence: Since we can clearly see they are weapons, but expected category is character, confidence maybe \"high\" that visible category is weapon, but category_match false. The confidence refers to how confident we are about the visible_category classification. I'd say \"high\".\n\nReason: \"Visible objects are rifles, not characters.\"\n\nNow overall_verdict: We need to decide pass/fail/uncertain. The items do not match expected categories, so likely fail. Also technical status indicates textured_probe_not_production, which is a blocker. So overall verdict likely \"fail\".\n\nSummary: short sentence: \"Two weapon assets visible, but expected character categories, causing category mismatch and promotion blocker.\"\n\npromotion_allowed: true only when all visible objects match expected categories and no meaningful quality blockers. Here categories mismatch, so promotion_allowed = false.\n\npromotion_blockers: list of blockers. Include category mismatch and technical status (textured_probe_not_production). So blockers: \"category mismatch (visible weapon vs expected character)\", \"missing PBR textures (textured_probe_not_production)\". Possibly also \"missing normalTexture, occlusionTexture, TANGENT\". But we need short items. Provide list strings.\n\nNow format JSON strictly.\n\nCheck schema: items array each with fields: grid_index (number), expected_file (string), expected_category (string), visible_category (string), category_match (boolean), confidence (string), reason (string).\n\nWe have two items. Ensure grid_index 1 and 2.\n\nexpected_file: as given.\n\nexpected_category: \"character\".\n\nvisible_category: \"weapon\".\n\ncategory_match: false.\n\nconfidence: \"high\".\n\nreason: \"Visible objects are rifles, not characters.\"\n\nNow overall_verdict: \"fail\".\n\nsummary: \"Two weapon assets visible, but expected character categories, causing category mismatch and promotion blocker.\"\n\npromotion_allowed: false.\n\npromotion_blockers: array of strings. Could include \"category mismatch\", \"textured_probe_not_production\". Maybe also \"missing PBR maps\". Keep concise.\n\nNow ensure JSON is valid, no trailing commas.\n\nLet's craft.\n</think>\n{\n  \"overall_verdict\": \"fail\",\n  \"summary\": \"Two weapon assets visible, but expected character categories, causing category mismatch and promotion blocker.\",\n  \"items\": [\n    {\n      \"grid_index\": 1,\n      \"expected_file\": \"RS_04_player_tactical_LOD0.glb\",\n      \"expected_category\": \"character\",\n      \"visible_category\": \"weapon\",\n      \"category_match\": false,\n      \"confidence\": \"high\",\n      \"reason\": \"Visible object is a rifle, not a character.\"\n    },\n    {\n      \"grid_index\": 2,\n      \"expected_file\": \"RS_05_enemy_tactical_LOD0.glb\",\n      \"expected_category\": \"character\",\n      \"visible_category\": \"weapon\",\n      \"category_match\": false,\n      \"confidence\": \"high\",\n      \"reason\": \"Visible object is a rifle, not a character.\"\n    }\n  ],\n  \"promotion_allowed\": false,\n  \"promotion_blockers\": [\n    \"category mismatch (visible weapon vs expected character)\",\n    \"textured_probe_not_production (missing normalTexture, occlusionTexture/AO, TANGENT)\"\n  ]\n}<|im_end|>",
+  "input_image": "/Users/yuanshaochen/My project/Assets/Screenshots/RealifiedCategorySheets/realified_character_contact_sheet.png",
+  "input_audit": "/Users/yuanshaochen/My project/docs/REALIFIED_ASSETS_IMPORT_AUDIT.json",
+  "endpoint": "http://127.0.0.1:8083/v1/chat/completions",
+  "model": "nemotron-omni",
+  "category": "character",
+  "asset_suffix": "_LOD0.glb",
+  "expected_asset_count": 2
+}

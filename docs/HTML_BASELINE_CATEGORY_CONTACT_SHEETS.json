@@ -1,0 +1,38 @@
+{
+  "schema": "html_baseline_category_contact_sheets_v1",
+  "timestamp_utc": "2026-05-18T04:13:27.2948630Z",
+  "output_directory": "Assets/Screenshots/HtmlBaselineCategorySheets",
+  "category_count": 5,
+  "categories": [
+    {
+      "category": "weapon",
+      "path": "Assets/Screenshots/HtmlBaselineCategorySheets/html_baseline_weapon_contact_sheet.png",
+      "expected_asset_count": 4,
+      "rendered": true
+    },
+    {
+      "category": "character",
+      "path": "Assets/Screenshots/HtmlBaselineCategorySheets/html_baseline_character_contact_sheet.png",
+      "expected_asset_count": 2,
+      "rendered": true
+    },
+    {
+      "category": "gear",
+      "path": "Assets/Screenshots/HtmlBaselineCategorySheets/html_baseline_gear_contact_sheet.png",
+      "expected_asset_count": 2,
+      "rendered": true
+    },
+    {
+      "category": "loot",
+      "path": "Assets/Screenshots/HtmlBaselineCategorySheets/html_baseline_loot_contact_sheet.png",
+      "expected_asset_count": 4,
+      "rendered": true
+    },
+    {
+      "category": "environment_prop",
+      "path": "Assets/Screenshots/HtmlBaselineCategorySheets/html_baseline_environment_prop_contact_sheet.png",
+      "expected_asset_count": 5,
+      "rendered": true
+    }
+  ]
+}

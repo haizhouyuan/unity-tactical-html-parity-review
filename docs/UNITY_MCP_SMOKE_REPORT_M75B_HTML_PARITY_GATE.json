@@ -1,0 +1,40 @@
+{
+  "timestamp_utc": "2026-05-17T20:46:27.980404+00:00",
+  "mcp_url": "http://127.0.0.1:8080/mcp",
+  "execute_acceptance": true,
+  "one_button_acceptance": true,
+  "errors": [],
+  "session_id": "97bbdae129e14e8e88687cc53eeef710",
+  "protocol_version": "2025-06-18",
+  "server_name": "mcp-for-unity-server",
+  "server_version": "3.3.1",
+  "tools_count": 43,
+  "required_tools": {
+    "read_console": true,
+    "execute_menu_item": true,
+    "manage_editor": true,
+    "tools_list": true
+  },
+  "read_console_ok": true,
+  "read_console_response_excerpt": "{\"content\": [{\"type\": \"text\", \"text\": \"{\\\"success\\\":true,\\\"message\\\":\\\"Retrieved 5 log entries.\\\",\\\"data\\\":[{\\\"type\\\":\\\"Error\\\",\\\"message\\\":\\\"Assets/Editor/HtmlTacticalParityGate.cs(113,9): error CS0103: The name 'Debug' does not exist in the current context\\\",\\\"file\\\":\\\"Assets/Editor/HtmlTacticalParityGate.cs\\\",\\\"line\\\":113,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Log\\\",\\\"message\\\":\\\"[AI Tools] Realified import/material gate written to docs/REALIFIED_IMPORT_MATERIAL_GATE.json\\\",\\\"file\\\":\\\"Assets/Editor/RealifiedImportMaterialGate.cs\\\",\\\"line\\\":86,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Log\\\",\\\"message\\\":\\\"[GLBImporter] PBR material setup complete for RS_08_loot_ammo_LOD0\\\",\\\"file\\\":\\\"Assets/Scripts/Editor/UnityGLBImporter.cs\\\",\\\"line\\\":77,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Log\\\",\\\"message\\\":\\\"[GLBImporter] PBR material setup complete for RS_09_loot_medkit_LOD0\\\",\\\"file\\\":\\\"Assets/Scripts/Editor/UnityGLBImporter.cs\\\",\\\"line\\\":77,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Log\\\",\\\"message\\\":\\\"[GLBImporter] PBR material setup complete for RS_06_gear_helmet_LOD0\\\",\\\"file\\\":\\\"Assets/Scripts/Editor/UnityGLBImporter.cs\\\",\\\"line\\\":77,\\\"stackTrace\\\":null}]}\"}], \"structuredContent\": {\"success\": true, \"message\": \"Retrieved 5 log entries.\", \"data\": [{\"type\": \"Error\", \"message\": \"Assets/Editor/HtmlTacticalParityGate.cs(113,9): error CS0103: The name 'Debug' does not exist in the current context\", \"file\": \"Assets/Editor/HtmlTacticalParityGate.cs\", \"line\": 113, \"stackTrace\": null}, {\"type\": \"Log\", \"message\": \"[AI Tools] Realified import/material gate written to docs/REALIFIED_IMPORT_MATERIAL_GATE.json\", \"file\": \"Assets/Editor/RealifiedImportMaterialGate.cs\", \"line\": 86, \"stackTrace\": null}, {\"type\": \"Log\", \"message\": \"[GLBImporter] PBR material setup complete for RS_08_loot_ammo_LOD0\", \"file\": \"Assets/Scripts/Editor/UnityGLBImporter.cs\", \"line\": 77, \"stackTrace\": null}, {\"type\": \"Log\", \"message\": \"[GLBImporter] PBR material setup complete for RS_09_loot_medkit_LOD0\", \"file\": \"Assets/Scripts/Editor/UnityGLBI",
+  "execute_menu_item_response_excerpt": "{\"content\": [{\"type\": \"text\", \"text\": \"{\\\"success\\\":true,\\\"message\\\":\\\"Attempted to execute menu item: 'AI Tools/Run Tactical Acceptance Pipeline'. Check Unity logs for confirmation or errors.\\\",\\\"error\\\":null,\\\"data\\\":null,\\\"hint\\\":null}\"}], \"structuredContent\": {\"success\": true, \"message\": \"Attempted to execute menu item: 'AI Tools/Run Tactical Acceptance Pipeline'. Check Unity logs for confirmation or errors.\", \"error\": null, \"data\": null, \"hint\": null}, \"isError\": false}",
+  "acceptance_report": "/Users/yuanshaochen/My project/docs/TACTICAL_ACCEPTANCE_PIPELINE_REPORT.json",
+  "acceptance_status": "complete",
+  "acceptance_console_errors": 0,
+  "acceptance_all_required_current_gates_passed": true,
+  "acceptance_full_visual_asset_gate_passed": false,
+  "acceptance_completion_credit": "gameplay_route_plus_incremental_assets_environment_first_person_weapon_polish_and_authored_character_clip_evidence",
+  "acceptance_master_fields_present": {
+    "realified_audit_path": true,
+    "realified_urp_material_validation_path": true,
+    "nemotron_review_path": true,
+    "player_pov_screenshot_path": true,
+    "playable_route_screenshot_directory": true,
+    "first_person_fire_screenshot_path": true,
+    "realified_contact_sheet_path": true,
+    "semantic_review_passed": true,
+    "semantic_review_current_for_audit": true
+  },
+  "acceptance_semantic_review_passed": false,
+  "acceptance_semantic_review_current_for_audit": true
+}

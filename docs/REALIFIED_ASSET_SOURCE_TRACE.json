@@ -1,0 +1,2078 @@
+{
+  "schema": "realified_asset_source_trace_v1",
+  "timestamp_utc": "2026-05-17T21:23:26.294466+00:00",
+  "unity_root": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets",
+  "research_assets_root": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets",
+  "category_review_path": "/Users/yuanshaochen/My project/docs/REALIFIED_CATEGORY_NEMOTRON_REVIEWS.json",
+  "total_unity_glb": 48,
+  "source_hash_matches": 0,
+  "lod0_or_primary_failures": 12,
+  "nonweapon_semantic_failures": 8,
+  "verdict": "Do not promote the Unity Realified batch. Current Unity GLBs do not trace back by SHA256 to the expected research asset packet outputs, and existing semantic reviews mark non-weapon LOD0 categories as visible weapon silhouettes.",
+  "assets": [
+    {
+      "file": "RS_02_sidearm_LOD0.glb",
+      "stem": "RS_02_sidearm",
+      "expected_category": "weapon",
+      "expected_packet": "sidearm_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_02_sidearm_LOD0.glb",
+      "bytes": 8889560,
+      "sha256": "e6feebd8ee14962bbd071d9ffcb0b68695b297ac5efe1b6c65c80a572c1690ea",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/sidearm_v1/model/optimized.glb",
+          "relative_path": "sidearm_v1/model/optimized.glb",
+          "bytes": 1960592,
+          "sha256": "b17726721088b501df66311ca90aade0a5ded81f5fa30dfec425b10f421a4877"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/sidearm_v1/model/cleaned.glb",
+          "relative_path": "sidearm_v1/model/cleaned.glb",
+          "bytes": 1960592,
+          "sha256": "b17726721088b501df66311ca90aade0a5ded81f5fa30dfec425b10f421a4877"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/sidearm_v1/model/raw.glb",
+          "relative_path": "sidearm_v1/model/raw.glb",
+          "bytes": 180476,
+          "sha256": "aa1fd450ed947ecff9dc9c9ff07a5f4f329d6359d3a462064483bac72cd60255"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "match",
+      "visible_category": "weapon",
+      "category_match": true,
+      "review_reason": "visible sidearm silhouette matches expected weapon",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_02_sidearm_LOD1.glb",
+      "stem": "RS_02_sidearm",
+      "expected_category": "weapon",
+      "expected_packet": "sidearm_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_02_sidearm_LOD1.glb",
+      "bytes": 7561336,
+      "sha256": "68d5f2d9d00fdcabe684a191de19feeff834eb85ba69f2002caf3f5466a96adf",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/sidearm_v1/model/optimized.glb",
+          "relative_path": "sidearm_v1/model/optimized.glb",
+          "bytes": 1960592,
+          "sha256": "b17726721088b501df66311ca90aade0a5ded81f5fa30dfec425b10f421a4877"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/sidearm_v1/model/cleaned.glb",
+          "relative_path": "sidearm_v1/model/cleaned.glb",
+          "bytes": 1960592,
+          "sha256": "b17726721088b501df66311ca90aade0a5ded81f5fa30dfec425b10f421a4877"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/sidearm_v1/model/raw.glb",
+          "relative_path": "sidearm_v1/model/raw.glb",
+          "bytes": 180476,
+          "sha256": "aa1fd450ed947ecff9dc9c9ff07a5f4f329d6359d3a462064483bac72cd60255"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_02_sidearm_LOD2.glb",
+      "stem": "RS_02_sidearm",
+      "expected_category": "weapon",
+      "expected_packet": "sidearm_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_02_sidearm_LOD2.glb",
+      "bytes": 6895636,
+      "sha256": "fe07a48fb042fe2575d693ca9305a43273c86f93b80f8658f2ec2cfb88d017ef",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/sidearm_v1/model/optimized.glb",
+          "relative_path": "sidearm_v1/model/optimized.glb",
+          "bytes": 1960592,
+          "sha256": "b17726721088b501df66311ca90aade0a5ded81f5fa30dfec425b10f421a4877"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/sidearm_v1/model/cleaned.glb",
+          "relative_path": "sidearm_v1/model/cleaned.glb",
+          "bytes": 1960592,
+          "sha256": "b17726721088b501df66311ca90aade0a5ded81f5fa30dfec425b10f421a4877"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/sidearm_v1/model/raw.glb",
+          "relative_path": "sidearm_v1/model/raw.glb",
+          "bytes": 180476,
+          "sha256": "aa1fd450ed947ecff9dc9c9ff07a5f4f329d6359d3a462064483bac72cd60255"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_02_sidearm_textured.glb",
+      "stem": "RS_02_sidearm",
+      "expected_category": "weapon",
+      "expected_packet": "sidearm_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_02_sidearm_textured.glb",
+      "bytes": 6703872,
+      "sha256": "340ed3dc7910348b6592f5e346fd6e889c431a23ab8266b6ea390c6a9b6e932b",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/sidearm_v1/model/optimized.glb",
+          "relative_path": "sidearm_v1/model/optimized.glb",
+          "bytes": 1960592,
+          "sha256": "b17726721088b501df66311ca90aade0a5ded81f5fa30dfec425b10f421a4877"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/sidearm_v1/model/cleaned.glb",
+          "relative_path": "sidearm_v1/model/cleaned.glb",
+          "bytes": 1960592,
+          "sha256": "b17726721088b501df66311ca90aade0a5ded81f5fa30dfec425b10f421a4877"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/sidearm_v1/model/raw.glb",
+          "relative_path": "sidearm_v1/model/raw.glb",
+          "bytes": 180476,
+          "sha256": "aa1fd450ed947ecff9dc9c9ff07a5f4f329d6359d3a462064483bac72cd60255"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_03_secondary_weapon_LOD0.glb",
+      "stem": "RS_03_secondary_weapon",
+      "expected_category": "weapon",
+      "expected_packet": "secondary_weapon_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_03_secondary_weapon_LOD0.glb",
+      "bytes": 8895268,
+      "sha256": "2be664196682abcb640cbfc496a9c81d92e4f50a9d88aef32595023ce6cfa1c8",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/optimized.glb",
+          "relative_path": "secondary_weapon_v1/model/optimized.glb",
+          "bytes": 44497048,
+          "sha256": "53e2fc965686c690712d31d10aff6f9652260f0b5ae78a7575a5e92520082439"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/cleaned.glb",
+          "relative_path": "secondary_weapon_v1/model/cleaned.glb",
+          "bytes": 44497048,
+          "sha256": "53e2fc965686c690712d31d10aff6f9652260f0b5ae78a7575a5e92520082439"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/raw.glb",
+          "relative_path": "secondary_weapon_v1/model/raw.glb",
+          "bytes": 36721520,
+          "sha256": "84f9641fa0cfe6ced53b1153112b7bd3b8036ed34c5ec4917605fc6a370e2925"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/hunyuan_textured.glb",
+          "relative_path": "secondary_weapon_v1/model/hunyuan_textured.glb",
+          "bytes": 36721520,
+          "sha256": "84f9641fa0cfe6ced53b1153112b7bd3b8036ed34c5ec4917605fc6a370e2925"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "secondary_weapon_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 20551808,
+          "sha256": "658a237c8f343810a663f405ce74d74a7c2873e239366fab85b240115d290edd"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "match",
+      "visible_category": "weapon",
+      "category_match": true,
+      "review_reason": "visible secondary weapon silhouette matches expected",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_03_secondary_weapon_LOD1.glb",
+      "stem": "RS_03_secondary_weapon",
+      "expected_category": "weapon",
+      "expected_packet": "secondary_weapon_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_03_secondary_weapon_LOD1.glb",
+      "bytes": 7567044,
+      "sha256": "735154b2b4fe29608118116ed57e17f18c78af4d345f11fd4a62c5d4bcb77a72",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/optimized.glb",
+          "relative_path": "secondary_weapon_v1/model/optimized.glb",
+          "bytes": 44497048,
+          "sha256": "53e2fc965686c690712d31d10aff6f9652260f0b5ae78a7575a5e92520082439"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/cleaned.glb",
+          "relative_path": "secondary_weapon_v1/model/cleaned.glb",
+          "bytes": 44497048,
+          "sha256": "53e2fc965686c690712d31d10aff6f9652260f0b5ae78a7575a5e92520082439"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/raw.glb",
+          "relative_path": "secondary_weapon_v1/model/raw.glb",
+          "bytes": 36721520,
+          "sha256": "84f9641fa0cfe6ced53b1153112b7bd3b8036ed34c5ec4917605fc6a370e2925"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/hunyuan_textured.glb",
+          "relative_path": "secondary_weapon_v1/model/hunyuan_textured.glb",
+          "bytes": 36721520,
+          "sha256": "84f9641fa0cfe6ced53b1153112b7bd3b8036ed34c5ec4917605fc6a370e2925"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "secondary_weapon_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 20551808,
+          "sha256": "658a237c8f343810a663f405ce74d74a7c2873e239366fab85b240115d290edd"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_03_secondary_weapon_LOD2.glb",
+      "stem": "RS_03_secondary_weapon",
+      "expected_category": "weapon",
+      "expected_packet": "secondary_weapon_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_03_secondary_weapon_LOD2.glb",
+      "bytes": 6901344,
+      "sha256": "8d1e05d0f74f36ae9bec0c664e974ce29665989a10dd613775450b738dae092a",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/optimized.glb",
+          "relative_path": "secondary_weapon_v1/model/optimized.glb",
+          "bytes": 44497048,
+          "sha256": "53e2fc965686c690712d31d10aff6f9652260f0b5ae78a7575a5e92520082439"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/cleaned.glb",
+          "relative_path": "secondary_weapon_v1/model/cleaned.glb",
+          "bytes": 44497048,
+          "sha256": "53e2fc965686c690712d31d10aff6f9652260f0b5ae78a7575a5e92520082439"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/raw.glb",
+          "relative_path": "secondary_weapon_v1/model/raw.glb",
+          "bytes": 36721520,
+          "sha256": "84f9641fa0cfe6ced53b1153112b7bd3b8036ed34c5ec4917605fc6a370e2925"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/hunyuan_textured.glb",
+          "relative_path": "secondary_weapon_v1/model/hunyuan_textured.glb",
+          "bytes": 36721520,
+          "sha256": "84f9641fa0cfe6ced53b1153112b7bd3b8036ed34c5ec4917605fc6a370e2925"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "secondary_weapon_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 20551808,
+          "sha256": "658a237c8f343810a663f405ce74d74a7c2873e239366fab85b240115d290edd"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_03_secondary_weapon_textured.glb",
+      "stem": "RS_03_secondary_weapon",
+      "expected_category": "weapon",
+      "expected_packet": "secondary_weapon_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_03_secondary_weapon_textured.glb",
+      "bytes": 6709552,
+      "sha256": "0a9b23800d8f9d2da9cf05dd3e0082b6601ee183b08a05baa898e0deac2cb56e",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/optimized.glb",
+          "relative_path": "secondary_weapon_v1/model/optimized.glb",
+          "bytes": 44497048,
+          "sha256": "53e2fc965686c690712d31d10aff6f9652260f0b5ae78a7575a5e92520082439"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/cleaned.glb",
+          "relative_path": "secondary_weapon_v1/model/cleaned.glb",
+          "bytes": 44497048,
+          "sha256": "53e2fc965686c690712d31d10aff6f9652260f0b5ae78a7575a5e92520082439"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/raw.glb",
+          "relative_path": "secondary_weapon_v1/model/raw.glb",
+          "bytes": 36721520,
+          "sha256": "84f9641fa0cfe6ced53b1153112b7bd3b8036ed34c5ec4917605fc6a370e2925"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/hunyuan_textured.glb",
+          "relative_path": "secondary_weapon_v1/model/hunyuan_textured.glb",
+          "bytes": 36721520,
+          "sha256": "84f9641fa0cfe6ced53b1153112b7bd3b8036ed34c5ec4917605fc6a370e2925"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "secondary_weapon_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 20551808,
+          "sha256": "658a237c8f343810a663f405ce74d74a7c2873e239366fab85b240115d290edd"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_04_player_tactical_LOD0.glb",
+      "stem": "RS_04_player_tactical",
+      "expected_category": "character",
+      "expected_packet": "player_tactical_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_04_player_tactical_LOD0.glb",
+      "bytes": 8727484,
+      "sha256": "c27e2399fd10112068a0df63508b399e7c087a4a5d9e0a1eb55c2d0ddd2290de",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/player_tactical_v1/model/optimized.glb",
+          "relative_path": "player_tactical_v1/model/optimized.glb",
+          "bytes": 2699088,
+          "sha256": "a969ed31ca87f4195e4925650c7bf4c057d0174cd28bb9c12d7ba41323e9b0fe"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/player_tactical_v1/model/cleaned.glb",
+          "relative_path": "player_tactical_v1/model/cleaned.glb",
+          "bytes": 2699088,
+          "sha256": "a969ed31ca87f4195e4925650c7bf4c057d0174cd28bb9c12d7ba41323e9b0fe"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/player_tactical_v1/model/raw.glb",
+          "relative_path": "player_tactical_v1/model/raw.glb",
+          "bytes": 467092,
+          "sha256": "9e228f0ad1001142023fd40e36933fbdceeffa6e37248ddbe27b8bfc9aae0ea2"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "mismatch",
+      "visible_category": "weapon",
+      "category_match": false,
+      "review_reason": "Visible object is a rifle, not a character.",
+      "promotion_action": "quarantine_regenerate_or_replace_category_wrong"
+    },
+    {
+      "file": "RS_04_player_tactical_LOD1.glb",
+      "stem": "RS_04_player_tactical",
+      "expected_category": "character",
+      "expected_packet": "player_tactical_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_04_player_tactical_LOD1.glb",
+      "bytes": 7824252,
+      "sha256": "9c64561f1ba4b7fcd72ef8e1a91a870721da17e16238408e4dc12429bb018032",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/player_tactical_v1/model/optimized.glb",
+          "relative_path": "player_tactical_v1/model/optimized.glb",
+          "bytes": 2699088,
+          "sha256": "a969ed31ca87f4195e4925650c7bf4c057d0174cd28bb9c12d7ba41323e9b0fe"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/player_tactical_v1/model/cleaned.glb",
+          "relative_path": "player_tactical_v1/model/cleaned.glb",
+          "bytes": 2699088,
+          "sha256": "a969ed31ca87f4195e4925650c7bf4c057d0174cd28bb9c12d7ba41323e9b0fe"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/player_tactical_v1/model/raw.glb",
+          "relative_path": "player_tactical_v1/model/raw.glb",
+          "bytes": 467092,
+          "sha256": "9e228f0ad1001142023fd40e36933fbdceeffa6e37248ddbe27b8bfc9aae0ea2"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_04_player_tactical_LOD2.glb",
+      "stem": "RS_04_player_tactical",
+      "expected_category": "character",
+      "expected_packet": "player_tactical_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_04_player_tactical_LOD2.glb",
+      "bytes": 7371576,
+      "sha256": "343267be63384cde7feb4879b84f601839f658ec4a3de13758ec5a548c0960dc",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/player_tactical_v1/model/optimized.glb",
+          "relative_path": "player_tactical_v1/model/optimized.glb",
+          "bytes": 2699088,
+          "sha256": "a969ed31ca87f4195e4925650c7bf4c057d0174cd28bb9c12d7ba41323e9b0fe"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/player_tactical_v1/model/cleaned.glb",
+          "relative_path": "player_tactical_v1/model/cleaned.glb",
+          "bytes": 2699088,
+          "sha256": "a969ed31ca87f4195e4925650c7bf4c057d0174cd28bb9c12d7ba41323e9b0fe"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/player_tactical_v1/model/raw.glb",
+          "relative_path": "player_tactical_v1/model/raw.glb",
+          "bytes": 467092,
+          "sha256": "9e228f0ad1001142023fd40e36933fbdceeffa6e37248ddbe27b8bfc9aae0ea2"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_04_player_tactical_textured.glb",
+      "stem": "RS_04_player_tactical",
+      "expected_category": "character",
+      "expected_packet": "player_tactical_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_04_player_tactical_textured.glb",
+      "bytes": 7393016,
+      "sha256": "db7a98935b6b039a5455d39be44572d1e8884ce42c4837c024b773f6d3df0bd2",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/player_tactical_v1/model/optimized.glb",
+          "relative_path": "player_tactical_v1/model/optimized.glb",
+          "bytes": 2699088,
+          "sha256": "a969ed31ca87f4195e4925650c7bf4c057d0174cd28bb9c12d7ba41323e9b0fe"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/player_tactical_v1/model/cleaned.glb",
+          "relative_path": "player_tactical_v1/model/cleaned.glb",
+          "bytes": 2699088,
+          "sha256": "a969ed31ca87f4195e4925650c7bf4c057d0174cd28bb9c12d7ba41323e9b0fe"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/player_tactical_v1/model/raw.glb",
+          "relative_path": "player_tactical_v1/model/raw.glb",
+          "bytes": 467092,
+          "sha256": "9e228f0ad1001142023fd40e36933fbdceeffa6e37248ddbe27b8bfc9aae0ea2"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_05_enemy_tactical_LOD0.glb",
+      "stem": "RS_05_enemy_tactical",
+      "expected_category": "character",
+      "expected_packet": "enemy_tactical_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_05_enemy_tactical_LOD0.glb",
+      "bytes": 8684036,
+      "sha256": "d136f460eda1f0f4c145f6bc59a0b6de8827898e98b78315764bdd964f590e22",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/enemy_tactical_v1/model/optimized.glb",
+          "relative_path": "enemy_tactical_v1/model/optimized.glb",
+          "bytes": 2709940,
+          "sha256": "c8d67f9f17e6c6abc51510fb53d1776f6095aba6cc286873b64b4db0e7601d19"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/enemy_tactical_v1/model/cleaned.glb",
+          "relative_path": "enemy_tactical_v1/model/cleaned.glb",
+          "bytes": 2709940,
+          "sha256": "c8d67f9f17e6c6abc51510fb53d1776f6095aba6cc286873b64b4db0e7601d19"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/enemy_tactical_v1/model/raw.glb",
+          "relative_path": "enemy_tactical_v1/model/raw.glb",
+          "bytes": 467124,
+          "sha256": "8c40c323aef1f8fda5e34c11ce6bbd30441f5da989d43580ea86a9b7f3bf1bd0"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "mismatch",
+      "visible_category": "weapon",
+      "category_match": false,
+      "review_reason": "Visible object is a rifle, not a character.",
+      "promotion_action": "quarantine_regenerate_or_replace_category_wrong"
+    },
+    {
+      "file": "RS_05_enemy_tactical_LOD1.glb",
+      "stem": "RS_05_enemy_tactical",
+      "expected_category": "character",
+      "expected_packet": "enemy_tactical_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_05_enemy_tactical_LOD1.glb",
+      "bytes": 7780804,
+      "sha256": "22b2b72f935bea3e6ba6834932931cecfc90b1a266839ae1b963f2b77dcbce17",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/enemy_tactical_v1/model/optimized.glb",
+          "relative_path": "enemy_tactical_v1/model/optimized.glb",
+          "bytes": 2709940,
+          "sha256": "c8d67f9f17e6c6abc51510fb53d1776f6095aba6cc286873b64b4db0e7601d19"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/enemy_tactical_v1/model/cleaned.glb",
+          "relative_path": "enemy_tactical_v1/model/cleaned.glb",
+          "bytes": 2709940,
+          "sha256": "c8d67f9f17e6c6abc51510fb53d1776f6095aba6cc286873b64b4db0e7601d19"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/enemy_tactical_v1/model/raw.glb",
+          "relative_path": "enemy_tactical_v1/model/raw.glb",
+          "bytes": 467124,
+          "sha256": "8c40c323aef1f8fda5e34c11ce6bbd30441f5da989d43580ea86a9b7f3bf1bd0"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_05_enemy_tactical_LOD2.glb",
+      "stem": "RS_05_enemy_tactical",
+      "expected_category": "character",
+      "expected_packet": "enemy_tactical_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_05_enemy_tactical_LOD2.glb",
+      "bytes": 7328128,
+      "sha256": "3796a4de16fbac831926d1a68dc4bfcfb5032ae2bc9d9da23d0f209936fddd0d",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/enemy_tactical_v1/model/optimized.glb",
+          "relative_path": "enemy_tactical_v1/model/optimized.glb",
+          "bytes": 2709940,
+          "sha256": "c8d67f9f17e6c6abc51510fb53d1776f6095aba6cc286873b64b4db0e7601d19"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/enemy_tactical_v1/model/cleaned.glb",
+          "relative_path": "enemy_tactical_v1/model/cleaned.glb",
+          "bytes": 2709940,
+          "sha256": "c8d67f9f17e6c6abc51510fb53d1776f6095aba6cc286873b64b4db0e7601d19"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/enemy_tactical_v1/model/raw.glb",
+          "relative_path": "enemy_tactical_v1/model/raw.glb",
+          "bytes": 467124,
+          "sha256": "8c40c323aef1f8fda5e34c11ce6bbd30441f5da989d43580ea86a9b7f3bf1bd0"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_05_enemy_tactical_textured.glb",
+      "stem": "RS_05_enemy_tactical",
+      "expected_category": "character",
+      "expected_packet": "enemy_tactical_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_05_enemy_tactical_textured.glb",
+      "bytes": 7349568,
+      "sha256": "62c25606671287f07c3977110bcab0e3d9e86f04158883ce6f97e59e6ce0c0f0",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/enemy_tactical_v1/model/optimized.glb",
+          "relative_path": "enemy_tactical_v1/model/optimized.glb",
+          "bytes": 2709940,
+          "sha256": "c8d67f9f17e6c6abc51510fb53d1776f6095aba6cc286873b64b4db0e7601d19"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/enemy_tactical_v1/model/cleaned.glb",
+          "relative_path": "enemy_tactical_v1/model/cleaned.glb",
+          "bytes": 2709940,
+          "sha256": "c8d67f9f17e6c6abc51510fb53d1776f6095aba6cc286873b64b4db0e7601d19"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/enemy_tactical_v1/model/raw.glb",
+          "relative_path": "enemy_tactical_v1/model/raw.glb",
+          "bytes": 467124,
+          "sha256": "8c40c323aef1f8fda5e34c11ce6bbd30441f5da989d43580ea86a9b7f3bf1bd0"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_06_gear_helmet_LOD0.glb",
+      "stem": "RS_06_gear_helmet",
+      "expected_category": "gear",
+      "expected_packet": "gear_set_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_06_gear_helmet_LOD0.glb",
+      "bytes": 8501152,
+      "sha256": "2ed21a9d49ac1363bd8610870f941ce37d1670e43a1e71c9ec3d18fc956af4a8",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/optimized.glb",
+          "relative_path": "gear_set_v1/model/optimized.glb",
+          "bytes": 48162708,
+          "sha256": "a1bf6b41c88060ace86f6f61bf88c3b721ef0f7f172161ac2be09b5f786f1be6"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/cleaned.glb",
+          "relative_path": "gear_set_v1/model/cleaned.glb",
+          "bytes": 48162708,
+          "sha256": "a1bf6b41c88060ace86f6f61bf88c3b721ef0f7f172161ac2be09b5f786f1be6"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/raw.glb",
+          "relative_path": "gear_set_v1/model/raw.glb",
+          "bytes": 41245324,
+          "sha256": "c25686bf69930b90ebc20b84c33a8ae65ab41024ed0b49dc0ad09b64fd36cc78"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/hunyuan_textured.glb",
+          "relative_path": "gear_set_v1/model/hunyuan_textured.glb",
+          "bytes": 41245324,
+          "sha256": "c25686bf69930b90ebc20b84c33a8ae65ab41024ed0b49dc0ad09b64fd36cc78"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "gear_set_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 23224280,
+          "sha256": "25c9b23ed51685b274732bf268b25cfeadff128dddbf729db9d92597fcf896fd"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "mismatch",
+      "visible_category": "weapon",
+      "category_match": false,
+      "review_reason": "Visible object is a rifle, not a helmet or vest.",
+      "promotion_action": "quarantine_regenerate_or_replace_category_wrong"
+    },
+    {
+      "file": "RS_06_gear_helmet_LOD1.glb",
+      "stem": "RS_06_gear_helmet",
+      "expected_category": "gear",
+      "expected_packet": "gear_set_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_06_gear_helmet_LOD1.glb",
+      "bytes": 7597920,
+      "sha256": "ea05774aaf5161ad51a3230e97919fb5be09ef083c20f9c8d2a67f722013addf",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/optimized.glb",
+          "relative_path": "gear_set_v1/model/optimized.glb",
+          "bytes": 48162708,
+          "sha256": "a1bf6b41c88060ace86f6f61bf88c3b721ef0f7f172161ac2be09b5f786f1be6"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/cleaned.glb",
+          "relative_path": "gear_set_v1/model/cleaned.glb",
+          "bytes": 48162708,
+          "sha256": "a1bf6b41c88060ace86f6f61bf88c3b721ef0f7f172161ac2be09b5f786f1be6"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/raw.glb",
+          "relative_path": "gear_set_v1/model/raw.glb",
+          "bytes": 41245324,
+          "sha256": "c25686bf69930b90ebc20b84c33a8ae65ab41024ed0b49dc0ad09b64fd36cc78"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/hunyuan_textured.glb",
+          "relative_path": "gear_set_v1/model/hunyuan_textured.glb",
+          "bytes": 41245324,
+          "sha256": "c25686bf69930b90ebc20b84c33a8ae65ab41024ed0b49dc0ad09b64fd36cc78"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "gear_set_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 23224280,
+          "sha256": "25c9b23ed51685b274732bf268b25cfeadff128dddbf729db9d92597fcf896fd"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_06_gear_helmet_LOD2.glb",
+      "stem": "RS_06_gear_helmet",
+      "expected_category": "gear",
+      "expected_packet": "gear_set_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_06_gear_helmet_LOD2.glb",
+      "bytes": 7145244,
+      "sha256": "01d5250b2275033857dc391c4b9fc3243d74ac5d9cae68a9c77091549b6afced",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/optimized.glb",
+          "relative_path": "gear_set_v1/model/optimized.glb",
+          "bytes": 48162708,
+          "sha256": "a1bf6b41c88060ace86f6f61bf88c3b721ef0f7f172161ac2be09b5f786f1be6"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/cleaned.glb",
+          "relative_path": "gear_set_v1/model/cleaned.glb",
+          "bytes": 48162708,
+          "sha256": "a1bf6b41c88060ace86f6f61bf88c3b721ef0f7f172161ac2be09b5f786f1be6"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/raw.glb",
+          "relative_path": "gear_set_v1/model/raw.glb",
+          "bytes": 41245324,
+          "sha256": "c25686bf69930b90ebc20b84c33a8ae65ab41024ed0b49dc0ad09b64fd36cc78"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/hunyuan_textured.glb",
+          "relative_path": "gear_set_v1/model/hunyuan_textured.glb",
+          "bytes": 41245324,
+          "sha256": "c25686bf69930b90ebc20b84c33a8ae65ab41024ed0b49dc0ad09b64fd36cc78"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "gear_set_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 23224280,
+          "sha256": "25c9b23ed51685b274732bf268b25cfeadff128dddbf729db9d92597fcf896fd"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_06_gear_helmet_textured.glb",
+      "stem": "RS_06_gear_helmet",
+      "expected_category": "gear",
+      "expected_packet": "gear_set_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_06_gear_helmet_textured.glb",
+      "bytes": 7166688,
+      "sha256": "ff2e24048c3c4facbbc23fe7d2524240808b4ef84a8e02c7a6126dc012e973d2",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/optimized.glb",
+          "relative_path": "gear_set_v1/model/optimized.glb",
+          "bytes": 48162708,
+          "sha256": "a1bf6b41c88060ace86f6f61bf88c3b721ef0f7f172161ac2be09b5f786f1be6"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/cleaned.glb",
+          "relative_path": "gear_set_v1/model/cleaned.glb",
+          "bytes": 48162708,
+          "sha256": "a1bf6b41c88060ace86f6f61bf88c3b721ef0f7f172161ac2be09b5f786f1be6"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/raw.glb",
+          "relative_path": "gear_set_v1/model/raw.glb",
+          "bytes": 41245324,
+          "sha256": "c25686bf69930b90ebc20b84c33a8ae65ab41024ed0b49dc0ad09b64fd36cc78"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/hunyuan_textured.glb",
+          "relative_path": "gear_set_v1/model/hunyuan_textured.glb",
+          "bytes": 41245324,
+          "sha256": "c25686bf69930b90ebc20b84c33a8ae65ab41024ed0b49dc0ad09b64fd36cc78"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "gear_set_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 23224280,
+          "sha256": "25c9b23ed51685b274732bf268b25cfeadff128dddbf729db9d92597fcf896fd"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_07_gear_vest_LOD0.glb",
+      "stem": "RS_07_gear_vest",
+      "expected_category": "gear",
+      "expected_packet": "gear_set_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_07_gear_vest_LOD0.glb",
+      "bytes": 8746532,
+      "sha256": "8f9f0c8d8d014924c81cdfc1ea14dfad3b6f8f5760f6d02bcd0d940fe4e85698",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/optimized.glb",
+          "relative_path": "gear_set_v1/model/optimized.glb",
+          "bytes": 48162708,
+          "sha256": "a1bf6b41c88060ace86f6f61bf88c3b721ef0f7f172161ac2be09b5f786f1be6"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/cleaned.glb",
+          "relative_path": "gear_set_v1/model/cleaned.glb",
+          "bytes": 48162708,
+          "sha256": "a1bf6b41c88060ace86f6f61bf88c3b721ef0f7f172161ac2be09b5f786f1be6"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/raw.glb",
+          "relative_path": "gear_set_v1/model/raw.glb",
+          "bytes": 41245324,
+          "sha256": "c25686bf69930b90ebc20b84c33a8ae65ab41024ed0b49dc0ad09b64fd36cc78"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/hunyuan_textured.glb",
+          "relative_path": "gear_set_v1/model/hunyuan_textured.glb",
+          "bytes": 41245324,
+          "sha256": "c25686bf69930b90ebc20b84c33a8ae65ab41024ed0b49dc0ad09b64fd36cc78"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "gear_set_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 23224280,
+          "sha256": "25c9b23ed51685b274732bf268b25cfeadff128dddbf729db9d92597fcf896fd"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "mismatch",
+      "visible_category": "weapon",
+      "category_match": false,
+      "review_reason": "Visible object is a rifle, not a vest.",
+      "promotion_action": "quarantine_regenerate_or_replace_category_wrong"
+    },
+    {
+      "file": "RS_07_gear_vest_LOD1.glb",
+      "stem": "RS_07_gear_vest",
+      "expected_category": "gear",
+      "expected_packet": "gear_set_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_07_gear_vest_LOD1.glb",
+      "bytes": 7843300,
+      "sha256": "d0cfc06d86e630b2433f8b0b455c8633175c108edbcb8dc184e823a2632315bf",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/optimized.glb",
+          "relative_path": "gear_set_v1/model/optimized.glb",
+          "bytes": 48162708,
+          "sha256": "a1bf6b41c88060ace86f6f61bf88c3b721ef0f7f172161ac2be09b5f786f1be6"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/cleaned.glb",
+          "relative_path": "gear_set_v1/model/cleaned.glb",
+          "bytes": 48162708,
+          "sha256": "a1bf6b41c88060ace86f6f61bf88c3b721ef0f7f172161ac2be09b5f786f1be6"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/raw.glb",
+          "relative_path": "gear_set_v1/model/raw.glb",
+          "bytes": 41245324,
+          "sha256": "c25686bf69930b90ebc20b84c33a8ae65ab41024ed0b49dc0ad09b64fd36cc78"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/hunyuan_textured.glb",
+          "relative_path": "gear_set_v1/model/hunyuan_textured.glb",
+          "bytes": 41245324,
+          "sha256": "c25686bf69930b90ebc20b84c33a8ae65ab41024ed0b49dc0ad09b64fd36cc78"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "gear_set_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 23224280,
+          "sha256": "25c9b23ed51685b274732bf268b25cfeadff128dddbf729db9d92597fcf896fd"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_07_gear_vest_LOD2.glb",
+      "stem": "RS_07_gear_vest",
+      "expected_category": "gear",
+      "expected_packet": "gear_set_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_07_gear_vest_LOD2.glb",
+      "bytes": 7390620,
+      "sha256": "0d45ab1b5921cba6a93a8b918be017df3aa7deac8a6df6d322650d0f801d2d07",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/optimized.glb",
+          "relative_path": "gear_set_v1/model/optimized.glb",
+          "bytes": 48162708,
+          "sha256": "a1bf6b41c88060ace86f6f61bf88c3b721ef0f7f172161ac2be09b5f786f1be6"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/cleaned.glb",
+          "relative_path": "gear_set_v1/model/cleaned.glb",
+          "bytes": 48162708,
+          "sha256": "a1bf6b41c88060ace86f6f61bf88c3b721ef0f7f172161ac2be09b5f786f1be6"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/raw.glb",
+          "relative_path": "gear_set_v1/model/raw.glb",
+          "bytes": 41245324,
+          "sha256": "c25686bf69930b90ebc20b84c33a8ae65ab41024ed0b49dc0ad09b64fd36cc78"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/hunyuan_textured.glb",
+          "relative_path": "gear_set_v1/model/hunyuan_textured.glb",
+          "bytes": 41245324,
+          "sha256": "c25686bf69930b90ebc20b84c33a8ae65ab41024ed0b49dc0ad09b64fd36cc78"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "gear_set_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 23224280,
+          "sha256": "25c9b23ed51685b274732bf268b25cfeadff128dddbf729db9d92597fcf896fd"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_07_gear_vest_textured.glb",
+      "stem": "RS_07_gear_vest",
+      "expected_category": "gear",
+      "expected_packet": "gear_set_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_07_gear_vest_textured.glb",
+      "bytes": 7412068,
+      "sha256": "477704cb1f28774618556d65993c7332dffc4823affa200309699adf48d6dcc2",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/optimized.glb",
+          "relative_path": "gear_set_v1/model/optimized.glb",
+          "bytes": 48162708,
+          "sha256": "a1bf6b41c88060ace86f6f61bf88c3b721ef0f7f172161ac2be09b5f786f1be6"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/cleaned.glb",
+          "relative_path": "gear_set_v1/model/cleaned.glb",
+          "bytes": 48162708,
+          "sha256": "a1bf6b41c88060ace86f6f61bf88c3b721ef0f7f172161ac2be09b5f786f1be6"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/raw.glb",
+          "relative_path": "gear_set_v1/model/raw.glb",
+          "bytes": 41245324,
+          "sha256": "c25686bf69930b90ebc20b84c33a8ae65ab41024ed0b49dc0ad09b64fd36cc78"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/hunyuan_textured.glb",
+          "relative_path": "gear_set_v1/model/hunyuan_textured.glb",
+          "bytes": 41245324,
+          "sha256": "c25686bf69930b90ebc20b84c33a8ae65ab41024ed0b49dc0ad09b64fd36cc78"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/gear_set_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "gear_set_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 23224280,
+          "sha256": "25c9b23ed51685b274732bf268b25cfeadff128dddbf729db9d92597fcf896fd"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_08_loot_ammo_LOD0.glb",
+      "stem": "RS_08_loot_ammo",
+      "expected_category": "loot",
+      "expected_packet": "loot_set_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_08_loot_ammo_LOD0.glb",
+      "bytes": 8651752,
+      "sha256": "fa461ca8bbddcb1723813548dfa8263b563c157c18cef241b09a947ea93daabb",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/optimized.glb",
+          "relative_path": "loot_set_v1/model/optimized.glb",
+          "bytes": 69868612,
+          "sha256": "48b1032cc28657fec5d11ce73003f47db96e3b970ecbd4099aab992ceb1d0e9f"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/cleaned.glb",
+          "relative_path": "loot_set_v1/model/cleaned.glb",
+          "bytes": 69868612,
+          "sha256": "48b1032cc28657fec5d11ce73003f47db96e3b970ecbd4099aab992ceb1d0e9f"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/raw.glb",
+          "relative_path": "loot_set_v1/model/raw.glb",
+          "bytes": 62675520,
+          "sha256": "f9a7cb4d603431bf50bd501f6c0aea18c7532d9a94031e6a9f5e90030951d827"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/hunyuan_textured.glb",
+          "relative_path": "loot_set_v1/model/hunyuan_textured.glb",
+          "bytes": 62675520,
+          "sha256": "f9a7cb4d603431bf50bd501f6c0aea18c7532d9a94031e6a9f5e90030951d827"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "loot_set_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 32395520,
+          "sha256": "4062abbf759b2494ab9284cd02a1900f8e7e47cdc39999d39251bb2835e22087"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "mismatch",
+      "visible_category": "weapon",
+      "category_match": false,
+      "review_reason": "Visible object is a rifle, not ammo or medkit.",
+      "promotion_action": "quarantine_regenerate_or_replace_category_wrong"
+    },
+    {
+      "file": "RS_08_loot_ammo_LOD1.glb",
+      "stem": "RS_08_loot_ammo",
+      "expected_category": "loot",
+      "expected_packet": "loot_set_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_08_loot_ammo_LOD1.glb",
+      "bytes": 7748520,
+      "sha256": "f825c46dd768010b73fcb9ba99f91e58c4cede2ad040e8d4752d69f604afce7b",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/optimized.glb",
+          "relative_path": "loot_set_v1/model/optimized.glb",
+          "bytes": 69868612,
+          "sha256": "48b1032cc28657fec5d11ce73003f47db96e3b970ecbd4099aab992ceb1d0e9f"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/cleaned.glb",
+          "relative_path": "loot_set_v1/model/cleaned.glb",
+          "bytes": 69868612,
+          "sha256": "48b1032cc28657fec5d11ce73003f47db96e3b970ecbd4099aab992ceb1d0e9f"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/raw.glb",
+          "relative_path": "loot_set_v1/model/raw.glb",
+          "bytes": 62675520,
+          "sha256": "f9a7cb4d603431bf50bd501f6c0aea18c7532d9a94031e6a9f5e90030951d827"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/hunyuan_textured.glb",
+          "relative_path": "loot_set_v1/model/hunyuan_textured.glb",
+          "bytes": 62675520,
+          "sha256": "f9a7cb4d603431bf50bd501f6c0aea18c7532d9a94031e6a9f5e90030951d827"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "loot_set_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 32395520,
+          "sha256": "4062abbf759b2494ab9284cd02a1900f8e7e47cdc39999d39251bb2835e22087"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_08_loot_ammo_LOD2.glb",
+      "stem": "RS_08_loot_ammo",
+      "expected_category": "loot",
+      "expected_packet": "loot_set_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_08_loot_ammo_LOD2.glb",
+      "bytes": 7295840,
+      "sha256": "9dd343d250390d1ea16ca663fc33f17fcd7b96f44ff89bdce6ed6bb149012c66",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/optimized.glb",
+          "relative_path": "loot_set_v1/model/optimized.glb",
+          "bytes": 69868612,
+          "sha256": "48b1032cc28657fec5d11ce73003f47db96e3b970ecbd4099aab992ceb1d0e9f"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/cleaned.glb",
+          "relative_path": "loot_set_v1/model/cleaned.glb",
+          "bytes": 69868612,
+          "sha256": "48b1032cc28657fec5d11ce73003f47db96e3b970ecbd4099aab992ceb1d0e9f"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/raw.glb",
+          "relative_path": "loot_set_v1/model/raw.glb",
+          "bytes": 62675520,
+          "sha256": "f9a7cb4d603431bf50bd501f6c0aea18c7532d9a94031e6a9f5e90030951d827"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/hunyuan_textured.glb",
+          "relative_path": "loot_set_v1/model/hunyuan_textured.glb",
+          "bytes": 62675520,
+          "sha256": "f9a7cb4d603431bf50bd501f6c0aea18c7532d9a94031e6a9f5e90030951d827"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "loot_set_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 32395520,
+          "sha256": "4062abbf759b2494ab9284cd02a1900f8e7e47cdc39999d39251bb2835e22087"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_08_loot_ammo_textured.glb",
+      "stem": "RS_08_loot_ammo",
+      "expected_category": "loot",
+      "expected_packet": "loot_set_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_08_loot_ammo_textured.glb",
+      "bytes": 7317288,
+      "sha256": "40a0c94195041bad74c39572f61884a02bc4e46f9aaac331bcd97d4bb871cc2a",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/optimized.glb",
+          "relative_path": "loot_set_v1/model/optimized.glb",
+          "bytes": 69868612,
+          "sha256": "48b1032cc28657fec5d11ce73003f47db96e3b970ecbd4099aab992ceb1d0e9f"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/cleaned.glb",
+          "relative_path": "loot_set_v1/model/cleaned.glb",
+          "bytes": 69868612,
+          "sha256": "48b1032cc28657fec5d11ce73003f47db96e3b970ecbd4099aab992ceb1d0e9f"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/raw.glb",
+          "relative_path": "loot_set_v1/model/raw.glb",
+          "bytes": 62675520,
+          "sha256": "f9a7cb4d603431bf50bd501f6c0aea18c7532d9a94031e6a9f5e90030951d827"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/hunyuan_textured.glb",
+          "relative_path": "loot_set_v1/model/hunyuan_textured.glb",
+          "bytes": 62675520,
+          "sha256": "f9a7cb4d603431bf50bd501f6c0aea18c7532d9a94031e6a9f5e90030951d827"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "loot_set_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 32395520,
+          "sha256": "4062abbf759b2494ab9284cd02a1900f8e7e47cdc39999d39251bb2835e22087"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_09_loot_medkit_LOD0.glb",
+      "stem": "RS_09_loot_medkit",
+      "expected_category": "loot",
+      "expected_packet": "loot_set_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_09_loot_medkit_LOD0.glb",
+      "bytes": 8131488,
+      "sha256": "6e590d95a9baaaeceb74c10cbea212689b4114d2a27284222741067787c1e21c",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/optimized.glb",
+          "relative_path": "loot_set_v1/model/optimized.glb",
+          "bytes": 69868612,
+          "sha256": "48b1032cc28657fec5d11ce73003f47db96e3b970ecbd4099aab992ceb1d0e9f"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/cleaned.glb",
+          "relative_path": "loot_set_v1/model/cleaned.glb",
+          "bytes": 69868612,
+          "sha256": "48b1032cc28657fec5d11ce73003f47db96e3b970ecbd4099aab992ceb1d0e9f"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/raw.glb",
+          "relative_path": "loot_set_v1/model/raw.glb",
+          "bytes": 62675520,
+          "sha256": "f9a7cb4d603431bf50bd501f6c0aea18c7532d9a94031e6a9f5e90030951d827"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/hunyuan_textured.glb",
+          "relative_path": "loot_set_v1/model/hunyuan_textured.glb",
+          "bytes": 62675520,
+          "sha256": "f9a7cb4d603431bf50bd501f6c0aea18c7532d9a94031e6a9f5e90030951d827"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "loot_set_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 32395520,
+          "sha256": "4062abbf759b2494ab9284cd02a1900f8e7e47cdc39999d39251bb2835e22087"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "mismatch",
+      "visible_category": "weapon",
+      "category_match": false,
+      "review_reason": "Visible object is a rifle, not medkit.",
+      "promotion_action": "quarantine_regenerate_or_replace_category_wrong"
+    },
+    {
+      "file": "RS_09_loot_medkit_LOD1.glb",
+      "stem": "RS_09_loot_medkit",
+      "expected_category": "loot",
+      "expected_packet": "loot_set_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_09_loot_medkit_LOD1.glb",
+      "bytes": 7228256,
+      "sha256": "d6e59ca15354dc8e8a7f1444f9a4283389656f93d949b75e189daeb0a0465803",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/optimized.glb",
+          "relative_path": "loot_set_v1/model/optimized.glb",
+          "bytes": 69868612,
+          "sha256": "48b1032cc28657fec5d11ce73003f47db96e3b970ecbd4099aab992ceb1d0e9f"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/cleaned.glb",
+          "relative_path": "loot_set_v1/model/cleaned.glb",
+          "bytes": 69868612,
+          "sha256": "48b1032cc28657fec5d11ce73003f47db96e3b970ecbd4099aab992ceb1d0e9f"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/raw.glb",
+          "relative_path": "loot_set_v1/model/raw.glb",
+          "bytes": 62675520,
+          "sha256": "f9a7cb4d603431bf50bd501f6c0aea18c7532d9a94031e6a9f5e90030951d827"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/hunyuan_textured.glb",
+          "relative_path": "loot_set_v1/model/hunyuan_textured.glb",
+          "bytes": 62675520,
+          "sha256": "f9a7cb4d603431bf50bd501f6c0aea18c7532d9a94031e6a9f5e90030951d827"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "loot_set_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 32395520,
+          "sha256": "4062abbf759b2494ab9284cd02a1900f8e7e47cdc39999d39251bb2835e22087"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_09_loot_medkit_LOD2.glb",
+      "stem": "RS_09_loot_medkit",
+      "expected_category": "loot",
+      "expected_packet": "loot_set_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_09_loot_medkit_LOD2.glb",
+      "bytes": 6775580,
+      "sha256": "12f8c77b004cb0442d1ddf92f91c8d054a07d1650aa2f0216d2422a3c0432f66",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/optimized.glb",
+          "relative_path": "loot_set_v1/model/optimized.glb",
+          "bytes": 69868612,
+          "sha256": "48b1032cc28657fec5d11ce73003f47db96e3b970ecbd4099aab992ceb1d0e9f"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/cleaned.glb",
+          "relative_path": "loot_set_v1/model/cleaned.glb",
+          "bytes": 69868612,
+          "sha256": "48b1032cc28657fec5d11ce73003f47db96e3b970ecbd4099aab992ceb1d0e9f"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/raw.glb",
+          "relative_path": "loot_set_v1/model/raw.glb",
+          "bytes": 62675520,
+          "sha256": "f9a7cb4d603431bf50bd501f6c0aea18c7532d9a94031e6a9f5e90030951d827"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/hunyuan_textured.glb",
+          "relative_path": "loot_set_v1/model/hunyuan_textured.glb",
+          "bytes": 62675520,
+          "sha256": "f9a7cb4d603431bf50bd501f6c0aea18c7532d9a94031e6a9f5e90030951d827"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "loot_set_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 32395520,
+          "sha256": "4062abbf759b2494ab9284cd02a1900f8e7e47cdc39999d39251bb2835e22087"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_09_loot_medkit_textured.glb",
+      "stem": "RS_09_loot_medkit",
+      "expected_category": "loot",
+      "expected_packet": "loot_set_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_09_loot_medkit_textured.glb",
+      "bytes": 6797024,
+      "sha256": "35554d875848abf23063d35406175f1a46e7a2731a324bf3e4f8f78c3833ca84",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/optimized.glb",
+          "relative_path": "loot_set_v1/model/optimized.glb",
+          "bytes": 69868612,
+          "sha256": "48b1032cc28657fec5d11ce73003f47db96e3b970ecbd4099aab992ceb1d0e9f"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/cleaned.glb",
+          "relative_path": "loot_set_v1/model/cleaned.glb",
+          "bytes": 69868612,
+          "sha256": "48b1032cc28657fec5d11ce73003f47db96e3b970ecbd4099aab992ceb1d0e9f"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/raw.glb",
+          "relative_path": "loot_set_v1/model/raw.glb",
+          "bytes": 62675520,
+          "sha256": "f9a7cb4d603431bf50bd501f6c0aea18c7532d9a94031e6a9f5e90030951d827"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/hunyuan_textured.glb",
+          "relative_path": "loot_set_v1/model/hunyuan_textured.glb",
+          "bytes": 62675520,
+          "sha256": "f9a7cb4d603431bf50bd501f6c0aea18c7532d9a94031e6a9f5e90030951d827"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/loot_set_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "loot_set_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 32395520,
+          "sha256": "4062abbf759b2494ab9284cd02a1900f8e7e47cdc39999d39251bb2835e22087"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_10_prop_container_LOD0.glb",
+      "stem": "RS_10_prop_container",
+      "expected_category": "environment_prop",
+      "expected_packet": "container_checkpoint_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_10_prop_container_LOD0.glb",
+      "bytes": 7955604,
+      "sha256": "8671a6c1ad21a8510b88f8a022e23d9e9db9373ab2cce12c71f8cb455a3dbe66",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/container_checkpoint_v1/model/optimized.glb",
+          "relative_path": "container_checkpoint_v1/model/optimized.glb",
+          "bytes": 70808720,
+          "sha256": "f24b0b4a30e809a2ae5607ec911d4e53c9dfe41afc274f98e46f2365a46ece32"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/container_checkpoint_v1/model/cleaned.glb",
+          "relative_path": "container_checkpoint_v1/model/cleaned.glb",
+          "bytes": 70808720,
+          "sha256": "f24b0b4a30e809a2ae5607ec911d4e53c9dfe41afc274f98e46f2365a46ece32"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/container_checkpoint_v1/model/raw.glb",
+          "relative_path": "container_checkpoint_v1/model/raw.glb",
+          "bytes": 62942416,
+          "sha256": "57b21dc7a5fdab27fde3377711a72800dfdcc8514cc1d0943916280520cd65d5"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/container_checkpoint_v1/model/hunyuan_textured.glb",
+          "relative_path": "container_checkpoint_v1/model/hunyuan_textured.glb",
+          "bytes": 62942416,
+          "sha256": "57b21dc7a5fdab27fde3377711a72800dfdcc8514cc1d0943916280520cd65d5"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/container_checkpoint_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "container_checkpoint_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 32685884,
+          "sha256": "dc214334c84ce89ab57fc75d57addccb6694f7364923cb649b7a2a1f00f75101"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "mismatch",
+      "visible_category": "weapon",
+      "category_match": false,
+      "review_reason": "Visible object is a rifle, not an environment prop.",
+      "promotion_action": "quarantine_regenerate_or_replace_category_wrong"
+    },
+    {
+      "file": "RS_10_prop_container_LOD1.glb",
+      "stem": "RS_10_prop_container",
+      "expected_category": "environment_prop",
+      "expected_packet": "container_checkpoint_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_10_prop_container_LOD1.glb",
+      "bytes": 7052372,
+      "sha256": "c9b9cfd52e5a8f0e10e9261e4de45007dbb917e5cc4be022b52e6ea86d6abb93",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/container_checkpoint_v1/model/optimized.glb",
+          "relative_path": "container_checkpoint_v1/model/optimized.glb",
+          "bytes": 70808720,
+          "sha256": "f24b0b4a30e809a2ae5607ec911d4e53c9dfe41afc274f98e46f2365a46ece32"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/container_checkpoint_v1/model/cleaned.glb",
+          "relative_path": "container_checkpoint_v1/model/cleaned.glb",
+          "bytes": 70808720,
+          "sha256": "f24b0b4a30e809a2ae5607ec911d4e53c9dfe41afc274f98e46f2365a46ece32"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/container_checkpoint_v1/model/raw.glb",
+          "relative_path": "container_checkpoint_v1/model/raw.glb",
+          "bytes": 62942416,
+          "sha256": "57b21dc7a5fdab27fde3377711a72800dfdcc8514cc1d0943916280520cd65d5"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/container_checkpoint_v1/model/hunyuan_textured.glb",
+          "relative_path": "container_checkpoint_v1/model/hunyuan_textured.glb",
+          "bytes": 62942416,
+          "sha256": "57b21dc7a5fdab27fde3377711a72800dfdcc8514cc1d0943916280520cd65d5"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/container_checkpoint_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "container_checkpoint_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 32685884,
+          "sha256": "dc214334c84ce89ab57fc75d57addccb6694f7364923cb649b7a2a1f00f75101"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_10_prop_container_LOD2.glb",
+      "stem": "RS_10_prop_container",
+      "expected_category": "environment_prop",
+      "expected_packet": "container_checkpoint_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_10_prop_container_LOD2.glb",
+      "bytes": 6599696,
+      "sha256": "a5942aeb916d4332cca9036dd5a848d7bad9af0066eeebb3898452c3c0a017e3",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/container_checkpoint_v1/model/optimized.glb",
+          "relative_path": "container_checkpoint_v1/model/optimized.glb",
+          "bytes": 70808720,
+          "sha256": "f24b0b4a30e809a2ae5607ec911d4e53c9dfe41afc274f98e46f2365a46ece32"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/container_checkpoint_v1/model/cleaned.glb",
+          "relative_path": "container_checkpoint_v1/model/cleaned.glb",
+          "bytes": 70808720,
+          "sha256": "f24b0b4a30e809a2ae5607ec911d4e53c9dfe41afc274f98e46f2365a46ece32"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/container_checkpoint_v1/model/raw.glb",
+          "relative_path": "container_checkpoint_v1/model/raw.glb",
+          "bytes": 62942416,
+          "sha256": "57b21dc7a5fdab27fde3377711a72800dfdcc8514cc1d0943916280520cd65d5"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/container_checkpoint_v1/model/hunyuan_textured.glb",
+          "relative_path": "container_checkpoint_v1/model/hunyuan_textured.glb",
+          "bytes": 62942416,
+          "sha256": "57b21dc7a5fdab27fde3377711a72800dfdcc8514cc1d0943916280520cd65d5"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/container_checkpoint_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "container_checkpoint_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 32685884,
+          "sha256": "dc214334c84ce89ab57fc75d57addccb6694f7364923cb649b7a2a1f00f75101"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_10_prop_container_textured.glb",
+      "stem": "RS_10_prop_container",
+      "expected_category": "environment_prop",
+      "expected_packet": "container_checkpoint_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_10_prop_container_textured.glb",
+      "bytes": 6621136,
+      "sha256": "6b8032bd88084b67493559760fd774911b92153a0d3b598e50d97b7eb5ee9cae",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/container_checkpoint_v1/model/optimized.glb",
+          "relative_path": "container_checkpoint_v1/model/optimized.glb",
+          "bytes": 70808720,
+          "sha256": "f24b0b4a30e809a2ae5607ec911d4e53c9dfe41afc274f98e46f2365a46ece32"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/container_checkpoint_v1/model/cleaned.glb",
+          "relative_path": "container_checkpoint_v1/model/cleaned.glb",
+          "bytes": 70808720,
+          "sha256": "f24b0b4a30e809a2ae5607ec911d4e53c9dfe41afc274f98e46f2365a46ece32"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/container_checkpoint_v1/model/raw.glb",
+          "relative_path": "container_checkpoint_v1/model/raw.glb",
+          "bytes": 62942416,
+          "sha256": "57b21dc7a5fdab27fde3377711a72800dfdcc8514cc1d0943916280520cd65d5"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/container_checkpoint_v1/model/hunyuan_textured.glb",
+          "relative_path": "container_checkpoint_v1/model/hunyuan_textured.glb",
+          "bytes": 62942416,
+          "sha256": "57b21dc7a5fdab27fde3377711a72800dfdcc8514cc1d0943916280520cd65d5"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/container_checkpoint_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "container_checkpoint_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 32685884,
+          "sha256": "dc214334c84ce89ab57fc75d57addccb6694f7364923cb649b7a2a1f00f75101"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_11_prop_crate_LOD0.glb",
+      "stem": "RS_11_prop_crate",
+      "expected_category": "environment_prop",
+      "expected_packet": "tactical_crate_trellis_texturealchemy_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_11_prop_crate_LOD0.glb",
+      "bytes": 8146680,
+      "sha256": "adee07cb3f8177044b0373a91696a23185b065af2f8648320e03c5ee450f5b67",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/tactical_crate_trellis_texturealchemy_v1/model/optimized.glb",
+          "relative_path": "tactical_crate_trellis_texturealchemy_v1/model/optimized.glb",
+          "bytes": 6370452,
+          "sha256": "1f744c3f378d06914857dd1150117b374ae09d8553117f43c728d1a14d8e0ae2"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/tactical_crate_trellis_texturealchemy_v1/model/cleaned.glb",
+          "relative_path": "tactical_crate_trellis_texturealchemy_v1/model/cleaned.glb",
+          "bytes": 6370452,
+          "sha256": "1f744c3f378d06914857dd1150117b374ae09d8553117f43c728d1a14d8e0ae2"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/tactical_crate_trellis_texturealchemy_v1/model/raw.glb",
+          "relative_path": "tactical_crate_trellis_texturealchemy_v1/model/raw.glb",
+          "bytes": 655544,
+          "sha256": "73f59f1cd3c74e43b59e7e2618f9ccc566cb2b41f991959410cd924338236caf"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "mismatch",
+      "visible_category": "weapon",
+      "category_match": false,
+      "review_reason": "Visible object is a rifle, not an environment prop.",
+      "promotion_action": "quarantine_regenerate_or_replace_category_wrong"
+    },
+    {
+      "file": "RS_11_prop_crate_LOD1.glb",
+      "stem": "RS_11_prop_crate",
+      "expected_category": "environment_prop",
+      "expected_packet": "tactical_crate_trellis_texturealchemy_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_11_prop_crate_LOD1.glb",
+      "bytes": 7243448,
+      "sha256": "808b045252f850da45bf01366d41ad70057184aaf15868008e773cbd515ab180",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/tactical_crate_trellis_texturealchemy_v1/model/optimized.glb",
+          "relative_path": "tactical_crate_trellis_texturealchemy_v1/model/optimized.glb",
+          "bytes": 6370452,
+          "sha256": "1f744c3f378d06914857dd1150117b374ae09d8553117f43c728d1a14d8e0ae2"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/tactical_crate_trellis_texturealchemy_v1/model/cleaned.glb",
+          "relative_path": "tactical_crate_trellis_texturealchemy_v1/model/cleaned.glb",
+          "bytes": 6370452,
+          "sha256": "1f744c3f378d06914857dd1150117b374ae09d8553117f43c728d1a14d8e0ae2"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/tactical_crate_trellis_texturealchemy_v1/model/raw.glb",
+          "relative_path": "tactical_crate_trellis_texturealchemy_v1/model/raw.glb",
+          "bytes": 655544,
+          "sha256": "73f59f1cd3c74e43b59e7e2618f9ccc566cb2b41f991959410cd924338236caf"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_11_prop_crate_LOD2.glb",
+      "stem": "RS_11_prop_crate",
+      "expected_category": "environment_prop",
+      "expected_packet": "tactical_crate_trellis_texturealchemy_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_11_prop_crate_LOD2.glb",
+      "bytes": 6790772,
+      "sha256": "d12e36dca5c3c549d8a91b44b6f3666969e59c6dc6d93c8d76c11df042dc63a8",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/tactical_crate_trellis_texturealchemy_v1/model/optimized.glb",
+          "relative_path": "tactical_crate_trellis_texturealchemy_v1/model/optimized.glb",
+          "bytes": 6370452,
+          "sha256": "1f744c3f378d06914857dd1150117b374ae09d8553117f43c728d1a14d8e0ae2"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/tactical_crate_trellis_texturealchemy_v1/model/cleaned.glb",
+          "relative_path": "tactical_crate_trellis_texturealchemy_v1/model/cleaned.glb",
+          "bytes": 6370452,
+          "sha256": "1f744c3f378d06914857dd1150117b374ae09d8553117f43c728d1a14d8e0ae2"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/tactical_crate_trellis_texturealchemy_v1/model/raw.glb",
+          "relative_path": "tactical_crate_trellis_texturealchemy_v1/model/raw.glb",
+          "bytes": 655544,
+          "sha256": "73f59f1cd3c74e43b59e7e2618f9ccc566cb2b41f991959410cd924338236caf"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_11_prop_crate_textured.glb",
+      "stem": "RS_11_prop_crate",
+      "expected_category": "environment_prop",
+      "expected_packet": "tactical_crate_trellis_texturealchemy_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_11_prop_crate_textured.glb",
+      "bytes": 6812216,
+      "sha256": "c53ef4b090bba8bad5e94ea563905caf9f92644d4b6ececa9ed193fd06bf9346",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/tactical_crate_trellis_texturealchemy_v1/model/optimized.glb",
+          "relative_path": "tactical_crate_trellis_texturealchemy_v1/model/optimized.glb",
+          "bytes": 6370452,
+          "sha256": "1f744c3f378d06914857dd1150117b374ae09d8553117f43c728d1a14d8e0ae2"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/tactical_crate_trellis_texturealchemy_v1/model/cleaned.glb",
+          "relative_path": "tactical_crate_trellis_texturealchemy_v1/model/cleaned.glb",
+          "bytes": 6370452,
+          "sha256": "1f744c3f378d06914857dd1150117b374ae09d8553117f43c728d1a14d8e0ae2"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/tactical_crate_trellis_texturealchemy_v1/model/raw.glb",
+          "relative_path": "tactical_crate_trellis_texturealchemy_v1/model/raw.glb",
+          "bytes": 655544,
+          "sha256": "73f59f1cd3c74e43b59e7e2618f9ccc566cb2b41f991959410cd924338236caf"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_12_shotgun_LOD0.glb",
+      "stem": "RS_12_shotgun",
+      "expected_category": "weapon",
+      "expected_packet": "secondary_weapon_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_12_shotgun_LOD0.glb",
+      "bytes": 8323044,
+      "sha256": "eb244b70c99b68cdf23d7a1a896b8afe603e648336890426943e31252f4b58de",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/optimized.glb",
+          "relative_path": "secondary_weapon_v1/model/optimized.glb",
+          "bytes": 44497048,
+          "sha256": "53e2fc965686c690712d31d10aff6f9652260f0b5ae78a7575a5e92520082439"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/cleaned.glb",
+          "relative_path": "secondary_weapon_v1/model/cleaned.glb",
+          "bytes": 44497048,
+          "sha256": "53e2fc965686c690712d31d10aff6f9652260f0b5ae78a7575a5e92520082439"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/raw.glb",
+          "relative_path": "secondary_weapon_v1/model/raw.glb",
+          "bytes": 36721520,
+          "sha256": "84f9641fa0cfe6ced53b1153112b7bd3b8036ed34c5ec4917605fc6a370e2925"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/hunyuan_textured.glb",
+          "relative_path": "secondary_weapon_v1/model/hunyuan_textured.glb",
+          "bytes": 36721520,
+          "sha256": "84f9641fa0cfe6ced53b1153112b7bd3b8036ed34c5ec4917605fc6a370e2925"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "secondary_weapon_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 20551808,
+          "sha256": "658a237c8f343810a663f405ce74d74a7c2873e239366fab85b240115d290edd"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "match",
+      "visible_category": "weapon",
+      "category_match": true,
+      "review_reason": "visible shotgun silhouette but missing PBR maps",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_12_shotgun_LOD1.glb",
+      "stem": "RS_12_shotgun",
+      "expected_category": "weapon",
+      "expected_packet": "secondary_weapon_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_12_shotgun_LOD1.glb",
+      "bytes": 7419812,
+      "sha256": "e35a59f2592defea3d607352a31a14d2c00b65fd769cd47793a6c8004593195c",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/optimized.glb",
+          "relative_path": "secondary_weapon_v1/model/optimized.glb",
+          "bytes": 44497048,
+          "sha256": "53e2fc965686c690712d31d10aff6f9652260f0b5ae78a7575a5e92520082439"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/cleaned.glb",
+          "relative_path": "secondary_weapon_v1/model/cleaned.glb",
+          "bytes": 44497048,
+          "sha256": "53e2fc965686c690712d31d10aff6f9652260f0b5ae78a7575a5e92520082439"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/raw.glb",
+          "relative_path": "secondary_weapon_v1/model/raw.glb",
+          "bytes": 36721520,
+          "sha256": "84f9641fa0cfe6ced53b1153112b7bd3b8036ed34c5ec4917605fc6a370e2925"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/hunyuan_textured.glb",
+          "relative_path": "secondary_weapon_v1/model/hunyuan_textured.glb",
+          "bytes": 36721520,
+          "sha256": "84f9641fa0cfe6ced53b1153112b7bd3b8036ed34c5ec4917605fc6a370e2925"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "secondary_weapon_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 20551808,
+          "sha256": "658a237c8f343810a663f405ce74d74a7c2873e239366fab85b240115d290edd"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_12_shotgun_LOD2.glb",
+      "stem": "RS_12_shotgun",
+      "expected_category": "weapon",
+      "expected_packet": "secondary_weapon_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_12_shotgun_LOD2.glb",
+      "bytes": 6967136,
+      "sha256": "ddb6316ec8af5a60e0ea5204aacc2674117553fe9a9ef6d17851a92f5f7ca171",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/optimized.glb",
+          "relative_path": "secondary_weapon_v1/model/optimized.glb",
+          "bytes": 44497048,
+          "sha256": "53e2fc965686c690712d31d10aff6f9652260f0b5ae78a7575a5e92520082439"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/cleaned.glb",
+          "relative_path": "secondary_weapon_v1/model/cleaned.glb",
+          "bytes": 44497048,
+          "sha256": "53e2fc965686c690712d31d10aff6f9652260f0b5ae78a7575a5e92520082439"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/raw.glb",
+          "relative_path": "secondary_weapon_v1/model/raw.glb",
+          "bytes": 36721520,
+          "sha256": "84f9641fa0cfe6ced53b1153112b7bd3b8036ed34c5ec4917605fc6a370e2925"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/hunyuan_textured.glb",
+          "relative_path": "secondary_weapon_v1/model/hunyuan_textured.glb",
+          "bytes": 36721520,
+          "sha256": "84f9641fa0cfe6ced53b1153112b7bd3b8036ed34c5ec4917605fc6a370e2925"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "secondary_weapon_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 20551808,
+          "sha256": "658a237c8f343810a663f405ce74d74a7c2873e239366fab85b240115d290edd"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "RS_12_shotgun_textured.glb",
+      "stem": "RS_12_shotgun",
+      "expected_category": "weapon",
+      "expected_packet": "secondary_weapon_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/RS_12_shotgun_textured.glb",
+      "bytes": 6988584,
+      "sha256": "62c2e8c8c1cad86def1d68e52ec0d60fb3119ff97b110fe7dd044b196fcf796d",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/optimized.glb",
+          "relative_path": "secondary_weapon_v1/model/optimized.glb",
+          "bytes": 44497048,
+          "sha256": "53e2fc965686c690712d31d10aff6f9652260f0b5ae78a7575a5e92520082439"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/cleaned.glb",
+          "relative_path": "secondary_weapon_v1/model/cleaned.glb",
+          "bytes": 44497048,
+          "sha256": "53e2fc965686c690712d31d10aff6f9652260f0b5ae78a7575a5e92520082439"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/raw.glb",
+          "relative_path": "secondary_weapon_v1/model/raw.glb",
+          "bytes": 36721520,
+          "sha256": "84f9641fa0cfe6ced53b1153112b7bd3b8036ed34c5ec4917605fc6a370e2925"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/hunyuan_textured.glb",
+          "relative_path": "secondary_weapon_v1/model/hunyuan_textured.glb",
+          "bytes": 36721520,
+          "sha256": "84f9641fa0cfe6ced53b1153112b7bd3b8036ed34c5ec4917605fc6a370e2925"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/secondary_weapon_v1/model/hunyuan_shape_raw.glb",
+          "relative_path": "secondary_weapon_v1/model/hunyuan_shape_raw.glb",
+          "bytes": 20551808,
+          "sha256": "658a237c8f343810a663f405ce74d74a7c2873e239366fab85b240115d290edd"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "hero_rifle_LOD0.glb",
+      "stem": "hero_rifle",
+      "expected_category": "weapon",
+      "expected_packet": "hero_rifle_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/hero_rifle_LOD0.glb",
+      "bytes": 10468384,
+      "sha256": "1216ba3b554072fdf4b3529b009c99f83fe88908283697cbd2796ddbd132dab4",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/hero_rifle_v1/model/optimized.glb",
+          "relative_path": "hero_rifle_v1/model/optimized.glb",
+          "bytes": 665644,
+          "sha256": "a767b01df427193d65b675610e65f69e0094549dd1c02fe69017a48826ece523"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/hero_rifle_v1/model/cleaned.glb",
+          "relative_path": "hero_rifle_v1/model/cleaned.glb",
+          "bytes": 665644,
+          "sha256": "a767b01df427193d65b675610e65f69e0094549dd1c02fe69017a48826ece523"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/hero_rifle_v1/model/raw.glb",
+          "relative_path": "hero_rifle_v1/model/raw.glb",
+          "bytes": 665644,
+          "sha256": "a767b01df427193d65b675610e65f69e0094549dd1c02fe69017a48826ece523"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "match",
+      "visible_category": "weapon",
+      "category_match": true,
+      "review_reason": "visible rifle silhouette matches expected",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "hero_rifle_LOD1.glb",
+      "stem": "hero_rifle",
+      "expected_category": "weapon",
+      "expected_packet": "hero_rifle_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/hero_rifle_LOD1.glb",
+      "bytes": 9140160,
+      "sha256": "f1550b4a53e000a8c69f4b28ac80755dcf1df1e84414c18a4caaa2260e9a114e",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/hero_rifle_v1/model/optimized.glb",
+          "relative_path": "hero_rifle_v1/model/optimized.glb",
+          "bytes": 665644,
+          "sha256": "a767b01df427193d65b675610e65f69e0094549dd1c02fe69017a48826ece523"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/hero_rifle_v1/model/cleaned.glb",
+          "relative_path": "hero_rifle_v1/model/cleaned.glb",
+          "bytes": 665644,
+          "sha256": "a767b01df427193d65b675610e65f69e0094549dd1c02fe69017a48826ece523"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/hero_rifle_v1/model/raw.glb",
+          "relative_path": "hero_rifle_v1/model/raw.glb",
+          "bytes": 665644,
+          "sha256": "a767b01df427193d65b675610e65f69e0094549dd1c02fe69017a48826ece523"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "hero_rifle_LOD2.glb",
+      "stem": "hero_rifle",
+      "expected_category": "weapon",
+      "expected_packet": "hero_rifle_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/hero_rifle_LOD2.glb",
+      "bytes": 8474460,
+      "sha256": "d39ebedc788f55b697e6601b1ca2bfd56afba059ace3325338999d55e31180b3",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/hero_rifle_v1/model/optimized.glb",
+          "relative_path": "hero_rifle_v1/model/optimized.glb",
+          "bytes": 665644,
+          "sha256": "a767b01df427193d65b675610e65f69e0094549dd1c02fe69017a48826ece523"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/hero_rifle_v1/model/cleaned.glb",
+          "relative_path": "hero_rifle_v1/model/cleaned.glb",
+          "bytes": 665644,
+          "sha256": "a767b01df427193d65b675610e65f69e0094549dd1c02fe69017a48826ece523"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/hero_rifle_v1/model/raw.glb",
+          "relative_path": "hero_rifle_v1/model/raw.glb",
+          "bytes": 665644,
+          "sha256": "a767b01df427193d65b675610e65f69e0094549dd1c02fe69017a48826ece523"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    },
+    {
+      "file": "hero_rifle_textured.glb",
+      "stem": "hero_rifle",
+      "expected_category": "weapon",
+      "expected_packet": "hero_rifle_v1",
+      "unity_path": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/RealifiedAssets/hero_rifle_textured.glb",
+      "bytes": 8282704,
+      "sha256": "0a953cb61c0c67cc7a8215ffc9a2c8bbf60322128724c2c330d22b5fd7780251",
+      "source_candidates": [
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/hero_rifle_v1/model/optimized.glb",
+          "relative_path": "hero_rifle_v1/model/optimized.glb",
+          "bytes": 665644,
+          "sha256": "a767b01df427193d65b675610e65f69e0094549dd1c02fe69017a48826ece523"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/hero_rifle_v1/model/cleaned.glb",
+          "relative_path": "hero_rifle_v1/model/cleaned.glb",
+          "bytes": 665644,
+          "sha256": "a767b01df427193d65b675610e65f69e0094549dd1c02fe69017a48826ece523"
+        },
+        {
+          "path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/hero_rifle_v1/model/raw.glb",
+          "relative_path": "hero_rifle_v1/model/raw.glb",
+          "bytes": 665644,
+          "sha256": "a767b01df427193d65b675610e65f69e0094549dd1c02fe69017a48826ece523"
+        }
+      ],
+      "source_hash_match": false,
+      "matched_source_paths": [],
+      "semantic_status": "not_reviewed",
+      "visible_category": "",
+      "category_match": null,
+      "review_reason": "",
+      "promotion_action": "quarantine_trace_source_before_review"
+    }
+  ]
+}

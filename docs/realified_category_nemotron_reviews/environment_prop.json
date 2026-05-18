@@ -1,0 +1,39 @@
+{
+  "overall_verdict": "fail",
+  "summary": "Two weapon assets visible, mismatching expected environment prop categories.",
+  "items": [
+    {
+      "grid_index": 1,
+      "expected_file": "RS_10_prop_container_LOD0.glb",
+      "expected_category": "environment_prop",
+      "visible_category": "weapon",
+      "category_match": false,
+      "confidence": "high",
+      "reason": "Visible object is a rifle, not an environment prop."
+    },
+    {
+      "grid_index": 2,
+      "expected_file": "RS_11_prop_crate_LOD0.glb",
+      "expected_category": "environment_prop",
+      "visible_category": "weapon",
+      "category_match": false,
+      "confidence": "high",
+      "reason": "Visible object is a rifle, not an environment prop."
+    }
+  ],
+  "promotion_allowed": false,
+  "promotion_blockers": [
+    "Category mismatch: visible objects are weapons, expected environment props."
+  ],
+  "review_timestamp_utc": "2026-05-17T19:26:45.631163+00:00",
+  "deterministic_guard_applied": false,
+  "technical_blockers": [],
+  "raw_model_output": "<think>\nWe need to parse the context. The user says: \"You are reviewing a Unity contact sheet of AI-generated GLB assets. The grid is ordered left-to-right, top-to-bottom. Compare each visible object against the expected file/category list below.\"\n\nWe have expected assets list with two entries:\n\ngrid_index 1: expected_file \"RS_10_prop_container_LOD0.glb\", expected_category \"environment_prop\", technical_status \"promotable_pbr_candidate\", technical_reasons [].\n\ngrid_index 2: expected_file \"RS_11_prop_crate_LOD0.glb\", expected_category \"environment_prop\", technical_status \"promotable_pbr_candidate\", technical_reasons [].\n\nSo expected categories are both \"environment_prop\". The visible objects: there are two objects in the image: a blue rifle-like weapon on left, and a tan rifle-like weapon on right. They look like weapons (rifle silhouettes). So visible categories: likely \"weapon\". The expected categories are \"environment_prop\". So category_match = false for both items (since they are weapons, not environment props). Also need to check if any visible object looks like rifle/weapon silhouette => mark category_match=false. Indeed they are weapons.\n\nNow we need to fill items array with entries for each grid_index (1 and 2). For each, we need visible_category (choose from weapon|character|gear|loot|environment_prop|unknown). Since they are weapons, visible_category = \"weapon\". category_match = false (since expected is environment_prop). confidence: maybe \"medium\" because it's clear they are weapons, but maybe ambiguous? The image clearly shows weapons, so confidence high? But the expected category is environment_prop, which is mismatched. Confidence maybe \"high\" because we are sure they are weapons, not environment props. However the instruction: \"if character, gear, loot, container, or crate items visibly look like rifle/weapon silhouettes, mark category_match=false.\" So we must set category_match false. Confidence maybe \"high\" because it's obvious.\n\nReason: \"Visible objects are rifles, not environment props.\"\n\nNow overall_verdict: Since category_match false for both items, promotion_allowed should be false? The schema says promotion_allowed true only when all visible objects match expected categories and no blockers. Here they don't match, so promotion_allowed = false. promotion_blockers: list of reasons, maybe \"category mismatch (visible objects are weapons, expected environment props)\". Also maybe \"quality blockers\" but none. So we list that.\n\nNow summary: short sentence: \"Two weapon assets visible, mismatching expected environment prop categories.\"\n\nNow produce JSON strictly.\n\nCheck schema: items array objects must have fields: grid_index (number), expected_file (string), expected_category (string), visible_category (string), category_match (boolean), confidence (string), reason (string).\n\nWe need to fill expected_file and expected_category for each grid_index as per expected list.\n\ngrid_index 1: expected_file \"RS_10_prop_container_LOD0.glb\", expected_category \"environment_prop\". visible_category \"weapon\". category_match false. confidence \"high\". reason \"Visible object is a rifle, not an environment prop.\"\n\ngrid_index 2: expected_file \"RS_11_prop_crate_LOD0.glb\", expected_category \"environment_prop\". visible_category \"weapon\". category_match false. confidence \"high\". reason \"Visible object is a rifle, not an environment prop.\"\n\nNow overall_verdict: Since category_match false for all items, verdict likely \"fail\". Could also be \"uncertain\"? But clear mismatch, so \"fail\".\n\npromotion_allowed: false.\n\npromotion_blockers: list of strings. At least one blocker: \"category mismatch (visible weapons vs expected environment props)\". Could also include \"insufficient PBR maps\" but not relevant. We'll include the main blocker.\n\nNow ensure JSON format, no extra spaces? It's okay.\n\nLet's craft final answer.\n</think>\n{\n  \"overall_verdict\": \"fail\",\n  \"summary\": \"Two weapon assets visible, mismatching expected environment prop categories.\",\n  \"items\": [\n    {\n      \"grid_index\": 1,\n      \"expected_file\": \"RS_10_prop_container_LOD0.glb\",\n      \"expected_category\": \"environment_prop\",\n      \"visible_category\": \"weapon\",\n      \"category_match\": false,\n      \"confidence\": \"high\",\n      \"reason\": \"Visible object is a rifle, not an environment prop.\"\n    },\n    {\n      \"grid_index\": 2,\n      \"expected_file\": \"RS_11_prop_crate_LOD0.glb\",\n      \"expected_category\": \"environment_prop\",\n      \"visible_category\": \"weapon\",\n      \"category_match\": false,\n      \"confidence\": \"high\",\n      \"reason\": \"Visible object is a rifle, not an environment prop.\"\n    }\n  ],\n  \"promotion_allowed\": false,\n  \"promotion_blockers\": [\n    \"Category mismatch: visible objects are weapons, expected environment props.\"\n  ]\n}<|im_end|>",
+  "input_image": "/Users/yuanshaochen/My project/Assets/Screenshots/RealifiedCategorySheets/realified_environment_prop_contact_sheet.png",
+  "input_audit": "/Users/yuanshaochen/My project/docs/REALIFIED_ASSETS_IMPORT_AUDIT.json",
+  "endpoint": "http://127.0.0.1:8083/v1/chat/completions",
+  "model": "nemotron-omni",
+  "category": "environment_prop",
+  "asset_suffix": "_LOD0.glb",
+  "expected_asset_count": 2
+}

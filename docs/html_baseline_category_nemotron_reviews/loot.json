@@ -1,0 +1,55 @@
+{
+  "overall_verdict": "pass",
+  "summary": "All items match expected loot categories with no quality blockers.",
+  "items": [
+    {
+      "grid_index": 1,
+      "expected_file": "models/loot_ammo_final.glb",
+      "expected_category": "loot",
+      "visible_category": "loot",
+      "category_match": true,
+      "confidence": "high",
+      "reason": "Ammo box clearly represents loot item type."
+    },
+    {
+      "grid_index": 2,
+      "expected_file": "models/loot_medkit_final.glb",
+      "expected_category": "loot",
+      "visible_category": "loot",
+      "category_match": true,
+      "confidence": "high",
+      "reason": "Medkit with red cross is standard loot visual representation."
+    },
+    {
+      "grid_index": 3,
+      "expected_file": "models/loot_firstaid_final.glb",
+      "expected_category": "loot",
+      "visible_category": "loot",
+      "category_match": true,
+      "confidence": "high",
+      "reason": "First aid kit with red cross matches expected loot category."
+    },
+    {
+      "grid_index": 4,
+      "expected_file": "models/loot_bandage_final.glb",
+      "expected_category": "loot",
+      "visible_category": "loot",
+      "category_match": true,
+      "confidence": "high",
+      "reason": "Bandage roll with red cross is consistent with loot item type."
+    }
+  ],
+  "promotion_allowed": true,
+  "promotion_blockers": [],
+  "review_timestamp_utc": "2026-05-17T19:24:36.959245+00:00",
+  "deterministic_guard_applied": false,
+  "technical_blockers": [],
+  "raw_model_output": "<think></think>\n{\n  \"overall_verdict\": \"pass\",\n  \"summary\": \"All items match expected loot categories with no quality blockers.\",\n  \"items\": [\n    {\n      \"grid_index\": 1,\n      \"expected_file\": \"models/loot_ammo_final.glb\",\n      \"expected_category\": \"loot\",\n      \"visible_category\": \"loot\",\n      \"category_match\": true,\n      \"confidence\": \"high\",\n      \"reason\": \"Ammo box clearly represents loot item type.\"\n    },\n    {\n      \"grid_index\": 2,\n      \"expected_file\": \"models/loot_medkit_final.glb\",\n      \"expected_category\": \"loot\",\n      \"visible_category\": \"loot\",\n      \"category_match\": true,\n      \"confidence\": \"high\",\n      \"reason\": \"Medkit with red cross is standard loot visual representation.\"\n    },\n    {\n      \"grid_index\": 3,\n      \"expected_file\": \"models/loot_firstaid_final.glb\",\n      \"expected_category\": \"loot\",\n      \"visible_category\": \"loot\",\n      \"category_match\": true,\n      \"confidence\": \"high\",\n      \"reason\": \"First aid kit with red cross matches expected loot category.\"\n    },\n    {\n      \"grid_index\": 4,\n      \"expected_file\": \"models/loot_bandage_final.glb\",\n      \"expected_category\": \"loot\",\n      \"visible_category\": \"loot\",\n      \"category_match\": true,\n      \"confidence\": \"high\",\n      \"reason\": \"Bandage roll with red cross is consistent with loot item type.\"\n    }\n  ],\n  \"promotion_allowed\": true,\n  \"promotion_blockers\": []\n}<|im_end|>",
+  "input_image": "/Users/yuanshaochen/My project/Assets/Screenshots/HtmlBaselineCategorySheets/html_baseline_loot_contact_sheet.png",
+  "input_audit": "/Users/yuanshaochen/My project/docs/HTML_BASELINE_ASSET_AUDIT.json",
+  "endpoint": "http://127.0.0.1:8083/v1/chat/completions",
+  "model": "nemotron-omni",
+  "category": "loot",
+  "asset_suffix": ".glb",
+  "expected_asset_count": 4
+}

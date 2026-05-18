@@ -1,0 +1,267 @@
+{
+  "schema": "html_baseline_category_nemotron_reviews_v1",
+  "review_timestamp_utc": "2026-05-17T19:24:45.799263+00:00",
+  "status": "complete",
+  "promotion_allowed": false,
+  "failed_categories": [
+    "weapon",
+    "gear"
+  ],
+  "category_count": 5,
+  "categories": [
+    {
+      "overall_verdict": "fail",
+      "summary": "Visible objects do not match expected weapon categories",
+      "items": [
+        {
+          "grid_index": 1,
+          "expected_file": "models/pistol_m5_candidate.glb",
+          "expected_category": "weapon",
+          "visible_category": "unknown",
+          "category_match": false,
+          "confidence": "medium",
+          "reason": "Object appears as generic box, not pistol silhouette"
+        },
+        {
+          "grid_index": 2,
+          "expected_file": "models/shotgun_m5_candidate.glb",
+          "expected_category": "weapon",
+          "visible_category": "unknown",
+          "category_match": false,
+          "confidence": "medium",
+          "reason": "Object appears as generic box, not shotgun silhouette"
+        },
+        {
+          "grid_index": 3,
+          "expected_file": "models/groza_procedural_candidate.glb",
+          "expected_category": "weapon",
+          "visible_category": "unknown",
+          "category_match": false,
+          "confidence": "medium",
+          "reason": "Object appears as generic box, not rifle silhouette"
+        },
+        {
+          "grid_index": 4,
+          "expected_file": "models/dmr_m5_candidate.glb",
+          "expected_category": "weapon",
+          "visible_category": "unknown",
+          "category_match": false,
+          "confidence": "medium",
+          "reason": "Object appears as generic box, not rifle silhouette"
+        }
+      ],
+      "promotion_allowed": false,
+      "promotion_blockers": [
+        "All visible objects appear as generic boxes rather than weapon silhouettes",
+        "No clear weapon category indicators visible in any grid item"
+      ],
+      "review_timestamp_utc": "2026-05-17T19:24:20.031588+00:00",
+      "deterministic_guard_applied": false,
+      "technical_blockers": [],
+      "raw_model_output": "<think></think>\n{\n  \"overall_verdict\": \"fail\",\n  \"summary\": \"Visible objects do not match expected weapon categories\",\n  \"items\": [\n    {\n      \"grid_index\": 1,\n      \"expected_file\": \"models/pistol_m5_candidate.glb\",\n      \"expected_category\": \"weapon\",\n      \"visible_category\": \"unknown\",\n      \"category_match\": false,\n      \"confidence\": \"medium\",\n      \"reason\": \"Object appears as generic box, not pistol silhouette\"\n    },\n    {\n      \"grid_index\": 2,\n      \"expected_file\": \"models/shotgun_m5_candidate.glb\",\n      \"expected_category\": \"weapon\",\n      \"visible_category\": \"unknown\",\n      \"category_match\": false,\n      \"confidence\": \"medium\",\n      \"reason\": \"Object appears as generic box, not shotgun silhouette\"\n    },\n    {\n      \"grid_index\": 3,\n      \"expected_file\": \"models/groza_procedural_candidate.glb\",\n      \"expected_category\": \"weapon\",\n      \"visible_category\": \"unknown\",\n      \"category_match\": false,\n      \"confidence\": \"medium\",\n      \"reason\": \"Object appears as generic box, not rifle silhouette\"\n    },\n    {\n      \"grid_index\": 4,\n      \"expected_file\": \"models/dmr_m5_candidate.glb\",\n      \"expected_category\": \"weapon\",\n      \"visible_category\": \"unknown\",\n      \"category_match\": false,\n      \"confidence\": \"medium\",\n      \"reason\": \"Object appears as generic box, not rifle silhouette\"\n    }\n  ],\n  \"promotion_allowed\": false,\n  \"promotion_blockers\": [\n    \"All visible objects appear as generic boxes rather than weapon silhouettes\",\n    \"No clear weapon category indicators visible in any grid item\"\n  ]\n}<|im_end|>",
+      "input_image": "/Users/yuanshaochen/My project/Assets/Screenshots/HtmlBaselineCategorySheets/html_baseline_weapon_contact_sheet.png",
+      "input_audit": "/Users/yuanshaochen/My project/docs/HTML_BASELINE_ASSET_AUDIT.json",
+      "endpoint": "http://127.0.0.1:8083/v1/chat/completions",
+      "model": "nemotron-omni",
+      "category": "weapon",
+      "asset_suffix": ".glb",
+      "expected_asset_count": 4
+    },
+    {
+      "overall_verdict": "pass",
+      "summary": "Two character models match expected categories and quality.",
+      "items": [
+        {
+          "grid_index": 1,
+          "expected_file": "models/character_player_final.glb",
+          "expected_category": "character",
+          "visible_category": "character",
+          "category_match": true,
+          "confidence": "high",
+          "reason": "Model shows humanoid form with head, torso, limbs, and base stand consistent with player character."
+        },
+        {
+          "grid_index": 2,
+          "expected_file": "models/character_enemy_final.glb",
+          "expected_category": "character",
+          "visible_category": "character",
+          "category_match": true,
+          "confidence": "high",
+          "reason": "Model shows humanoid form with head, torso, limbs, and base stand consistent with enemy character."
+        }
+      ],
+      "promotion_allowed": true,
+      "promotion_blockers": [],
+      "review_timestamp_utc": "2026-05-17T19:24:24.732861+00:00",
+      "deterministic_guard_applied": false,
+      "technical_blockers": [],
+      "raw_model_output": "<think></think>\n{\n  \"overall_verdict\": \"pass\",\n  \"summary\": \"Two character models match expected categories and quality.\",\n  \"items\": [\n    {\n      \"grid_index\": 1,\n      \"expected_file\": \"models/character_player_final.glb\",\n      \"expected_category\": \"character\",\n      \"visible_category\": \"character\",\n      \"category_match\": true,\n      \"confidence\": \"high\",\n      \"reason\": \"Model shows humanoid form with head, torso, limbs, and base stand consistent with player character.\"\n    },\n    {\n      \"grid_index\": 2,\n      \"expected_file\": \"models/character_enemy_final.glb\",\n      \"expected_category\": \"character\",\n      \"visible_category\": \"character\",\n      \"category_match\": true,\n      \"confidence\": \"high\",\n      \"reason\": \"Model shows humanoid form with head, torso, limbs, and base stand consistent with enemy character.\"\n    }\n  ],\n  \"promotion_allowed\": true,\n  \"promotion_blockers\": []\n}<|im_end|>",
+      "input_image": "/Users/yuanshaochen/My project/Assets/Screenshots/HtmlBaselineCategorySheets/html_baseline_character_contact_sheet.png",
+      "input_audit": "/Users/yuanshaochen/My project/docs/HTML_BASELINE_ASSET_AUDIT.json",
+      "endpoint": "http://127.0.0.1:8083/v1/chat/completions",
+      "model": "nemotron-omni",
+      "category": "character",
+      "asset_suffix": ".glb",
+      "expected_asset_count": 2
+    },
+    {
+      "overall_verdict": "fail",
+      "summary": "Two assets visible but category and file mismatches detected",
+      "items": [
+        {
+          "grid_index": 1,
+          "expected_file": "models/loot_helmet_final.glb",
+          "expected_category": "gear",
+          "visible_category": "unknown",
+          "category_match": false,
+          "confidence": "medium",
+          "reason": "Object appears spherical with small attachments, not helmet-shaped"
+        },
+        {
+          "grid_index": 2,
+          "expected_file": "models/loot_vest_final.glb",
+          "expected_category": "gear",
+          "visible_category": "unknown",
+          "category_match": false,
+          "confidence": "medium",
+          "reason": "Object is a flat platform with blocks, not vest-shaped"
+        }
+      ],
+      "promotion_allowed": false,
+      "promotion_blockers": [
+        "grid_index 1: visible object does not resemble helmet",
+        "grid_index 2: visible object does not resemble vest"
+      ],
+      "review_timestamp_utc": "2026-05-17T19:24:29.848519+00:00",
+      "deterministic_guard_applied": false,
+      "technical_blockers": [],
+      "raw_model_output": "<think></think>\n{\n  \"overall_verdict\": \"fail\",\n  \"summary\": \"Two assets visible but category and file mismatches detected\",\n  \"items\": [\n    {\n      \"grid_index\": 1,\n      \"expected_file\": \"models/loot_helmet_final.glb\",\n      \"expected_category\": \"gear\",\n      \"visible_category\": \"unknown\",\n      \"category_match\": false,\n      \"confidence\": \"medium\",\n      \"reason\": \"Object appears spherical with small attachments, not helmet-shaped\"\n    },\n    {\n      \"grid_index\": 2,\n      \"expected_file\": \"models/loot_vest_final.glb\",\n      \"expected_category\": \"gear\",\n      \"visible_category\": \"unknown\",\n      \"category_match\": false,\n      \"confidence\": \"medium\",\n      \"reason\": \"Object is a flat platform with blocks, not vest-shaped\"\n    }\n  ],\n  \"promotion_allowed\": false,\n  \"promotion_blockers\": [\n    \"grid_index 1: visible object does not resemble helmet\",\n    \"grid_index 2: visible object does not resemble vest\"\n  ]\n}<|im_end|>",
+      "input_image": "/Users/yuanshaochen/My project/Assets/Screenshots/HtmlBaselineCategorySheets/html_baseline_gear_contact_sheet.png",
+      "input_audit": "/Users/yuanshaochen/My project/docs/HTML_BASELINE_ASSET_AUDIT.json",
+      "endpoint": "http://127.0.0.1:8083/v1/chat/completions",
+      "model": "nemotron-omni",
+      "category": "gear",
+      "asset_suffix": ".glb",
+      "expected_asset_count": 2
+    },
+    {
+      "overall_verdict": "pass",
+      "summary": "All items match expected loot categories with no quality blockers.",
+      "items": [
+        {
+          "grid_index": 1,
+          "expected_file": "models/loot_ammo_final.glb",
+          "expected_category": "loot",
+          "visible_category": "loot",
+          "category_match": true,
+          "confidence": "high",
+          "reason": "Ammo box clearly represents loot item type."
+        },
+        {
+          "grid_index": 2,
+          "expected_file": "models/loot_medkit_final.glb",
+          "expected_category": "loot",
+          "visible_category": "loot",
+          "category_match": true,
+          "confidence": "high",
+          "reason": "Medkit with red cross is standard loot visual representation."
+        },
+        {
+          "grid_index": 3,
+          "expected_file": "models/loot_firstaid_final.glb",
+          "expected_category": "loot",
+          "visible_category": "loot",
+          "category_match": true,
+          "confidence": "high",
+          "reason": "First aid kit with red cross matches expected loot category."
+        },
+        {
+          "grid_index": 4,
+          "expected_file": "models/loot_bandage_final.glb",
+          "expected_category": "loot",
+          "visible_category": "loot",
+          "category_match": true,
+          "confidence": "high",
+          "reason": "Bandage roll with red cross is consistent with loot item type."
+        }
+      ],
+      "promotion_allowed": true,
+      "promotion_blockers": [],
+      "review_timestamp_utc": "2026-05-17T19:24:36.959245+00:00",
+      "deterministic_guard_applied": false,
+      "technical_blockers": [],
+      "raw_model_output": "<think></think>\n{\n  \"overall_verdict\": \"pass\",\n  \"summary\": \"All items match expected loot categories with no quality blockers.\",\n  \"items\": [\n    {\n      \"grid_index\": 1,\n      \"expected_file\": \"models/loot_ammo_final.glb\",\n      \"expected_category\": \"loot\",\n      \"visible_category\": \"loot\",\n      \"category_match\": true,\n      \"confidence\": \"high\",\n      \"reason\": \"Ammo box clearly represents loot item type.\"\n    },\n    {\n      \"grid_index\": 2,\n      \"expected_file\": \"models/loot_medkit_final.glb\",\n      \"expected_category\": \"loot\",\n      \"visible_category\": \"loot\",\n      \"category_match\": true,\n      \"confidence\": \"high\",\n      \"reason\": \"Medkit with red cross is standard loot visual representation.\"\n    },\n    {\n      \"grid_index\": 3,\n      \"expected_file\": \"models/loot_firstaid_final.glb\",\n      \"expected_category\": \"loot\",\n      \"visible_category\": \"loot\",\n      \"category_match\": true,\n      \"confidence\": \"high\",\n      \"reason\": \"First aid kit with red cross matches expected loot category.\"\n    },\n    {\n      \"grid_index\": 4,\n      \"expected_file\": \"models/loot_bandage_final.glb\",\n      \"expected_category\": \"loot\",\n      \"visible_category\": \"loot\",\n      \"category_match\": true,\n      \"confidence\": \"high\",\n      \"reason\": \"Bandage roll with red cross is consistent with loot item type.\"\n    }\n  ],\n  \"promotion_allowed\": true,\n  \"promotion_blockers\": []\n}<|im_end|>",
+      "input_image": "/Users/yuanshaochen/My project/Assets/Screenshots/HtmlBaselineCategorySheets/html_baseline_loot_contact_sheet.png",
+      "input_audit": "/Users/yuanshaochen/My project/docs/HTML_BASELINE_ASSET_AUDIT.json",
+      "endpoint": "http://127.0.0.1:8083/v1/chat/completions",
+      "model": "nemotron-omni",
+      "category": "loot",
+      "asset_suffix": ".glb",
+      "expected_asset_count": 4
+    },
+    {
+      "overall_verdict": "pass",
+      "summary": "All visible objects match expected environment props with no weapon-like silhouettes or quality blockers.",
+      "items": [
+        {
+          "grid_index": 1,
+          "expected_file": "models/prop_container_final.glb",
+          "expected_category": "environment_prop",
+          "visible_category": "environment_prop",
+          "category_match": true,
+          "confidence": "high",
+          "reason": "Visible as a container with stacked items, matching expected prop type."
+        },
+        {
+          "grid_index": 2,
+          "expected_file": "models/prop_crate_final.glb",
+          "expected_category": "environment_prop",
+          "visible_category": "environment_prop",
+          "category_match": true,
+          "confidence": "high",
+          "reason": "Visible as a standard crate, matching expected prop type."
+        },
+        {
+          "grid_index": 3,
+          "expected_file": "models/prop_ladder_stair_final.glb",
+          "expected_category": "environment_prop",
+          "visible_category": "environment_prop",
+          "category_match": true,
+          "confidence": "high",
+          "reason": "Visible as a ladder/stair structure, matching expected prop type."
+        },
+        {
+          "grid_index": 4,
+          "expected_file": "models/prop_interior_furniture_final.glb",
+          "expected_category": "environment_prop",
+          "visible_category": "environment_prop",
+          "category_match": true,
+          "confidence": "high",
+          "reason": "Visible as interior furniture (e.g., desk/shelf), matching expected prop type."
+        },
+        {
+          "grid_index": 5,
+          "expected_file": "models/prop_ground_wall_fence_final.glb",
+          "expected_category": "environment_prop",
+          "visible_category": "environment_prop",
+          "category_match": true,
+          "confidence": "high",
+          "reason": "Visible as a wall/fence structure, matching expected prop type."
+        }
+      ],
+      "promotion_allowed": true,
+      "promotion_blockers": [],
+      "review_timestamp_utc": "2026-05-17T19:24:45.716405+00:00",
+      "deterministic_guard_applied": false,
+      "technical_blockers": [],
+      "raw_model_output": "<think></think>\n{\n  \"overall_verdict\": \"pass\",\n  \"summary\": \"All visible objects match expected environment props with no weapon-like silhouettes or quality blockers.\",\n  \"items\": [\n    {\n      \"grid_index\": 1,\n      \"expected_file\": \"models/prop_container_final.glb\",\n      \"expected_category\": \"environment_prop\",\n      \"visible_category\": \"environment_prop\",\n      \"category_match\": true,\n      \"confidence\": \"high\",\n      \"reason\": \"Visible as a container with stacked items, matching expected prop type.\"\n    },\n    {\n      \"grid_index\": 2,\n      \"expected_file\": \"models/prop_crate_final.glb\",\n      \"expected_category\": \"environment_prop\",\n      \"visible_category\": \"environment_prop\",\n      \"category_match\": true,\n      \"confidence\": \"high\",\n      \"reason\": \"Visible as a standard crate, matching expected prop type.\"\n    },\n    {\n      \"grid_index\": 3,\n      \"expected_file\": \"models/prop_ladder_stair_final.glb\",\n      \"expected_category\": \"environment_prop\",\n      \"visible_category\": \"environment_prop\",\n      \"category_match\": true,\n      \"confidence\": \"high\",\n      \"reason\": \"Visible as a ladder/stair structure, matching expected prop type.\"\n    },\n    {\n      \"grid_index\": 4,\n      \"expected_file\": \"models/prop_interior_furniture_final.glb\",\n      \"expected_category\": \"environment_prop\",\n      \"visible_category\": \"environment_prop\",\n      \"category_match\": true,\n      \"confidence\": \"high\",\n      \"reason\": \"Visible as interior furniture (e.g., desk/shelf), matching expected prop type.\"\n    },\n    {\n      \"grid_index\": 5,\n      \"expected_file\": \"models/prop_ground_wall_fence_final.glb\",\n      \"expected_category\": \"environment_prop\",\n      \"visible_category\": \"environment_prop\",\n      \"category_match\": true,\n      \"confidence\": \"high\",\n      \"reason\": \"Visible as a wall/fence structure, matching expected prop type.\"\n    }\n  ],\n  \"promotion_allowed\": true,\n  \"promotion_blockers\": []\n}<|im_end|>",
+      "input_image": "/Users/yuanshaochen/My project/Assets/Screenshots/HtmlBaselineCategorySheets/html_baseline_environment_prop_contact_sheet.png",
+      "input_audit": "/Users/yuanshaochen/My project/docs/HTML_BASELINE_ASSET_AUDIT.json",
+      "endpoint": "http://127.0.0.1:8083/v1/chat/completions",
+      "model": "nemotron-omni",
+      "category": "environment_prop",
+      "asset_suffix": ".glb",
+      "expected_asset_count": 5
+    }
+  ]
+}

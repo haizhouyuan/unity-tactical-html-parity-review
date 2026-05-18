@@ -1,0 +1,23 @@
+{
+  "schema": "unity_glb_pbr_visual_review_v1",
+  "timestamp_utc": "2026-05-17T09:19:40.0600930Z",
+  "asset_folder": "Assets/HtmlTacticalAssets/RealifiedAssets",
+  "textured_glb_count": 12,
+  "scene": "Assets/Scenes/GLB_PBR_Textured_ContactSheet.unity",
+  "screenshot": "Assets/Screenshots/glb_pbr_textured_contact_sheet.png",
+  "important_limitation": "This is a normalized visual contact sheet, not proof that assets are bound to gameplay entities.",
+  "assets": [
+    {"file":"hero_rifle_textured.glb","bounds":[1.907,0.765,1.412],"renderers":1,"materials":1,"textured_materials":1,"normal_slots":0,"pbr_slots":1},
+    {"file":"RS_02_sidearm_textured.glb","bounds":[1.907,0.765,1.412],"renderers":1,"materials":1,"textured_materials":1,"normal_slots":0,"pbr_slots":1},
+    {"file":"RS_03_secondary_weapon_textured.glb","bounds":[1.907,0.765,1.412],"renderers":1,"materials":1,"textured_materials":1,"normal_slots":0,"pbr_slots":1},
+    {"file":"RS_04_player_tactical_textured.glb","bounds":[1.907,0.765,1.412],"renderers":1,"materials":1,"textured_materials":1,"normal_slots":0,"pbr_slots":1},
+    {"file":"RS_05_enemy_tactical_textured.glb","bounds":[1.907,0.765,1.412],"renderers":1,"materials":1,"textured_materials":1,"normal_slots":0,"pbr_slots":1},
+    {"file":"RS_06_gear_helmet_textured.glb","bounds":[1.907,0.765,1.412],"renderers":1,"materials":1,"textured_materials":1,"normal_slots":0,"pbr_slots":1},
+    {"file":"RS_07_gear_vest_textured.glb","bounds":[1.907,0.765,1.412],"renderers":1,"materials":1,"textured_materials":1,"normal_slots":0,"pbr_slots":1},
+    {"file":"RS_08_loot_ammo_textured.glb","bounds":[1.907,0.765,1.412],"renderers":1,"materials":1,"textured_materials":1,"normal_slots":0,"pbr_slots":1},
+    {"file":"RS_09_loot_medkit_textured.glb","bounds":[1.907,0.765,1.412],"renderers":1,"materials":1,"textured_materials":1,"normal_slots":0,"pbr_slots":1},
+    {"file":"RS_10_prop_container_textured.glb","bounds":[1.907,0.765,1.412],"renderers":1,"materials":1,"textured_materials":1,"normal_slots":0,"pbr_slots":1},
+    {"file":"RS_11_prop_crate_textured.glb","bounds":[1.907,0.765,1.412],"renderers":1,"materials":1,"textured_materials":1,"normal_slots":0,"pbr_slots":1},
+    {"file":"RS_12_shotgun_textured.glb","bounds":[1.907,0.765,1.412],"renderers":1,"materials":1,"textured_materials":1,"normal_slots":0,"pbr_slots":1}
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "overall_verdict": "pass",
+  "summary": "Two character models match expected categories and quality.",
+  "items": [
+    {
+      "grid_index": 1,
+      "expected_file": "models/character_player_final.glb",
+      "expected_category": "character",
+      "visible_category": "character",
+      "category_match": true,
+      "confidence": "high",
+      "reason": "Model shows humanoid form with head, torso, limbs, and base stand consistent with player character."
+    },
+    {
+      "grid_index": 2,
+      "expected_file": "models/character_enemy_final.glb",
+      "expected_category": "character",
+      "visible_category": "character",
+      "category_match": true,
+      "confidence": "high",
+      "reason": "Model shows humanoid form with head, torso, limbs, and base stand consistent with enemy character."
+    }
+  ],
+  "promotion_allowed": true,
+  "promotion_blockers": [],
+  "review_timestamp_utc": "2026-05-17T19:24:24.732861+00:00",
+  "deterministic_guard_applied": false,
+  "technical_blockers": [],
+  "raw_model_output": "<think></think>\n{\n  \"overall_verdict\": \"pass\",\n  \"summary\": \"Two character models match expected categories and quality.\",\n  \"items\": [\n    {\n      \"grid_index\": 1,\n      \"expected_file\": \"models/character_player_final.glb\",\n      \"expected_category\": \"character\",\n      \"visible_category\": \"character\",\n      \"category_match\": true,\n      \"confidence\": \"high\",\n      \"reason\": \"Model shows humanoid form with head, torso, limbs, and base stand consistent with player character.\"\n    },\n    {\n      \"grid_index\": 2,\n      \"expected_file\": \"models/character_enemy_final.glb\",\n      \"expected_category\": \"character\",\n      \"visible_category\": \"character\",\n      \"category_match\": true,\n      \"confidence\": \"high\",\n      \"reason\": \"Model shows humanoid form with head, torso, limbs, and base stand consistent with enemy character.\"\n    }\n  ],\n  \"promotion_allowed\": true,\n  \"promotion_blockers\": []\n}<|im_end|>",
+  "input_image": "/Users/yuanshaochen/My project/Assets/Screenshots/HtmlBaselineCategorySheets/html_baseline_character_contact_sheet.png",
+  "input_audit": "/Users/yuanshaochen/My project/docs/HTML_BASELINE_ASSET_AUDIT.json",
+  "endpoint": "http://127.0.0.1:8083/v1/chat/completions",
+  "model": "nemotron-omni",
+  "category": "character",
+  "asset_suffix": ".glb",
+  "expected_asset_count": 2
+}

@@ -1,0 +1,75 @@
+{
+  "schema": "promoted_asset_player_camera_visibility_gate_v1",
+  "timestamp_utc": "2026-05-18T04:14:03.1194740Z",
+  "application_is_playing": true,
+  "passed": false,
+  "promotion_queue_path": "docs/REALIFIED_ASSET_CLASS_PROMOTION_QUEUE.json",
+  "player_pov_screenshot_path": "Assets/Screenshots/tactical_html_replica_current_player_pov_verified.png",
+  "camera_present": true,
+  "minimum_screen_area_ratio": 0.002,
+  "summary": {
+    "class_count": 5,
+    "production_promoted_classes": 0,
+    "visible_promoted_classes": 0,
+    "visible_promoted_objects": 0,
+    "candidate_visible_objects": 103,
+    "blocked_reason": "no_production_promoted_assets"
+  },
+  "classes": [
+    {
+      "category": "weapon",
+      "asset_ids": ["hero_rifle", "sidearm", "secondary_weapon", "shotgun"],
+      "production_promoted": false,
+      "candidate_visible_object_count": 103,
+      "visible_promoted_object_count": 0,
+      "visible_promoted": false,
+      "max_screen_area_ratio": 0.000254,
+      "visible_object_names": "rivet_-0.47_03, rivet_0.05_06, top_rail_tooth_00, COLLIDER_PROXY_weapon_bbox, angled_grip, top_rail_tooth_03, rivet_0.22_07, rivet_-0.98_00, rivet_-0.29_04, top_rail_tooth_08, adjustable_cheek_riser, precision_stock, mlok_slot_07, mlok_slot_10, dmr_receiver_upper, box_magazine, HTML GLB Instance - hero_rifle_LOD0, mlok_slot_06, scope_mount_rear, top_rail_tooth_05, top_rail_tooth_07, rivet_-0.12_05, scope_rear_lens, mlok_slot_01, top_rail_tooth_01, match_barrel, rivet_-0.64_02, mlok_slot_02, top_rail_tooth_09, HTML GLB Instance - RS_02_sidearm_LOD0, scope_mount_front, freefloat_handguard, mlok_slot_05, top_rail_tooth_10, mlok_slot_08, top_rail_tooth_04, rivet_-0.81_01, rubber_butt_pad, mlok_slot_00, scope_body, top_rail_tooth_02, muzzle_brake_two_port, top_rail_tooth_06, mlok_slot_04, dmr_receiver_lower, weapon_collision_proxy_nonrender, mlok_slot_03, scope_front_lens, mlok_slot_09",
+      "blockers": ["technical_import_or_pbr_sidecar_incomplete", "semantic_category_review_failed", "class_not_production_promoted"]
+    },
+    {
+      "category": "character",
+      "asset_ids": ["player_tactical", "enemy_tactical"],
+      "production_promoted": false,
+      "candidate_visible_object_count": 0,
+      "visible_promoted_object_count": 0,
+      "visible_promoted": false,
+      "max_screen_area_ratio": 0,
+      "visible_object_names": "",
+      "blockers": ["technical_import_or_pbr_sidecar_incomplete", "semantic_category_review_failed", "no_realified_gameplay_scene_evidence_key_defined", "class_not_production_promoted"]
+    },
+    {
+      "category": "gear",
+      "asset_ids": ["helmet", "vest"],
+      "production_promoted": false,
+      "candidate_visible_object_count": 0,
+      "visible_promoted_object_count": 0,
+      "visible_promoted": false,
+      "max_screen_area_ratio": 0,
+      "visible_object_names": "",
+      "blockers": ["semantic_category_review_failed", "gameplay_scene_evidence_missing_or_partial", "class_not_production_promoted"]
+    },
+    {
+      "category": "loot",
+      "asset_ids": ["ammo", "medkit"],
+      "production_promoted": false,
+      "candidate_visible_object_count": 0,
+      "visible_promoted_object_count": 0,
+      "visible_promoted": false,
+      "max_screen_area_ratio": 0,
+      "visible_object_names": "",
+      "blockers": ["semantic_category_review_failed", "gameplay_scene_evidence_missing_or_partial", "class_not_production_promoted"]
+    },
+    {
+      "category": "environment_prop",
+      "asset_ids": ["container", "crate"],
+      "production_promoted": false,
+      "candidate_visible_object_count": 0,
+      "visible_promoted_object_count": 0,
+      "visible_promoted": false,
+      "max_screen_area_ratio": 0,
+      "visible_object_names": "",
+      "blockers": ["semantic_category_review_failed", "gameplay_scene_evidence_missing_or_partial", "class_not_production_promoted"]
+    }
+  ]
+}

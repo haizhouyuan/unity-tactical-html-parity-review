@@ -1,0 +1,129 @@
+{
+  "schema": "research_packet_unity_candidates_v1",
+  "timestamp_utc": "2026-05-17T21:31:11.497497+00:00",
+  "research_root": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets",
+  "unity_candidate_root": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/ResearchPacketCandidates",
+  "candidate_count": 2,
+  "fully_imported_count": 2,
+  "promotion_note": "These files are quarantined review candidates. They must pass Unity import, single-asset semantic review, and player-camera gameplay-context evidence before replacing any HTML baseline asset.",
+  "candidates": [
+    {
+      "candidate_id": "player_tactical_candidate",
+      "category": "character",
+      "packet": "player_tactical_v1",
+      "packet_dir": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/player_tactical_v1",
+      "target_dir": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/ResearchPacketCandidates/player_tactical_candidate",
+      "model": {
+        "source": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/player_tactical_v1/model/optimized.glb",
+        "dest": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/ResearchPacketCandidates/player_tactical_candidate/player_tactical_candidate.glb",
+        "source_sha256": "a969ed31ca87f4195e4925650c7bf4c057d0174cd28bb9c12d7ba41323e9b0fe",
+        "dest_sha256": "a969ed31ca87f4195e4925650c7bf4c057d0174cd28bb9c12d7ba41323e9b0fe",
+        "bytes": 2699088,
+        "copied": true
+      },
+      "textures": [
+        {
+          "source": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/player_tactical_v1/textures/player_tactical_basecolor.png",
+          "dest": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/ResearchPacketCandidates/player_tactical_candidate/player_tactical_candidate_basecolor.png",
+          "source_sha256": "7d1c3b2e441f1102ba1ed50b9e98dcb210be68ac23be582edc37b85da4222508",
+          "dest_sha256": "7d1c3b2e441f1102ba1ed50b9e98dcb210be68ac23be582edc37b85da4222508",
+          "bytes": 293691,
+          "copied": true
+        },
+        {
+          "source": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/player_tactical_v1/textures/player_tactical_normal.png",
+          "dest": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/ResearchPacketCandidates/player_tactical_candidate/player_tactical_candidate_normal.png",
+          "source_sha256": "1dada02504314ef67554e57df0bc2796b2b71518bbed622c6c6d57b1c14ede68",
+          "dest_sha256": "1dada02504314ef67554e57df0bc2796b2b71518bbed622c6c6d57b1c14ede68",
+          "bytes": 1467688,
+          "copied": true
+        },
+        {
+          "source": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/player_tactical_v1/textures/player_tactical_roughness.png",
+          "dest": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/ResearchPacketCandidates/player_tactical_candidate/player_tactical_candidate_roughness.png",
+          "source_sha256": "5e3a3b43b21c8053603fcfeeb414287153452663614df7f608822185ce7d31db",
+          "dest_sha256": "5e3a3b43b21c8053603fcfeeb414287153452663614df7f608822185ce7d31db",
+          "bytes": 270633,
+          "copied": true
+        },
+        {
+          "source": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/player_tactical_v1/textures/player_tactical_metallic.png",
+          "dest": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/ResearchPacketCandidates/player_tactical_candidate/player_tactical_candidate_metallic.png",
+          "source_sha256": "7dca817119f71f451091fee604de20a3d9e366fb9b6ac7e3acfe1d2ae73c21fb",
+          "dest_sha256": "7dca817119f71f451091fee604de20a3d9e366fb9b6ac7e3acfe1d2ae73c21fb",
+          "bytes": 10455,
+          "copied": true
+        },
+        {
+          "source": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/player_tactical_v1/textures/player_tactical_ao.png",
+          "dest": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/ResearchPacketCandidates/player_tactical_candidate/player_tactical_candidate_ao.png",
+          "source_sha256": "9e72b54edc4ddf458763e48284f160603d246410983747227365f5303662b453",
+          "dest_sha256": "9e72b54edc4ddf458763e48284f160603d246410983747227365f5303662b453",
+          "bytes": 203737,
+          "copied": true
+        }
+      ],
+      "status": "candidate_imported_for_review",
+      "blockers": []
+    },
+    {
+      "candidate_id": "enemy_tactical_candidate",
+      "category": "character",
+      "packet": "enemy_tactical_v1",
+      "packet_dir": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/enemy_tactical_v1",
+      "target_dir": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/ResearchPacketCandidates/enemy_tactical_candidate",
+      "model": {
+        "source": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/enemy_tactical_v1/model/optimized.glb",
+        "dest": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/ResearchPacketCandidates/enemy_tactical_candidate/enemy_tactical_candidate.glb",
+        "source_sha256": "c8d67f9f17e6c6abc51510fb53d1776f6095aba6cc286873b64b4db0e7601d19",
+        "dest_sha256": "c8d67f9f17e6c6abc51510fb53d1776f6095aba6cc286873b64b4db0e7601d19",
+        "bytes": 2709940,
+        "copied": true
+      },
+      "textures": [
+        {
+          "source": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/enemy_tactical_v1/textures/enemy_tactical_basecolor.png",
+          "dest": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/ResearchPacketCandidates/enemy_tactical_candidate/enemy_tactical_candidate_basecolor.png",
+          "source_sha256": "db3abb71b0edb4a6538111ce574403793e1821e1eecbf90c376bd6f4108a5f2f",
+          "dest_sha256": "db3abb71b0edb4a6538111ce574403793e1821e1eecbf90c376bd6f4108a5f2f",
+          "bytes": 311071,
+          "copied": true
+        },
+        {
+          "source": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/enemy_tactical_v1/textures/enemy_tactical_normal.png",
+          "dest": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/ResearchPacketCandidates/enemy_tactical_candidate/enemy_tactical_candidate_normal.png",
+          "source_sha256": "6bc7ab4c87d80c29311738a2a35e940bbfd450a36ac029fd1bc82ac741f80a36",
+          "dest_sha256": "6bc7ab4c87d80c29311738a2a35e940bbfd450a36ac029fd1bc82ac741f80a36",
+          "bytes": 1462602,
+          "copied": true
+        },
+        {
+          "source": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/enemy_tactical_v1/textures/enemy_tactical_roughness.png",
+          "dest": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/ResearchPacketCandidates/enemy_tactical_candidate/enemy_tactical_candidate_roughness.png",
+          "source_sha256": "0539cb7ccf7981cb5c5502c1de6b7ad8dd3750bdbf976cf3f9739918467e70c3",
+          "dest_sha256": "0539cb7ccf7981cb5c5502c1de6b7ad8dd3750bdbf976cf3f9739918467e70c3",
+          "bytes": 268135,
+          "copied": true
+        },
+        {
+          "source": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/enemy_tactical_v1/textures/enemy_tactical_metallic.png",
+          "dest": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/ResearchPacketCandidates/enemy_tactical_candidate/enemy_tactical_candidate_metallic.png",
+          "source_sha256": "7dca817119f71f451091fee604de20a3d9e366fb9b6ac7e3acfe1d2ae73c21fb",
+          "dest_sha256": "7dca817119f71f451091fee604de20a3d9e366fb9b6ac7e3acfe1d2ae73c21fb",
+          "bytes": 10455,
+          "copied": true
+        },
+        {
+          "source": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/enemy_tactical_v1/textures/enemy_tactical_ao.png",
+          "dest": "/Users/yuanshaochen/My project/Assets/HtmlTacticalAssets/ResearchPacketCandidates/enemy_tactical_candidate/enemy_tactical_candidate_ao.png",
+          "source_sha256": "91da135e3b2d00bd92cf191e7e217be53031368e35c42f9e6acd6eab18759a07",
+          "dest_sha256": "91da135e3b2d00bd92cf191e7e217be53031368e35c42f9e6acd6eab18759a07",
+          "bytes": 200467,
+          "copied": true
+        }
+      ],
+      "status": "candidate_imported_for_review",
+      "blockers": []
+    }
+  ]
+}

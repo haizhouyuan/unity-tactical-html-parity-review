@@ -1,0 +1,27 @@
+{
+  "schema": "research_packet_candidate_audit_v1",
+  "timestamp_utc": "2026-05-17T21:44:51.050600+00:00",
+  "total_glb": 2,
+  "status_counts": {
+    "promotable_pbr_candidate": 2
+  },
+  "category_counts": {
+    "character": 2
+  },
+  "promotable_pbr_candidates": 2,
+  "verdict": "candidate review only; not production until semantic and gameplay gates pass",
+  "assets": [
+    {
+      "file": "player_tactical_candidate.glb",
+      "category": "character",
+      "promotion_status": "promotable_pbr_candidate",
+      "promotion_reasons": []
+    },
+    {
+      "file": "enemy_tactical_candidate.glb",
+      "category": "character",
+      "promotion_status": "promotable_pbr_candidate",
+      "promotion_reasons": []
+    }
+  ]
+}

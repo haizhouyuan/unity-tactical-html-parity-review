@@ -1,0 +1,40 @@
+{
+  "timestamp_utc": "2026-05-17T21:10:44.183299+00:00",
+  "mcp_url": "http://127.0.0.1:8080/mcp",
+  "execute_acceptance": true,
+  "one_button_acceptance": true,
+  "errors": [],
+  "session_id": "cc7b8fe5fda34abcb76549ff0a0e9524",
+  "protocol_version": "2025-06-18",
+  "server_name": "mcp-for-unity-server",
+  "server_version": "3.3.1",
+  "tools_count": 43,
+  "required_tools": {
+    "read_console": true,
+    "execute_menu_item": true,
+    "manage_editor": true,
+    "tools_list": true
+  },
+  "read_console_ok": true,
+  "read_console_response_excerpt": "{\"content\": [{\"type\": \"text\", \"text\": \"{\\\"success\\\":true,\\\"message\\\":\\\"Retrieved 5 log entries.\\\",\\\"data\\\":[{\\\"type\\\":\\\"Log\\\",\\\"message\\\":\\\"[AI Tools] Tactical playable route gate report written to docs/TACTICAL_PLAYABLE_ROUTE_GATE.json passed=True\\\",\\\"file\\\":\\\"Assets/Editor/TacticalPlayableRouteGate.cs\\\",\\\"line\\\":168,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Log\\\",\\\"message\\\":\\\"[AI Tools] Realified asset class promotion queue written to docs/REALIFIED_ASSET_CLASS_PROMOTION_QUEUE.json\\\",\\\"file\\\":\\\"Assets/Editor/RealifiedAssetPromotionQueue.cs\\\",\\\"line\\\":49,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Log\\\",\\\"message\\\":\\\"[AI Tools] Tactical verified player POV camera render written to Assets/Screenshots/tactical_html_replica_current_player_pov_verified.png prepared=True\\\",\\\"file\\\":\\\"Assets/Editor/TacticalPlayerPovGate.cs\\\",\\\"line\\\":29,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Log\\\",\\\"message\\\":\\\"[AI Tools] Tactical player POV gate report written to docs/TACTICAL_PLAYER_POV_GATE.json passed=True\\\",\\\"file\\\":\\\"Assets/Editor/TacticalPlayerPovGate.cs\\\",\\\"line\\\":190,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Log\\\",\\\"message\\\":\\\"[AI Tools] Promoted asset player camera visibility gate written to docs/PROMOTED_ASSET_PLAYER_CAMERA_VISIBILITY_GATE.json passed=False\\\",\\\"file\\\":\\\"Assets/Editor/PromotedAssetPlayerCameraVisibilityGate.cs\\\",\\\"line\\\":61,\\\"stackTrace\\\":null}]}\"}], \"structuredContent\": {\"success\": true, \"message\": \"Retrieved 5 log entries.\", \"data\": [{\"type\": \"Log\", \"message\": \"[AI Tools] Tactical playable route gate report written to docs/TACTICAL_PLAYABLE_ROUTE_GATE.json passed=True\", \"file\": \"Assets/Editor/TacticalPlayableRouteGate.cs\", \"line\": 168, \"stackTrace\": null}, {\"type\": \"Log\", \"message\": \"[AI Tools] Realified asset class promotion queue written to docs/REALIFIED_ASSET_CLASS_PROMOTION_QUEUE.json\", \"file\": \"Assets/Editor/RealifiedAssetPromotionQueue.cs\", \"line\": 49, \"stackTrace\": null}, {\"type\": \"Log\", \"message\": \"[AI Tools] Tactical verified player POV camera render written to Assets/Screenshots/t",
+  "execute_menu_item_response_excerpt": "{\"content\": [{\"type\": \"text\", \"text\": \"{\\\"success\\\":true,\\\"message\\\":\\\"Attempted to execute menu item: 'AI Tools/Run Tactical Acceptance Pipeline'. Check Unity logs for confirmation or errors.\\\",\\\"error\\\":null,\\\"data\\\":null,\\\"hint\\\":null}\"}], \"structuredContent\": {\"success\": true, \"message\": \"Attempted to execute menu item: 'AI Tools/Run Tactical Acceptance Pipeline'. Check Unity logs for confirmation or errors.\", \"error\": null, \"data\": null, \"hint\": null}, \"isError\": false}",
+  "acceptance_report": "/Users/yuanshaochen/My project/docs/TACTICAL_ACCEPTANCE_PIPELINE_REPORT.json",
+  "acceptance_status": "complete",
+  "acceptance_console_errors": 0,
+  "acceptance_all_required_current_gates_passed": true,
+  "acceptance_full_visual_asset_gate_passed": false,
+  "acceptance_completion_credit": "gameplay_route_plus_incremental_assets_environment_first_person_weapon_polish_and_authored_character_clip_evidence",
+  "acceptance_master_fields_present": {
+    "realified_audit_path": true,
+    "realified_urp_material_validation_path": true,
+    "nemotron_review_path": true,
+    "player_pov_screenshot_path": true,
+    "playable_route_screenshot_directory": true,
+    "first_person_fire_screenshot_path": true,
+    "realified_contact_sheet_path": true,
+    "semantic_review_passed": true,
+    "semantic_review_current_for_audit": true
+  },
+  "acceptance_semantic_review_passed": false,
+  "acceptance_semantic_review_current_for_audit": true
+}

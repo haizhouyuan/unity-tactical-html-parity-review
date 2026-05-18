@@ -1,0 +1,40 @@
+{
+  "overall_verdict": "fail",
+  "summary": "Two weapon assets visible, mismatching expected loot categories, causing failure.",
+  "items": [
+    {
+      "grid_index": 1,
+      "expected_file": "RS_08_loot_ammo_LOD0.glb",
+      "expected_category": "loot",
+      "visible_category": "weapon",
+      "category_match": false,
+      "confidence": "high",
+      "reason": "Visible object is a rifle, not ammo or medkit."
+    },
+    {
+      "grid_index": 2,
+      "expected_file": "RS_09_loot_medkit_LOD0.glb",
+      "expected_category": "loot",
+      "visible_category": "weapon",
+      "category_match": false,
+      "confidence": "high",
+      "reason": "Visible object is a rifle, not medkit."
+    }
+  ],
+  "promotion_allowed": false,
+  "promotion_blockers": [
+    "category mismatch (weapon vs loot) for both items",
+    "visual objects are rifles, not ammo or medkit"
+  ],
+  "review_timestamp_utc": "2026-05-17T19:26:25.669063+00:00",
+  "deterministic_guard_applied": false,
+  "technical_blockers": [],
+  "raw_model_output": "<think>\nWe need to parse the context. The user says: \"You are reviewing a Unity contact sheet of AI-generated GLB assets.\" The grid is ordered left-to-right, top-to-bottom. Compare each visible object against the expected file/category list below.\n\nExpected assets list includes two entries:\n\ngrid_index 1: expected_file \"RS_08_loot_ammo_LOD0.glb\", expected_category \"loot\", technical_status \"promotable_pbr_candidate\", technical_reasons [].\n\ngrid_index 2: expected_file \"RS_09_loot_medkit_LOD0.glb\", expected_category \"loot\", technical_status \"promotable_pbr_candidate\", technical_reasons [].\n\nSo we have two items in the grid. The image shows two objects: two rifles (looks like weapons). They are not ammo or medkit; they are weapons. So visible_category likely \"weapon\". But expected_category is \"loot\". So category_match = false.\n\nWe need to fill items array with each grid_index (1 and 2). For each, we need visible_category (weapon|character|gear|loot|environment_prop|unknown). Since they are weapons, visible_category = \"weapon\". category_match = false (since expected is loot). confidence: maybe \"medium\" because it's clear they are weapons, but expected is loot, so mismatch. reason: \"Visible objects are rifles, not ammo or medkit.\"\n\nNow overall_verdict: Since category_match is false for both items, the overall verdict likely \"fail\". But we need to consider if any blockers. Promotion_allowed: only true when all visible objects match expected categories and no meaningful quality blockers. Here they don't match categories, so promotion_allowed = false.\n\npromotion_blockers: list of reasons. Could include \"category mismatch (visible weapon vs expected loot)\" for each item. Also maybe \"quality\" but not needed. So we can list \"category mismatch for grid_index 1 and 2\" or separate entries. The schema expects a list of strings. We'll include \"visible objects are weapons, not loot items\". Also maybe \"insufficient semantic category alignment\".\n\nNow summary: short sentence. Something like \"Two weapon assets visible, mismatching expected loot categories, causing failure.\"\n\nNow ensure JSON format, strict.\n\nLet's construct items:\n\nItem 1:\ngrid_index: 1\nexpected_file: \"RS_08_loot_ammo_LOD0.glb\"\nexpected_category: \"loot\"\nvisible_category: \"weapon\"\ncategory_match: false\nconfidence: \"high\" (since clearly visible)\nreason: \"Visible object is a rifle, not ammo or medkit.\"\n\nItem 2:\ngrid_index: 2\nexpected_file: \"RS_09_loot_medkit_LOD0.glb\"\nexpected_category: \"loot\"\nvisible_category: \"weapon\"\ncategory_match: false\nconfidence: \"high\"\nreason: \"Visible object is a rifle, not medkit.\"\n\nNow overall_verdict: \"fail\"\n\nsummary: \"Two weapon assets visible, mismatching expected loot categories, causing failure.\"\n\npromotion_allowed: false\n\npromotion_blockers: [\"category mismatch (weapon vs loot) for both items\", \"visual objects are rifles, not ammo or medkit\"]\n\nCheck schema: items array objects must have fields exactly as described. Ensure boolean values for category_match, promotion_allowed.\n\nNow produce JSON.\n</think>\n{\n  \"overall_verdict\": \"fail\",\n  \"summary\": \"Two weapon assets visible, mismatching expected loot categories, causing failure.\",\n  \"items\": [\n    {\n      \"grid_index\": 1,\n      \"expected_file\": \"RS_08_loot_ammo_LOD0.glb\",\n      \"expected_category\": \"loot\",\n      \"visible_category\": \"weapon\",\n      \"category_match\": false,\n      \"confidence\": \"high\",\n      \"reason\": \"Visible object is a rifle, not ammo or medkit.\"\n    },\n    {\n      \"grid_index\": 2,\n      \"expected_file\": \"RS_09_loot_medkit_LOD0.glb\",\n      \"expected_category\": \"loot\",\n      \"visible_category\": \"weapon\",\n      \"category_match\": false,\n      \"confidence\": \"high\",\n      \"reason\": \"Visible object is a rifle, not medkit.\"\n    }\n  ],\n  \"promotion_allowed\": false,\n  \"promotion_blockers\": [\n    \"category mismatch (weapon vs loot) for both items\",\n    \"visual objects are rifles, not ammo or medkit\"\n  ]\n}<|im_end|>",
+  "input_image": "/Users/yuanshaochen/My project/Assets/Screenshots/RealifiedCategorySheets/realified_loot_contact_sheet.png",
+  "input_audit": "/Users/yuanshaochen/My project/docs/REALIFIED_ASSETS_IMPORT_AUDIT.json",
+  "endpoint": "http://127.0.0.1:8083/v1/chat/completions",
+  "model": "nemotron-omni",
+  "category": "loot",
+  "asset_suffix": "_LOD0.glb",
+  "expected_asset_count": 2
+}

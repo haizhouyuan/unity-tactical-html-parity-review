@@ -1,0 +1,21 @@
+{
+  "schema": "html_tactical_parity_gate_v1",
+  "timestamp_utc": "2026-05-18T04:14:03.6876280Z",
+  "passed": true,
+  "lobby_death_restart_parity": true,
+  "settings_and_skin_parity": true,
+  "first_third_ads_stance_jump_parity": true,
+  "weapon_hit_feedback_parity": true,
+  "npc_remote_combat_dynamic_spawn_parity": true,
+  "floor_ladder_parity": true,
+  "building_environment_detail_parity": true,
+  "glb_import_scene_replacement_parity": true,
+  "evidence_validation_parity": true,
+  "active_glb_instances": 112,
+  "active_glb_renderers": 2547,
+  "route_screenshot_count": 19,
+  "category_failed_scene_instances": 0,
+  "full_visual_asset_gate_passed": false,
+  "completion_credit": "gameplay_route_plus_incremental_assets_environment_first_person_weapon_polish_authored_character_clip_and_tactical_character_detail_kit_evidence",
+  "note": "HTML tactical parity gate can pass while full visual PUBG-like realism still remains open."
+}

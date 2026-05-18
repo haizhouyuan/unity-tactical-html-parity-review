@@ -1,0 +1,144 @@
+{
+  "schema": "realified_category_contact_sheets_v1",
+  "timestamp_utc": "2026-05-18T04:13:25.8198930Z",
+  "output_directory": "Assets/Screenshots/RealifiedCategorySheets",
+  "category_count": 5,
+  "categories": [
+    {
+      "category": "weapon",
+      "path": "Assets/Screenshots/RealifiedCategorySheets/realified_weapon_contact_sheet.png",
+      "expected_asset_count": 4,
+      "rendered": true,
+      "assets": [
+        {
+          "file": "RS_02_sidearm_LOD0.glb",
+          "unity_path": "Assets/HtmlTacticalAssets/RealifiedAssets/RS_02_sidearm_LOD0.glb",
+          "sha256": "e6feebd8ee14962bbd071d9ffcb0b68695b297ac5efe1b6c65c80a572c1690ea",
+          "loaded": true,
+          "renderer_count": 1,
+          "material_count": 1
+        },
+        {
+          "file": "RS_03_secondary_weapon_LOD0.glb",
+          "unity_path": "Assets/HtmlTacticalAssets/RealifiedAssets/RS_03_secondary_weapon_LOD0.glb",
+          "sha256": "2be664196682abcb640cbfc496a9c81d92e4f50a9d88aef32595023ce6cfa1c8",
+          "loaded": true,
+          "renderer_count": 1,
+          "material_count": 1
+        },
+        {
+          "file": "RS_12_shotgun_LOD0.glb",
+          "unity_path": "Assets/HtmlTacticalAssets/RealifiedAssets/RS_12_shotgun_LOD0.glb",
+          "sha256": "eb244b70c99b68cdf23d7a1a896b8afe603e648336890426943e31252f4b58de",
+          "loaded": true,
+          "renderer_count": 1,
+          "material_count": 1
+        },
+        {
+          "file": "hero_rifle_LOD0.glb",
+          "unity_path": "Assets/HtmlTacticalAssets/RealifiedAssets/hero_rifle_LOD0.glb",
+          "sha256": "1216ba3b554072fdf4b3529b009c99f83fe88908283697cbd2796ddbd132dab4",
+          "loaded": true,
+          "renderer_count": 1,
+          "material_count": 1
+        }
+      ]
+    },
+    {
+      "category": "character",
+      "path": "Assets/Screenshots/RealifiedCategorySheets/realified_character_contact_sheet.png",
+      "expected_asset_count": 2,
+      "rendered": true,
+      "assets": [
+        {
+          "file": "RS_04_player_tactical_LOD0.glb",
+          "unity_path": "Assets/HtmlTacticalAssets/RealifiedAssets/RS_04_player_tactical_LOD0.glb",
+          "sha256": "c27e2399fd10112068a0df63508b399e7c087a4a5d9e0a1eb55c2d0ddd2290de",
+          "loaded": true,
+          "renderer_count": 1,
+          "material_count": 1
+        },
+        {
+          "file": "RS_05_enemy_tactical_LOD0.glb",
+          "unity_path": "Assets/HtmlTacticalAssets/RealifiedAssets/RS_05_enemy_tactical_LOD0.glb",
+          "sha256": "d136f460eda1f0f4c145f6bc59a0b6de8827898e98b78315764bdd964f590e22",
+          "loaded": true,
+          "renderer_count": 1,
+          "material_count": 1
+        }
+      ]
+    },
+    {
+      "category": "gear",
+      "path": "Assets/Screenshots/RealifiedCategorySheets/realified_gear_contact_sheet.png",
+      "expected_asset_count": 2,
+      "rendered": true,
+      "assets": [
+        {
+          "file": "RS_06_gear_helmet_LOD0.glb",
+          "unity_path": "Assets/HtmlTacticalAssets/RealifiedAssets/RS_06_gear_helmet_LOD0.glb",
+          "sha256": "2ed21a9d49ac1363bd8610870f941ce37d1670e43a1e71c9ec3d18fc956af4a8",
+          "loaded": true,
+          "renderer_count": 1,
+          "material_count": 1
+        },
+        {
+          "file": "RS_07_gear_vest_LOD0.glb",
+          "unity_path": "Assets/HtmlTacticalAssets/RealifiedAssets/RS_07_gear_vest_LOD0.glb",
+          "sha256": "8f9f0c8d8d014924c81cdfc1ea14dfad3b6f8f5760f6d02bcd0d940fe4e85698",
+          "loaded": true,
+          "renderer_count": 1,
+          "material_count": 1
+        }
+      ]
+    },
+    {
+      "category": "loot",
+      "path": "Assets/Screenshots/RealifiedCategorySheets/realified_loot_contact_sheet.png",
+      "expected_asset_count": 2,
+      "rendered": true,
+      "assets": [
+        {
+          "file": "RS_08_loot_ammo_LOD0.glb",
+          "unity_path": "Assets/HtmlTacticalAssets/RealifiedAssets/RS_08_loot_ammo_LOD0.glb",
+          "sha256": "fa461ca8bbddcb1723813548dfa8263b563c157c18cef241b09a947ea93daabb",
+          "loaded": true,
+          "renderer_count": 1,
+          "material_count": 1
+        },
+        {
+          "file": "RS_09_loot_medkit_LOD0.glb",
+          "unity_path": "Assets/HtmlTacticalAssets/RealifiedAssets/RS_09_loot_medkit_LOD0.glb",
+          "sha256": "6e590d95a9baaaeceb74c10cbea212689b4114d2a27284222741067787c1e21c",
+          "loaded": true,
+          "renderer_count": 1,
+          "material_count": 1
+        }
+      ]
+    },
+    {
+      "category": "environment_prop",
+      "path": "Assets/Screenshots/RealifiedCategorySheets/realified_environment_prop_contact_sheet.png",
+      "expected_asset_count": 2,
+      "rendered": true,
+      "assets": [
+        {
+          "file": "RS_10_prop_container_LOD0.glb",
+          "unity_path": "Assets/HtmlTacticalAssets/RealifiedAssets/RS_10_prop_container_LOD0.glb",
+          "sha256": "8671a6c1ad21a8510b88f8a022e23d9e9db9373ab2cce12c71f8cb455a3dbe66",
+          "loaded": true,
+          "renderer_count": 1,
+          "material_count": 1
+        },
+        {
+          "file": "RS_11_prop_crate_LOD0.glb",
+          "unity_path": "Assets/HtmlTacticalAssets/RealifiedAssets/RS_11_prop_crate_LOD0.glb",
+          "sha256": "adee07cb3f8177044b0373a91696a23185b065af2f8648320e03c5ee450f5b67",
+          "loaded": true,
+          "renderer_count": 1,
+          "material_count": 1
+        }
+      ]
+    }
+  ]
+}

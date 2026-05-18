@@ -1,0 +1,305 @@
+{
+  "schema": "realified_urp_material_validation_v1",
+  "timestamp_utc": "2026-05-17T15:41:39.261833+00:00",
+  "unity_mcp_server": "mcp-for-unity-server 3.3.1",
+  "unity_mcp_tools_count": 43,
+  "unity_mcp_errors": [],
+  "audit_total_glb": 48,
+  "audit_sidecar_promotable_count": 18,
+  "audit_status_counts": {
+    "textured_probe_not_production": 30,
+    "promotable_pbr_candidate": 18
+  },
+  "material_count": 7,
+  "materials": [
+    {
+      "material": "RS_02_sidearm_LOD0_PBR.mat",
+      "asset_stem": "RS_02_sidearm_LOD0",
+      "shader": "fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3",
+      "texture_bindings": {
+        "_BaseMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: 42271bc24f47f4adc8e5c9c520bf8796, type: 3"
+        },
+        "_BumpMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: 147df86a78c8e4b7f89eac2a250f80be, type: 3"
+        },
+        "_MetallicGlossMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: 3d96d23b42489468895d597b63f7e39a, type: 3"
+        },
+        "_OcclusionMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: 51b02978e4d2d484c81325dee7138beb, type: 3"
+        }
+      },
+      "sidecar_files": {
+        "basecolor": true,
+        "normal": true,
+        "metallic": true,
+        "roughness": true,
+        "ao": true
+      },
+      "source_asset_audit_status": "textured_probe_not_production",
+      "import_valid": true,
+      "sidecar_pbr_valid": true,
+      "production_promoted": false
+    },
+    {
+      "material": "RS_03_secondary_weapon_LOD0_PBR.mat",
+      "asset_stem": "RS_03_secondary_weapon_LOD0",
+      "shader": "fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3",
+      "texture_bindings": {
+        "_BaseMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: 79b45a0ffffdf40dcafd800cf9e779cf, type: 3"
+        },
+        "_BumpMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: d7282eade053b403a9616f966f02845b, type: 3"
+        },
+        "_MetallicGlossMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: d1b11a750296442c4bb21482b36537cc, type: 3"
+        },
+        "_OcclusionMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: c0ff5008eb4db4c348cdcfb71cf83514, type: 3"
+        }
+      },
+      "sidecar_files": {
+        "basecolor": true,
+        "normal": true,
+        "metallic": true,
+        "roughness": true,
+        "ao": true
+      },
+      "source_asset_audit_status": "textured_probe_not_production",
+      "import_valid": true,
+      "sidecar_pbr_valid": true,
+      "production_promoted": false
+    },
+    {
+      "material": "RS_06_gear_helmet_LOD0_PBR.mat",
+      "asset_stem": "RS_06_gear_helmet_LOD0",
+      "shader": "fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3",
+      "texture_bindings": {
+        "_BaseMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: 7f43b19996a994cbab6677382eca01eb, type: 3"
+        },
+        "_BumpMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: eda9fc98a5d474b21b563255260ebe58, type: 3"
+        },
+        "_MetallicGlossMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: 03cff24daa8b842248527a61fbbd89bf, type: 3"
+        },
+        "_OcclusionMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: 27afb73af08234a00a7fde494b278284, type: 3"
+        }
+      },
+      "sidecar_files": {
+        "basecolor": true,
+        "normal": true,
+        "metallic": true,
+        "roughness": true,
+        "ao": true
+      },
+      "source_asset_audit_status": "promotable_pbr_candidate",
+      "import_valid": true,
+      "sidecar_pbr_valid": true,
+      "production_promoted": false
+    },
+    {
+      "material": "RS_07_gear_vest_LOD0_PBR.mat",
+      "asset_stem": "RS_07_gear_vest_LOD0",
+      "shader": "fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3",
+      "texture_bindings": {
+        "_BaseMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: 886e1cfcd5ba14e82bcf5c97ac86470d, type: 3"
+        },
+        "_BumpMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: a3f5197db367343f0b0a87a51103ca1c, type: 3"
+        },
+        "_MetallicGlossMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: df64231f4fc884071bd015b8f8dd8b64, type: 3"
+        },
+        "_OcclusionMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: 5247e90a8c7c7450298d46588f9bd275, type: 3"
+        }
+      },
+      "sidecar_files": {
+        "basecolor": true,
+        "normal": true,
+        "metallic": true,
+        "roughness": true,
+        "ao": true
+      },
+      "source_asset_audit_status": "promotable_pbr_candidate",
+      "import_valid": true,
+      "sidecar_pbr_valid": true,
+      "production_promoted": false
+    },
+    {
+      "material": "RS_08_loot_ammo_LOD0_PBR.mat",
+      "asset_stem": "RS_08_loot_ammo_LOD0",
+      "shader": "fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3",
+      "texture_bindings": {
+        "_BaseMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: 01688cc5e29284f71a4ac4f331c68500, type: 3"
+        },
+        "_BumpMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: c040a75d5086f4cc380a627fa9c0a5a7, type: 3"
+        },
+        "_MetallicGlossMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: 94e6cab48a7794b37a2e7272fdcb22f0, type: 3"
+        },
+        "_OcclusionMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: 538c96a2244544f51ad8886658abd02a, type: 3"
+        }
+      },
+      "sidecar_files": {
+        "basecolor": true,
+        "normal": true,
+        "metallic": true,
+        "roughness": true,
+        "ao": true
+      },
+      "source_asset_audit_status": "promotable_pbr_candidate",
+      "import_valid": true,
+      "sidecar_pbr_valid": true,
+      "production_promoted": false
+    },
+    {
+      "material": "RS_09_loot_medkit_LOD0_PBR.mat",
+      "asset_stem": "RS_09_loot_medkit_LOD0",
+      "shader": "fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3",
+      "texture_bindings": {
+        "_BaseMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: c69bfa6df3f3f475a8557d26537d41c3, type: 3"
+        },
+        "_BumpMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: 8c7690a0c5b2146faac196734595b8c3, type: 3"
+        },
+        "_MetallicGlossMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: ddeab63a6331d482ebedca2fd14d257e, type: 3"
+        },
+        "_OcclusionMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: e1fc2222342ee4c16993b326f5bab213, type: 3"
+        }
+      },
+      "sidecar_files": {
+        "basecolor": true,
+        "normal": true,
+        "metallic": true,
+        "roughness": true,
+        "ao": true
+      },
+      "source_asset_audit_status": "promotable_pbr_candidate",
+      "import_valid": true,
+      "sidecar_pbr_valid": true,
+      "production_promoted": false
+    },
+    {
+      "material": "hero_rifle_LOD0_PBR.mat",
+      "asset_stem": "hero_rifle_LOD0",
+      "shader": "fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3",
+      "texture_bindings": {
+        "_BaseMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: 93cf38b87548a48c19b1f3798dab8e5c, type: 3"
+        },
+        "_BumpMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: 23421c38b99c74e6c9167b2b9159da85, type: 3"
+        },
+        "_MetallicGlossMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: 3254dfac96b704a45bb7dd464e5562b7, type: 3"
+        },
+        "_OcclusionMap": {
+          "present": true,
+          "bound": true,
+          "raw": "fileID: 2800000, guid: a46e2942d89c64db38898c7a5c03e108, type: 3"
+        }
+      },
+      "sidecar_files": {
+        "basecolor": true,
+        "normal": true,
+        "metallic": true,
+        "roughness": true,
+        "ao": true
+      },
+      "source_asset_audit_status": "textured_probe_not_production",
+      "import_valid": true,
+      "sidecar_pbr_valid": true,
+      "production_promoted": false
+    }
+  ],
+  "summary": {
+    "import_valid_materials": 7,
+    "sidecar_pbr_valid_materials": 7,
+    "production_promoted_materials": 0,
+    "missing_promotable_lod_materials": [
+      "RS_06_gear_helmet_LOD1",
+      "RS_06_gear_helmet_LOD2",
+      "RS_07_gear_vest_LOD1",
+      "RS_07_gear_vest_LOD2",
+      "RS_08_loot_ammo_LOD1",
+      "RS_08_loot_ammo_LOD2",
+      "RS_09_loot_medkit_LOD1",
+      "RS_09_loot_medkit_LOD2",
+      "RS_10_prop_container_LOD0",
+      "RS_10_prop_container_LOD1",
+      "RS_10_prop_container_LOD2",
+      "RS_11_prop_crate_LOD0",
+      "RS_11_prop_crate_LOD1",
+      "RS_11_prop_crate_LOD2"
+    ],
+    "has_any_console_or_mcp_errors": false,
+    "verdict": "URP material files exist and bind the expected maps for the authored promoted LOD0 set, but this validates import/material wiring only. It does not upgrade textured probes or characters to production assets."
+  }
+}

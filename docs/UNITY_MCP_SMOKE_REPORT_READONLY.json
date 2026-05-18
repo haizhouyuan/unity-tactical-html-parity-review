@@ -1,0 +1,19 @@
+{
+  "timestamp_utc": "2026-05-17T14:37:09.192634+00:00",
+  "mcp_url": "http://127.0.0.1:8080/mcp",
+  "execute_acceptance": false,
+  "errors": [],
+  "session_id": "4ac1c66f345e4cdd83dda940e1c9c499",
+  "protocol_version": "2025-06-18",
+  "server_name": "mcp-for-unity-server",
+  "server_version": "3.3.1",
+  "tools_count": 43,
+  "required_tools": {
+    "read_console": true,
+    "execute_menu_item": true,
+    "manage_editor": true,
+    "tools_list": true
+  },
+  "read_console_ok": true,
+  "read_console_response_excerpt": "{\"content\": [{\"type\": \"text\", \"text\": \"{\\\"success\\\":true,\\\"message\\\":\\\"Retrieved 5 log entries.\\\",\\\"data\\\":[{\\\"type\\\":\\\"Error\\\",\\\"message\\\":\\\"Assets/Editor/TacticalPrototypeTools.cs(1460,40): error CS0104: 'Object' is an ambiguous reference between 'UnityEngine.Object' and 'object'\\\",\\\"file\\\":\\\"Assets/Editor/TacticalPrototypeTools.cs\\\",\\\"line\\\":1460,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Error\\\",\\\"message\\\":\\\"Assets/Editor/TacticalPrototypeTools.cs(1460,73): error CS0104: 'Object' is an ambiguous reference between 'UnityEngine.Object' and 'object'\\\",\\\"file\\\":\\\"Assets/Editor/TacticalPrototypeTools.cs\\\",\\\"line\\\":1460,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Log\\\",\\\"message\\\":\\\"[GLBImporter] PBR material setup complete for tactical_crate_v1\\\",\\\"file\\\":\\\"Assets/Scripts/Editor/UnityGLBImporter.cs\\\",\\\"line\\\":75,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Log\\\",\\\"message\\\":\\\"[GLBImporter] PBR material setup complete for approved_container_v1\\\",\\\"file\\\":\\\"Assets/Scripts/Editor/UnityGLBImporter.cs\\\",\\\"line\\\":75,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Log\\\",\\\"message\\\":\\\"[GLBImporter] PBR material setup complete for approved_player_tactical_v1\\\",\\\"file\\\":\\\"Assets/Scripts/Editor/UnityGLBImporter.cs\\\",\\\"line\\\":75,\\\"stackTrace\\\":null}]}\"}], \"structuredContent\": {\"success\": true, \"message\": \"Retrieved 5 log entries.\", \"data\": [{\"type\": \"Error\", \"message\": \"Assets/Editor/TacticalPrototypeTools.cs(1460,40): error CS0104: 'Object' is an ambiguous reference between 'UnityEngine.Object' and 'object'\", \"file\": \"Assets/Editor/TacticalPrototypeTools.cs\", \"line\": 1460, \"stackTrace\": null}, {\"type\": \"Error\", \"message\": \"Assets/Editor/TacticalPrototypeTools.cs(1460,73): error CS0104: 'Object' is an ambiguous reference between 'UnityEngine.Object' and 'object'\", \"file\": \"Assets/Editor/TacticalPrototypeTools.cs\", \"line\": 1460, \"stackTrace\": null}, {\"type\": \"Log\", \"message\": \"[GLBImporter] PBR material setup complete for tactical_crate_v1\", \"file\": \"Assets/Scripts/Editor/UnityGLBImporter.cs\", \"line\": 75, \"stackTrace\": null},"
+}

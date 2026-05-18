@@ -1,0 +1,37 @@
+{
+  "overall_verdict": "pass",
+  "summary": "Both candidate models match expected character categories with high confidence.",
+  "items": [
+    {
+      "grid_index": 1,
+      "expected_file": "player_tactical_candidate.glb",
+      "expected_category": "character",
+      "visible_category": "character",
+      "category_match": true,
+      "confidence": "high",
+      "reason": "Model clearly depicts a character silhouette matching the expected player tactical candidate."
+    },
+    {
+      "grid_index": 2,
+      "expected_file": "enemy_tactical_candidate.glb",
+      "expected_category": "character",
+      "visible_category": "character",
+      "category_match": true,
+      "confidence": "high",
+      "reason": "Model clearly depicts an enemy character silhouette matching the expected enemy tactical candidate."
+    }
+  ],
+  "promotion_allowed": true,
+  "promotion_blockers": [],
+  "review_timestamp_utc": "2026-05-17T21:45:15.066385+00:00",
+  "deterministic_guard_applied": false,
+  "technical_blockers": [],
+  "raw_model_output": "<think>\nWe need to compare each visible object against expected file/category list.\n\nGrid index 1: expected file player_tactical_candidate.glb, expected category character. Visible object: appears to be a character model (looks like a tactical character). So category_match true. Confidence high. Reason: matches expected character silhouette.\n\nGrid index 2: expected file enemy_tactical_candidate.glb, expected category character. Visible object: also a character model (enemy). So category_match true. Confidence high.\n\nNow overall_verdict: Since both match expected categories and no blockers, promotion_allowed true. No promotion_blockers.\n\nCheck if any weapon silhouettes: The objects appear to be characters, not weapons. So category_match true.\n\nThus JSON:\n\n{\n \"overall_verdict\": \"pass\",\n \"summary\": \"Both candidate models match expected character categories with high confidence.\",\n \"items\": [\n   {\n     \"grid_index\": 1,\n     \"expected_file\": \"player_tactical_candidate.glb\",\n     \"expected_category\": \"character\",\n     \"visible_category\": \"character\",\n     \"category_match\": true,\n     \"confidence\": \"high\",\n     \"reason\": \"Model clearly depicts a character silhouette matching the expected player tactical candidate.\"\n   },\n   {\n     \"grid_index\": 2,\n     \"expected_file\": \"enemy_tactical_candidate.glb\",\n     \"expected_category\": \"character\",\n     \"visible_category\": \"character\",\n     \"category_match\": true,\n     \"confidence\": \"high\",\n     \"reason\": \"Model clearly depicts an enemy character silhouette matching the expected enemy tactical candidate.\"\n   }\n ],\n \"promotion_allowed\": true,\n \"promotion_blockers\": []\n}\n\nCheck schema: visible_category must be one of weapon|character|gear|loot|environment_prop|unknown. We used \"character\". That's allowed.\n\nMake sure JSON is strict, no extra spaces? It's fine.\n\nReturn only JSON.\n</think>\n{\n  \"overall_verdict\": \"pass\",\n  \"summary\": \"Both candidate models match expected character categories with high confidence.\",\n  \"items\": [\n    {\n      \"grid_index\": 1,\n      \"expected_file\": \"player_tactical_candidate.glb\",\n      \"expected_category\": \"character\",\n      \"visible_category\": \"character\",\n      \"category_match\": true,\n      \"confidence\": \"high\",\n      \"reason\": \"Model clearly depicts a character silhouette matching the expected player tactical candidate.\"\n    },\n    {\n      \"grid_index\": 2,\n      \"expected_file\": \"enemy_tactical_candidate.glb\",\n      \"expected_category\": \"character\",\n      \"visible_category\": \"character\",\n      \"category_match\": true,\n      \"confidence\": \"high\",\n      \"reason\": \"Model clearly depicts an enemy character silhouette matching the expected enemy tactical candidate.\"\n    }\n  ],\n  \"promotion_allowed\": true,\n  \"promotion_blockers\": []\n}<|im_end|>",
+  "input_image": "/Users/yuanshaochen/My project/Assets/Screenshots/ResearchPacketCandidateSheets/research_packet_character_candidates_contact_sheet.png",
+  "input_audit": "/Users/yuanshaochen/My project/docs/RESEARCH_PACKET_CANDIDATE_AUDIT.json",
+  "endpoint": "http://127.0.0.1:8083/v1/chat/completions",
+  "model": "nemotron-omni",
+  "category": "character",
+  "asset_suffix": ".glb",
+  "expected_asset_count": 2
+}

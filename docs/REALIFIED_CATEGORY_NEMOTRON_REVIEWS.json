@@ -1,0 +1,259 @@
+{
+  "schema": "realified_category_nemotron_reviews_v1",
+  "timestamp_utc": "2026-05-17T19:26:45.671831+00:00",
+  "sheet_report": "/Users/yuanshaochen/My project/docs/REALIFIED_CATEGORY_CONTACT_SHEETS.json",
+  "category_count": 5,
+  "rendered_categories": {
+    "weapon": true,
+    "character": true,
+    "gear": true,
+    "loot": true,
+    "environment_prop": true
+  },
+  "missing_rendered_categories": [],
+  "failed_categories": [
+    "weapon",
+    "character",
+    "gear",
+    "loot",
+    "environment_prop"
+  ],
+  "promotion_allowed": false,
+  "reviews": {
+    "weapon": {
+      "overall_verdict": "fail",
+      "summary": "Three weapons match expected categories but quality blockers prevent promotion.",
+      "items": [
+        {
+          "grid_index": 1,
+          "expected_file": "RS_02_sidearm_LOD0.glb",
+          "expected_category": "weapon",
+          "visible_category": "weapon",
+          "category_match": true,
+          "confidence": "high",
+          "reason": "visible sidearm silhouette matches expected weapon"
+        },
+        {
+          "grid_index": 2,
+          "expected_file": "RS_03_secondary_weapon_LOD0.glb",
+          "expected_category": "weapon",
+          "visible_category": "weapon",
+          "category_match": true,
+          "confidence": "high",
+          "reason": "visible secondary weapon silhouette matches expected"
+        },
+        {
+          "grid_index": 3,
+          "expected_file": "RS_12_shotgun_LOD0.glb",
+          "expected_category": "weapon",
+          "visible_category": "weapon",
+          "category_match": true,
+          "confidence": "medium",
+          "reason": "visible shotgun silhouette but missing PBR maps"
+        },
+        {
+          "grid_index": 4,
+          "expected_file": "hero_rifle_LOD0.glb",
+          "expected_category": "weapon",
+          "visible_category": "weapon",
+          "category_match": true,
+          "confidence": "high",
+          "reason": "visible rifle silhouette matches expected"
+        }
+      ],
+      "promotion_allowed": false,
+      "promotion_blockers": [
+        "expected_assets_not_technically_promotable: RS_12_shotgun_LOD0.glb",
+        "missing TANGENT attribute for production normal mapping",
+        "missing normalTexture",
+        "missing occlusionTexture/AO",
+        "missing_normal_texture",
+        "missing_occlusion_or_ao_texture",
+        "missing_tangent_attribute"
+      ],
+      "review_timestamp_utc": "2026-05-17T19:25:27.665945+00:00",
+      "deterministic_guard_applied": true,
+      "technical_blockers": [
+        "expected_assets_not_technically_promotable: RS_12_shotgun_LOD0.glb",
+        "missing_normal_texture",
+        "missing_occlusion_or_ao_texture",
+        "missing_tangent_attribute"
+      ],
+      "raw_model_output": "<think>\nWe need to compare each visible object (grid_index 1-4) against expected file/category list.\n\nWe have 4 items in grid, each presumably a weapon. Expected files: RS_02_sidearm_LOD0.glb (weapon), RS_03_secondary_weapon_LOD0.glb (weapon), RS_12_shotgun_LOD0.glb (weapon), hero_rifle_LOD0.glb (weapon). All expected category weapon.\n\nWe need to see visible category for each. The image shows four weapons, all appear to be rifles/weapons. So visible_category likely \"weapon\". Need to check if any looks like character, gear, etc. All are weapons, so category_match true for each.\n\nConfidence: high (clearly weapons). Reason: matches expected weapon silhouette.\n\nNow technical status: The technical audit summary says 27 promotable_pbr_candidate, 21 textured_probe_not_production. But we need to see if any blockers. The expected items have technical_status: promotable_pbr_candidate for 1,2,4; textured_probe_not_production for 3. However the visible objects are weapons; we need to see if any quality blockers (e.g., missing textures). The technical audit summary indicates many assets are textured probes (embedding textures). But we only have visual info; we cannot see texture maps. However the expected file for index 3 is \"RS_12_shotgun_LOD0.glb\" with status textured_probe_not_production and reasons missing normalTexture etc. That suggests that the visible object at index 3 may have quality issues. But the question: \"promotion_allowed\": true only when all visible objects match categories and there are no meaningful quality blockers. Since index 3 has a blocker (missing normalTexture etc.), promotion_allowed should be false.\n\nBut we need to see if the visible object at index 3 indeed has those blockers. The technical audit summary indicates 21 assets are textured_probe_not_production, meaning they lack proper PBR maps. So likely index 3 is one of those. So promotion_blockers should include the reasons for index 3.\n\nWe need to list promotion_blockers as strings. Probably include \"missing normalTexture\", \"missing occlusionTexture/AO\", \"missing TANGENT attribute for production normal mapping\" for index 3. Also maybe other blockers if any other items have issues. Items 1,2,4 are promotable_pbr_candidate with no reasons, so no blockers.\n\nThus promotion_allowed = false.\n\nNow we need to fill items array with each grid_index.\n\nFor each item:\n\ngrid_index 1:\nexpected_file \"RS_02_sidearm_LOD0.glb\"\nexpected_category \"weapon\"\nvisible_category \"weapon\"\ncategory_match true\nconfidence high\nreason \"visible weapon silhouette matches expected sidearm\"\n\ngrid_index 2:\nexpected_file \"RS_03_secondary_weapon_LOD0.glb\"\nvisible_category \"weapon\"\ncategory_match true\nconfidence high\nreason \"visible secondary weapon silhouette matches expected\"\n\ngrid_index 3:\nexpected_file \"RS_12_shotgun_LOD0.glb\"\nvisible_category \"weapon\"\ncategory_match true (since it's a weapon)\nconfidence medium? maybe medium because quality issues. But category_match is true (it is a weapon). The reason could be \"visible shotgun silhouette but missing PBR maps\". confidence maybe medium.\n\ngrid_index 4:\nexpected_file \"hero_rifle_LOD0.glb\"\nvisible_category \"weapon\"\ncategory_match true\nconfidence high\nreason \"visible rifle silhouette matches expected\"\n\nNow overall_verdict: Since promotion_allowed false, verdict likely \"fail\". But could be \"uncertain\"? The instructions: overall_verdict \"pass|fail|uncertain\". Since there are blockers, fail.\n\nSummary: short sentence: \"Three weapons match categories but quality blockers prevent promotion.\"\n\nNow promotion_blockers list: include the reasons for index 3. Also maybe any other blockers? The technical audit says many assets are textured probes, but we only see 4 items. So only index 3 has blockers.\n\nThus promotion_blockers: [\"missing normalTexture\", \"missing occlusionTexture/AO\", \"missing TANGENT attribute for production normal mapping\"].\n\nCheck schema: items array objects must have fields: grid_index, expected_file, expected_category, visible_category, category_match, confidence, reason.\n\nMake sure boolean category_match true.\n\nConfidence values: high, medium, low. Use high for 1,2,4; medium for 3.\n\nNow produce JSON.\n</think>\n{\n  \"overall_verdict\": \"fail\",\n  \"summary\": \"Three weapons match expected categories but quality blockers prevent promotion.\",\n  \"items\": [\n    {\n      \"grid_index\": 1,\n      \"expected_file\": \"RS_02_sidearm_LOD0.glb\",\n      \"expected_category\": \"weapon\",\n      \"visible_category\": \"weapon\",\n      \"category_match\": true,\n      \"confidence\": \"high\",\n      \"reason\": \"visible sidearm silhouette matches expected weapon\"\n    },\n    {\n      \"grid_index\": 2,\n      \"expected_file\": \"RS_03_secondary_weapon_LOD0.glb\",\n      \"expected_category\": \"weapon\",\n      \"visible_category\": \"weapon\",\n      \"category_match\": true,\n      \"confidence\": \"high\",\n      \"reason\": \"visible secondary weapon silhouette matches expected\"\n    },\n    {\n      \"grid_index\": 3,\n      \"expected_file\": \"RS_12_shotgun_LOD0.glb\",\n      \"expected_category\": \"weapon\",\n      \"visible_category\": \"weapon\",\n      \"category_match\": true,\n      \"confidence\": \"medium\",\n      \"reason\": \"visible shotgun silhouette but missing PBR maps\"\n    },\n    {\n      \"grid_index\": 4,\n      \"expected_file\": \"hero_rifle_LOD0.glb\",\n      \"expected_category\": \"weapon\",\n      \"visible_category\": \"weapon\",\n      \"category_match\": true,\n      \"confidence\": \"high\",\n      \"reason\": \"visible rifle silhouette matches expected\"\n    }\n  ],\n  \"promotion_allowed\": false,\n  \"promotion_blockers\": [\n    \"missing normalTexture\",\n    \"missing occlusionTexture/AO\",\n    \"missing TANGENT attribute for production normal mapping\"\n  ]\n}<|im_end|>",
+      "input_image": "/Users/yuanshaochen/My project/Assets/Screenshots/RealifiedCategorySheets/realified_weapon_contact_sheet.png",
+      "input_audit": "/Users/yuanshaochen/My project/docs/REALIFIED_ASSETS_IMPORT_AUDIT.json",
+      "endpoint": "http://127.0.0.1:8083/v1/chat/completions",
+      "model": "nemotron-omni",
+      "category": "weapon",
+      "asset_suffix": "_LOD0.glb",
+      "expected_asset_count": 4
+    },
+    "character": {
+      "overall_verdict": "fail",
+      "summary": "Two weapon assets visible, but expected character categories, causing category mismatch and promotion blocker.",
+      "items": [
+        {
+          "grid_index": 1,
+          "expected_file": "RS_04_player_tactical_LOD0.glb",
+          "expected_category": "character",
+          "visible_category": "weapon",
+          "category_match": false,
+          "confidence": "high",
+          "reason": "Visible object is a rifle, not a character."
+        },
+        {
+          "grid_index": 2,
+          "expected_file": "RS_05_enemy_tactical_LOD0.glb",
+          "expected_category": "character",
+          "visible_category": "weapon",
+          "category_match": false,
+          "confidence": "high",
+          "reason": "Visible object is a rifle, not a character."
+        }
+      ],
+      "promotion_allowed": false,
+      "promotion_blockers": [
+        "category mismatch (visible weapon vs expected character)",
+        "expected_assets_not_technically_promotable: RS_04_player_tactical_LOD0.glb, RS_05_enemy_tactical_LOD0.glb",
+        "missing_normal_texture",
+        "missing_occlusion_or_ao_texture",
+        "missing_tangent_attribute",
+        "textured_probe_not_production (missing normalTexture, occlusionTexture/AO, TANGENT)"
+      ],
+      "review_timestamp_utc": "2026-05-17T19:25:45.002719+00:00",
+      "deterministic_guard_applied": true,
+      "technical_blockers": [
+        "expected_assets_not_technically_promotable: RS_04_player_tactical_LOD0.glb, RS_05_enemy_tactical_LOD0.glb",
+        "missing_normal_texture",
+        "missing_occlusion_or_ao_texture",
+        "missing_tangent_attribute"
+      ],
+      "raw_model_output": "<think>\nWe need to parse the context. The user says: \"You are reviewing a Unity contact sheet of AI-generated GLB assets. The grid is ordered left-to-right, top-to-bottom. Compare each visible object against the expected file/category list below.\"\n\nWe have expected assets list with two entries:\n\ngrid_index 1: expected_file \"RS_04_player_tactical_LOD0.glb\", expected_category \"character\", technical_status \"textured_probe_not_production\", technical_reasons list.\n\ngrid_index 2: expected_file \"RS_05_enemy_tactical_LOD0.glb\", expected_category \"character\", same technical status.\n\nSo expected categories are both \"character\". The visible objects: there are two weapons (rifle-like). The grid is left-to-right, top-to-bottom. So grid_index 1 is left object (blue/teal rifle). grid_index 2 is right object (pink/red rifle). Both appear to be weapons (rifles). The expected category is \"character\". But the visible category is \"weapon\". According to instructions: \"if character, gear, loot, container, or crate items visibly look like rifle/weapon silhouettes, mark category_match=false.\" So category_match should be false for both items because they are weapons but expected category is character. Also need to set visible_category to appropriate category: \"weapon\". So visible_category = \"weapon\". category_match = false.\n\nConfidence: Since we can clearly see they are weapons, but expected category is character, confidence maybe \"high\" that visible category is weapon, but category_match false. The confidence refers to how confident we are about the visible_category classification. I'd say \"high\".\n\nReason: \"Visible objects are rifles, not characters.\"\n\nNow overall_verdict: We need to decide pass/fail/uncertain. The items do not match expected categories, so likely fail. Also technical status indicates textured_probe_not_production, which is a blocker. So overall verdict likely \"fail\".\n\nSummary: short sentence: \"Two weapon assets visible, but expected character categories, causing category mismatch and promotion blocker.\"\n\npromotion_allowed: true only when all visible objects match expected categories and no meaningful quality blockers. Here categories mismatch, so promotion_allowed = false.\n\npromotion_blockers: list of blockers. Include category mismatch and technical status (textured_probe_not_production). So blockers: \"category mismatch (visible weapon vs expected character)\", \"missing PBR textures (textured_probe_not_production)\". Possibly also \"missing normalTexture, occlusionTexture, TANGENT\". But we need short items. Provide list strings.\n\nNow format JSON strictly.\n\nCheck schema: items array each with fields: grid_index (number), expected_file (string), expected_category (string), visible_category (string), category_match (boolean), confidence (string), reason (string).\n\nWe have two items. Ensure grid_index 1 and 2.\n\nexpected_file: as given.\n\nexpected_category: \"character\".\n\nvisible_category: \"weapon\".\n\ncategory_match: false.\n\nconfidence: \"high\".\n\nreason: \"Visible objects are rifles, not characters.\"\n\nNow overall_verdict: \"fail\".\n\nsummary: \"Two weapon assets visible, but expected character categories, causing category mismatch and promotion blocker.\"\n\npromotion_allowed: false.\n\npromotion_blockers: array of strings. Could include \"category mismatch\", \"textured_probe_not_production\". Maybe also \"missing PBR maps\". Keep concise.\n\nNow ensure JSON is valid, no trailing commas.\n\nLet's craft.\n</think>\n{\n  \"overall_verdict\": \"fail\",\n  \"summary\": \"Two weapon assets visible, but expected character categories, causing category mismatch and promotion blocker.\",\n  \"items\": [\n    {\n      \"grid_index\": 1,\n      \"expected_file\": \"RS_04_player_tactical_LOD0.glb\",\n      \"expected_category\": \"character\",\n      \"visible_category\": \"weapon\",\n      \"category_match\": false,\n      \"confidence\": \"high\",\n      \"reason\": \"Visible object is a rifle, not a character.\"\n    },\n    {\n      \"grid_index\": 2,\n      \"expected_file\": \"RS_05_enemy_tactical_LOD0.glb\",\n      \"expected_category\": \"character\",\n      \"visible_category\": \"weapon\",\n      \"category_match\": false,\n      \"confidence\": \"high\",\n      \"reason\": \"Visible object is a rifle, not a character.\"\n    }\n  ],\n  \"promotion_allowed\": false,\n  \"promotion_blockers\": [\n    \"category mismatch (visible weapon vs expected character)\",\n    \"textured_probe_not_production (missing normalTexture, occlusionTexture/AO, TANGENT)\"\n  ]\n}<|im_end|>",
+      "input_image": "/Users/yuanshaochen/My project/Assets/Screenshots/RealifiedCategorySheets/realified_character_contact_sheet.png",
+      "input_audit": "/Users/yuanshaochen/My project/docs/REALIFIED_ASSETS_IMPORT_AUDIT.json",
+      "endpoint": "http://127.0.0.1:8083/v1/chat/completions",
+      "model": "nemotron-omni",
+      "category": "character",
+      "asset_suffix": "_LOD0.glb",
+      "expected_asset_count": 2
+    },
+    "gear": {
+      "overall_verdict": "fail",
+      "summary": "Two weapon objects visible, but expected gear items; category mismatch.",
+      "items": [
+        {
+          "grid_index": 1,
+          "expected_file": "RS_06_gear_helmet_LOD0.glb",
+          "expected_category": "gear",
+          "visible_category": "weapon",
+          "category_match": false,
+          "confidence": "high",
+          "reason": "Visible object is a rifle, not a helmet or vest."
+        },
+        {
+          "grid_index": 2,
+          "expected_file": "RS_07_gear_vest_LOD0.glb",
+          "expected_category": "gear",
+          "visible_category": "weapon",
+          "category_match": false,
+          "confidence": "high",
+          "reason": "Visible object is a rifle, not a vest."
+        }
+      ],
+      "promotion_allowed": false,
+      "promotion_blockers": [
+        "category mismatch (visible weapon vs expected gear)"
+      ],
+      "review_timestamp_utc": "2026-05-17T19:26:08.258885+00:00",
+      "deterministic_guard_applied": false,
+      "technical_blockers": [],
+      "raw_model_output": "<think>\nWe need to parse the context. The user says: \"You are reviewing a Unity contact sheet of AI-generated GLB assets. The grid is ordered left-to-right, top-to-bottom. Compare each visible object against the expected file/category list below.\"\n\nWe have expected assets list with two entries:\n\ngrid_index 1: expected_file \"RS_06_gear_helmet_LOD0.glb\", expected_category \"gear\", technical_status \"promotable_pbr_candidate\", technical_reasons [].\n\ngrid_index 2: expected_file \"RS_07_gear_vest_LOD0.glb\", expected_category \"gear\", technical_status \"promotable_pbr_candidate\", technical_reasons [].\n\nSo expected categories are both \"gear\". The visible objects: there are two objects in the image: two blue rifles (looks like weapons). They are clearly weapon silhouettes, not gear (helmet, vest). So category_match should be false for both items. Also expected categories are gear, but visible category is \"weapon\". So category_match false.\n\nWe need to fill items array with entries for each visible object. The grid is ordered left-to-right, top-to-bottom. There are two objects, presumably grid_index 1 is left object, grid_index 2 is right object. So we need two items.\n\nFor each item, we need:\n- grid_index: 1 or 2\n- expected_file: from expected list (matching index)\n- expected_category: \"gear\"\n- visible_category: \"weapon|character|gear|loot|environment_prop|unknown\". Since they are weapons, visible_category = \"weapon\".\n- category_match: true/false. Since expected is gear, visible is weapon => false.\n- confidence: \"high|medium|low\". The visual evidence is clear, so confidence high.\n- reason: short reason.\n\nAlso need overall_verdict: pass|fail|uncertain. Since category_match false for both, likely fail. But we need to consider promotion_allowed: true only when all visible objects match expected categories and no blockers. Since they don't match, promotion_allowed = false. However the schema expects promotion_allowed boolean. So set false.\n\npromotion_blockers: list of strings. Since category mismatch, blocker could be \"category mismatch (visible weapon vs expected gear)\". Also maybe \"visual quality\" but not needed. Provide one blocker.\n\nSummary: short sentence: \"Two weapon objects visible, but expected gear items; category mismatch.\"\n\nNow need to ensure JSON format strict.\n\nLet's construct items:\n\nItem 1:\ngrid_index: 1\nexpected_file: \"RS_06_gear_helmet_LOD0.glb\"\nexpected_category: \"gear\"\nvisible_category: \"weapon\"\ncategory_match: false\nconfidence: \"high\"\nreason: \"Visible object is a rifle, not a helmet or vest.\"\n\nItem 2:\ngrid_index: 2\nexpected_file: \"RS_07_gear_vest_LOD0.glb\"\nexpected_category: \"gear\"\nvisible_category: \"weapon\"\ncategory_match: false\nconfidence: \"high\"\nreason: \"Visible object is a rifle, not a vest.\"\n\nNow overall_verdict: Since category_match false for both, verdict = \"fail\". (If any mismatch, fail). promotion_allowed: false.\n\npromotion_blockers: [\"category mismatch (visible weapon vs expected gear)\", \"insufficient PBR sidecar maps\"]? The technical audit says assets with complete Unity sidecar PBR maps can be promoted, but we have no sidecar info. However the main blocker is category mismatch. Provide that.\n\nBut the schema expects promotion_blockers array of strings. Provide maybe two items: category mismatch and missing sidecar PBR maps. However the instruction: \"Set promotion_allowed=true only when all visible objects match their expected categories and there are no meaningful quality blockers.\" So we have category mismatch, which is a meaningful blocker. Also maybe missing sidecar maps, but not evident. We'll include category mismatch.\n\nThus final JSON:\n\n{\n  \"overall_verdict\": \"fail\",\n  \"summary\": \"Two weapon objects visible, but expected gear items; category mismatch.\",\n  \"items\": [\n    {\n      \"grid_index\": 1,\n      \"expected_file\": \"RS_06_gear_helmet_LOD0.glb\",\n      \"expected_category\": \"gear\",\n      \"visible_category\": \"weapon\",\n      \"category_match\": false,\n      \"confidence\": \"high\",\n      \"reason\": \"Visible object is a rifle, not a helmet or vest.\"\n    },\n    {\n      \"grid_index\": 2,\n      \"expected_file\": \"RS_07_gear_vest_LOD0.glb\",\n      \"expected_category\": \"gear\",\n      \"visible_category\": \"weapon\",\n      \"category_match\": false,\n      \"confidence\": \"high\",\n      \"reason\": \"Visible object is a rifle, not a vest.\"\n    }\n  ],\n  \"promotion_allowed\": false,\n  \"promotion_blockers\": [\"category mismatch (visible weapon vs expected gear)\"]\n}\n\nCheck schema: all fields present. Ensure boolean values are true/false not strings. Ensure confidence strings are exactly \"high|medium|low\". Use \"high\". Ensure category_match boolean.\n\nAll good.\n</think>\n{\n  \"overall_verdict\": \"fail\",\n  \"summary\": \"Two weapon objects visible, but expected gear items; category mismatch.\",\n  \"items\": [\n    {\n      \"grid_index\": 1,\n      \"expected_file\": \"RS_06_gear_helmet_LOD0.glb\",\n      \"expected_category\": \"gear\",\n      \"visible_category\": \"weapon\",\n      \"category_match\": false,\n      \"confidence\": \"high\",\n      \"reason\": \"Visible object is a rifle, not a helmet or vest.\"\n    },\n    {\n      \"grid_index\": 2,\n      \"expected_file\": \"RS_07_gear_vest_LOD0.glb\",\n      \"expected_category\": \"gear\",\n      \"visible_category\": \"weapon\",\n      \"category_match\": false,\n      \"confidence\": \"high\",\n      \"reason\": \"Visible object is a rifle, not a vest.\"\n    }\n  ],\n  \"promotion_allowed\": false,\n  \"promotion_blockers\": [\n    \"category mismatch (visible weapon vs expected gear)\"\n  ]\n}<|im_end|>",
+      "input_image": "/Users/yuanshaochen/My project/Assets/Screenshots/RealifiedCategorySheets/realified_gear_contact_sheet.png",
+      "input_audit": "/Users/yuanshaochen/My project/docs/REALIFIED_ASSETS_IMPORT_AUDIT.json",
+      "endpoint": "http://127.0.0.1:8083/v1/chat/completions",
+      "model": "nemotron-omni",
+      "category": "gear",
+      "asset_suffix": "_LOD0.glb",
+      "expected_asset_count": 2
+    },
+    "loot": {
+      "overall_verdict": "fail",
+      "summary": "Two weapon assets visible, mismatching expected loot categories, causing failure.",
+      "items": [
+        {
+          "grid_index": 1,
+          "expected_file": "RS_08_loot_ammo_LOD0.glb",
+          "expected_category": "loot",
+          "visible_category": "weapon",
+          "category_match": false,
+          "confidence": "high",
+          "reason": "Visible object is a rifle, not ammo or medkit."
+        },
+        {
+          "grid_index": 2,
+          "expected_file": "RS_09_loot_medkit_LOD0.glb",
+          "expected_category": "loot",
+          "visible_category": "weapon",
+          "category_match": false,
+          "confidence": "high",
+          "reason": "Visible object is a rifle, not medkit."
+        }
+      ],
+      "promotion_allowed": false,
+      "promotion_blockers": [
+        "category mismatch (weapon vs loot) for both items",
+        "visual objects are rifles, not ammo or medkit"
+      ],
+      "review_timestamp_utc": "2026-05-17T19:26:25.669063+00:00",
+      "deterministic_guard_applied": false,
+      "technical_blockers": [],
+      "raw_model_output": "<think>\nWe need to parse the context. The user says: \"You are reviewing a Unity contact sheet of AI-generated GLB assets.\" The grid is ordered left-to-right, top-to-bottom. Compare each visible object against the expected file/category list below.\n\nExpected assets list includes two entries:\n\ngrid_index 1: expected_file \"RS_08_loot_ammo_LOD0.glb\", expected_category \"loot\", technical_status \"promotable_pbr_candidate\", technical_reasons [].\n\ngrid_index 2: expected_file \"RS_09_loot_medkit_LOD0.glb\", expected_category \"loot\", technical_status \"promotable_pbr_candidate\", technical_reasons [].\n\nSo we have two items in the grid. The image shows two objects: two rifles (looks like weapons). They are not ammo or medkit; they are weapons. So visible_category likely \"weapon\". But expected_category is \"loot\". So category_match = false.\n\nWe need to fill items array with each grid_index (1 and 2). For each, we need visible_category (weapon|character|gear|loot|environment_prop|unknown). Since they are weapons, visible_category = \"weapon\". category_match = false (since expected is loot). confidence: maybe \"medium\" because it's clear they are weapons, but expected is loot, so mismatch. reason: \"Visible objects are rifles, not ammo or medkit.\"\n\nNow overall_verdict: Since category_match is false for both items, the overall verdict likely \"fail\". But we need to consider if any blockers. Promotion_allowed: only true when all visible objects match expected categories and no meaningful quality blockers. Here they don't match categories, so promotion_allowed = false.\n\npromotion_blockers: list of reasons. Could include \"category mismatch (visible weapon vs expected loot)\" for each item. Also maybe \"quality\" but not needed. So we can list \"category mismatch for grid_index 1 and 2\" or separate entries. The schema expects a list of strings. We'll include \"visible objects are weapons, not loot items\". Also maybe \"insufficient semantic category alignment\".\n\nNow summary: short sentence. Something like \"Two weapon assets visible, mismatching expected loot categories, causing failure.\"\n\nNow ensure JSON format, strict.\n\nLet's construct items:\n\nItem 1:\ngrid_index: 1\nexpected_file: \"RS_08_loot_ammo_LOD0.glb\"\nexpected_category: \"loot\"\nvisible_category: \"weapon\"\ncategory_match: false\nconfidence: \"high\" (since clearly visible)\nreason: \"Visible object is a rifle, not ammo or medkit.\"\n\nItem 2:\ngrid_index: 2\nexpected_file: \"RS_09_loot_medkit_LOD0.glb\"\nexpected_category: \"loot\"\nvisible_category: \"weapon\"\ncategory_match: false\nconfidence: \"high\"\nreason: \"Visible object is a rifle, not medkit.\"\n\nNow overall_verdict: \"fail\"\n\nsummary: \"Two weapon assets visible, mismatching expected loot categories, causing failure.\"\n\npromotion_allowed: false\n\npromotion_blockers: [\"category mismatch (weapon vs loot) for both items\", \"visual objects are rifles, not ammo or medkit\"]\n\nCheck schema: items array objects must have fields exactly as described. Ensure boolean values for category_match, promotion_allowed.\n\nNow produce JSON.\n</think>\n{\n  \"overall_verdict\": \"fail\",\n  \"summary\": \"Two weapon assets visible, mismatching expected loot categories, causing failure.\",\n  \"items\": [\n    {\n      \"grid_index\": 1,\n      \"expected_file\": \"RS_08_loot_ammo_LOD0.glb\",\n      \"expected_category\": \"loot\",\n      \"visible_category\": \"weapon\",\n      \"category_match\": false,\n      \"confidence\": \"high\",\n      \"reason\": \"Visible object is a rifle, not ammo or medkit.\"\n    },\n    {\n      \"grid_index\": 2,\n      \"expected_file\": \"RS_09_loot_medkit_LOD0.glb\",\n      \"expected_category\": \"loot\",\n      \"visible_category\": \"weapon\",\n      \"category_match\": false,\n      \"confidence\": \"high\",\n      \"reason\": \"Visible object is a rifle, not medkit.\"\n    }\n  ],\n  \"promotion_allowed\": false,\n  \"promotion_blockers\": [\n    \"category mismatch (weapon vs loot) for both items\",\n    \"visual objects are rifles, not ammo or medkit\"\n  ]\n}<|im_end|>",
+      "input_image": "/Users/yuanshaochen/My project/Assets/Screenshots/RealifiedCategorySheets/realified_loot_contact_sheet.png",
+      "input_audit": "/Users/yuanshaochen/My project/docs/REALIFIED_ASSETS_IMPORT_AUDIT.json",
+      "endpoint": "http://127.0.0.1:8083/v1/chat/completions",
+      "model": "nemotron-omni",
+      "category": "loot",
+      "asset_suffix": "_LOD0.glb",
+      "expected_asset_count": 2
+    },
+    "environment_prop": {
+      "overall_verdict": "fail",
+      "summary": "Two weapon assets visible, mismatching expected environment prop categories.",
+      "items": [
+        {
+          "grid_index": 1,
+          "expected_file": "RS_10_prop_container_LOD0.glb",
+          "expected_category": "environment_prop",
+          "visible_category": "weapon",
+          "category_match": false,
+          "confidence": "high",
+          "reason": "Visible object is a rifle, not an environment prop."
+        },
+        {
+          "grid_index": 2,
+          "expected_file": "RS_11_prop_crate_LOD0.glb",
+          "expected_category": "environment_prop",
+          "visible_category": "weapon",
+          "category_match": false,
+          "confidence": "high",
+          "reason": "Visible object is a rifle, not an environment prop."
+        }
+      ],
+      "promotion_allowed": false,
+      "promotion_blockers": [
+        "Category mismatch: visible objects are weapons, expected environment props."
+      ],
+      "review_timestamp_utc": "2026-05-17T19:26:45.631163+00:00",
+      "deterministic_guard_applied": false,
+      "technical_blockers": [],
+      "raw_model_output": "<think>\nWe need to parse the context. The user says: \"You are reviewing a Unity contact sheet of AI-generated GLB assets. The grid is ordered left-to-right, top-to-bottom. Compare each visible object against the expected file/category list below.\"\n\nWe have expected assets list with two entries:\n\ngrid_index 1: expected_file \"RS_10_prop_container_LOD0.glb\", expected_category \"environment_prop\", technical_status \"promotable_pbr_candidate\", technical_reasons [].\n\ngrid_index 2: expected_file \"RS_11_prop_crate_LOD0.glb\", expected_category \"environment_prop\", technical_status \"promotable_pbr_candidate\", technical_reasons [].\n\nSo expected categories are both \"environment_prop\". The visible objects: there are two objects in the image: a blue rifle-like weapon on left, and a tan rifle-like weapon on right. They look like weapons (rifle silhouettes). So visible categories: likely \"weapon\". The expected categories are \"environment_prop\". So category_match = false for both items (since they are weapons, not environment props). Also need to check if any visible object looks like rifle/weapon silhouette => mark category_match=false. Indeed they are weapons.\n\nNow we need to fill items array with entries for each grid_index (1 and 2). For each, we need visible_category (choose from weapon|character|gear|loot|environment_prop|unknown). Since they are weapons, visible_category = \"weapon\". category_match = false (since expected is environment_prop). confidence: maybe \"medium\" because it's clear they are weapons, but maybe ambiguous? The image clearly shows weapons, so confidence high? But the expected category is environment_prop, which is mismatched. Confidence maybe \"high\" because we are sure they are weapons, not environment props. However the instruction: \"if character, gear, loot, container, or crate items visibly look like rifle/weapon silhouettes, mark category_match=false.\" So we must set category_match false. Confidence maybe \"high\" because it's obvious.\n\nReason: \"Visible objects are rifles, not environment props.\"\n\nNow overall_verdict: Since category_match false for both items, promotion_allowed should be false? The schema says promotion_allowed true only when all visible objects match expected categories and no blockers. Here they don't match, so promotion_allowed = false. promotion_blockers: list of reasons, maybe \"category mismatch (visible objects are weapons, expected environment props)\". Also maybe \"quality blockers\" but none. So we list that.\n\nNow summary: short sentence: \"Two weapon assets visible, mismatching expected environment prop categories.\"\n\nNow produce JSON strictly.\n\nCheck schema: items array objects must have fields: grid_index (number), expected_file (string), expected_category (string), visible_category (string), category_match (boolean), confidence (string), reason (string).\n\nWe need to fill expected_file and expected_category for each grid_index as per expected list.\n\ngrid_index 1: expected_file \"RS_10_prop_container_LOD0.glb\", expected_category \"environment_prop\". visible_category \"weapon\". category_match false. confidence \"high\". reason \"Visible object is a rifle, not an environment prop.\"\n\ngrid_index 2: expected_file \"RS_11_prop_crate_LOD0.glb\", expected_category \"environment_prop\". visible_category \"weapon\". category_match false. confidence \"high\". reason \"Visible object is a rifle, not an environment prop.\"\n\nNow overall_verdict: Since category_match false for all items, verdict likely \"fail\". Could also be \"uncertain\"? But clear mismatch, so \"fail\".\n\npromotion_allowed: false.\n\npromotion_blockers: list of strings. At least one blocker: \"category mismatch (visible weapons vs expected environment props)\". Could also include \"insufficient PBR maps\" but not relevant. We'll include the main blocker.\n\nNow ensure JSON format, no extra spaces? It's okay.\n\nLet's craft final answer.\n</think>\n{\n  \"overall_verdict\": \"fail\",\n  \"summary\": \"Two weapon assets visible, mismatching expected environment prop categories.\",\n  \"items\": [\n    {\n      \"grid_index\": 1,\n      \"expected_file\": \"RS_10_prop_container_LOD0.glb\",\n      \"expected_category\": \"environment_prop\",\n      \"visible_category\": \"weapon\",\n      \"category_match\": false,\n      \"confidence\": \"high\",\n      \"reason\": \"Visible object is a rifle, not an environment prop.\"\n    },\n    {\n      \"grid_index\": 2,\n      \"expected_file\": \"RS_11_prop_crate_LOD0.glb\",\n      \"expected_category\": \"environment_prop\",\n      \"visible_category\": \"weapon\",\n      \"category_match\": false,\n      \"confidence\": \"high\",\n      \"reason\": \"Visible object is a rifle, not an environment prop.\"\n    }\n  ],\n  \"promotion_allowed\": false,\n  \"promotion_blockers\": [\n    \"Category mismatch: visible objects are weapons, expected environment props.\"\n  ]\n}<|im_end|>",
+      "input_image": "/Users/yuanshaochen/My project/Assets/Screenshots/RealifiedCategorySheets/realified_environment_prop_contact_sheet.png",
+      "input_audit": "/Users/yuanshaochen/My project/docs/REALIFIED_ASSETS_IMPORT_AUDIT.json",
+      "endpoint": "http://127.0.0.1:8083/v1/chat/completions",
+      "model": "nemotron-omni",
+      "category": "environment_prop",
+      "asset_suffix": "_LOD0.glb",
+      "expected_asset_count": 2
+    }
+  }
+}

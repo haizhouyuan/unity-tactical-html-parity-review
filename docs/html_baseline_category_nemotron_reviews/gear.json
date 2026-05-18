@@ -1,0 +1,40 @@
+{
+  "overall_verdict": "fail",
+  "summary": "Two assets visible but category and file mismatches detected",
+  "items": [
+    {
+      "grid_index": 1,
+      "expected_file": "models/loot_helmet_final.glb",
+      "expected_category": "gear",
+      "visible_category": "unknown",
+      "category_match": false,
+      "confidence": "medium",
+      "reason": "Object appears spherical with small attachments, not helmet-shaped"
+    },
+    {
+      "grid_index": 2,
+      "expected_file": "models/loot_vest_final.glb",
+      "expected_category": "gear",
+      "visible_category": "unknown",
+      "category_match": false,
+      "confidence": "medium",
+      "reason": "Object is a flat platform with blocks, not vest-shaped"
+    }
+  ],
+  "promotion_allowed": false,
+  "promotion_blockers": [
+    "grid_index 1: visible object does not resemble helmet",
+    "grid_index 2: visible object does not resemble vest"
+  ],
+  "review_timestamp_utc": "2026-05-17T19:24:29.848519+00:00",
+  "deterministic_guard_applied": false,
+  "technical_blockers": [],
+  "raw_model_output": "<think></think>\n{\n  \"overall_verdict\": \"fail\",\n  \"summary\": \"Two assets visible but category and file mismatches detected\",\n  \"items\": [\n    {\n      \"grid_index\": 1,\n      \"expected_file\": \"models/loot_helmet_final.glb\",\n      \"expected_category\": \"gear\",\n      \"visible_category\": \"unknown\",\n      \"category_match\": false,\n      \"confidence\": \"medium\",\n      \"reason\": \"Object appears spherical with small attachments, not helmet-shaped\"\n    },\n    {\n      \"grid_index\": 2,\n      \"expected_file\": \"models/loot_vest_final.glb\",\n      \"expected_category\": \"gear\",\n      \"visible_category\": \"unknown\",\n      \"category_match\": false,\n      \"confidence\": \"medium\",\n      \"reason\": \"Object is a flat platform with blocks, not vest-shaped\"\n    }\n  ],\n  \"promotion_allowed\": false,\n  \"promotion_blockers\": [\n    \"grid_index 1: visible object does not resemble helmet\",\n    \"grid_index 2: visible object does not resemble vest\"\n  ]\n}<|im_end|>",
+  "input_image": "/Users/yuanshaochen/My project/Assets/Screenshots/HtmlBaselineCategorySheets/html_baseline_gear_contact_sheet.png",
+  "input_audit": "/Users/yuanshaochen/My project/docs/HTML_BASELINE_ASSET_AUDIT.json",
+  "endpoint": "http://127.0.0.1:8083/v1/chat/completions",
+  "model": "nemotron-omni",
+  "category": "gear",
+  "asset_suffix": ".glb",
+  "expected_asset_count": 2
+}

@@ -1,0 +1,109 @@
+{
+  "schema": "html_baseline_asset_audit_v1",
+  "timestamp_utc": "2026-05-18T04:13:27.5037410Z",
+  "verdict": "HTML final packet baseline assets are used as the category-correct parity floor while generated Realified assets remain quarantined.",
+  "assets": [
+    {
+      "file": "models/pistol_m5_candidate.glb",
+      "category": "weapon",
+      "promotion_status": "production_ready",
+      "promotion_reasons": []
+    },
+    {
+      "file": "models/shotgun_m5_candidate.glb",
+      "category": "weapon",
+      "promotion_status": "production_ready",
+      "promotion_reasons": []
+    },
+    {
+      "file": "models/groza_procedural_candidate.glb",
+      "category": "weapon",
+      "promotion_status": "production_ready",
+      "promotion_reasons": []
+    },
+    {
+      "file": "models/dmr_m5_candidate.glb",
+      "category": "weapon",
+      "promotion_status": "production_ready",
+      "promotion_reasons": []
+    },
+    {
+      "file": "models/character_player_final.glb",
+      "category": "character",
+      "promotion_status": "production_ready",
+      "promotion_reasons": []
+    },
+    {
+      "file": "models/character_enemy_final.glb",
+      "category": "character",
+      "promotion_status": "production_ready",
+      "promotion_reasons": []
+    },
+    {
+      "file": "models/loot_helmet_final.glb",
+      "category": "gear",
+      "promotion_status": "production_ready",
+      "promotion_reasons": []
+    },
+    {
+      "file": "models/loot_vest_final.glb",
+      "category": "gear",
+      "promotion_status": "production_ready",
+      "promotion_reasons": []
+    },
+    {
+      "file": "models/loot_ammo_final.glb",
+      "category": "loot",
+      "promotion_status": "production_ready",
+      "promotion_reasons": []
+    },
+    {
+      "file": "models/loot_medkit_final.glb",
+      "category": "loot",
+      "promotion_status": "production_ready",
+      "promotion_reasons": []
+    },
+    {
+      "file": "models/loot_firstaid_final.glb",
+      "category": "loot",
+      "promotion_status": "production_ready",
+      "promotion_reasons": []
+    },
+    {
+      "file": "models/loot_bandage_final.glb",
+      "category": "loot",
+      "promotion_status": "production_ready",
+      "promotion_reasons": []
+    },
+    {
+      "file": "models/prop_container_final.glb",
+      "category": "environment_prop",
+      "promotion_status": "production_ready",
+      "promotion_reasons": []
+    },
+    {
+      "file": "models/prop_crate_final.glb",
+      "category": "environment_prop",
+      "promotion_status": "production_ready",
+      "promotion_reasons": []
+    },
+    {
+      "file": "models/prop_ladder_stair_final.glb",
+      "category": "environment_prop",
+      "promotion_status": "production_ready",
+      "promotion_reasons": []
+    },
+    {
+      "file": "models/prop_interior_furniture_final.glb",
+      "category": "environment_prop",
+      "promotion_status": "production_ready",
+      "promotion_reasons": []
+    },
+    {
+      "file": "models/prop_ground_wall_fence_final.glb",
+      "category": "environment_prop",
+      "promotion_status": "production_ready",
+      "promotion_reasons": []
+    }
+  ]
+}
