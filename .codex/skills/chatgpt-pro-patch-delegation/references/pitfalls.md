@@ -27,6 +27,12 @@ Update this file whenever a PRO delegation run exposes a new failure mode.
 - ChatGPT's visible activity/sidebar can show stale earlier work from the same conversation. Trust the main answer, downloaded filenames, and patch contents; do not infer the current task from a stale activity label.
 - Unity gates that require runtime objects may write a structurally valid failure report when executed outside Play Mode. For M92, the first direct `AI Tools/Run Weapon Feel Gate` run had all metrics at zero because `application_is_playing=false`; enter Play Mode or use the acceptance pipeline before treating the gate as meaningful.
 - Acceptance-pipeline summaries must preserve important numeric metrics from child reports. If the child gate contains values such as recoil peak, reload pose magnitude, ADS stability, shot feedback count, and third-person mount score, mirror them into the pipeline report instead of only carrying booleans.
+- ChatGPT conversations can contain multiple completed artifact sets. When a later prompt is still thinking, text extraction may show older "Done" files from the same thread; search for the newest prompt marker, then use the visible/downloaded filenames and local file metadata rather than assuming the tail of the page is the latest result.
+- PRO reference-image output must stay quarantined. Passing a manifest/image validator only proves it is a usable reference batch, not a Unity asset, not PBR, not gameplay-bound, and not production-promoted.
+- Manifest shape drift is common. Accept `images`, `entries`, or `items` arrays when validating, but keep required per-image fields strict.
+- Underscore-heavy view names such as `three_quarter` can break greedy filename parsers. Parse known view suffixes explicitly before comparing `asset_id` and `view`.
+- Contact sheets are part of the requested review surface, not nice-to-have decoration. Treat missing contact sheets as blockers for PRO batch-image validation.
+- If strict visual gates are introduced, acceptance summaries must distinguish old gameplay/parity pass from full current pass. Keep a separate field such as `gameplay_parity_gates_passed=true`, and make `all_required_current_gates_passed=false` while strict visual gates remain false.
 
 ## Additions From Future Runs
 

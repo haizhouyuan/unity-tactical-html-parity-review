@@ -44,6 +44,42 @@ If you cannot run Unity, write:
 Unity execution not verified by PRO; Codex must apply, run Unity, and verify.
 ```
 
+## Reference Image Batch Add-On
+
+Use this add-on when asking PRO to generate reference images as asset-factory inputs.
+
+```text
+Also return a separate reference-image zip.
+
+Required zip shape:
+- manifest.json
+- prompts/
+- contact_sheets/
+- images/weapon/
+- images/humanoid/
+- images/gear/
+- images/loot/
+- images/environment_prop/
+
+Every image must use:
+images/<class>/M94_<class>_<asset_id>_<view>_v01.png
+
+Every manifest entry must include:
+- image_file
+- class
+- asset_id
+- view
+- intended_unity_asset_id
+- prompt
+- negative_prompt
+- generator
+- dimensions
+- usage = reference_image_only
+- production_status = quarantine_reference
+
+The images are quarantine references only. Do not claim production-ready, gameplay-bound, semantic-pass, or Unity-promoted status.
+```
+
 ## Notes
 
 - Give PRO exact file paths and explicit negative constraints.

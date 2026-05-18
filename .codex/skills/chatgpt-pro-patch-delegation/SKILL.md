@@ -5,7 +5,7 @@ description: Use when delegating repository patch authoring to ChatGPT PRO throu
 
 # ChatGPT PRO Patch Delegation
 
-Use ChatGPT PRO as an asynchronous patch-author or reviewer lane. Codex remains the integrator: it writes the precise task brief, waits at a sane cadence, downloads the artifact, applies it locally, verifies it, and records what is still unproven.
+Use ChatGPT PRO as an asynchronous patch-author, reviewer, or reference-image lane. Codex remains the integrator: it writes the precise task brief, waits at a sane cadence, downloads the artifact, applies or quarantines it locally, verifies it, and records what is still unproven.
 
 ## Operating Rule
 
@@ -26,6 +26,7 @@ For Unity work, PRO cannot prove the active Editor state, community MCP state, b
    - Require `README_FOR_PATCH.md`, `changed_files.json`, `risk_notes.md`, and any local check results.
    - Explicitly say when Unity execution is not expected from PRO.
    - See `references/patch-request-template.md` for the compact template.
+   - For generated-image batches, require a manifest, deterministic filenames, contact sheets, and explicit `reference_image_only` / `quarantine_reference` metadata.
 
 3. Wait without busy polling.
    - Large code patch requests may take 15-30 minutes or longer.
@@ -37,6 +38,7 @@ For Unity work, PRO cannot prove the active Editor state, community MCP state, b
    - Keep the original downloaded file under `~/Downloads`.
    - Unpack into `/tmp` or a dated scratch directory before touching the repo.
    - Inspect the file list before applying anything.
+   - For image zips, unpack only into a quarantine path such as `external/pro_outputs/...` until local validation passes.
 
 5. Apply only after checks.
    - Run `git status --short --branch`.
@@ -49,6 +51,7 @@ For Unity work, PRO cannot prove the active Editor state, community MCP state, b
    - Scan changed files for credential-like values and accidental local-only paths.
    - Confirm no `Builds/` or generated binary payload slipped in unless explicitly expected.
    - For Unity patches, refresh/import in the active project and run the relevant `AI Tools/...` menu gate.
+   - For PRO image batches, run `tools/validate_pro_batch_images.py <zip-or-dir> --require-first-wave` before copying into any asset-factory input lane.
    - If Unity cannot be executed, write a blocker report instead of claiming pass.
 
 7. Update this skill when new pitfalls appear.
@@ -85,11 +88,22 @@ For Unity-specific work, also verify:
 - screenshots or built-player outputs exist when required;
 - existing false gates remain false unless the new evidence genuinely closes them.
 
+For PRO reference-image batches, also verify:
+
+- `manifest.json` exists and uses `images`, `entries`, or `items`;
+- every image path follows `images/<class>/M94_<class>_<asset_id>_<view>_vNN.png`;
+- `view` values include only known views such as `front`, `side`, `back`, `top`, and `three_quarter`;
+- each class has a contact sheet;
+- each image is at least 1024x1024 PNG;
+- each manifest entry says `usage=reference_image_only` and `production_status=quarantine_reference`;
+- the package is not promoted into Unity gameplay assets until local image-to-3D, Blender/cleanup, Unity import, semantic review, player-camera visibility, and gameplay-event gates pass.
+
 ## Completion Language
 
 Say:
 
 - "PRO produced a patch and local static checks pass."
+- "PRO produced reference images and the quarantine manifest validation passes."
 - "Unity execution is still pending."
 - "This closes code preparation, not the gameplay/visual gate."
 
