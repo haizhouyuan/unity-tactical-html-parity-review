@@ -1,0 +1,94 @@
+Mono path[0] = '/Users/yuanshaochen/My project/Builds/M86/TacticalPrototypeM86.app/Contents/Resources/Data/Managed'
+Mono config path = '/Users/yuanshaochen/My project/Builds/M86/TacticalPrototypeM86.app/Contents/MonoBleedingEdge/etc'
+CodeReloadManager initialized
+Found 3 interfaces on host : 0) [redacted-ip] 1) [redacted-ip] 2) [redacted-ip]
+Player connection [8527568512]  Target information:
+
+Player connection [8527568512]  * "[IP] [redacted-ip] [Port] 55000 [Flags] 2 [Guid] 871883983 [EditorId] 494143603 [Version] 1048832 [Id] OSXPlayer(1,yuanshaochendeMacBook-Pro.local) [Debug] 0 [PackageName] OSXPlayer [ProjectName] My project"
+
+Player connection [8527568512]  * "[IP] [redacted-ip] [Port] 55000 [Flags] 2 [Guid] 871883983 [EditorId] 494143603 [Version] 1048832 [Id] OSXPlayer(1,yuanshaochendeMacBook-Pro.local) [Debug] 0 [PackageName] OSXPlayer [ProjectName] My project"
+
+Player connection [8527568512]  * "[IP] [redacted-ip] [Port] 55000 [Flags] 2 [Guid] 871883983 [EditorId] 494143603 [Version] 1048832 [Id] OSXPlayer(1,yuanshaochendeMacBook-Pro.local) [Debug] 0 [PackageName] OSXPlayer [ProjectName] My project"
+
+Player connection [8527568512] Started UDP target info broadcast (1) on [[redacted-ip]:54997].
+
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Initialize engine version: 6000.4.7f1 (f3c3c4248748)
+[Subsystems] Discovering subsystems at path /Users/yuanshaochen/My project/Builds/M86/TacticalPrototypeM86.app/Contents/Resources/Data/UnitySubsystems
+GfxDevice: creating device client; kGfxThreadingModeThreaded
+ preferred device: Apple M2 Max (high power)
+Metal devices available: 1
+0: Apple M2 Max (high power)
+Using device Apple M2 Max (high power)
+Initializing Metal device caps: Apple M2 Max
+Mac GPU Family: 2
+Apple GPU Family: 8
+MSL Version: 3.0
+Has Float MSAA: 1
+Has Float Filtering: 1
+ReadWrite Texture Tier: 2
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Finished resetting the current domain, in  0.001 seconds
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+UnloadTime: 0.800125 ms
+[M90] Installing built-player route recorder. Args: /Users/yuanshaochen/My project/Builds/M86/TacticalPrototypeM86.app/Contents/MacOS/My project | --m90-built-route-capture | --m90-output=/Users/yuanshaochen/My project/M90BuiltPlayerRoute | -screen-fullscreen | 0 | -screen-width | 1280 | -screen-height | 720 | -logFile | /Users/yuanshaochen/My project/M90BuiltPlayerRoute/player.log
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:123)
+TacticalBuiltPlayerRouteRecorder:InstallIfRequested () (at /Users/yuanshaochen/My project/Assets/Scripts/Tactical/TacticalBuiltPlayerRouteRecorder.cs:43)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 123)
+
+[M90] Built-player route output directory: /Users/yuanshaochen/My project/M90BuiltPlayerRoute
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:123)
+TacticalBuiltPlayerRouteRecorder:Start () (at /Users/yuanshaochen/My project/Assets/Scripts/Tactical/TacticalBuiltPlayerRouteRecorder.cs:54)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 123)
+
+[M90] Route objects found: game=True player=True camera=True
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:123)
+TacticalBuiltPlayerRouteRecorder/<RunRoute>d__12:MoveNext () (at /Users/yuanshaochen/My project/Assets/Scripts/Tactical/TacticalBuiltPlayerRouteRecorder.cs:65)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr) (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)
+
+(Filename: /Users/bokken/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 123)
+
+Thread 0x17167f000 may have been prematurely finalized
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input Polling Thread exited.
+Input System module state changed to: Shutdown.
+Thread 0x1701f7000 may have been prematurely finalized
+Thread 0x170283000 may have been prematurely finalized
+Thread 0x17030f000 may have been prematurely finalized
+Thread 0x17039b000 may have been prematurely finalized
+Thread 0x170427000 may have been prematurely finalized
+Thread 0x1704b3000 may have been prematurely finalized
+Thread 0x17053f000 may have been prematurely finalized
+Thread 0x1705cb000 may have been prematurely finalized
+Thread 0x170657000 may have been prematurely finalized
+Thread 0x1706e3000 may have been prematurely finalized
+Thread 0x17076f000 may have been prematurely finalized
+CodeReloadManager destroyed
+PlayerConnection::Cleanup##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1779103944878,"processId":43144,"allocatedMemory":2928508,"memoryLabels":[{"Default":55921},{"Permanent":1528},{"Thread":39352},{"Manager":544399},{"VertexData":8},{"Geometry":408},{"Texture":16},{"Shader":78441},{"Material":24},{"GfxDevice":38608},{"GfxThread":320},{"Animation":328},{"Audio":3040},{"FreeType":8},{"FontEngine":736},{"Physics":2120},{"Physics2D":16},{"Serialization":624},{"Input":10064},{"JobScheduler":33216},{"TextLib":216},{"Mono":32},{"ScriptingNativeRuntime":128},{"BaseObject":1609216},{"Resource":512},{"Renderer":3528},{"Transform":6485},{"File":816},{"WebCam":32},{"Culling":32},{"Terrain":11250},{"Wind":24},{"String":3128},{"Utility":312512},{"PoolAlloc":2280},{"AI":40},{"TypeTree":5064},{"RuntimeInitializeOnLoadManager":64},{"SpriteAtlas":120},{"GI":7176},{"Director":8232},{"CloudService":144},{"WebRequest":776},{"VR":47498},{"SceneManager":360},{"Video":2080},{"LazyScriptCache":32},{"NativeArray":648},{"Camera":9},{"Secure":1},{"SerializationCache":1576},{"APIUpdating":10320},{"Subsystems":336},{"VirtualTexturing":57496},{"Baselib":16},{"Analytics":80},{"Hierarchy":992},{"CoreStats":13032},{"Identifiers":12960},{"Gui":40},{"CoreBusinessMetrics":120},{"AssetReference":32}]}

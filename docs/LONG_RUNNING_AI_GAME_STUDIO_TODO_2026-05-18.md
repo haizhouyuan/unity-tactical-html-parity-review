@@ -573,6 +573,40 @@ Important limitation:
 
 - M89 is cleaner built-player launch/window evidence, not route evidence. The strict blocker `clean_built_player_gameplay_capture_passed=false` remains open.
 
+### M90: Built Player Runtime Route Capture
+
+Status: completed on 2026-05-18 as a built-player runtime route. This is not external keyboard/mouse automation.
+
+Primary lane: release/liveops / evidence audit / gameplay proof.
+
+Goal:
+
+- Prove the built macOS app can execute the core tactical gameplay route and capture evidence outside the Unity Editor.
+
+Checklist:
+
+- [x] Add a built-player-only route recorder that is disabled during normal gameplay unless launched with `--m90-built-route-capture`.
+- [x] Rebuild the macOS player through `AI Tools/Run M86 Build Release Gate`.
+- [x] Launch `/Users/yuanshaochen/My project/Builds/M86/TacticalPrototypeM86.app` with the M90 flag.
+- [x] Capture lobby, start, movement, traversal, pickup, fire, reload, damage, death, and restart screenshots.
+- [x] Prove first-person weapon visibility.
+- [x] Prove pickup changes gameplay state from pistol to rifle.
+- [x] Redact local IP addresses from the committed player log.
+- [x] Record `external_input_driven=false` so this is not overstated as manual/input-bot proof.
+
+Latest evidence:
+
+- `Assets/Scripts/Tactical/TacticalBuiltPlayerRouteRecorder.cs`
+- `docs/M90_BUILT_PLAYER_RUNTIME_ROUTE_CAPTURE.json`
+- `docs/M90_BUILT_PLAYER_RUNTIME_ROUTE_CAPTURE.log`
+- `docs/M90_BUILT_PLAYER_RUNTIME_ROUTE_CAPTURE_COMPLETION_2026-05-18.md`
+- `docs/M90_BUILT_PLAYER_RUNTIME_ROUTE_CAPTURE_PIPELINE_2026-05-18.json`
+- `Assets/Screenshots/M90BuiltPlayerRoute/`
+
+Important limitation:
+
+- M90 proves a built-player runtime gameplay route, not external keyboard/mouse automation and not final visual production quality.
+
 ## Supporting Lanes
 
 ### S1: Unity MCP / Toolchain Reliability
@@ -669,9 +703,10 @@ The track is not done until:
 - [x] promoted asset visibility gate passes at class level through M87 approved-equivalent route evidence.
 - [x] M88 strict full visual gate blocker audit exists.
 - [x] M89 built-player foreground launch capture exists.
+- [x] M90 built-player runtime gameplay route capture exists.
 - [ ] `full_visual_asset_gate_passed=true`.
-- [ ] the player route can be manually played with visible weapon, pickup, NPC combat, reload, building traversal, and restart.
+- [ ] the player route can be externally or manually played with visible weapon, pickup, NPC combat, reload, building traversal, and restart.
 
 ## Immediate Next Action
 
-Continue the built-player evidence lane with M90: an input-driven gameplay route capture or blocker report. M90 should prove start, movement, pickup, fire/reload, NPC interaction, and restart/death behavior from the built macOS app, not only from Unity Editor or a launch window screenshot.
+Choose M91 based on priority: either run an external-input/manual built-player playtest route to complement M90, or return to the strict visual blockers from M88: final weapon art review, final humanoid art review, and generated batch class promotion.
