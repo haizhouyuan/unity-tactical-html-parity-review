@@ -1,0 +1,20 @@
+{
+  "timestamp_utc": "2026-05-18T14:19:09.150725+00:00",
+  "mcp_url": "http://127.0.0.1:8080/mcp",
+  "execute_acceptance": false,
+  "one_button_acceptance": false,
+  "errors": [],
+  "session_id": "1b0c8000a66f4469a72ba7e06910241b",
+  "protocol_version": "2025-06-18",
+  "server_name": "mcp-for-unity-server",
+  "server_version": "3.3.1",
+  "tools_count": 43,
+  "required_tools": {
+    "read_console": true,
+    "execute_menu_item": true,
+    "manage_editor": true,
+    "tools_list": true
+  },
+  "read_console_ok": true,
+  "read_console_response_excerpt": "{\"content\": [{\"type\": \"text\", \"text\": \"{\\\"success\\\":true,\\\"message\\\":\\\"Retrieved 1 log entries.\\\",\\\"data\\\":[{\\\"type\\\":\\\"Warning\\\",\\\"message\\\":\\\"Account API did not become accessible within 30 seconds. This may be due to network issues or editor focus.\\\",\\\"file\\\":\\\"./Library/PackageCache/com.unity.ai.assistant@667f49aff9c0/Modules/Unity.AI.Toolkit.Accounts/Services/States/ApiAccessibleState.cs\\\",\\\"line\\\":32,\\\"stackTrace\\\":null}]}\"}], \"structuredContent\": {\"success\": true, \"message\": \"Retrieved 1 log entries.\", \"data\": [{\"type\": \"Warning\", \"message\": \"Account API did not become accessible within 30 seconds. This may be due to network issues or editor focus.\", \"file\": \"./Library/PackageCache/com.unity.ai.assistant@667f49aff9c0/Modules/Unity.AI.Toolkit.Accounts/Services/States/ApiAccessibleState.cs\", \"line\": 32, \"stackTrace\": null}]}, \"isError\": false}"
+}

@@ -62,6 +62,8 @@ docs/M87_CLASS_LEVEL_PRODUCTION_VISIBILITY_COMPLETION_2026-05-18.md
 docs/M88_STRICT_FULL_VISUAL_ASSET_GATE_COMPLETION_2026-05-18.md
 docs/M89_BUILT_PLAYER_CLEAN_CAPTURE_COMPLETION_2026-05-18.md
 docs/M90_BUILT_PLAYER_RUNTIME_ROUTE_CAPTURE_COMPLETION_2026-05-18.md
+docs/M91_EXTERNAL_INPUT_BUILT_PLAYER_ROUTE_MISSION_CONTRACT_2026-05-18.md
+docs/M91_EXTERNAL_INPUT_BUILT_PLAYER_ROUTE_COMPLETION_2026-05-18.md
 docs/M0_6_COMMUNITY_UNITY_MCP_SKILL_VERIFICATION_2026-05-18.md
 docs/COMMUNITY_UNITY_MCP_CODEX_SKILL_PLAN.md
 ```
@@ -112,12 +114,13 @@ At export time, the local pipeline reported:
 - `m88_strict_full_visual_asset_gate_passed: false` in `docs/M88_STRICT_FULL_VISUAL_ASSET_GATE.json`
 - `m89_built_player_clean_capture_passed: true` as launch/window evidence only in `docs/M89_BUILT_PLAYER_CLEAN_CAPTURE.json`
 - `m90_built_player_runtime_route_capture_passed: true` in `docs/M90_BUILT_PLAYER_RUNTIME_ROUTE_CAPTURE.json`, with `external_input_driven=false`
+- `m91_external_input_built_player_route_passed: true` in `docs/M91ExternalInputBuiltPlayerRoute/M91_EXTERNAL_INPUT_BUILT_PLAYER_ROUTE.json`, with `external_input_driven=true` and `built_player=true`
 - `html_tactical_parity_gate_passed: true`
 - `all_required_current_gates_passed: true`
 - `full_visual_asset_gate_passed: false`
 - `realified_asset_gameplay_production_promoted_assets: 1`
 
-The important warning is still the last two lines: only one realified asset has production gameplay promotion evidence, and the full visual asset gate remains false. M84 separately proves one weapon, one approved container, and one approved medkit through gameplay-bound promotion evidence. M85 adds a scoped player-camera visual production pass with wet-route details, decals, clutter, lighting, and before/after screenshots. M86 proves a local macOS build can be produced and launch-smoked. M87 proves five route-level production-visibility classes using approved-equivalent or gameplay-bound assets. M89 adds a cleaner built-player foreground capture. M90 adds a built-player runtime gameplay route proving start, movement, pickup, fire/reload, NPC interaction, death, restart, and first-person weapon visibility, but it is not an external-input-driven route. None of M84, M85, M86, M87, M89, or M90 makes the failed Realified non-weapon batch production-ready or claims final PUBG-like visual quality.
+The important warning is still the last two lines: only one realified asset has production gameplay promotion evidence, and the full visual asset gate remains false. M84 separately proves one weapon, one approved container, and one approved medkit through gameplay-bound promotion evidence. M85 adds a scoped player-camera visual production pass with wet-route details, decals, clutter, lighting, and before/after screenshots. M86 proves a local macOS build can be produced and launch-smoked. M87 proves five route-level production-visibility classes using approved-equivalent or gameplay-bound assets. M89 adds a cleaner built-player foreground capture. M90 adds a built-player runtime gameplay route proving start, movement, pickup, fire/reload, NPC interaction, death, restart, and first-person weapon visibility, but it is not an external-input-driven route. M91 complements M90 by driving the built macOS app with OS-level external keyboard/mouse input and writing eight player-route screenshots plus a passing Editor gate. None of M84, M85, M86, M87, M89, M90, or M91 makes the failed Realified non-weapon batch production-ready or claims final PUBG-like visual quality.
 
 ## Known Gaps
 
@@ -129,6 +132,7 @@ The important warning is still the last two lines: only one realified asset has 
 - M88 makes the strict full-visual blockers explicit: final weapon art review, final humanoid art review, generated batch class promotion, and clean built-player gameplay capture are still open.
 - M89 improves built-player foreground launch evidence, but `clean_built_player_gameplay_capture_passed` remains open until an input-driven built-player route proves start, movement, pickup, fire/reload, NPC interaction, and restart/death behavior.
 - M90 proves the same built-player gameplay route from the macOS app through a runtime recorder, but `external_input_driven=false`; external keyboard/mouse automation or manual human route evidence remains a separate optional proof.
+- M91 proves the same built-player route through external keyboard/mouse automation with `passed=true`, `external_input_driven=true`, and `built_player=true` in `docs/M91ExternalInputBuiltPlayerRoute/M91_EXTERNAL_INPUT_BUILT_PLAYER_ROUTE.json`.
 - Character and environment assets still need stronger production-quality replacements.
 - The Unity version still lags the HTML baseline in many interaction and feedback details.
 - Some assets are present in `Assets/HtmlTacticalAssets/` but are not yet visible or active in the actual player route.

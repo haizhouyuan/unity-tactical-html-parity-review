@@ -1,0 +1,17 @@
+{
+  "schema": "m91_external_input_built_player_gate_v1",
+  "timestamp_utc": "2026-05-18T14:36:55.8039940Z",
+  "passed": true,
+  "script_exists": true,
+  "built_app_exists": true,
+  "built_app_path": "/Users/yuanshaochen/My project/Builds/M86/TacticalPrototypeM86.app",
+  "route_json_exists": true,
+  "route_json_path": "docs/M91ExternalInputBuiltPlayerRoute/M91_EXTERNAL_INPUT_BUILT_PLAYER_ROUTE.json",
+  "route_json_passed": true,
+  "route_json_external_input_driven": true,
+  "route_json_built_player": true,
+  "route_json_screenshot_count": 8,
+  "launch_command": "\"/Users/yuanshaochen/My project/Builds/M86/TacticalPrototypeM86.app/Contents/MacOS/My project\" --m91-external-input-route --m91-output=\"/Users/yuanshaochen/My project/docs\"",
+  "note": "This gate only passes after an external-input built-player telemetry JSON exists with passed=true and external_input_driven=true. It does not drive input itself.",
+  "blockers": []
+}

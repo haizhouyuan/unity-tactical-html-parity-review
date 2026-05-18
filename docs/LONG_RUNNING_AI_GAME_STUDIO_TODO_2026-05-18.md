@@ -38,7 +38,8 @@ Interpretation:
 - HTML parity evidence is useful but not final visual completion.
 - Production visual assets are still the main unfinished goal.
 - M0 docs are complete.
-- Next executable work starts at M0.5.
+- M91 external-input built-player route evidence now exists and passes.
+- Next executable work returns to the M88 strict visual blockers unless a new toolchain/release gate is prioritized.
 
 ## Master Queue
 
@@ -607,6 +608,45 @@ Important limitation:
 
 - M90 proves a built-player runtime gameplay route, not external keyboard/mouse automation and not final visual production quality.
 
+### M91: External-Input Built Player Route
+
+Status: completed on 2026-05-18.
+
+Primary lane: release/liveops / QA playtest / evidence audit.
+
+Goal:
+
+- Complement M90 by proving the built macOS app can complete the route through external input rather than direct runtime gameplay API calls.
+
+Checklist:
+
+- [x] Add `TacticalExternalInputRouteTelemetry`, disabled unless launched with `--m91-external-input-route`.
+- [x] Add `AI Tools/Run M91 External Input Built Player Gate`.
+- [x] Add mission contract.
+- [x] Launch `/Users/yuanshaochen/My project/Builds/M86/TacticalPrototypeM86.app` with `--m91-external-input-route`.
+- [x] Drive the route with external OS-level keyboard/mouse input automation.
+- [x] Capture start, movement, pickup, fire, reload, enemy interaction, and death/restart screenshots.
+- [x] Confirm `docs/M91ExternalInputBuiltPlayerRoute/M91_EXTERNAL_INPUT_BUILT_PLAYER_ROUTE.json` has `passed=true`, `external_input_driven=true`, and `built_player=true`.
+- [x] Run `AI Tools/Run M91 External Input Built Player Gate` and confirm the gate report passes.
+
+Latest evidence:
+
+- `Assets/Scripts/Tactical/TacticalExternalInputRouteTelemetry.cs`
+- `Assets/Editor/M91ExternalInputBuiltPlayerGate.cs`
+- `docs/M91_EXTERNAL_INPUT_BUILT_PLAYER_ROUTE_MISSION_CONTRACT_2026-05-18.md`
+- `docs/M91_EXTERNAL_INPUT_BUILT_PLAYER_ROUTE_COMPLETION_2026-05-18.md`
+- `docs/M91ExternalInputBuiltPlayerRoute/M91_EXTERNAL_INPUT_BUILT_PLAYER_ROUTE.json`
+- `docs/M91ExternalInputBuiltPlayerRoute/`
+- `docs/M91_EXTERNAL_INPUT_BUILT_PLAYER_GATE.json`
+- `docs/M91_EXTERNAL_INPUT_BUILT_PLAYER_GATE.md`
+- `docs/UNITY_MCP_EXECUTE_M91_GATE_PASS.json`
+
+Important limitation:
+
+- M91 does not close `full_visual_asset_gate_passed=false`.
+- M91 does not close final weapon art, final humanoid art, or generated batch promotion blockers.
+- The Editor gate must not pass unless the external-input route JSON already proves `passed=true`.
+
 ## Supporting Lanes
 
 ### S1: Unity MCP / Toolchain Reliability
@@ -704,9 +744,10 @@ The track is not done until:
 - [x] M88 strict full visual gate blocker audit exists.
 - [x] M89 built-player foreground launch capture exists.
 - [x] M90 built-player runtime gameplay route capture exists.
+- [x] M91 external-input built-player route capture passes.
 - [ ] `full_visual_asset_gate_passed=true`.
 - [ ] the player route can be externally or manually played with visible weapon, pickup, NPC combat, reload, building traversal, and restart.
 
 ## Immediate Next Action
 
-Choose M91 based on priority: either run an external-input/manual built-player playtest route to complement M90, or return to the strict visual blockers from M88: final weapon art review, final humanoid art review, and generated batch class promotion.
+Return to the M88 strict visual blockers: final weapon art review, final humanoid art review, and generated batch class promotion. M91 closed the external-input route evidence gap, but it did not close final production visual quality.
