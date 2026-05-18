@@ -16,6 +16,7 @@ public static class TacticalAcceptancePipeline
     private const string RouteReportPath = "docs/TACTICAL_PLAYABLE_ROUTE_GATE.json";
     private const string BuildingIntegrityReportPath = "docs/BUILDING_INTEGRITY_GATE.json";
     private const string WeaponFeelReportPath = "docs/WEAPON_FEEL_GATE.json";
+    private const string AiPlaytestReportPath = "docs/AI_PLAYTEST_ROUTE_GATE.json";
     private const string HtmlParityReportPath = "docs/HTML_TACTICAL_PARITY_GATE.json";
     private const string RealifiedImportMaterialGatePath = "docs/REALIFIED_IMPORT_MATERIAL_GATE.json";
     private const string RealifiedPromotionQueuePath = "docs/REALIFIED_ASSET_CLASS_PROMOTION_QUEUE.json";
@@ -247,7 +248,8 @@ public static class TacticalAcceptancePipeline
         RealifiedAssetGameplayPromotionLedger.WriteLedger();
         HtmlTacticalParityGate.WriteReport();
         WeaponFeelGate.WriteReport();
-        AppendNote("playable route, player POV, promoted asset visibility, gameplay proof, HTML parity, and weapon feel gates ran");
+        AiPlaytestRouteGate.WriteReport();
+        AppendNote("playable route, player POV, promoted asset visibility, gameplay proof, HTML parity, weapon feel, and AI playtest gates ran");
         WritePipelineReport("gates_ran");
         SetStage(Stage.WaitStoppedAfterGates);
         EditorApplication.isPlaying = false;
@@ -308,6 +310,7 @@ public static class TacticalAcceptancePipeline
         var route = ReadGate(RouteReportPath);
         var buildingIntegrity = ReadGate(BuildingIntegrityReportPath);
         var weaponFeel = ReadGate(WeaponFeelReportPath);
+        var aiPlaytest = ReadGate(AiPlaytestReportPath);
         var htmlParity = ReadGate(HtmlParityReportPath);
         var routeJson = ReadText(RouteReportPath);
         var htmlParityJson = ReadText(HtmlParityReportPath);
@@ -323,7 +326,7 @@ public static class TacticalAcceptancePipeline
         var sourceTraceJson = ReadText(RealifiedSourceTracePath);
         var htmlBaselineCategorySheetJson = ReadText(HtmlBaselineCategorySheetPath);
         var htmlBaselineCategoryNemotronJson = ReadText(HtmlBaselineCategoryNemotronPath);
-        var allGatesPassed = playerPov.Passed && gameplay.Passed && route.Passed && buildingIntegrity.Passed && weaponFeel.Passed && htmlParity.Passed;
+        var allGatesPassed = playerPov.Passed && gameplay.Passed && route.Passed && buildingIntegrity.Passed && weaponFeel.Passed && aiPlaytest.Passed && htmlParity.Passed;
         var visualPolishPassed = ExtractBool(routeJson, "visual_polish_gate_passed");
         var incrementalAssetsPassed = ExtractBool(routeJson, "approved_incremental_asset_gate_passed");
         var fullVisualPassed = ExtractBool(routeJson, "full_visual_asset_gate_passed");
@@ -351,6 +354,7 @@ public static class TacticalAcceptancePipeline
         Append(report, "playable_route_gate_passed", route.Passed, true);
         Append(report, "building_integrity_gate_passed", buildingIntegrity.Passed, true);
         Append(report, "weapon_feel_gate_passed", weaponFeel.Passed, true);
+        Append(report, "ai_playtest_route_gate_passed", aiPlaytest.Passed, true);
         Append(report, "html_tactical_parity_gate_passed", htmlParity.Passed, true);
         Append(report, "approved_incremental_asset_gate_passed", incrementalAssetsPassed, true);
         Append(report, "visual_polish_gate_passed", visualPolishPassed, true);
@@ -415,6 +419,7 @@ public static class TacticalAcceptancePipeline
         Append(report, "playable_route_gate_path", RouteReportPath, true);
         Append(report, "building_integrity_gate_path", BuildingIntegrityReportPath, true);
         Append(report, "weapon_feel_gate_path", WeaponFeelReportPath, true);
+        Append(report, "ai_playtest_route_gate_path", AiPlaytestReportPath, true);
         Append(report, "html_tactical_parity_gate_path", HtmlParityReportPath, true);
         Append(report, "promoted_asset_visibility_gate_path", PromotedAssetVisibilityGatePath, true);
         Append(report, "realified_audit_path", RealifiedAuditPath, true);

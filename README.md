@@ -54,6 +54,7 @@ For the current active-Unity verification and first post-M0 gameplay gate, read:
 docs/M0_5R_ACTIVE_UNITY_SESSION_VERIFICATION_2026-05-18.md
 docs/M81_BUILDING_INTEGRITY_COMPLETION_2026-05-18.md
 docs/M82_WEAPON_FEEL_COMPLETION_2026-05-18.md
+docs/M83_AI_PLAYTEST_ROUTE_COMPLETION_2026-05-18.md
 docs/M0_6_COMMUNITY_UNITY_MCP_SKILL_VERIFICATION_2026-05-18.md
 docs/COMMUNITY_UNITY_MCP_CODEX_SKILL_PLAN.md
 ```
@@ -96,6 +97,7 @@ At export time, the local pipeline reported:
 - `gameplay_proof_gate_passed: true`
 - `building_integrity_gate_passed: true`
 - `weapon_feel_gate_passed: true`
+- `ai_playtest_route_gate_passed: true`
 - `html_tactical_parity_gate_passed: true`
 - `all_required_current_gates_passed: true`
 - `full_visual_asset_gate_passed: false`

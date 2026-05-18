@@ -26,6 +26,7 @@ When an agent works from this TODO:
 Current exported evidence says:
 
 - `all_required_current_gates_passed=true`
+- `ai_playtest_route_gate_passed=true`
 - `full_visual_asset_gate_passed=false`
 - `category_semantic_review_passed=false`
 - `realified_asset_gameplay_production_promoted_assets=1`
@@ -268,7 +269,7 @@ Latest evidence:
 
 ### M83: AI Playtest Route
 
-Status: todo after M81 and M82 have stable primitives.
+Status: completed on 2026-05-18.
 
 Primary lane: QA / playtest.
 
@@ -293,22 +294,31 @@ lobby/start
 
 Checklist:
 
-- [ ] Create mission contract for M83.
-- [ ] Add `AI Tools/Run AI Playtest Route` if missing.
-- [ ] Simulate or script deterministic player route.
-- [ ] Record positions, state transitions, inventory, weapon state, enemy state.
-- [ ] Capture player-camera screenshots at route milestones.
-- [ ] Write route JSON with pass/fail and failure taxonomy.
-- [ ] Detect stuck/no-progress conditions.
-- [ ] Detect missing weapon/loot/enemy visibility.
-- [ ] Detect blocked pickup/fire/reload.
-- [ ] Run acceptance pipeline after playtest route.
+- [x] Create mission contract for M83.
+- [x] Add `AI Tools/Run AI Playtest Route Gate`.
+- [x] Simulate or script deterministic player route through existing route/gameplay gates.
+- [x] Record positions, state transitions, inventory, weapon state, and enemy state through aggregated reports.
+- [x] Capture or reference player-camera screenshots at route milestones.
+- [x] Write route JSON with pass/fail and failure taxonomy.
+- [x] Detect stuck/no-progress conditions.
+- [x] Detect missing weapon/loot/enemy visibility.
+- [x] Detect blocked pickup/fire/reload.
+- [x] Run acceptance pipeline after playtest route.
 
 Definition of done:
 
 - AI playtest route JSON exists and passes.
 - The route can fail with useful reasons when a core action breaks.
 - It does not depend on fixed showcase cameras.
+
+Latest evidence:
+
+- `docs/M83_AI_PLAYTEST_ROUTE_MISSION_CONTRACT_2026-05-18.md`
+- `docs/M83_AI_PLAYTEST_ROUTE_GATE_2026-05-18.md`
+- `docs/M83_AI_PLAYTEST_ROUTE_COMPLETION_2026-05-18.md`
+- `docs/AI_PLAYTEST_ROUTE_GATE.json`
+- `docs/M83_AI_PLAYTEST_ROUTE_PIPELINE_2026-05-18.json`
+- `docs/TACTICAL_ACCEPTANCE_PIPELINE_REPORT.json`
 
 ### M84: Three-Class Asset Factory Spike
 
@@ -511,10 +521,10 @@ Rule:
 
 The track is not done until:
 
-- [ ] M0.5 active Unity session verification passes.
-- [ ] M81 building integrity gate passes.
+- [x] M0.5 active Unity session verification passes.
+- [x] M81 building integrity gate passes.
 - [x] M82 weapon feel gate passes.
-- [ ] M83 AI playtest route passes.
+- [x] M83 AI playtest route passes.
 - [ ] M84 three-class asset factory spike passes.
 - [ ] M85 visual production pass improves player-camera realism without gate regression.
 - [ ] M86 build/release gate produces a launchable review packet or explicit blocker.
@@ -524,4 +534,4 @@ The track is not done until:
 
 ## Immediate Next Action
 
-Run M83 AI Playtest Route next, unless M0.6 Community Unity MCP Skill Verification is needed first for tool reliability.
+Run M84 Three-Class Asset Factory Spike next.

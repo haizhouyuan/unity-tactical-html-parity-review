@@ -1,0 +1,42 @@
+{
+  "mission_id": "M83_ai_playtest_route",
+  "date": "2026-05-18",
+  "status": "complete",
+  "active_unity_project": "/Users/yuanshaochen/My project",
+  "community_mcp_endpoint": "http://127.0.0.1:8080/mcp",
+  "menu_command": "AI Tools/Run Tactical Acceptance Pipeline",
+  "reports": {
+    "ai_playtest_route_gate": "docs/AI_PLAYTEST_ROUTE_GATE.json",
+    "acceptance_pipeline": "docs/TACTICAL_ACCEPTANCE_PIPELINE_REPORT.json",
+    "playable_route": "docs/TACTICAL_PLAYABLE_ROUTE_GATE.json",
+    "gameplay_proof": "docs/TACTICAL_GAMEPLAY_PROOF_GATE.json",
+    "building_integrity": "docs/BUILDING_INTEGRITY_GATE.json",
+    "weapon_feel": "docs/WEAPON_FEEL_GATE.json",
+    "player_pov": "docs/TACTICAL_PLAYER_POV_GATE.json"
+  },
+  "fresh_pipeline_result": {
+    "status": "complete",
+    "console_errors": 0,
+    "console_warnings": 0,
+    "all_required_current_gates_passed": true,
+    "ai_playtest_route_gate_passed": true,
+    "full_visual_asset_gate_passed": false,
+    "semantic_review_passed": false,
+    "category_semantic_review_passed": false
+  },
+  "ai_playtest_result": {
+    "passed": true,
+    "start_passed": true,
+    "movement_passed": true,
+    "traversal_passed": true,
+    "loot_passed": true,
+    "combat_passed": true,
+    "reload_or_recovery_passed": true,
+    "death_restart_passed": true,
+    "no_stuck_detected": true,
+    "screenshot_evidence": true,
+    "blockers": "none"
+  },
+  "recovery_note": "Unity session initially blocked on recovered-scene backup dialog and duplicate project instance. After preserving backups, clearing the stale duplicate process, and reopening the active project, community MCP reported compiling=false/updating=false and the full pipeline completed.",
+  "next_recommended_mission": "M84_three_class_asset_factory_spike"
+}
