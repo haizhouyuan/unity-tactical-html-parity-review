@@ -55,6 +55,7 @@ docs/M0_5R_ACTIVE_UNITY_SESSION_VERIFICATION_2026-05-18.md
 docs/M81_BUILDING_INTEGRITY_COMPLETION_2026-05-18.md
 docs/M82_WEAPON_FEEL_COMPLETION_2026-05-18.md
 docs/M83_AI_PLAYTEST_ROUTE_COMPLETION_2026-05-18.md
+docs/M84_THREE_CLASS_ASSET_FACTORY_SPIKE_COMPLETION_2026-05-18.md
 docs/M0_6_COMMUNITY_UNITY_MCP_SKILL_VERIFICATION_2026-05-18.md
 docs/COMMUNITY_UNITY_MCP_CODEX_SKILL_PLAN.md
 ```
@@ -98,17 +99,18 @@ At export time, the local pipeline reported:
 - `building_integrity_gate_passed: true`
 - `weapon_feel_gate_passed: true`
 - `ai_playtest_route_gate_passed: true`
+- `m84_three_class_asset_factory_spike_passed: true`
 - `html_tactical_parity_gate_passed: true`
 - `all_required_current_gates_passed: true`
 - `full_visual_asset_gate_passed: false`
 - `realified_asset_gameplay_production_promoted_assets: 1`
 
-The important warning is the last line: only one realified asset has production gameplay promotion evidence. The tactical loop is playable enough for route gates, but the Unity version is still far from the HTML baseline's total gameplay density and far from PUBG-like visual quality.
+The important warning is the last line: only one realified asset has production gameplay promotion evidence. M84 now separately proves one weapon, one approved container, and one approved medkit through gameplay-bound promotion evidence, but that does not make the failed Realified non-weapon batch production-ready. The tactical loop is playable enough for route gates, but the Unity version is still far from the HTML baseline's total gameplay density and far from PUBG-like visual quality.
 
 ## Known Gaps
 
 - First-person weapon visibility, fire/reload feedback, hit marker, recoil evidence, and third-person mount now have a passing hero-weapon gate, but the authored animation and final weapon art quality are still not commercial-grade.
-- Most realified assets are not yet promoted into gameplay entities.
+- Most realified assets are not yet promoted into gameplay entities. M84 intentionally keeps failed Realified non-weapon assets quarantined while promoting semantic-approved container and medkit equivalents for the three-class spike.
 - Character and environment assets still need stronger production-quality replacements.
 - The Unity version still lags the HTML baseline in many interaction and feedback details.
 - Some assets are present in `Assets/HtmlTacticalAssets/` but are not yet visible or active in the actual player route.

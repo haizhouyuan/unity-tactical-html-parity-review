@@ -322,7 +322,7 @@ Latest evidence:
 
 ### M84: Three-Class Asset Factory Spike
 
-Status: todo after M0.5, but gameplay binding steps should wait for M81/M82/M83 primitives where relevant.
+Status: completed on 2026-05-18.
 
 Primary lane: asset pipeline.
 
@@ -350,24 +350,34 @@ Forbidden changes:
 
 Checklist:
 
-- [ ] Create mission contract for M84.
-- [ ] For each class, record source/provenance and intended semantic class.
-- [ ] Import into Unity.
-- [ ] Validate material/PBR state.
-- [ ] Run semantic review.
-- [ ] Bind to gameplay entity only if semantic-ready.
-- [ ] Prove player-camera visibility.
-- [ ] Prove gameplay event:
+- [x] Create mission contract for M84.
+- [x] For each class, record source/provenance and intended semantic class.
+- [x] Import into Unity.
+- [x] Validate material/PBR state.
+- [x] Run semantic review or reuse already-approved semantic assets.
+- [x] Bind to gameplay entity only if semantic-ready.
+- [x] Prove player-camera visibility.
+- [x] Prove gameplay event:
   - weapon fires/reloads/hits;
   - container blocks line-of-sight/shots;
   - medkit is picked up or mutates state.
-- [ ] Update promotion ledger.
-- [ ] Update promoted asset player-camera visibility gate.
+- [x] Update M84-specific promotion ledger/report.
+- [x] Update tactical acceptance pipeline with M84 player-camera visibility and event evidence.
 
 Definition of done:
 
 - One weapon, one environment prop, and one loot item reach production-promoted status.
 - No candidate-only asset receives completion credit.
+- Existing failed Realified non-weapon semantic reviews stay quarantined instead of being overwritten.
+
+Latest evidence:
+
+- `docs/M84_THREE_CLASS_ASSET_FACTORY_SPIKE_MISSION_CONTRACT_2026-05-18.md`
+- `docs/M84_THREE_CLASS_ASSET_FACTORY_SPIKE_COMPLETION_2026-05-18.md`
+- `docs/M84_THREE_CLASS_ASSET_FACTORY_SPIKE.json`
+- `docs/M84_THREE_CLASS_ASSET_FACTORY_SPIKE.md`
+- `docs/M84_THREE_CLASS_ASSET_FACTORY_SPIKE_PIPELINE_2026-05-18.json`
+- `Assets/Screenshots/M84AssetFactory/`
 
 ### M85: Visual Production Pass
 
@@ -525,7 +535,7 @@ The track is not done until:
 - [x] M81 building integrity gate passes.
 - [x] M82 weapon feel gate passes.
 - [x] M83 AI playtest route passes.
-- [ ] M84 three-class asset factory spike passes.
+- [x] M84 three-class asset factory spike passes.
 - [ ] M85 visual production pass improves player-camera realism without gate regression.
 - [ ] M86 build/release gate produces a launchable review packet or explicit blocker.
 - [ ] `full_visual_asset_gate_passed=true`.
@@ -534,4 +544,4 @@ The track is not done until:
 
 ## Immediate Next Action
 
-Run M84 Three-Class Asset Factory Spike next.
+Run M85 Visual Production Pass next.
