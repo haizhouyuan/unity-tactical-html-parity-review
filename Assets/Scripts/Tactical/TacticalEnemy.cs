@@ -62,7 +62,7 @@ public class TacticalEnemy : MonoBehaviour
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(direction), Time.deltaTime * 8f);
             }
 
-            if (distance < shootRange && Time.time >= nextShotTime)
+            if (distance < shootRange && HasClearShotToPlayer() && Time.time >= nextShotTime)
             {
                 nextShotTime = Time.time + shootInterval + Random.Range(-0.25f, 0.45f);
                 game.DamagePlayer(attackDamage * game.EnemyStrengthMultiplier * (distance < 9f ? 1.25f : 1f));
@@ -83,6 +83,43 @@ public class TacticalEnemy : MonoBehaviour
             returnHome.y = 0f;
             MoveTowards((patrol * 0.45f + returnHome.normalized * 0.55f).normalized, moveSpeed * 0.45f);
         }
+    }
+
+    private bool HasClearShotToPlayer()
+    {
+        if (player == null)
+        {
+            return false;
+        }
+
+        var start = transform.position + Vector3.up * 1.35f;
+        var target = player.position + Vector3.up * 1.2f;
+        var toTarget = target - start;
+        var distance = toTarget.magnitude;
+        if (distance < 0.1f)
+        {
+            return true;
+        }
+
+        var hits = Physics.RaycastAll(start, toTarget.normalized, distance, ~0, QueryTriggerInteraction.Ignore);
+        System.Array.Sort(hits, (a, b) => a.distance.CompareTo(b.distance));
+        foreach (var hit in hits)
+        {
+            if (hit.collider == null || hit.collider.transform.IsChildOf(transform))
+            {
+                continue;
+            }
+
+            var hitPlayer = hit.collider.GetComponentInParent<TacticalPlayerController>();
+            if (hitPlayer != null && hitPlayer.transform == player)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        return true;
     }
 
     private void MoveTowards(Vector3 direction, float speed)

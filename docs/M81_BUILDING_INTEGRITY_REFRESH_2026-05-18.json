@@ -1,0 +1,95 @@
+{
+  "timestamp_utc": "2026-05-18T06:22:56Z",
+  "server_info": {
+    "name": "mcp-for-unity-server",
+    "version": "3.3.1"
+  },
+  "refresh": {
+    "jsonrpc": "2.0",
+    "id": 2,
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":\"True,False\",\"compiler\":\"roslyn\"}}"
+        }
+      ],
+      "structuredContent": {
+        "success": true,
+        "message": "Code executed successfully.",
+        "data": {
+          "result": "True,False",
+          "compiler": "roslyn"
+        }
+      },
+      "isError": false
+    }
+  },
+  "status_polls": [
+    {
+      "jsonrpc": "2.0",
+      "id": 3,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":\"True,False\",\"compiler\":\"roslyn\"}}"
+          }
+        ],
+        "structuredContent": {
+          "success": true,
+          "message": "Code executed successfully.",
+          "data": {
+            "result": "True,False",
+            "compiler": "roslyn"
+          }
+        },
+        "isError": false
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": 4,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":\"False,False\",\"compiler\":\"roslyn\"}}"
+          }
+        ],
+        "structuredContent": {
+          "success": true,
+          "message": "Code executed successfully.",
+          "data": {
+            "result": "False,False",
+            "compiler": "roslyn"
+          }
+        },
+        "isError": false
+      }
+    }
+  ],
+  "console_after_refresh": {
+    "jsonrpc": "2.0",
+    "id": 50,
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\":true,\"message\":\"Retrieved 4 log entries.\",\"data\":[\"Assets/Editor/BuildingIntegrityGate.cs(360,112): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'\",\"Assets/Editor/BuildingIntegrityGate.cs(360,35): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'\",\"Assets/Editor/BuildingIntegrityGate.cs(373,99): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'\",\"Assets/Editor/BuildingIntegrityGate.cs(373,30): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'\"]}"
+        }
+      ],
+      "structuredContent": {
+        "success": true,
+        "message": "Retrieved 4 log entries.",
+        "data": [
+          "Assets/Editor/BuildingIntegrityGate.cs(360,112): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'",
+          "Assets/Editor/BuildingIntegrityGate.cs(360,35): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'",
+          "Assets/Editor/BuildingIntegrityGate.cs(373,99): warning CS0618: 'FindObjectsSortMode' is obsolete: 'FindObjectsSortMode has been deprecated. Use the FindObjectsByType overloads that do not take a FindObjectsSortMode parameter.'",
+          "Assets/Editor/BuildingIntegrityGate.cs(373,30): warning CS0618: 'Object.FindObjectsByType<T>(FindObjectsInactive, FindObjectsSortMode)' is obsolete: 'FindObjectsByType with FindObjectsSortMode parameter has been deprecated. Use FindObjectsByType<T>() or FindObjectsByType<T>(FindObjectsInactive) instead. InstanceID will be replaced in the future with EntityId and previous sort order cannot be maintained.'"
+        ]
+      },
+      "isError": false
+    }
+  }
+}

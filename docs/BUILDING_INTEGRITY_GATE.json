@@ -1,0 +1,26 @@
+{
+  "schema": "building_integrity_gate_v1",
+  "timestamp_utc": "2026-05-18T06:36:13.4093850Z",
+  "application_is_playing": true,
+  "passed": true,
+  "application_ready": true,
+  "scene_objects_ready": true,
+  "spawn_outside_building": true,
+  "doorway_clear": true,
+  "first_floor_entry": true,
+  "first_floor_support": true,
+  "ladder_upper_floor": true,
+  "upper_floor_support": true,
+  "roof_edge_drop_clear": true,
+  "container_raycast_blocks_line": true,
+  "enemy_open_lane_damages_player": true,
+  "enemy_cover_prevents_damage": true,
+  "screenshot_count": 4,
+  "screenshots": [
+    { "label": "01_building_a_door_entry_start", "path": "Assets/Screenshots/BuildingIntegrity/01_building_a_door_entry_start.png", "note": "Standing outside Building A doorway" },
+    { "label": "02_building_a_first_floor_inside", "path": "Assets/Screenshots/BuildingIntegrity/02_building_a_first_floor_inside.png", "note": "Moved through doorway into Building A first floor" },
+    { "label": "02b_ladder_upper_floor", "path": "Assets/Screenshots/BuildingIntegrity/02b_ladder_upper_floor.png", "note": "Used Building A interior ladder and reached upper floor" },
+    { "label": "03_cover_block_probe", "path": "Assets/Screenshots/BuildingIntegrity/03_cover_block_probe.png", "note": "Player positioned behind container cover for enemy line-of-sight proof" }
+  ],
+  "details": "spawnOutsideBuilding=True; doorwayRay blocked=False; entryCapsule blocked=False; firstFloorEntry inside=True routeClear=True distance=0.00; A Floor 1 supportHit=A Floor 1 distance=3.22; ladder floor 1->3 y=9.24 inside=True; A Floor 3 supportHit=A Floor 3 distance=3.22; roof centerSupported=True edgeImmediateRoof=False; containerRay blocked=True hit=Container 1; openShot hp=96.2; coverShot hp=100.0;"
+}

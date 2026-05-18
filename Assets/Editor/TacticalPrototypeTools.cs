@@ -597,8 +597,9 @@ This scene is the Unity-side HTML tactical game replica pass. It is intentionall
             {
                 Box(label + " Front Wall Left " + (floor + 1), new Vector3(basePosition.x - doorWidth * 0.5f - (size.x - doorWidth) * 0.25f, y + 1.85f, basePosition.z + size.y / 2f), new Vector3((size.x - doorWidth) * 0.5f, 3.4f, 0.45f), materials["wall"]);
                 Box(label + " Front Wall Right " + (floor + 1), new Vector3(basePosition.x + doorWidth * 0.5f + (size.x - doorWidth) * 0.25f, y + 1.85f, basePosition.z + size.y / 2f), new Vector3((size.x - doorWidth) * 0.5f, 3.4f, 0.45f), materials["wall"]);
-                Box(label + " Door Lintel " + (floor + 1), new Vector3(basePosition.x, y + 3.22f, basePosition.z + size.y / 2f), new Vector3(doorWidth, 0.86f, 0.5f), materials["wall"]);
-                Box(label + " Door Step " + (floor + 1), new Vector3(basePosition.x, y + 0.12f, basePosition.z + size.y / 2f + 0.56f), new Vector3(doorWidth + 0.8f, 0.12f, 1.25f), materials["floor"]);
+                Box(label + " Door Lintel " + (floor + 1), new Vector3(basePosition.x, y + 3.42f, basePosition.z + size.y / 2f), new Vector3(doorWidth, 0.32f, 0.5f), materials["wall"]);
+                var step = Box(label + " Door Step " + (floor + 1), new Vector3(basePosition.x, y + 0.12f, basePosition.z + size.y / 2f + 0.56f), new Vector3(doorWidth + 0.8f, 0.12f, 1.25f), materials["floor"]);
+                DisableCollider(step);
             }
             else
             {
@@ -1701,6 +1702,15 @@ This scene is the Unity-side HTML tactical game replica pass. It is intentionall
         obj.transform.localScale = scale;
         obj.GetComponent<Renderer>().sharedMaterial = material;
         return obj;
+    }
+
+    private static void DisableCollider(GameObject obj)
+    {
+        var collider = obj == null ? null : obj.GetComponent<Collider>();
+        if (collider != null)
+        {
+            collider.enabled = false;
+        }
     }
 
     private static GameObject Anchor(string name, Vector3 position)

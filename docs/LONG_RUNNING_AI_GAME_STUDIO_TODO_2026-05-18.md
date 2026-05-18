@@ -129,7 +129,7 @@ Definition of done:
 
 ### M81: Building Integrity Gate
 
-Status: next.
+Status: completed on 2026-05-18.
 
 Primary lane: gameplay engineering.
 
@@ -161,18 +161,18 @@ Forbidden changes:
 
 Checklist:
 
-- [ ] Create or update a mission contract for M81.
-- [ ] Add `AI Tools/Run Building Integrity Gate` if missing.
-- [ ] Gate starts player outside a building.
-- [ ] Gate proves player can enter first floor.
-- [ ] Gate proves player can reach a valid second-floor/upper-floor landing.
-- [ ] Gate records floor/support height transitions.
-- [ ] Gate verifies balcony/fall/support behavior.
-- [ ] Gate verifies door/collider blockers do not block valid entry.
-- [ ] Gate verifies container/cover blocks NPC line-of-sight or shots.
-- [ ] Gate emits JSON report.
-- [ ] Gate emits or references player-camera/debug screenshot evidence.
-- [ ] Tactical acceptance pipeline still passes.
+- [x] Create or update a mission contract for M81.
+- [x] Add `AI Tools/Run Building Integrity Gate` if missing.
+- [x] Gate starts player outside a building.
+- [x] Gate proves player can enter first floor.
+- [x] Gate proves player can reach a valid second-floor/upper-floor landing.
+- [x] Gate records floor/support height transitions.
+- [x] Gate verifies balcony/fall/support behavior.
+- [x] Gate verifies door/collider blockers do not block valid entry.
+- [x] Gate verifies container/cover blocks NPC line-of-sight or shots.
+- [x] Gate emits JSON report.
+- [x] Gate emits or references player-camera/debug screenshot evidence.
+- [x] Tactical acceptance pipeline still passes.
 
 Definition of done:
 
@@ -181,9 +181,17 @@ Definition of done:
 - Cover/collision proof exists.
 - No new Console compile errors.
 
+Latest evidence:
+
+- `docs/M81_BUILDING_INTEGRITY_GATE_2026-05-18.md`
+- `docs/M81_BUILDING_INTEGRITY_COMPLETION_2026-05-18.md`
+- `docs/BUILDING_INTEGRITY_GATE.json`
+- `docs/M81_BUILDING_INTEGRITY_PIPELINE_2026-05-18.json`
+- `Assets/Screenshots/BuildingIntegrity/`
+
 ### M82: Weapon Feel Gate
 
-Status: todo after M81 or parallel only if M81 is blocked by Unity session/tooling.
+Status: next.
 
 Primary lane: gameplay engineering / visual direction.
 

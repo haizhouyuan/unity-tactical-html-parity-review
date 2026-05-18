@@ -1,0 +1,191 @@
+{
+  "timestamp_utc": "2026-05-18T06:36:17Z",
+  "server_info": {
+    "name": "mcp-for-unity-server",
+    "version": "3.3.1"
+  },
+  "refresh": {
+    "jsonrpc": "2.0",
+    "id": 2,
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":\"True,False\",\"compiler\":\"roslyn\"}}"
+        }
+      ],
+      "structuredContent": {
+        "success": true,
+        "message": "Code executed successfully.",
+        "data": {
+          "result": "True,False",
+          "compiler": "roslyn"
+        }
+      },
+      "isError": false
+    }
+  },
+  "status_polls": [
+    {
+      "jsonrpc": "2.0",
+      "id": 3,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":\"True,False,False\",\"compiler\":\"roslyn\"}}"
+          }
+        ],
+        "structuredContent": {
+          "success": true,
+          "message": "Code executed successfully.",
+          "data": {
+            "result": "True,False,False",
+            "compiler": "roslyn"
+          }
+        },
+        "isError": false
+      }
+    },
+    {
+      "jsonrpc": "2.0",
+      "id": 4,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":\"False,False,False\",\"compiler\":\"roslyn\"}}"
+          }
+        ],
+        "structuredContent": {
+          "success": true,
+          "message": "Code executed successfully.",
+          "data": {
+            "result": "False,False,False",
+            "compiler": "roslyn"
+          }
+        },
+        "isError": false
+      }
+    }
+  ],
+  "console_before": {
+    "jsonrpc": "2.0",
+    "id": 60,
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\":true,\"message\":\"Retrieved 0 log entries.\",\"data\":[]}"
+        }
+      ],
+      "structuredContent": {
+        "success": true,
+        "message": "Retrieved 0 log entries.",
+        "data": []
+      },
+      "isError": false
+    }
+  },
+  "execute_pipeline": {
+    "jsonrpc": "2.0",
+    "id": 61,
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\":true,\"message\":\"Attempted to execute menu item: 'AI Tools/Run Tactical Acceptance Pipeline'. Check Unity logs for confirmation or errors.\",\"error\":null,\"data\":null,\"hint\":null}"
+        }
+      ],
+      "structuredContent": {
+        "success": true,
+        "message": "Attempted to execute menu item: 'AI Tools/Run Tactical Acceptance Pipeline'. Check Unity logs for confirmation or errors.",
+        "error": null,
+        "data": null,
+        "hint": null
+      },
+      "isError": false
+    }
+  },
+  "pipeline_polls_count": 5,
+  "console_after": {
+    "jsonrpc": "2.0",
+    "id": 500,
+    "result": {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"success\":true,\"message\":\"Retrieved 11 log entries.\",\"data\":[\"[AI Tools] Tactical playable route gate report written to docs/TACTICAL_PLAYABLE_ROUTE_GATE.json passed=True\",\"[AI Tools] Realified asset class promotion queue written to docs/REALIFIED_ASSET_CLASS_PROMOTION_QUEUE.json\",\"[AI Tools] Tactical verified player POV camera render written to Assets/Screenshots/tactical_html_replica_current_player_pov_verified.png prepared=True\",\"[AI Tools] Tactical player POV gate report written to docs/TACTICAL_PLAYER_POV_GATE.json passed=True\",\"[AI Tools] Building integrity gate report written to docs/BUILDING_INTEGRITY_GATE.json passed=True\",\"[AI Tools] Promoted asset player camera visibility gate written to docs/PROMOTED_ASSET_PLAYER_CAMERA_VISIBILITY_GATE.json passed=False\",\"[AI Tools] Tactical gameplay proof gate report written to docs/TACTICAL_GAMEPLAY_PROOF_GATE.json passed=True\",\"[AI Tools] Realified asset gameplay promotion ledger written to docs/REALIFIED_ASSET_GAMEPLAY_PROMOTION_LEDGER.json promoted=1\",\"[AI Tools] HTML tactical parity gate report written to docs/HTML_TACTICAL_PARITY_GATE.json passed=True\",\"Account API did not become accessible within 30 seconds. This may be due to network issues or editor focus.\",\"[AI Tools] Tactical acceptance pipeline complete. Report: docs/TACTICAL_ACCEPTANCE_PIPELINE_REPORT.json\"]}"
+        }
+      ],
+      "structuredContent": {
+        "success": true,
+        "message": "Retrieved 11 log entries.",
+        "data": [
+          "[AI Tools] Tactical playable route gate report written to docs/TACTICAL_PLAYABLE_ROUTE_GATE.json passed=True",
+          "[AI Tools] Realified asset class promotion queue written to docs/REALIFIED_ASSET_CLASS_PROMOTION_QUEUE.json",
+          "[AI Tools] Tactical verified player POV camera render written to Assets/Screenshots/tactical_html_replica_current_player_pov_verified.png prepared=True",
+          "[AI Tools] Tactical player POV gate report written to docs/TACTICAL_PLAYER_POV_GATE.json passed=True",
+          "[AI Tools] Building integrity gate report written to docs/BUILDING_INTEGRITY_GATE.json passed=True",
+          "[AI Tools] Promoted asset player camera visibility gate written to docs/PROMOTED_ASSET_PLAYER_CAMERA_VISIBILITY_GATE.json passed=False",
+          "[AI Tools] Tactical gameplay proof gate report written to docs/TACTICAL_GAMEPLAY_PROOF_GATE.json passed=True",
+          "[AI Tools] Realified asset gameplay promotion ledger written to docs/REALIFIED_ASSET_GAMEPLAY_PROMOTION_LEDGER.json promoted=1",
+          "[AI Tools] HTML tactical parity gate report written to docs/HTML_TACTICAL_PARITY_GATE.json passed=True",
+          "Account API did not become accessible within 30 seconds. This may be due to network issues or editor focus.",
+          "[AI Tools] Tactical acceptance pipeline complete. Report: docs/TACTICAL_ACCEPTANCE_PIPELINE_REPORT.json"
+        ]
+      },
+      "isError": false
+    }
+  },
+  "building_report_mtime_before": 1779085996.7642272,
+  "building_report_mtime_after": 1779086173.40973,
+  "acceptance_report_mtime_before": 1779085998.8399289,
+  "acceptance_report_mtime_after": 1779086175.4411814,
+  "building_report": {
+    "schema": "building_integrity_gate_v1",
+    "timestamp_utc": "2026-05-18T06:36:13.4093850Z",
+    "application_is_playing": true,
+    "passed": true,
+    "application_ready": true,
+    "scene_objects_ready": true,
+    "spawn_outside_building": true,
+    "doorway_clear": true,
+    "first_floor_entry": true,
+    "first_floor_support": true,
+    "ladder_upper_floor": true,
+    "upper_floor_support": true,
+    "roof_edge_drop_clear": true,
+    "container_raycast_blocks_line": true,
+    "enemy_open_lane_damages_player": true,
+    "enemy_cover_prevents_damage": true,
+    "screenshot_count": 4,
+    "screenshots": [
+      {
+        "label": "01_building_a_door_entry_start",
+        "path": "Assets/Screenshots/BuildingIntegrity/01_building_a_door_entry_start.png",
+        "note": "Standing outside Building A doorway"
+      },
+      {
+        "label": "02_building_a_first_floor_inside",
+        "path": "Assets/Screenshots/BuildingIntegrity/02_building_a_first_floor_inside.png",
+        "note": "Moved through doorway into Building A first floor"
+      },
+      {
+        "label": "02b_ladder_upper_floor",
+        "path": "Assets/Screenshots/BuildingIntegrity/02b_ladder_upper_floor.png",
+        "note": "Used Building A interior ladder and reached upper floor"
+      },
+      {
+        "label": "03_cover_block_probe",
+        "path": "Assets/Screenshots/BuildingIntegrity/03_cover_block_probe.png",
+        "note": "Player positioned behind container cover for enemy line-of-sight proof"
+      }
+    ],
+    "details": "spawnOutsideBuilding=True; doorwayRay blocked=False; entryCapsule blocked=False; firstFloorEntry inside=True routeClear=True distance=0.00; A Floor 1 supportHit=A Floor 1 distance=3.22; ladder floor 1->3 y=9.24 inside=True; A Floor 3 supportHit=A Floor 3 distance=3.22; roof centerSupported=True edgeImmediateRoof=False; containerRay blocked=True hit=Container 1; openShot hp=96.2; coverShot hp=100.0;"
+  },
+  "acceptance_report_status": "complete",
+  "acceptance_building_integrity_gate_passed": true,
+  "acceptance_all_required_current_gates_passed": true,
+  "building_integrity_passed": true
+}
