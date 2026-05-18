@@ -1,0 +1,175 @@
+{
+  "schema": "m0_6_community_unity_mcp_skill_verification_v1",
+  "timestamp_utc": "2026-05-18T08:35:49Z",
+  "repo_root": "/Users/yuanshaochen/Projects/unity-tactical-html-parity-review",
+  "active_unity_project": "/Users/yuanshaochen/My project",
+  "skill_files": {
+    "skill_md_exists": true,
+    "reference_exists": true,
+    "skill_md": ".codex/skills/community-unity-mcp-adapter/SKILL.md",
+    "reference": ".codex/skills/community-unity-mcp-adapter/references/community-mcp-tool-contract.md",
+    "current_session_discovery": "not_proven_in_existing_session",
+    "note": "Current running Codex session was started before this patch, so runtime skill selector discovery cannot be freshly proven in-process; filesystem install is verified and next-session discovery is the follow-up check."
+  },
+  "community_mcp": {
+    "initialize_server": {
+      "name": "mcp-for-unity-server",
+      "version": "3.3.1"
+    },
+    "tool_count": 43,
+    "key_tools_present": {
+      "execute_menu_item": true,
+      "read_console": true,
+      "execute_code": true,
+      "batch_execute": true
+    },
+    "resource_count": 19,
+    "editor_state_resource": {
+      "status_code": 200,
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 4,
+        "result": {
+          "contents": [
+            {
+              "uri": "mcpforunity://editor/state",
+              "mimeType": "text/plain",
+              "text": "{\"success\":true,\"message\":\"Retrieved editor state.\",\"error\":null,\"data\":{\"schema_version\":\"unity-mcp/editor_state@2\",\"observed_at_unix_ms\":1779093332202,\"sequence\":7,\"unity\":{\"instance_id\":\"My project@211ba4f93a2f60f3\",\"unity_version\":\"6000.4.7f1\",\"project_id\":null,\"platform\":\"OSXEditor\",\"is_batch_mode\":false},\"editor\":{\"is_focused\":false,\"play_mode\":{\"is_playing\":false,\"is_paused\":false,\"is_changing\":false},\"active_scene\":{\"path\":\"Assets/Scenes/TacticalPrototype.unity\",\"guid\":\"ff51dc9959a6f4940b96becaa20ee69b\",\"name\":\"TacticalPrototype\"}},\"activity\":{\"phase\":\"idle\",\"since_unix_ms\":1779093006231,\"reasons\":[\"tick\"]},\"compilation\":{\"is_compiling\":false,\"is_domain_reload_pending\":false,\"last_compile_started_unix_ms\":null,\"last_compile_finished_unix_ms\":null,\"last_domain_reload_before_unix_ms\":null,\"last_domain_reload_after_unix_ms\":1779092984763},\"assets\":{\"is_updating\":false,\"external_changes_dirty\":true,\"external_changes_last_seen_unix_ms\":1779093332524,\"external_changes_dirty_since_unix_ms\":1779093332524,\"external_changes_last_cleared_unix_ms\":1779048577258,\"refresh\":{\"is_refresh_in_progress\":false,\"last_refresh_requested_unix_ms\":null,\"last_refresh_finished_unix_ms\":null}},\"tests\":{\"is_running\":false,\"mode\":null,\"current_job_id\":null,\"started_unix_ms\":null,\"started_by\":\"unknown\",\"last_run\":null},\"transport\":{\"unity_bridge_connected\":null,\"last_message_unix_ms\":null},\"settings\":{\"batch_execute_max_commands\":25},\"advice\":{\"ready_for_tools\":true,\"blocking_reasons\":[],\"recommended_retry_after_ms\":0,\"recommended_next_action\":\"none\"},\"staleness\":{\"age_ms\":357,\"is_stale\":false}},\"hint\":null}"
+            }
+          ]
+        }
+      }
+    },
+    "instances_resource": {
+      "status_code": 200,
+      "response": {
+        "jsonrpc": "2.0",
+        "id": 5,
+        "result": {
+          "contents": [
+            {
+              "uri": "mcpforunity://instances",
+              "mimeType": "text/plain",
+              "text": "{\"success\": true, \"transport\": \"http\", \"instance_count\": 1, \"instances\": [{\"id\": \"My project@211ba4f93a2f60f3\", \"name\": \"My project\", \"hash\": \"211ba4f93a2f60f3\", \"unity_version\": \"6000.4.7f1\", \"connected_at\": \"2026-05-18T08:35:29.837201+00:00\", \"session_id\": \"95aa49af-b087-4dd4-935c-fec8b4b17528\"}]}"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "preflight_run": {
+    "console_before": {
+      "jsonrpc": "2.0",
+      "id": 6,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true,\"message\":\"Retrieved 1 log entries.\",\"data\":[\"Account API did not become accessible within 30 seconds. This may be due to network issues or editor focus.\"]}"
+          }
+        ],
+        "structuredContent": {
+          "success": true,
+          "message": "Retrieved 1 log entries.",
+          "data": [
+            "Account API did not become accessible within 30 seconds. This may be due to network issues or editor focus."
+          ]
+        },
+        "isError": false
+      }
+    },
+    "editor_state": {
+      "jsonrpc": "2.0",
+      "id": 7,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":\"playing=False compiling=False updating=False\",\"compiler\":\"roslyn\"}}"
+          }
+        ],
+        "structuredContent": {
+          "success": true,
+          "message": "Code executed successfully.",
+          "data": {
+            "result": "playing=False compiling=False updating=False",
+            "compiler": "roslyn"
+          }
+        },
+        "isError": false
+      }
+    },
+    "execute_menu_item": {
+      "jsonrpc": "2.0",
+      "id": 8,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true,\"message\":\"Attempted to execute menu item: 'AI Tools/Run Tactical Preflight'. Check Unity logs for confirmation or errors.\",\"error\":null,\"data\":null,\"hint\":null}"
+          }
+        ],
+        "structuredContent": {
+          "success": true,
+          "message": "Attempted to execute menu item: 'AI Tools/Run Tactical Preflight'. Check Unity logs for confirmation or errors.",
+          "error": null,
+          "data": null,
+          "hint": null
+        },
+        "isError": false
+      }
+    },
+    "console_after": {
+      "jsonrpc": "2.0",
+      "id": 9,
+      "result": {
+        "content": [
+          {
+            "type": "text",
+            "text": "{\"success\":true,\"message\":\"Retrieved 14 log entries.\",\"data\":[\"[AI Tools] Tactical playable route gate report written to docs/TACTICAL_PLAYABLE_ROUTE_GATE.json passed=True\",\"[AI Tools] Realified asset class promotion queue written to docs/REALIFIED_ASSET_CLASS_PROMOTION_QUEUE.json\",\"[AI Tools] Tactical verified player POV camera render written to Assets/Screenshots/tactical_html_replica_current_player_pov_verified.png prepared=True\",\"[AI Tools] Tactical player POV gate report written to docs/TACTICAL_PLAYER_POV_GATE.json passed=True\",\"[AI Tools] Building integrity gate report written to docs/BUILDING_INTEGRITY_GATE.json passed=True\",\"[AI Tools] Promoted asset player camera visibility gate written to docs/PROMOTED_ASSET_PLAYER_CAMERA_VISIBILITY_GATE.json passed=False\",\"[AI Tools] Tactical gameplay proof gate report written to docs/TACTICAL_GAMEPLAY_PROOF_GATE.json passed=True\",\"[AI Tools] Realified asset gameplay promotion ledger written to docs/REALIFIED_ASSET_GAMEPLAY_PROMOTION_LEDGER.json promoted=1\",\"[AI Tools] HTML tactical parity gate report written to docs/HTML_TACTICAL_PARITY_GATE.json passed=True\",\"[AI Tools] Weapon feel gate report written to docs/WEAPON_FEEL_GATE.json passed=True\",\"[AI Tools] Tactical acceptance pipeline complete. Report: docs/TACTICAL_ACCEPTANCE_PIPELINE_REPORT.json\",\"Account API did not become accessible within 30 seconds. This may be due to network issues or editor focus.\",\"<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [ExecuteMenuItem] Handling menu item command\",\"[AI Tools] Tactical preflight report written to docs/TACTICAL_PREFLIGHT_REPORT.json passed=True\"]}"
+          }
+        ],
+        "structuredContent": {
+          "success": true,
+          "message": "Retrieved 14 log entries.",
+          "data": [
+            "[AI Tools] Tactical playable route gate report written to docs/TACTICAL_PLAYABLE_ROUTE_GATE.json passed=True",
+            "[AI Tools] Realified asset class promotion queue written to docs/REALIFIED_ASSET_CLASS_PROMOTION_QUEUE.json",
+            "[AI Tools] Tactical verified player POV camera render written to Assets/Screenshots/tactical_html_replica_current_player_pov_verified.png prepared=True",
+            "[AI Tools] Tactical player POV gate report written to docs/TACTICAL_PLAYER_POV_GATE.json passed=True",
+            "[AI Tools] Building integrity gate report written to docs/BUILDING_INTEGRITY_GATE.json passed=True",
+            "[AI Tools] Promoted asset player camera visibility gate written to docs/PROMOTED_ASSET_PLAYER_CAMERA_VISIBILITY_GATE.json passed=False",
+            "[AI Tools] Tactical gameplay proof gate report written to docs/TACTICAL_GAMEPLAY_PROOF_GATE.json passed=True",
+            "[AI Tools] Realified asset gameplay promotion ledger written to docs/REALIFIED_ASSET_GAMEPLAY_PROMOTION_LEDGER.json promoted=1",
+            "[AI Tools] HTML tactical parity gate report written to docs/HTML_TACTICAL_PARITY_GATE.json passed=True",
+            "[AI Tools] Weapon feel gate report written to docs/WEAPON_FEEL_GATE.json passed=True",
+            "[AI Tools] Tactical acceptance pipeline complete. Report: docs/TACTICAL_ACCEPTANCE_PIPELINE_REPORT.json",
+            "Account API did not become accessible within 30 seconds. This may be due to network issues or editor focus.",
+            "<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [ExecuteMenuItem] Handling menu item command",
+            "[AI Tools] Tactical preflight report written to docs/TACTICAL_PREFLIGHT_REPORT.json passed=True"
+          ]
+        },
+        "isError": false
+      }
+    },
+    "copied_reports": [
+      "docs/TACTICAL_PREFLIGHT_REPORT.json",
+      "docs/UNITY_MCP_SMOKE_REPORT_LATEST.json"
+    ],
+    "tactical_preflight_report_summary": {
+      "status": null,
+      "passed": true,
+      "active_scene": "Assets/Scenes/TacticalPrototype.unity",
+      "console_errors": 0,
+      "console_warnings": 1,
+      "html_baseline_exists": true,
+      "tactical_scene_exists": true,
+      "workflow_tools_exists": null
+    }
+  },
+  "passed": true,
+  "remaining_risks": [
+    "Current Codex session skill selector was not restarted after adding the repo-local skill, so runtime discovery must be checked in a fresh session or by configured skill loader.",
+    "Official Unity MCP remains a different bridge and should not be assumed from this verification."
+  ]
+}

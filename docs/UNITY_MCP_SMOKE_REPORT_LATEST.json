@@ -1,19 +1,15 @@
 {
-  "timestamp_utc": "2026-05-17T15:15:42.322405+00:00",
-  "mcp_url": "http://127.0.0.1:8080/mcp",
-  "execute_acceptance": false,
-  "errors": [],
-  "session_id": "6b120969661e4e36b7a1d2edfecc81a2",
-  "protocol_version": "2025-06-18",
-  "server_name": "mcp-for-unity-server",
-  "server_version": "3.3.1",
-  "tools_count": 43,
-  "required_tools": {
-    "read_console": true,
-    "execute_menu_item": true,
-    "manage_editor": true,
-    "tools_list": true
-  },
-  "read_console_ok": true,
-  "read_console_response_excerpt": "{\"content\": [{\"type\": \"text\", \"text\": \"{\\\"success\\\":true,\\\"message\\\":\\\"Retrieved 5 log entries.\\\",\\\"data\\\":[{\\\"type\\\":\\\"Log\\\",\\\"message\\\":\\\"[AI Tools] Tactical playable route gate report written to docs/TACTICAL_PLAYABLE_ROUTE_GATE.json passed=True\\\",\\\"file\\\":\\\"Assets/Editor/TacticalPlayableRouteGate.cs\\\",\\\"line\\\":161,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Log\\\",\\\"message\\\":\\\"[AI Tools] Tactical verified player POV camera render written to Assets/Screenshots/tactical_html_replica_current_player_pov_verified.png prepared=True\\\",\\\"file\\\":\\\"Assets/Editor/TacticalPlayerPovGate.cs\\\",\\\"line\\\":29,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Log\\\",\\\"message\\\":\\\"[AI Tools] Tactical player POV gate report written to docs/TACTICAL_PLAYER_POV_GATE.json passed=True\\\",\\\"file\\\":\\\"Assets/Editor/TacticalPlayerPovGate.cs\\\",\\\"line\\\":190,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Log\\\",\\\"message\\\":\\\"[AI Tools] Tactical gameplay proof gate report written to docs/TACTICAL_GAMEPLAY_PROOF_GATE.json passed=True\\\",\\\"file\\\":\\\"Assets/Editor/TacticalGameplayProofGate.cs\\\",\\\"line\\\":160,\\\"stackTrace\\\":null},{\\\"type\\\":\\\"Log\\\",\\\"message\\\":\\\"[AI Tools] Tactical acceptance pipeline complete. Report: docs/TACTICAL_ACCEPTANCE_PIPELINE_REPORT.json\\\",\\\"file\\\":\\\"Assets/Editor/TacticalAcceptancePipeline.cs\\\",\\\"line\\\":232,\\\"stackTrace\\\":null}]}\"}], \"structuredContent\": {\"success\": true, \"message\": \"Retrieved 5 log entries.\", \"data\": [{\"type\": \"Log\", \"message\": \"[AI Tools] Tactical playable route gate report written to docs/TACTICAL_PLAYABLE_ROUTE_GATE.json passed=True\", \"file\": \"Assets/Editor/TacticalPlayableRouteGate.cs\", \"line\": 161, \"stackTrace\": null}, {\"type\": \"Log\", \"message\": \"[AI Tools] Tactical verified player POV camera render written to Assets/Screenshots/tactical_html_replica_current_player_pov_verified.png prepared=True\", \"file\": \"Assets/Editor/TacticalPlayerPovGate.cs\", \"line\": 29, \"stackTrace\": null}, {\"type\": \"Log\", \"message\": \"[AI Tools] Tactical player POV gate report written to docs/TACTICAL_PLAYER_POV_GATE.json pas"
+  "schema": "unity_mcp_smoke_report_v2",
+  "timestamp_utc": "2026-05-18T06:11:26.8774780Z",
+  "passed": true,
+  "transport_checked_by_this_command": false,
+  "transport_note": "This in-Editor command verifies project/editor readiness. MCP transport is proven only when an external client invokes this command and reads this report.",
+  "community_mcp_package_present": true,
+  "expected_http_endpoint": "http://127.0.0.1:8080/mcp",
+  "editor_is_compiling": false,
+  "editor_is_updating": false,
+  "application_is_playing": false,
+  "console_errors": 0,
+  "console_warnings": 1,
+  "active_scene": "Assets/Scenes/TacticalPrototype.unity"
 }

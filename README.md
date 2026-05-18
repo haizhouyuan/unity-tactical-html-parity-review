@@ -53,6 +53,9 @@ For the current active-Unity verification and first post-M0 gameplay gate, read:
 ```text
 docs/M0_5R_ACTIVE_UNITY_SESSION_VERIFICATION_2026-05-18.md
 docs/M81_BUILDING_INTEGRITY_COMPLETION_2026-05-18.md
+docs/M82_WEAPON_FEEL_COMPLETION_2026-05-18.md
+docs/M0_6_COMMUNITY_UNITY_MCP_SKILL_VERIFICATION_2026-05-18.md
+docs/COMMUNITY_UNITY_MCP_CODEX_SKILL_PLAN.md
 ```
 
 Project-local Codex skills live under:

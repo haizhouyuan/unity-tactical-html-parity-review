@@ -127,6 +127,30 @@ Definition of done:
 
 - M0.5 passes, or a blocker report names the exact failed layer: Unity project path, compile errors, menu import, MCP connection, or command execution.
 
+### M0.6: Community Unity MCP Skill Verification
+
+Status: completed on 2026-05-18.
+
+Goal:
+
+- Add and verify a repo-local Codex adapter skill for the current CoplayDev/community Unity MCP bridge.
+
+Checklist:
+
+- [x] Add `.codex/skills/community-unity-mcp-adapter/SKILL.md`.
+- [x] Add `.codex/skills/community-unity-mcp-adapter/references/community-mcp-tool-contract.md`.
+- [x] Document the skill plan in `docs/COMMUNITY_UNITY_MCP_CODEX_SKILL_PLAN.md`.
+- [x] Verify the community MCP bridge exposes `execute_menu_item`, `read_console`, `execute_code`, and `batch_execute`.
+- [x] Run `AI Tools/Run Tactical Preflight` through community MCP.
+- [x] Copy/read `docs/TACTICAL_PREFLIGHT_REPORT.json`.
+- [x] Record that current-session skill selector discovery is not proven until a fresh Codex session loads the new repo-local skill.
+
+Latest evidence:
+
+- `docs/M0_6_COMMUNITY_UNITY_MCP_SKILL_VERIFICATION_2026-05-18.md`
+- `docs/M0_6_COMMUNITY_UNITY_MCP_SKILL_VERIFICATION_2026-05-18.json`
+- `docs/TACTICAL_PREFLIGHT_REPORT.json`
+
 ### M81: Building Integrity Gate
 
 Status: completed on 2026-05-18.
