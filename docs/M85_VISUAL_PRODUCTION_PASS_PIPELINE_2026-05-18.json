@@ -1,0 +1,16 @@
+{
+  "schema": "m85_visual_production_pipeline_snapshot_v1",
+  "timestamp_utc": "2026-05-18T17:57:00Z",
+  "acceptance_report": "docs/TACTICAL_ACCEPTANCE_PIPELINE_REPORT.json",
+  "m85_report": "docs/M85_VISUAL_PRODUCTION_PASS.json",
+  "status": "complete",
+  "console_errors": 0,
+  "console_warnings": 0,
+  "all_required_current_gates_passed": true,
+  "m84_three_class_asset_factory_spike_passed": true,
+  "m85_visual_production_passed": true,
+  "full_visual_asset_gate_passed": false,
+  "m85_visual_detail_object_count": 67,
+  "after_screenshot_count": 4,
+  "truthful_full_visual_status_preserved": true
+}

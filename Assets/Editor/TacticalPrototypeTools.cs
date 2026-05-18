@@ -442,7 +442,96 @@ This scene is the Unity-side HTML tactical game replica pass. It is intentionall
         Box("Tactical Light Housing 02", new Vector3(26f, 6.5f, -18f), new Vector3(1.2f, 0.32f, 0.52f), materials["armor"]);
         Box("Tactical Warehouse Light Housing", new Vector3(0f, 5.1f, -28f), new Vector3(2.2f, 0.18f, 0.42f), materials["medical"]);
 
+        CreateM85VisualProductionDetails(materials);
         CreateRainField();
+    }
+
+    private static void CreateM85VisualProductionDetails(Dictionary<string, Material> materials)
+    {
+        var puddle = SaveMaterial("M85WetPuddleDecal", new Color(0.025f, 0.036f, 0.045f), 0.96f);
+        var mud = SaveMaterial("M85MudScuffDecal", new Color(0.090f, 0.075f, 0.055f), 0.30f);
+        var paint = SaveMaterial("M85FadedRoadPaintDecal", new Color(0.92f, 0.72f, 0.24f), 0.44f);
+        var cable = SaveMaterial("M85BlackCableBundle", new Color(0.012f, 0.013f, 0.014f), 0.36f);
+        var brass = SaveMaterial("M85SpentCasingMetal", new Color(0.78f, 0.58f, 0.28f), 0.62f);
+        var grime = SaveMaterial("M85WallGrimeDecal", new Color(0.050f, 0.058f, 0.055f), 0.28f);
+        var warning = SaveMaterial("M85WarningMarkerRed", new Color(0.70f, 0.08f, 0.06f), 0.38f);
+
+        var puddles = new[]
+        {
+            new Vector3(-4.8f, 0.075f, 20.2f), new Vector3(5.4f, 0.075f, 17.6f),
+            new Vector3(-1.8f, 0.075f, 30.8f), new Vector3(8.8f, 0.075f, 8.2f),
+            new Vector3(-12.5f, 0.075f, -2.8f), new Vector3(14.2f, 0.075f, -6.8f),
+            new Vector3(-3.0f, 0.075f, -23.5f), new Vector3(3.7f, 0.075f, -32.2f)
+        };
+        for (var i = 0; i < puddles.Length; i++)
+        {
+            var obj = Box("M85 Wet Puddle Decal " + (i + 1), puddles[i], new Vector3(3.6f + i % 3 * 0.45f, 0.018f, 1.0f + i % 2 * 0.35f), puddle);
+            obj.transform.eulerAngles = new Vector3(0f, i * 23f, 0f);
+            DisableCollider(obj);
+        }
+
+        var scuffs = new[]
+        {
+            new Vector3(-7.0f, 0.095f, 21.0f), new Vector3(-9.2f, 0.095f, 24.0f),
+            new Vector3(9.1f, 0.095f, 20.5f), new Vector3(11.6f, 0.095f, 24.6f),
+            new Vector3(-39.0f, 0.095f, -14.2f), new Vector3(-36.0f, 0.095f, -12.4f),
+            new Vector3(31.2f, 0.095f, -15.8f), new Vector3(35.4f, 0.095f, -14.8f),
+            new Vector3(3.0f, 0.095f, -25.5f), new Vector3(-2.4f, 0.095f, -30.4f)
+        };
+        for (var i = 0; i < scuffs.Length; i++)
+        {
+            var obj = Box("M85 Mud Scuff Decal " + (i + 1), scuffs[i], new Vector3(1.6f, 0.016f, 0.22f), mud);
+            obj.transform.eulerAngles = new Vector3(0f, 15f + i * 31f, 0f);
+            DisableCollider(obj);
+        }
+
+        for (var i = 0; i < 10; i++)
+        {
+            var z = -34f + i * 7.5f;
+            var left = Box("M85 Faded Road Paint Stripe L " + (i + 1), new Vector3(-2.2f, 0.11f, z), new Vector3(1.65f, 0.018f, 0.16f), paint);
+            var right = Box("M85 Faded Road Paint Stripe R " + (i + 1), new Vector3(2.2f, 0.11f, z), new Vector3(1.65f, 0.018f, 0.16f), paint);
+            left.transform.eulerAngles = new Vector3(0f, 4f, 0f);
+            right.transform.eulerAngles = new Vector3(0f, -4f, 0f);
+            DisableCollider(left);
+            DisableCollider(right);
+        }
+
+        var cablePositions = new[]
+        {
+            new Vector3(-11.0f, 0.16f, 17.6f), new Vector3(-8.8f, 0.16f, 17.1f),
+            new Vector3(9.8f, 0.16f, 19.5f), new Vector3(12.4f, 0.16f, 19.0f),
+            new Vector3(-1.7f, 0.16f, -19.8f), new Vector3(2.6f, 0.16f, -23.8f)
+        };
+        for (var i = 0; i < cablePositions.Length; i++)
+        {
+            var obj = Box("M85 Cable Bundle " + (i + 1), cablePositions[i], new Vector3(2.2f, 0.055f, 0.08f), cable);
+            obj.transform.eulerAngles = new Vector3(0f, 12f + i * 27f, 0f);
+            DisableCollider(obj);
+        }
+
+        for (var i = 0; i < 16; i++)
+        {
+            var x = 70.5f + (i % 4) * 0.22f;
+            var z = 70.8f + (i / 4) * 0.18f;
+            var casingObject = Box("M85 Spent Casing " + (i + 1), new Vector3(x, 0.13f, z), new Vector3(0.12f, 0.035f, 0.035f), brass);
+            casingObject.transform.eulerAngles = new Vector3(0f, i * 19f, 0f);
+            DisableCollider(casingObject);
+        }
+
+        var grimeTargets = new[]
+        {
+            new Vector3(-38f, 1.18f, -13.62f), new Vector3(-38f, 2.42f, -13.62f),
+            new Vector3(32f, 1.18f, -15.62f), new Vector3(32f, 2.42f, -15.62f),
+            new Vector3(0f, 1.30f, -18.62f), new Vector3(0f, 2.62f, -18.62f)
+        };
+        for (var i = 0; i < grimeTargets.Length; i++)
+        {
+            var obj = Box("M85 Wall Grime Decal " + (i + 1), grimeTargets[i], new Vector3(2.5f, 0.62f, 0.035f), grime);
+            DisableCollider(obj);
+        }
+
+        var redMarker = Box("M85 Checkpoint Warning Marker", new Vector3(0f, 0.13f, 16.4f), new Vector3(7.8f, 0.025f, 0.22f), warning);
+        DisableCollider(redMarker);
     }
 
     private static VolumeProfile CreateTacticalPostProcessProfile()

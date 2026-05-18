@@ -381,7 +381,7 @@ Latest evidence:
 
 ### M85: Visual Production Pass
 
-Status: todo after M81-M84 produce honest gates.
+Status: completed on 2026-05-18.
 
 Primary lane: visual direction.
 
@@ -402,20 +402,30 @@ Scope:
 
 Checklist:
 
-- [ ] Create mission contract for M85.
-- [ ] Capture before screenshots from player route.
-- [ ] Define visual style guide for small tactical slice.
-- [ ] Add scoped decals/clutter/material variation.
-- [ ] Tune lighting/postprocess without hiding asset defects.
-- [ ] Capture after screenshots from same route.
-- [ ] Run AI/human visual review.
-- [ ] Run acceptance pipeline.
+- [x] Create mission contract for M85.
+- [x] Capture before screenshots from player route.
+- [x] Define visual style guide for small tactical slice.
+- [x] Add scoped decals/clutter/material variation.
+- [x] Tune lighting/postprocess without hiding asset defects.
+- [x] Capture after screenshots from same route.
+- [x] Run visual review through an M85-specific JSON gate.
+- [x] Run acceptance pipeline.
 
 Definition of done:
 
 - Before/after player-camera evidence exists.
 - Gameplay route still passes.
 - Full visual asset gate improves without hiding failed categories.
+
+Latest evidence:
+
+- `docs/M85_VISUAL_PRODUCTION_PASS_MISSION_CONTRACT_2026-05-18.md`
+- `docs/M85_VISUAL_STYLE_GUIDE_2026-05-18.md`
+- `docs/M85_VISUAL_PRODUCTION_PASS.json`
+- `docs/M85_VISUAL_PRODUCTION_PASS.md`
+- `docs/M85_VISUAL_PRODUCTION_PASS_COMPLETION_2026-05-18.md`
+- `docs/M85_VISUAL_PRODUCTION_PASS_PIPELINE_2026-05-18.json`
+- `Assets/Screenshots/M85VisualProduction/`
 
 ### M86: Build / Release Gate
 
@@ -536,7 +546,7 @@ The track is not done until:
 - [x] M82 weapon feel gate passes.
 - [x] M83 AI playtest route passes.
 - [x] M84 three-class asset factory spike passes.
-- [ ] M85 visual production pass improves player-camera realism without gate regression.
+- [x] M85 visual production pass improves player-camera realism without gate regression.
 - [ ] M86 build/release gate produces a launchable review packet or explicit blocker.
 - [ ] `full_visual_asset_gate_passed=true`.
 - [ ] promoted asset visibility gate passes at class level.
@@ -544,4 +554,4 @@ The track is not done until:
 
 ## Immediate Next Action
 
-Run M85 Visual Production Pass next.
+Run M86 Build / Release Gate next.

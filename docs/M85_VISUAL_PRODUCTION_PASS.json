@@ -1,0 +1,65 @@
+{
+  "schema": "m85_visual_production_pass_v1",
+  "timestamp_utc": "2026-05-18T10:02:19.4520730Z",
+  "application_is_playing": true,
+  "passed": true,
+  "application_ready": true,
+  "before_reference_screenshots_present": true,
+  "before_reference_screenshots": [
+    "Assets/Screenshots/M85VisualProduction/00_before_building_entry_route.png",
+    "Assets/Screenshots/M85VisualProduction/00_before_container_cover_route.png",
+    "Assets/Screenshots/M85VisualProduction/00_before_first_person_weapon_route.png"
+  ],
+  "base_visual_systems_passed": true,
+  "scoped_visual_density_passed": true,
+  "screenshot_quality_passed": true,
+  "route_still_passed": true,
+  "truthful_full_visual_status_preserved": true,
+  "m85_visual_detail_object_count": 67,
+  "wet_puddle_decal_count": 8,
+  "mud_scuff_decal_count": 10,
+  "faded_road_paint_count": 20,
+  "cable_bundle_count": 6,
+  "spent_casing_count": 16,
+  "wall_grime_decal_count": 6,
+  "warning_marker_count": 1,
+  "rain_field_count": 1,
+  "postprocess_volume_count": 1,
+  "industrial_light_count": 3,
+  "wet_asphalt_renderer_count": 2,
+  "concrete_renderer_count": 71,
+  "fog_density": 0.01,
+  "after_screenshot_count": 4,
+  "after_screenshots": [
+    {
+      "label": "M85 after: first-person hero rifle over wet tactical road",
+      "path": "Assets/Screenshots/M85VisualProduction/01_after_first_person_weapon_wet_route.png",
+      "exists": true,
+      "file_bytes": 1341993,
+      "average_luma": 0.410605
+    },
+    {
+      "label": "M85 after: container cover, rain, puddles, decals, and yard lighting",
+      "path": "Assets/Screenshots/M85VisualProduction/02_after_container_cover_rain_lights.png",
+      "exists": true,
+      "file_bytes": 1299595,
+      "average_luma": 0.35757
+    },
+    {
+      "label": "M85 after: building entry with grime, mud scuffs, and route-readable doorway",
+      "path": "Assets/Screenshots/M85VisualProduction/03_after_building_entry_grime_route.png",
+      "exists": true,
+      "file_bytes": 1664518,
+      "average_luma": 0.228506
+    },
+    {
+      "label": "M85 after: enemy character silhouette under gameplay lighting",
+      "path": "Assets/Screenshots/M85VisualProduction/04_after_enemy_character_lighting_route.png",
+      "exists": true,
+      "file_bytes": 648952,
+      "average_luma": 0.442526
+    }
+  ],
+  "full_visual_asset_gate_intentionally_not_overridden": true,
+  "visual_completion_blocker": "Full visual completion still needs final first-person hero weapon art review, final humanoid art/retarget quality review, and remaining class-by-class promotion of generated GLBs. Current RealifiedAssets audit: 27 promotable, 21 textured probes, 27 sidecar-promotable; crate scene instances 0, container scene instances 0, gear scene instances 0, loot scene instances 0, weapon scene instances 163. Current approved character GLBs now contain skin, animation data, and an authored tactical detail kit, but the humanoid art is still an intermediate tactical import rather than a final production character."
+}
