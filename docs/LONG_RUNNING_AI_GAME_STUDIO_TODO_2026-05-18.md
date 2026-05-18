@@ -810,7 +810,7 @@ Return to the M88 strict visual blockers: final weapon art review, final humanoi
 
 ### M93: Realified Batch Root Cause / Regeneration Contract
 
-Status: root cause documented; regeneration not yet executed.
+Status: root cause documented; corrected loot fallback assets generated; Unity contact-sheet/import evidence refreshed; local Nemotron semantic review passes for the corrected loot contact sheet; gameplay promotion is still open.
 
 Primary lane: asset pipeline / visual direction / evidence audit.
 
@@ -822,15 +822,25 @@ Current finding:
 
 Next executable slice:
 
-- Regenerate or replace one non-weapon class first, preferably `loot`, through quarantine -> semantic review -> import/material validation -> gameplay binding -> player-camera pickup evidence.
+- Continue the corrected `loot` slice through gameplay binding -> player-camera pickup evidence -> promotion ledger update from evidence only.
 
 Checklist:
 
 - [x] Document that the current Realified batch cannot be promoted by ledger edits.
-- [ ] Inspect the asset-generation prompts/manifests for the mislabeled non-weapon assets.
-- [ ] Regenerate or replace one loot-class asset with category-correct geometry.
-- [ ] Run semantic contact-sheet review for the corrected loot class.
-- [ ] Import the corrected asset into Unity with material sidecars.
+- [x] Inspect the asset-generation/source-trace evidence for the mislabeled non-weapon assets.
+- [x] Regenerate or replace one loot-class asset with category-correct geometry.
+- [x] Import the corrected asset into Unity with material sidecars.
+- [x] Refresh Unity contact-sheet evidence for the corrected loot class.
+- [x] Run semantic contact-sheet review for the corrected loot class.
 - [ ] Bind one corrected loot asset into gameplay.
 - [ ] Capture player-camera pickup evidence.
 - [ ] Update promotion ledger from evidence only.
+
+Current evidence:
+
+- Corrected generator script: `tools/m93_generate_corrected_loot_assets.py`
+- Generation trace: `docs/M93_CORRECTED_LOOT_GENERATION_TRACE.json`
+- Unity contact sheet: `Assets/Screenshots/RealifiedCategorySheets/realified_loot_contact_sheet.png`
+- Contact-sheet report: `docs/REALIFIED_CATEGORY_CONTACT_SHEETS.json`
+- Import/material gate: `docs/REALIFIED_IMPORT_MATERIAL_GATE.json`
+- Local Nemotron semantic review: `docs/M93_CORRECTED_LOOT_NEMOTRON_REVIEW.json`

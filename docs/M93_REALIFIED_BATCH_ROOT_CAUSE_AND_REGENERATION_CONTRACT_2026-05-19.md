@@ -24,6 +24,30 @@ The current Realified batch must stay quarantined for non-weapon classes because
 
 M91 and M92 reduce route and weapon-feel blockers, but they do not change this generated-batch truth.
 
+## Corrected Loot Fallback Update
+
+The first executable M93 slice now replaces the two failed Realified loot stems with deterministic category-correct fallback assets:
+
+- `RS_08_loot_ammo`
+  - now: olive ammo crate with visible crate silhouette, handle, latches, and ammo-case markings
+  - previous LOD0 SHA256: `fa461ca8bbddcb1723813548dfa8263b563c157c18cef241b09a947ea93daabb`
+  - corrected LOD0 SHA256: `7d284020182a12bae34f707dc99418fa806f1a0c661fa37f272c57412f77da5c`
+- `RS_09_loot_medkit`
+  - now: red medkit case with white-cross markings, straps, buckles, and handle
+  - previous LOD0 SHA256: `6e590d95a9baaaeceb74c10cbea212689b4114d2a27284222741067787c1e21c`
+  - corrected LOD0 SHA256: `3b2268ed847b57b158d511d879b7f29c6d68c0709887e516b2527f57eaebafc0`
+
+Evidence:
+
+- generator: `tools/m93_generate_corrected_loot_assets.py`
+- generation trace: `docs/M93_CORRECTED_LOOT_GENERATION_TRACE.json`
+- refreshed Unity contact sheet: `Assets/Screenshots/RealifiedCategorySheets/realified_loot_contact_sheet.png`
+- refreshed contact-sheet report: `docs/REALIFIED_CATEGORY_CONTACT_SHEETS.json`
+- refreshed import/material gate: `docs/REALIFIED_IMPORT_MATERIAL_GATE.json`
+- local Nemotron semantic review: `docs/M93_CORRECTED_LOOT_NEMOTRON_REVIEW.json`
+
+This is intentionally recorded as a corrected fallback slice. It does not claim that the original AI Realified batch is fixed, does not override the older stale failed review for unrelated classes, and does not promote the loot class until gameplay binding, player-camera pickup evidence, and promotion ledger evidence exist.
+
 ## What Not To Do
 
 - Do not flip `full_visual_asset_gate_passed`.

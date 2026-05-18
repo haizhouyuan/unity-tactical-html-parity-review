@@ -1,0 +1,35 @@
+{
+  "schema": "m93_corrected_loot_nemotron_review_v1",
+  "reviewer": "local_nemotron_omni",
+  "image_path": "Assets/Screenshots/RealifiedCategorySheets/realified_loot_contact_sheet.png",
+  "source_contact_sheet_report": "docs/REALIFIED_CATEGORY_CONTACT_SHEETS.json",
+  "overall_verdict": "pass",
+  "summary": "Both loot assets match expected files and categories.",
+  "items": [
+    {
+      "grid_index": 1,
+      "expected_file": "RS_08_loot_ammo_LOD0.glb",
+      "expected_category": "loot",
+      "visible_category": "loot",
+      "category_match": true,
+      "confidence": "high",
+      "reason": "Visible category matches expected loot category; file name matches.",
+      "promotion_allowed": true,
+      "promotion_blockers": []
+    },
+    {
+      "grid_index": 2,
+      "expected_file": "RS_09_loot_medkit_LOD0.glb",
+      "expected_category": "loot",
+      "visible_category": "loot",
+      "category_match": true,
+      "confidence": "high",
+      "reason": "Visible category matches expected loot category; file name matches.",
+      "promotion_allowed": true,
+      "promotion_blockers": []
+    }
+  ],
+  "promotion_allowed_for_corrected_loot_semantics": true,
+  "promotion_scope_note": "Semantic contact-sheet review only. This does not prove gameplay binding, player-camera pickup evidence, or full visual asset gate completion.",
+  "raw_model_output": "<think>\nWe need to parse the image. There are two assets. Left: green crate, label \"loot\", file name \"RS_08_loot_ammo_LOD0\". Right: red crate, label \"loot\", file name \"RS_09_loot_medkit_LOD0\". Expected list: grid_index 1 expected_file RS_08_loot_ammo_LOD0 expected_category loot. grid_index 2 expected_file RS_09_loot_medkit_LOD0 expected_category loot.\n\nWe need to evaluate each item: visible_category among weapon|character|gear|loot|environment_prop|unknown. The visible category for both appears to be \"loot\" (they are labeled \"loot\" and are crates). So category_match = true (since expected_category is loot, visible_category is loot). confidence: likely high because clear. promotion_allowed: boolean. Not sure what promotion_allowed means; maybe whether the asset can be promoted? Probably based on category? Since it's loot, maybe promotion allowed? Not sure. The spec: promotion_allowed boolean, promotion_blockers array. We need to infer. Since both are loot, maybe promotion allowed = true? But we need to decide. The context: \"promotion_allowed\" maybe indicates if the asset can be promoted (like upgraded). For loot items maybe not? However typical loot can be promoted? Not clear. Could assume promotion_allowed = true unless there is a blocker. There are no blockers visible. So promotion_allowed = true. promotion_blockers: array of strings; if none, empty array.\n\nOverall_verdict: pass|fail. Since both items match expected, verdict = pass.\n\nSummary: brief description.\n\nItems array: two items with fields.\n\nLet's construct JSON.\n\nFields:\n- overall_verdict: \"pass\"\n- summary: \"Both loot assets match expected files and categories.\"\n- items: array of objects.\n\nEach item:\ngrid_index: 1 or 2 (int)\nexpected_file: string\nexpected_category: string\nvisible_category: \"loot\" (since they are loot)\ncategory_match: true (boolean)\nconfidence: \"high\"\nreason: maybe \"Visible category matches expected loot category; file names match.\"\npromotion_allowed: true (boolean)\npromotion_blockers: [] (empty array)\n\nCheck if any mismatches: The visible_category is \"loot\". The expected_category is \"loot\". So match.\n\nConfidence: high.\n\nNow produce JSON.\n</think>\n{\n  \"overall_verdict\": \"pass\",\n  \"summary\": \"Both loot assets match expected files and categories.\",\n  \"items\": [\n    {\n      \"grid_index\": 1,\n      \"expected_file\": \"RS_08_loot_ammo_LOD0\",\n      \"expected_category\": \"loot\",\n      \"visible_category\": \"loot\",\n      \"category_match\": true,\n      \"confidence\": \"high\",\n      \"reason\": \"Visible category matches expected loot category; file name matches.\",\n      \"promotion_allowed\": true,\n      \"promotion_blockers\": []\n    },\n    {\n      \"grid_index\": 2,\n      \"expected_file\": \"RS_09_loot_medkit_LOD0\",\n      \"expected_category\": \"loot\",\n      \"visible_category\": \"loot\",\n      \"category_match\": true,\n      \"confidence\": \"high\",\n      \"reason\": \"Visible category matches expected loot category; file name matches.\",\n      \"promotion_allowed\": true,\n      \"promotion_blockers\": []\n    }\n  ]\n}<|im_end|>"
+}

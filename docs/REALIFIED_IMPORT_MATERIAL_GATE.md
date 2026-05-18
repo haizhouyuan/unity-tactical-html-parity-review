@@ -1,14 +1,14 @@
 # Realified Import Material Gate
 
-Generated: 2026-05-18T04:13:13.0464110Z
+Generated: 2026-05-18T17:02:28.2388320Z
 
 ## Summary
 
 - Asset root exists: `True`
 - GLB files: `48`
-- PNG files: `145`
-- Material files: `13`
-- Meta files: `215`
+- PNG files: `149`
+- Material files: `17`
+- Meta files: `223`
 - Classes with all LODs: `12 / 12`
 - Classes with complete PBR sidecars: `9 / 12`
 - Classes with imported LOD0 prefab: `12 / 12`

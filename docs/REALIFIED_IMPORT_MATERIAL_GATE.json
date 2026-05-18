@@ -1,12 +1,12 @@
 {
   "schema": "realified_import_material_gate_v1",
-  "timestamp_utc": "2026-05-18T04:13:13.0443430Z",
+  "timestamp_utc": "2026-05-18T17:02:28.2335870Z",
   "asset_root": "Assets/HtmlTacticalAssets/RealifiedAssets",
   "asset_root_exists": true,
   "glb_count": 48,
-  "png_count": 145,
-  "mat_count": 13,
-  "meta_count": 215,
+  "png_count": 149,
+  "mat_count": 17,
+  "meta_count": 223,
   "summary": {
     "class_count": 12,
     "classes_with_all_lods": 12,
@@ -247,8 +247,8 @@
       "lod2_present": true,
       "all_lods_present": true,
       "lod0_imported_prefab": true,
-      "external_material_count": 1,
-      "accepted_material_shader_count": 4,
+      "external_material_count": 3,
+      "accepted_material_shader_count": 15,
       "has_accepted_material_shader": true,
       "pbr_sidecars": {
         "basecolor": true,
@@ -262,8 +262,8 @@
       "semantic_promotion_checked_here": false,
       "production_promoted": false,
       "glb_paths": ["Assets/HtmlTacticalAssets/RealifiedAssets/RS_08_loot_ammo_LOD0.glb", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_08_loot_ammo_LOD1.glb", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_08_loot_ammo_LOD2.glb"],
-      "external_materials": ["Assets/HtmlTacticalAssets/RealifiedAssets/RS_08_loot_ammo_LOD0_PBR.mat"],
-      "material_shaders": ["RS_08_loot_ammo_LOD0.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness", "RS_08_loot_ammo_LOD1.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness", "RS_08_loot_ammo_LOD2.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness", "RS_08_loot_ammo_LOD0_PBR.mat:Universal Render Pipeline/Lit"]
+      "external_materials": ["Assets/HtmlTacticalAssets/RealifiedAssets/RS_08_loot_ammo_LOD0_PBR.mat", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_08_loot_ammo_LOD1_PBR.mat", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_08_loot_ammo_LOD2_PBR.mat"],
+      "material_shaders": ["RS_08_loot_ammo_LOD0.glb:M93_ammo_black_rubber:Shader Graphs/glTF-pbrMetallicRoughness", "RS_08_loot_ammo_LOD0.glb:M93_ammo_brass_rounds:Shader Graphs/glTF-pbrMetallicRoughness", "RS_08_loot_ammo_LOD0.glb:M93_ammo_dark_metal:Shader Graphs/glTF-pbrMetallicRoughness", "RS_08_loot_ammo_LOD0.glb:M93_ammo_olive_case:Shader Graphs/glTF-pbrMetallicRoughness", "RS_08_loot_ammo_LOD0.glb:M93_ammo_yellow_label:Shader Graphs/glTF-pbrMetallicRoughness", "RS_08_loot_ammo_LOD1.glb:M93_ammo_black_rubber.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_08_loot_ammo_LOD1.glb:M93_ammo_dark_metal.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_08_loot_ammo_LOD1.glb:M93_ammo_olive_case.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_08_loot_ammo_LOD1.glb:M93_ammo_yellow_label.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_08_loot_ammo_LOD2.glb:M93_ammo_black_rubber.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_08_loot_ammo_LOD2.glb:M93_ammo_olive_case.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_08_loot_ammo_LOD2.glb:M93_ammo_yellow_label.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_08_loot_ammo_LOD0_PBR.mat:Universal Render Pipeline/Lit", "RS_08_loot_ammo_LOD1_PBR.mat:Universal Render Pipeline/Lit", "RS_08_loot_ammo_LOD2_PBR.mat:Universal Render Pipeline/Lit"]
     },
     {
       "category": "loot",
@@ -274,8 +274,8 @@
       "lod2_present": true,
       "all_lods_present": true,
       "lod0_imported_prefab": true,
-      "external_material_count": 1,
-      "accepted_material_shader_count": 4,
+      "external_material_count": 3,
+      "accepted_material_shader_count": 17,
       "has_accepted_material_shader": true,
       "pbr_sidecars": {
         "basecolor": true,
@@ -289,8 +289,8 @@
       "semantic_promotion_checked_here": false,
       "production_promoted": false,
       "glb_paths": ["Assets/HtmlTacticalAssets/RealifiedAssets/RS_09_loot_medkit_LOD0.glb", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_09_loot_medkit_LOD1.glb", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_09_loot_medkit_LOD2.glb"],
-      "external_materials": ["Assets/HtmlTacticalAssets/RealifiedAssets/RS_09_loot_medkit_LOD0_PBR.mat"],
-      "material_shaders": ["RS_09_loot_medkit_LOD0.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD1.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD2.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD0_PBR.mat:Universal Render Pipeline/Lit"]
+      "external_materials": ["Assets/HtmlTacticalAssets/RealifiedAssets/RS_09_loot_medkit_LOD0_PBR.mat", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_09_loot_medkit_LOD1_PBR.mat", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_09_loot_medkit_LOD2_PBR.mat"],
+      "material_shaders": ["RS_09_loot_medkit_LOD0.glb:M93_medkit_black_strap:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD0.glb:M93_medkit_buckle_metal:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD0.glb:M93_medkit_deep_red_case:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD0.glb:M93_medkit_fabric_dark_red:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD0.glb:M93_medkit_white_cross:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD1.glb:M93_medkit_black_strap.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD1.glb:M93_medkit_buckle_metal.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD1.glb:M93_medkit_deep_red_case.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD1.glb:M93_medkit_fabric_dark_red.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD1.glb:M93_medkit_white_cross.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD2.glb:M93_medkit_black_strap.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD2.glb:M93_medkit_deep_red_case.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD2.glb:M93_medkit_fabric_dark_red.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD2.glb:M93_medkit_white_cross.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD0_PBR.mat:Universal Render Pipeline/Lit", "RS_09_loot_medkit_LOD1_PBR.mat:Universal Render Pipeline/Lit", "RS_09_loot_medkit_LOD2_PBR.mat:Universal Render Pipeline/Lit"]
     },
     {
       "category": "environment_prop",

@@ -1,6 +1,6 @@
 {
   "schema": "realified_category_contact_sheets_v1",
-  "timestamp_utc": "2026-05-18T04:13:25.8198930Z",
+  "timestamp_utc": "2026-05-18T17:01:44.7440590Z",
   "output_directory": "Assets/Screenshots/RealifiedCategorySheets",
   "category_count": 5,
   "categories": [
@@ -101,18 +101,18 @@
         {
           "file": "RS_08_loot_ammo_LOD0.glb",
           "unity_path": "Assets/HtmlTacticalAssets/RealifiedAssets/RS_08_loot_ammo_LOD0.glb",
-          "sha256": "fa461ca8bbddcb1723813548dfa8263b563c157c18cef241b09a947ea93daabb",
+          "sha256": "7d284020182a12bae34f707dc99418fa806f1a0c661fa37f272c57412f77da5c",
           "loaded": true,
-          "renderer_count": 1,
-          "material_count": 1
+          "renderer_count": 22,
+          "material_count": 22
         },
         {
           "file": "RS_09_loot_medkit_LOD0.glb",
           "unity_path": "Assets/HtmlTacticalAssets/RealifiedAssets/RS_09_loot_medkit_LOD0.glb",
-          "sha256": "6e590d95a9baaaeceb74c10cbea212689b4114d2a27284222741067787c1e21c",
+          "sha256": "3b2268ed847b57b158d511d879b7f29c6d68c0709887e516b2527f57eaebafc0",
           "loaded": true,
-          "renderer_count": 1,
-          "material_count": 1
+          "renderer_count": 17,
+          "material_count": 17
         }
       ]
     },
