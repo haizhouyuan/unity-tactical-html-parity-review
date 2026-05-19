@@ -1,0 +1,33 @@
+{
+  "schema": "m97_hero_rifle_visual_proof_v1",
+  "timestamp_utc": "2026-05-19T12:39:54.2288110Z",
+  "passed": true,
+  "status": "m97_visual_slice_proof_passed",
+  "application_is_playing": true,
+  "hero_weapon_id": "rifle",
+  "m97_hero_rifle_visual_swap_prepared": true,
+  "first_person_candidate_visual_bound": true,
+  "third_person_candidate_visual_bound": true,
+  "candidate_is_quarantine_visual": true,
+  "candidate_is_production_promoted": false,
+  "first_person_candidate_renderer_count": 32,
+  "third_person_candidate_renderer_count": 4,
+  "first_person_candidate_screen_area": 1,
+  "first_person_candidate_screen_rect": "0.299,0.317,0.38,0.501",
+  "first_person_candidate_screen_quality_passed": true,
+  "fire_pose_visible": true,
+  "reload_pose_visible": true,
+  "weapon_feel_no_regression": true,
+  "m95_still_requires_final_art_review": true,
+  "m88_still_requires_strict_full_visual_gate": true,
+  "screenshot_count": 5,
+  "screenshots": [
+    { "label": "01_first_person_idle", "path": "Assets/Screenshots/M97HeroRifleVisualSwap/01_first_person_idle.png", "note": "First-person idle after M97 rifle visual swap" },
+    { "label": "02_first_person_ads", "path": "Assets/Screenshots/M97HeroRifleVisualSwap/02_first_person_ads.png", "note": "First-person ADS after M97 rifle visual swap" },
+    { "label": "03_first_person_fire", "path": "Assets/Screenshots/M97HeroRifleVisualSwap/03_first_person_fire.png", "note": "First-person fire after M97 rifle visual swap" },
+    { "label": "04_first_person_reload", "path": "Assets/Screenshots/M97HeroRifleVisualSwap/04_first_person_reload.png", "note": "First-person reload after M97 rifle visual swap" },
+    { "label": "05_third_person_mount", "path": "Assets/Screenshots/M97HeroRifleVisualSwap/05_third_person_mount.png", "note": "Third-person rifle mount after M97 rifle visual swap" }
+  ],
+  "blockers": [],
+  "policy": "This proof is player-visible value evidence only; it does not promote final art."
+}

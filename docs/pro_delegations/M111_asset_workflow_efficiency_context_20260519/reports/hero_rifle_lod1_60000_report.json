@@ -1,0 +1,12 @@
+{
+  "model_path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/hero_rifle_pro_clean_img2_3d_001/model/hunyuan_textured_raw.glb",
+  "out_glb": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/hero_rifle_pro_clean_img2_3d_001/model/hunyuan_textured_lod1_60000.glb",
+  "target_triangles": 60000,
+  "before_triangles": 208356,
+  "after_triangles": 59999,
+  "decimate_ratio": 0.28796866900881185,
+  "object_count": 1,
+  "mesh_names": [
+    "hero_rifle_hunyuan_textured"
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "model_path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/hero_rifle_pro_clean_img2_3d_001/model/hunyuan_textured_raw.glb",
+  "object_count": 1,
+  "mesh_names": [
+    "hero_rifle_hunyuan_textured"
+  ],
+  "vertex_count": 155819,
+  "triangle_count": 208356,
+  "bounds_min": [
+    -0.9968,
+    -0.1167,
+    -0.4043
+  ],
+  "bounds_max": [
+    0.9968,
+    0.1167,
+    0.4043
+  ],
+  "dimensions": [
+    1.9937,
+    0.2335,
+    0.8085
+  ],
+  "material_count": 1,
+  "material_names": [
+    "Material.001"
+  ],
+  "texture_images": [
+    {
+      "name": "hero_rifle_hunyuan_textured",
+      "filepath": "",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "hero_rifle_hunyuan_textured_metallic-hero_rifle_hunyuan_textured_roughness",
+      "filepath": "",
+      "size": [
+        1024,
+        1024
+      ]
+    }
+  ],
+  "preview_png": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/hero_rifle_pro_clean_img2_3d_001/evidence/blender_preview.png"
+}

@@ -1,0 +1,12 @@
+{
+  "model_path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/container_side_pro_clean_img2_3d_001/model/hunyuan_textured_raw.glb",
+  "out_glb": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/container_side_pro_clean_img2_3d_001/model/hunyuan_textured_lod1_80000.glb",
+  "target_triangles": 80000,
+  "before_triangles": 965824,
+  "after_triangles": 80000,
+  "decimate_ratio": 0.08283082632032338,
+  "object_count": 1,
+  "mesh_names": [
+    "container_side_hunyuan_textured"
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "schema": "m111_asset_workflow_efficiency_context_v1",
+  "total_files": 21,
+  "total_bytes": 26972285,
+  "files": [
+    {
+      "path": "PRO_PROMPT_M111.md",
+      "bytes": 6185,
+      "sha256": "316901444b049a06fc80b74ae46808af46557feee6a0ef0de487283ff315be21"
+    },
+    {
+      "path": "models/checkpoint_booth_hunyuan_lod1_150000.glb",
+      "bytes": 10279828,
+      "sha256": "55170f35d7136a35a0db3c1611cd78795c6fc693f788ea4b95f51e95827bf755"
+    },
+    {
+      "path": "models/container_side_hunyuan_lod1_80000.glb",
+      "bytes": 5643288,
+      "sha256": "32e21c6d816003870a71d0eebacbf483a2c41abfba400e3bf672acbf20d6600f"
+    },
+    {
+      "path": "models/hero_rifle_hunyuan_lod1_60000.glb",
+      "bytes": 4678072,
+      "sha256": "6f4df92221894d19c1719a5ecd0e229a0d6aae187b47c63c1b128cd39fcb1031"
+    },
+    {
+      "path": "previews/checkpoint_booth_blender_preview_lod1.png",
+      "bytes": 1505047,
+      "sha256": "574103252de68e4349e0c190e1a0a95053b90dea84f0af220796726c88b0390d"
+    },
+    {
+      "path": "previews/checkpoint_booth_blender_preview_raw.png",
+      "bytes": 1349479,
+      "sha256": "1a3f1139539657a45ba4eb3a45e729c44ce25c5cd90750ffe09b60bea008da22"
+    },
+    {
+      "path": "previews/container_side_blender_preview_lod1.png",
+      "bytes": 989838,
+      "sha256": "e4f546f7aff3ab05523ef4f67247a5f2f1a5aa1b853f34c996834a358884a5dc"
+    },
+    {
+      "path": "previews/container_side_blender_preview_raw.png",
+      "bytes": 888749,
+      "sha256": "63a1b38497d91b2c9a358b54bbac503c29f66a22de09731f42bfc00950714e0c"
+    },
+    {
+      "path": "previews/hero_rifle_blender_preview_raw.png",
+      "bytes": 681046,
+      "sha256": "bcac1b7881eb57289916f4f465f8ddb97e5f8a85a9fb24e2341a3bf085b2ca6b"
+    },
+    {
+      "path": "reports/checkpoint_booth_blender_preview_report.json",
+      "bytes": 1132,
+      "sha256": "9fa9e7d631d8eae48731b5f4c9dbfcbd029f77a455111c09ea7c98f0829484b0"
+    },
+    {
+      "path": "reports/checkpoint_booth_lod1_150000_report.json",
+      "bytes": 617,
+      "sha256": "9cce13ca5fc512e701c74636eed6dcaf2ba27caaec951016c925a22df0198346"
+    },
+    {
+      "path": "reports/container_side_blender_preview_report.json",
+      "bytes": 1122,
+      "sha256": "4238a4ba1bd984a40d1e6132d1a118414d6b718a89c725b2fe42003a27d5298d"
+    },
+    {
+      "path": "reports/container_side_lod1_80000_report.json",
+      "bytes": 608,
+      "sha256": "5ef2cad16e3ccdb2c1aec17f68e0d97a89c223f88bc65da8c76610de8caed48e"
+    },
+    {
+      "path": "reports/hero_rifle_blender_preview_report.json",
+      "bytes": 1098,
+      "sha256": "36e59c05c6bcf00ad2be11e08d2565d9dc954c336c2ae2c698ad6eff36ac1ebb"
+    },
+    {
+      "path": "reports/hero_rifle_lod1_60000_report.json",
+      "bytes": 596,
+      "sha256": "a1f5a310d2cae85b4f49e7114226ff4254a2ee389ab59da6a3d8eb22ab9981ae"
+    },
+    {
+      "path": "reports/kimi_asset_quality_review.md",
+      "bytes": 12466,
+      "sha256": "6e50d593bd04409f63b61446af0952963940d71117edc9df5615c1e53d1badc5"
+    },
+    {
+      "path": "reports/unity_m97_visual_proof_after_m110.json",
+      "bytes": 1964,
+      "sha256": "3431a29405eb056795bb502941b0b23fb8f2387624746e94ae183fbd518ba4be"
+    },
+    {
+      "path": "screenshots/unity_first_person_fire_after_m110_bind.png",
+      "bytes": 439485,
+      "sha256": "873761eaed9188de270f8a924e3b15a9e686b04b40979e1f92445d5ccbe5e7bc"
+    },
+    {
+      "path": "screenshots/unity_first_person_idle_after_m110_bind.png",
+      "bytes": 482671,
+      "sha256": "95262e455d625d8ea524dd8ead366b043916d2e8c707f7f5705dd9df3d35b9c0"
+    },
+    {
+      "path": "scripts/optimize_glb_lod_blender.py",
+      "bytes": 3139,
+      "sha256": "9539ec87532d774b2e18696578aadf0e6aa38b22ec7e2bd8c48c0860a68249ca"
+    },
+    {
+      "path": "scripts/render_glb_preview_blender.py",
+      "bytes": 5855,
+      "sha256": "47279a35ebac9e418a45af33d587f19f585cd240870c5cec17496e5e6e9a860d"
+    }
+  ]
+}

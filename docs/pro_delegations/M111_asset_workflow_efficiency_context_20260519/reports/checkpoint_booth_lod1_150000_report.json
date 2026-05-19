@@ -1,0 +1,12 @@
+{
+  "model_path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/checkpoint_booth_pro_clean_img2_3d_001/model/hunyuan_textured_raw.glb",
+  "out_glb": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/checkpoint_booth_pro_clean_img2_3d_001/model/hunyuan_textured_lod1_150000.glb",
+  "target_triangles": 150000,
+  "before_triangles": 2581254,
+  "after_triangles": 150000,
+  "decimate_ratio": 0.0581112900938846,
+  "object_count": 1,
+  "mesh_names": [
+    "checkpoint_booth_hunyuan_textured"
+  ]
+}

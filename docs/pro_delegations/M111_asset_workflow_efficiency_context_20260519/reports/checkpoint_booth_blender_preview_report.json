@@ -1,0 +1,47 @@
+{
+  "model_path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/checkpoint_booth_pro_clean_img2_3d_001/model/hunyuan_textured_raw.glb",
+  "object_count": 1,
+  "mesh_names": [
+    "checkpoint_booth_hunyuan_textured"
+  ],
+  "vertex_count": 1841250,
+  "triangle_count": 2581254,
+  "bounds_min": [
+    -0.997,
+    -0.9963,
+    -0.734
+  ],
+  "bounds_max": [
+    0.997,
+    0.9963,
+    0.734
+  ],
+  "dimensions": [
+    1.9941,
+    1.9925,
+    1.4681
+  ],
+  "material_count": 1,
+  "material_names": [
+    "Material.001"
+  ],
+  "texture_images": [
+    {
+      "name": "checkpoint_booth_hunyuan_textured",
+      "filepath": "",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "checkpoint_booth_hunyuan_textured_metallic-checkpoint_booth_hunyuan_textured_roughness",
+      "filepath": "",
+      "size": [
+        1024,
+        1024
+      ]
+    }
+  ],
+  "preview_png": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/checkpoint_booth_pro_clean_img2_3d_001/evidence/blender_preview.png"
+}

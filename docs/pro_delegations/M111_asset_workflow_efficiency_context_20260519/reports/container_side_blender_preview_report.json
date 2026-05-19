@@ -1,0 +1,47 @@
+{
+  "model_path": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/container_side_pro_clean_img2_3d_001/model/hunyuan_textured_raw.glb",
+  "object_count": 1,
+  "mesh_names": [
+    "container_side_hunyuan_textured"
+  ],
+  "vertex_count": 700388,
+  "triangle_count": 965824,
+  "bounds_min": [
+    -0.5531,
+    -0.9971,
+    -0.2524
+  ],
+  "bounds_max": [
+    0.5531,
+    0.9971,
+    0.2524
+  ],
+  "dimensions": [
+    1.1061,
+    1.9943,
+    0.5047
+  ],
+  "material_count": 1,
+  "material_names": [
+    "Material.001"
+  ],
+  "texture_images": [
+    {
+      "name": "container_side_hunyuan_textured",
+      "filepath": "",
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "container_side_hunyuan_textured_metallic-container_side_hunyuan_textured_roughness",
+      "filepath": "",
+      "size": [
+        1024,
+        1024
+      ]
+    }
+  ],
+  "preview_png": "/Users/yuanshaochen/Projects/ai-game-generation-research/experiments/pubg_like_asset_factory_20260513/assets/container_side_pro_clean_img2_3d_001/evidence/blender_preview.png"
+}
