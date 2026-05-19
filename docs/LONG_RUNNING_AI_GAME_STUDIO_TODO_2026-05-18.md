@@ -25,12 +25,18 @@ When an agent works from this TODO:
 
 Current exported evidence says:
 
-- `all_required_current_gates_passed=true`
+- `gameplay_parity_gates_passed=true`
+- `strict_visual_gates_passed=false`
+- `all_required_current_gates_passed=false`
 - `ai_playtest_route_gate_passed=true`
 - `full_visual_asset_gate_passed=false`
 - `category_semantic_review_passed=false`
 - `realified_asset_gameplay_production_promoted_assets=3`
 - `promoted_asset_visibility_gate_passed=true`
+- `m88_strict_full_visual_asset_gate_passed=false`
+- `m94_generated_batch_class_promotion_passed=false`
+- `m95_final_weapon_art_review_passed=false`
+- `m96_final_humanoid_art_review_passed=false`
 
 Interpretation:
 
@@ -40,7 +46,8 @@ Interpretation:
 - M0 docs are complete.
 - M91 external-input built-player route evidence now exists and passes.
 - M93 now promotes the corrected Realified ammo and medkit loot through route pickup evidence, but the strict full visual gate remains false.
-- Next executable work returns to the remaining M88 strict visual blockers: final weapon art review, final humanoid art review, and the rest of generated-batch class promotion.
+- The acceptance pipeline now separates `gameplay_parity_gates_passed` from strict visual completion. Future agents must not quote `all_required_current_gates_passed=true` until M88/M94/M95/M96 also pass.
+- Next executable work returns to the remaining M88 strict visual blockers: M94 generated-batch class promotion, M95 final weapon art review, and M96 final humanoid art review.
 
 ## Master Queue
 
@@ -856,3 +863,139 @@ Current evidence:
   - `production_promoted_classes=2`
   - `visible_promoted_classes=2`
 - Completion note: `docs/M93_CORRECTED_LOOT_GAMEPLAY_PROMOTION_COMPLETION_2026-05-18.md`
+
+### M94: Generated Batch Class Promotion
+
+Status: active blocker.
+
+Primary lane: asset pipeline / evidence audit / visual direction.
+
+Goal:
+
+- Promote a new generated batch across required visual classes using evidence, not legacy promoted assets and not reference-only images.
+
+Required classes:
+
+- weapon
+- humanoid
+- gear
+- loot
+- environment_prop
+
+Current blocker summary:
+
+- `docs/M94_GENERATED_BATCH_CLASS_PROMOTION_GATE.json` currently has `passed=false`.
+- Legacy promoted assets such as `hero_rifle`, `ammo`, and `medkit` are explicitly listed as not counting for this M94 batch unless they have an M94/source-batch marker.
+- Pro image outputs under `external/pro_outputs` count only as `reference_image_only` quarantine inputs until they produce imported, semantically reviewed, gameplay-bound assets.
+
+Checklist:
+
+- [ ] Download or receive ChatGPT Pro first-wave reference bundle.
+- [ ] Validate bundle with `tools/validate_pro_batch_images.py --require-first-wave`.
+- [ ] Stage images under quarantine/reference-only paths, not promoted asset paths.
+- [ ] Generate or import one M94-marked candidate per required class.
+- [ ] Record source sidecars with batch marker such as `source_batch_id=M94...`.
+- [ ] Import each candidate into Unity with material/PBR evidence.
+- [ ] Run semantic review per class.
+- [ ] Bind each class to real gameplay entity where applicable.
+- [ ] Capture actual player-camera visibility evidence.
+- [ ] Prove a gameplay event per class where required.
+- [ ] Update promotion ledger from evidence only.
+- [ ] Run `AI Tools/Run M94 Generated Batch Class Promotion Gate`.
+- [ ] Run `AI Tools/Run M88 Strict Full Visual Asset Gate`.
+
+Definition of done:
+
+- `docs/M94_GENERATED_BATCH_CLASS_PROMOTION_GATE.json` has `passed=true`.
+- The gate credits only M94-marked generated-batch assets, not old legacy promotions.
+- `docs/M88_STRICT_FULL_VISUAL_ASSET_GATE.json` no longer lists `generated_batch_class_promotion_passed=false`.
+
+### M95: Final Weapon Art Review Gate
+
+Status: active blocker.
+
+Primary lane: visual direction / gameplay engineering / evidence audit.
+
+Goal:
+
+- Move the weapon from functional/feel proof to final art review readiness for the current tactical prototype.
+
+Current blocker summary:
+
+- `docs/M95_FINAL_WEAPON_ART_REVIEW_GATE.json` currently has `passed=false`.
+- M92 proves scoped weapon feel and gameplay behavior, but it is not final weapon art approval.
+
+Checklist:
+
+- [ ] Ensure the current hero weapon is visible in first-person and third-person gameplay, not just a contact sheet.
+- [ ] Verify visual art fields: silhouette, material believability, sight/optic readability, muzzle/anchor alignment, scale, mount, reload pose, and hit/fire feedback.
+- [ ] Attach final review evidence paths: screenshots, route reports, weapon-feel gate, M91 route if relevant.
+- [ ] Obtain explicit final-art review approval in `docs/M95_FINAL_WEAPON_ART_REVIEW_APPROVAL.json`.
+- [ ] The approval must be root-level `passed=true`; nested or quoted text cannot satisfy the gate.
+- [ ] Run `AI Tools/Run M95 Final Weapon Art Review Gate`.
+- [ ] Run `AI Tools/Run M88 Strict Full Visual Asset Gate`.
+
+Definition of done:
+
+- `docs/M95_FINAL_WEAPON_ART_REVIEW_GATE.json` has `passed=true`.
+- The approval references actual player-camera gameplay evidence.
+- The weapon is not approved from a standalone render/contact sheet only.
+
+### M96: Final Humanoid Art Review Gate
+
+Status: active blocker.
+
+Primary lane: visual direction / gameplay engineering / evidence audit.
+
+Goal:
+
+- Move the humanoid/player/enemy visual from intermediate/proxy evidence to final art review readiness.
+
+Current blocker summary:
+
+- `docs/M96_FINAL_HUMANOID_ART_REVIEW_GATE.json` currently has `passed=false`.
+- Existing character evidence is useful, but final humanoid approval still needs explicit rooted evidence and must not credit proxy-only rigs.
+
+Checklist:
+
+- [ ] Ensure at least one humanoid player/enemy candidate is semantically correct and not a capsule/proxy-only body.
+- [ ] Verify player-camera visibility in real gameplay route.
+- [ ] Verify gameplay binding to enemy/player entity.
+- [ ] Verify action evidence: spawn, aim/fire or damage, hit/down/death where applicable.
+- [ ] Attach material/gear readability evidence.
+- [ ] Obtain explicit final-art review approval in `docs/M96_FINAL_HUMANOID_ART_REVIEW_APPROVAL.json`.
+- [ ] The approval must be root-level `passed=true`; nested or quoted text cannot satisfy the gate.
+- [ ] Run `AI Tools/Run M96 Final Humanoid Art Review Gate`.
+- [ ] Run `AI Tools/Run M88 Strict Full Visual Asset Gate`.
+
+Definition of done:
+
+- `docs/M96_FINAL_HUMANOID_ART_REVIEW_GATE.json` has `passed=true`.
+- Final humanoid approval is backed by actual gameplay/player-camera evidence.
+- Runtime proxy rigs or contact sheets are not counted as final humanoid completion.
+
+### M97: Strict Visual Closure / Whole Track Completion
+
+Status: blocked by M94, M95, and M96.
+
+Primary lane: evidence audit / release-liveops.
+
+Goal:
+
+- Run the full tactical acceptance pipeline after M94/M95/M96 are genuinely complete and prove that the whole upgrade track is closed.
+
+Checklist:
+
+- [ ] Run Unity compile/console preflight.
+- [ ] Run `AI Tools/Run Tactical Acceptance Pipeline`.
+- [ ] Confirm `gameplay_parity_gates_passed=true`.
+- [ ] Confirm `strict_visual_gates_passed=true`.
+- [ ] Confirm `all_required_current_gates_passed=true`.
+- [ ] Confirm `m88_strict_full_visual_asset_gate_passed=true`.
+- [ ] Confirm no new Unity Console errors.
+- [ ] Update README and closeout docs with honest evidence paths.
+- [ ] Commit and push the verified slice.
+
+Definition of done:
+
+- The game upgrade is not considered complete until M97 passes.

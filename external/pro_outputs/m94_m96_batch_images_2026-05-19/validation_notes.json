@@ -1,0 +1,26 @@
+{
+  "image_count": 15,
+  "classes": [
+    "environment_prop",
+    "gear",
+    "humanoid",
+    "loot",
+    "weapon"
+  ],
+  "has_contact_sheets": [
+    "environment_prop_contact_sheet.png",
+    "gear_contact_sheet.png",
+    "humanoid_contact_sheet.png",
+    "loot_contact_sheet.png",
+    "weapon_contact_sheet.png"
+  ],
+  "has_prompt_packs": [
+    "environment_prop_prompts.md",
+    "gear_prompts.md",
+    "humanoid_prompts.md",
+    "loot_prompts.md",
+    "weapon_prompts.md"
+  ],
+  "all_reference_only": true,
+  "dimensions_ok": true
+}

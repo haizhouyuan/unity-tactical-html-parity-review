@@ -1,0 +1,17 @@
+{
+  "schema": "m94_pro_batch_reference_image_validation_v1",
+  "timestamp_utc": "2026-05-19T00:13:21.0033480Z",
+  "passed": true,
+  "usage": "reference_image_only",
+  "production_status": "quarantine_reference",
+  "bundle_root": "external/pro_outputs/m94_m96_batch_images_2026-05-19",
+  "manifest_path": "external/pro_outputs/m94_m96_batch_images_2026-05-19/manifest.json",
+  "manifest_image_count": 15,
+  "first_wave_required_count": 15,
+  "first_wave_present": true,
+  "contact_sheets_present": true,
+  "prompt_packs_present": true,
+  "all_entries_reference_only_quarantine": true,
+  "blockers": [],
+  "note": "Reference images are quarantine inputs only. This validation never counts images as production assets."
+}

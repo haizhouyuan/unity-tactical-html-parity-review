@@ -1,0 +1,24 @@
+{
+  "schema": "m95_final_weapon_art_review_input_template_v1",
+  "date": "2026-05-19",
+  "usage": "local_manual_or_vlm_review_input_template",
+  "production_status": "review_input_template_not_gate_result",
+  "review_subject": "final weapon art",
+  "material_pbr_sidecar_exists": false,
+  "weapon_material_pbr_sidecar_exists": false,
+  "no_visible_placeholder_or_block_look": false,
+  "manual_or_vlm_final_weapon_art_review_passed": false,
+  "reviewer": "",
+  "evidence": {
+    "first_person_screenshot": "",
+    "third_person_screenshot": "",
+    "ads_screenshot": "",
+    "reload_screenshot": "",
+    "muzzle_or_impact_screenshot": "",
+    "pbr_sidecar_path": ""
+  },
+  "blockers": [
+    "Fill this template locally after visual review. Do not mark true from reference images alone."
+  ],
+  "note": "This file is a template. Copy to docs/M95_FINAL_WEAPON_ART_REVIEW_INPUT.json only after local review evidence exists."
+}
