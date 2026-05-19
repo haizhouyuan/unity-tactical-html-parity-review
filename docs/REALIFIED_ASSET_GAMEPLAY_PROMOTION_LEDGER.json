@@ -1,14 +1,14 @@
 {
   "schema": "realified_asset_gameplay_promotion_ledger_v1",
-  "timestamp_utc": "2026-05-18T23:39:45.1797320Z",
+  "timestamp_utc": "2026-05-19T00:51:33.8062900Z",
   "import_gate_path": "docs/REALIFIED_IMPORT_MATERIAL_GATE.json",
   "category_review_path": "docs/REALIFIED_CATEGORY_NEMOTRON_REVIEWS.json",
   "route_gate_path": "docs/TACTICAL_PLAYABLE_ROUTE_GATE.json",
   "gameplay_gate_path": "docs/TACTICAL_GAMEPLAY_PROOF_GATE.json",
   "summary": {
     "asset_count": 12,
-    "technical_semantic_scene_partial_assets": 5,
-    "production_promoted_assets": 3,
+    "technical_semantic_scene_partial_assets": 10,
+    "production_promoted_assets": 7,
     "any_production_promoted": true
   },
   "assets": [
@@ -19,11 +19,15 @@
       "imported": true,
       "technical_ready": true,
       "semantic_category_match": true,
-      "gameplay_scene_instances": 13,
+      "gameplay_scene_instances": 230,
       "gameplay_entity_scene_evidence": true,
       "player_camera_realified_asset_evidence": true,
       "asset_specific_gameplay_event_evidence": true,
       "production_promoted": true,
+      "m94_generated_batch": true,
+      "generation_batch": "M94",
+      "source_batch_id": "M94_FIRST_WAVE_2026-05-19",
+      "source_pipeline": "m94_local_blender_first_wave_from_pro_reference_images",
       "blockers": []
     },
     {
@@ -38,6 +42,10 @@
       "player_camera_realified_asset_evidence": true,
       "asset_specific_gameplay_event_evidence": false,
       "production_promoted": false,
+      "m94_generated_batch": false,
+      "generation_batch": "",
+      "source_batch_id": "",
+      "source_pipeline": "",
       "blockers": ["no_asset_specific_gameplay_event_evidence"]
     },
     {
@@ -52,6 +60,10 @@
       "player_camera_realified_asset_evidence": false,
       "asset_specific_gameplay_event_evidence": false,
       "production_promoted": false,
+      "m94_generated_batch": false,
+      "generation_batch": "",
+      "source_batch_id": "",
+      "source_pipeline": "",
       "blockers": ["no_player_camera_visible_realified_asset_evidence", "no_asset_specific_gameplay_event_evidence"]
     },
     {
@@ -66,6 +78,10 @@
       "player_camera_realified_asset_evidence": false,
       "asset_specific_gameplay_event_evidence": false,
       "production_promoted": false,
+      "m94_generated_batch": false,
+      "generation_batch": "",
+      "source_batch_id": "",
+      "source_pipeline": "",
       "blockers": ["technical_import_or_pbr_sidecar_incomplete", "no_gameplay_entity_scene_evidence", "no_player_camera_visible_realified_asset_evidence", "no_asset_specific_gameplay_event_evidence"]
     },
     {
@@ -74,13 +90,17 @@
       "expected_file": "RS_06_gear_helmet_LOD0.glb",
       "imported": true,
       "technical_ready": true,
-      "semantic_category_match": false,
-      "gameplay_scene_instances": 0,
-      "gameplay_entity_scene_evidence": false,
+      "semantic_category_match": true,
+      "gameplay_scene_instances": 32,
+      "gameplay_entity_scene_evidence": true,
       "player_camera_realified_asset_evidence": false,
       "asset_specific_gameplay_event_evidence": false,
       "production_promoted": false,
-      "blockers": ["semantic_category_mismatch_or_failed_review", "no_gameplay_entity_scene_evidence", "no_player_camera_visible_realified_asset_evidence", "no_asset_specific_gameplay_event_evidence"]
+      "m94_generated_batch": true,
+      "generation_batch": "M94",
+      "source_batch_id": "M94_FIRST_WAVE_2026-05-19",
+      "source_pipeline": "m94_local_blender_first_wave_from_pro_reference_images",
+      "blockers": ["no_player_camera_visible_realified_asset_evidence", "no_asset_specific_gameplay_event_evidence"]
     },
     {
       "asset_id": "vest",
@@ -88,13 +108,17 @@
       "expected_file": "RS_07_gear_vest_LOD0.glb",
       "imported": true,
       "technical_ready": true,
-      "semantic_category_match": false,
-      "gameplay_scene_instances": 0,
-      "gameplay_entity_scene_evidence": false,
-      "player_camera_realified_asset_evidence": false,
-      "asset_specific_gameplay_event_evidence": false,
-      "production_promoted": false,
-      "blockers": ["semantic_category_mismatch_or_failed_review", "no_gameplay_entity_scene_evidence", "no_player_camera_visible_realified_asset_evidence", "no_asset_specific_gameplay_event_evidence"]
+      "semantic_category_match": true,
+      "gameplay_scene_instances": 48,
+      "gameplay_entity_scene_evidence": true,
+      "player_camera_realified_asset_evidence": true,
+      "asset_specific_gameplay_event_evidence": true,
+      "production_promoted": true,
+      "m94_generated_batch": true,
+      "generation_batch": "M94",
+      "source_batch_id": "M94_FIRST_WAVE_2026-05-19",
+      "source_pipeline": "m94_local_blender_first_wave_from_pro_reference_images",
+      "blockers": []
     },
     {
       "asset_id": "ammo",
@@ -108,6 +132,10 @@
       "player_camera_realified_asset_evidence": true,
       "asset_specific_gameplay_event_evidence": true,
       "production_promoted": true,
+      "m94_generated_batch": false,
+      "generation_batch": "",
+      "source_batch_id": "",
+      "source_pipeline": "",
       "blockers": []
     },
     {
@@ -117,11 +145,15 @@
       "imported": true,
       "technical_ready": true,
       "semantic_category_match": true,
-      "gameplay_scene_instances": 68,
+      "gameplay_scene_instances": 44,
       "gameplay_entity_scene_evidence": true,
       "player_camera_realified_asset_evidence": true,
       "asset_specific_gameplay_event_evidence": true,
       "production_promoted": true,
+      "m94_generated_batch": true,
+      "generation_batch": "M94",
+      "source_batch_id": "M94_FIRST_WAVE_2026-05-19",
+      "source_pipeline": "m94_local_blender_first_wave_from_pro_reference_images",
       "blockers": []
     },
     {
@@ -130,13 +162,17 @@
       "expected_file": "RS_10_prop_container_LOD0.glb",
       "imported": true,
       "technical_ready": true,
-      "semantic_category_match": false,
-      "gameplay_scene_instances": 0,
-      "gameplay_entity_scene_evidence": false,
-      "player_camera_realified_asset_evidence": false,
-      "asset_specific_gameplay_event_evidence": false,
-      "production_promoted": false,
-      "blockers": ["semantic_category_mismatch_or_failed_review", "no_gameplay_entity_scene_evidence", "no_player_camera_visible_realified_asset_evidence", "no_asset_specific_gameplay_event_evidence"]
+      "semantic_category_match": true,
+      "gameplay_scene_instances": 384,
+      "gameplay_entity_scene_evidence": true,
+      "player_camera_realified_asset_evidence": true,
+      "asset_specific_gameplay_event_evidence": true,
+      "production_promoted": true,
+      "m94_generated_batch": true,
+      "generation_batch": "M94",
+      "source_batch_id": "M94_FIRST_WAVE_2026-05-19",
+      "source_pipeline": "m94_local_blender_first_wave_from_pro_reference_images",
+      "blockers": []
     },
     {
       "asset_id": "crate",
@@ -150,6 +186,10 @@
       "player_camera_realified_asset_evidence": false,
       "asset_specific_gameplay_event_evidence": false,
       "production_promoted": false,
+      "m94_generated_batch": false,
+      "generation_batch": "",
+      "source_batch_id": "",
+      "source_pipeline": "",
       "blockers": ["semantic_category_mismatch_or_failed_review", "no_gameplay_entity_scene_evidence", "no_player_camera_visible_realified_asset_evidence", "no_asset_specific_gameplay_event_evidence"]
     },
     {
@@ -157,28 +197,36 @@
       "category": "character",
       "expected_file": "RS_04_player_tactical_LOD0.glb",
       "imported": true,
-      "technical_ready": false,
-      "semantic_category_match": false,
+      "technical_ready": true,
+      "semantic_category_match": true,
       "gameplay_scene_instances": 0,
-      "gameplay_entity_scene_evidence": false,
-      "player_camera_realified_asset_evidence": false,
-      "asset_specific_gameplay_event_evidence": false,
-      "production_promoted": false,
-      "blockers": ["technical_import_or_pbr_sidecar_incomplete", "semantic_category_mismatch_or_failed_review", "no_gameplay_entity_scene_evidence", "no_player_camera_visible_realified_asset_evidence", "no_asset_specific_gameplay_event_evidence"]
+      "gameplay_entity_scene_evidence": true,
+      "player_camera_realified_asset_evidence": true,
+      "asset_specific_gameplay_event_evidence": true,
+      "production_promoted": true,
+      "m94_generated_batch": true,
+      "generation_batch": "M94",
+      "source_batch_id": "M94_FIRST_WAVE_2026-05-19",
+      "source_pipeline": "m94_local_blender_first_wave_from_pro_reference_images",
+      "blockers": []
     },
     {
       "asset_id": "enemy_tactical",
       "category": "character",
       "expected_file": "RS_05_enemy_tactical_LOD0.glb",
       "imported": true,
-      "technical_ready": false,
-      "semantic_category_match": false,
+      "technical_ready": true,
+      "semantic_category_match": true,
       "gameplay_scene_instances": 0,
-      "gameplay_entity_scene_evidence": false,
-      "player_camera_realified_asset_evidence": false,
-      "asset_specific_gameplay_event_evidence": false,
-      "production_promoted": false,
-      "blockers": ["technical_import_or_pbr_sidecar_incomplete", "semantic_category_mismatch_or_failed_review", "no_gameplay_entity_scene_evidence", "no_player_camera_visible_realified_asset_evidence", "no_asset_specific_gameplay_event_evidence"]
+      "gameplay_entity_scene_evidence": true,
+      "player_camera_realified_asset_evidence": true,
+      "asset_specific_gameplay_event_evidence": true,
+      "production_promoted": true,
+      "m94_generated_batch": true,
+      "generation_batch": "M94",
+      "source_batch_id": "M94_FIRST_WAVE_2026-05-19",
+      "source_pipeline": "m94_local_blender_first_wave_from_pro_reference_images",
+      "blockers": []
     }
   ]
 }

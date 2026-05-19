@@ -14,6 +14,7 @@ public static class RealifiedAssetGameplayPromotionLedger
     private const string ImportGatePath = "docs/REALIFIED_IMPORT_MATERIAL_GATE.json";
     private const string CategoryReviewPath = "docs/REALIFIED_CATEGORY_NEMOTRON_REVIEWS.json";
     private const string M93CorrectedLootReviewPath = "docs/M93_CORRECTED_LOOT_NEMOTRON_REVIEW.json";
+    private const string M94GeneratedBatchTracePath = "docs/M94_GENERATED_BATCH_ASSET_TRACE.json";
     private const string RouteGatePath = "docs/TACTICAL_PLAYABLE_ROUTE_GATE.json";
     private const string GameplayGatePath = "docs/TACTICAL_GAMEPLAY_PROOF_GATE.json";
 
@@ -42,8 +43,9 @@ public static class RealifiedAssetGameplayPromotionLedger
         var categoryJson = ReadText(CategoryReviewPath);
         var routeJson = ReadText(RouteGatePath);
         var gameplayJson = ReadText(GameplayGatePath);
+        var m94TraceJson = ReadText(M94GeneratedBatchTracePath);
         var details = ExtractString(routeJson, "details") + " " + ExtractString(gameplayJson, "details");
-        var results = Assets.Select(spec => BuildResult(spec, importJson, categoryJson, routeJson, gameplayJson, details)).ToArray();
+        var results = Assets.Select(spec => BuildResult(spec, importJson, categoryJson, routeJson, gameplayJson, m94TraceJson, details)).ToArray();
         var promotedCount = results.Count(result => result.ProductionPromoted);
         var partialCount = results.Count(result => result.TechnicalReady && result.SemanticCategoryMatch && result.GameplayEntitySceneEvidence);
 
@@ -54,11 +56,20 @@ public static class RealifiedAssetGameplayPromotionLedger
         UnityEngine.Debug.Log("[AI Tools] Realified asset gameplay promotion ledger written to " + ReportPath + " promoted=" + promotedCount);
     }
 
-    private static AssetResult BuildResult(AssetSpec spec, string importJson, string categoryJson, string routeJson, string gameplayJson, string routeDetails)
+    private static AssetResult BuildResult(AssetSpec spec, string importJson, string categoryJson, string routeJson, string gameplayJson, string m94TraceJson, string routeDetails)
     {
         var imported = ExtractAssetBool(importJson, spec.AssetId, "lod0_imported_prefab");
         var technicalReady = ExtractAssetBool(importJson, spec.AssetId, "technical_import_ready");
         var semanticMatch = ExtractAssetSemanticMatch(categoryJson, spec.Category, spec.ExpectedFile);
+        var m94TraceBody = ExtractM94TraceAssetBody(m94TraceJson, spec.AssetId);
+        var m94GeneratedBatch = ExtractBool(m94TraceBody, "m94_generated_batch");
+        var m94SemanticMatch = ExtractBool(m94TraceBody, "semantic_category_match");
+        var sourceBatchId = ExtractString(m94TraceBody, "source_batch_id");
+        var sourcePipeline = ExtractString(m94TraceBody, "source_pipeline");
+        if (m94GeneratedBatch && m94SemanticMatch)
+        {
+            semanticMatch = true;
+        }
         var sceneInstances = string.IsNullOrEmpty(spec.SceneEvidenceKey) ? 0 : ExtractInt(routeJson, spec.SceneEvidenceKey);
         var sceneEvidence = sceneInstances > 0;
         if (spec.AssetId == "ammo")
@@ -71,16 +82,46 @@ public static class RealifiedAssetGameplayPromotionLedger
             semanticMatch = semanticMatch || CorrectedLootSemanticReviewAllows(spec.ExpectedFile);
             sceneEvidence = sceneEvidence || ExtractBool(routeJson, "realified_medkit_loot_route_evidence");
         }
+        else if (spec.AssetId == "helmet")
+        {
+            sceneEvidence = sceneEvidence || ExtractBool(routeJson, "realified_helmet_loot_route_evidence");
+        }
+        else if (spec.AssetId == "vest")
+        {
+            sceneEvidence = sceneEvidence || ExtractBool(routeJson, "realified_vest_loot_route_evidence");
+        }
+        else if (spec.AssetId == "container")
+        {
+            sceneEvidence = sceneEvidence || ExtractBool(routeJson, "realified_container_route_evidence");
+        }
+        else if (spec.AssetId == "player_tactical")
+        {
+            sceneEvidence = sceneEvidence || ExtractBool(routeJson, "realified_player_tactical_route_evidence");
+        }
+        else if (spec.AssetId == "enemy_tactical")
+        {
+            sceneEvidence = sceneEvidence || ExtractBool(routeJson, "realified_enemy_tactical_route_evidence");
+        }
         var playerCameraEvidence = spec.AssetId == "hero_rifle"
             ? ExtractInt(routeJson, "spawn_first_person_gameplay_source_glb_renderers") >= 1
                 && routeDetails.Contains("active rifle", StringComparison.OrdinalIgnoreCase)
                 && ExtractDetailInt(routeDetails, "fpSourceGlbRenderers") >= 1
             : spec.AssetId == "sidearm"
                 ? ExtractInt(routeJson, "spawn_first_person_gameplay_source_glb_renderers") >= 1
-                : spec.AssetId == "ammo"
-                    ? ExtractBool(routeJson, "realified_ammo_loot_route_evidence")
-                    : spec.AssetId == "medkit"
-                        ? ExtractBool(routeJson, "realified_medkit_loot_route_evidence")
+            : spec.AssetId == "ammo"
+                ? ExtractBool(routeJson, "realified_ammo_loot_route_evidence")
+            : spec.AssetId == "medkit"
+                ? ExtractBool(routeJson, "realified_medkit_loot_route_evidence")
+            : spec.AssetId == "helmet"
+                ? ExtractBool(routeJson, "realified_helmet_loot_route_evidence")
+            : spec.AssetId == "vest"
+                ? ExtractBool(routeJson, "realified_vest_loot_route_evidence")
+            : spec.AssetId == "container"
+                ? ExtractBool(routeJson, "realified_container_route_evidence")
+            : spec.AssetId == "player_tactical"
+                ? ExtractBool(routeJson, "realified_player_tactical_route_evidence")
+            : spec.AssetId == "enemy_tactical"
+                ? ExtractBool(routeJson, "realified_enemy_tactical_route_evidence")
                 : false;
         var gameplayEventEvidence = spec.RequiresFireEvent
             ? ExtractBool(routeJson, "fire_state_mutation")
@@ -88,9 +129,19 @@ public static class RealifiedAssetGameplayPromotionLedger
                 && routeDetails.Contains("active rifle", StringComparison.OrdinalIgnoreCase)
             : spec.AssetId == "ammo"
                 ? ExtractBool(routeJson, "realified_ammo_loot_route_evidence") && ExtractBool(routeJson, "pickup_state_mutation")
-                : spec.AssetId == "medkit"
-                    ? ExtractBool(routeJson, "realified_medkit_loot_route_evidence") && ExtractBool(routeJson, "pickup_state_mutation")
-                    : false;
+            : spec.AssetId == "medkit"
+                ? ExtractBool(routeJson, "realified_medkit_loot_route_evidence") && ExtractBool(routeJson, "pickup_state_mutation")
+            : spec.AssetId == "helmet"
+                ? ExtractBool(routeJson, "realified_helmet_loot_route_evidence") && ExtractBool(routeJson, "pickup_state_mutation")
+            : spec.AssetId == "vest"
+                ? ExtractBool(routeJson, "realified_vest_loot_route_evidence") && ExtractBool(routeJson, "pickup_state_mutation")
+            : spec.AssetId == "container"
+                ? ExtractBool(routeJson, "realified_container_cover_route_evidence")
+            : spec.AssetId == "player_tactical"
+                ? ExtractBool(routeJson, "realified_player_tactical_route_evidence") && ExtractBool(routeJson, "moved_from_spawn")
+            : spec.AssetId == "enemy_tactical"
+                ? ExtractBool(routeJson, "realified_enemy_tactical_route_evidence") && (ExtractBool(routeJson, "enemy_ranged_attack_mutation") || ExtractBool(routeJson, "fire_state_mutation"))
+                : false;
         var productionPromoted = imported
             && technicalReady
             && semanticMatch
@@ -109,7 +160,21 @@ public static class RealifiedAssetGameplayPromotionLedger
             playerCameraEvidence,
             gameplayEventEvidence,
             productionPromoted,
+            m94GeneratedBatch,
+            sourceBatchId,
+            sourcePipeline,
             blockers);
+    }
+
+    private static string ExtractM94TraceAssetBody(string json, string assetId)
+    {
+        if (string.IsNullOrEmpty(json))
+        {
+            return "";
+        }
+
+        var match = Regex.Match(json, "\\{\\s*\\\"asset_id\\\"\\s*:\\s*\\\"" + Regex.Escape(assetId) + "\\\"(?<body>.*?)\\n\\s*\\}", RegexOptions.Singleline);
+        return match.Success ? match.Value : "";
     }
 
     private static string[] BuildBlockers(bool imported, bool technicalReady, bool semanticMatch, bool sceneEvidence, bool playerCameraEvidence, bool gameplayEventEvidence)
@@ -278,6 +343,10 @@ public static class RealifiedAssetGameplayPromotionLedger
         Append(json, "player_camera_realified_asset_evidence", result.PlayerCameraRealifiedAssetEvidence, true, 6);
         Append(json, "asset_specific_gameplay_event_evidence", result.AssetSpecificGameplayEventEvidence, true, 6);
         Append(json, "production_promoted", result.ProductionPromoted, true, 6);
+        Append(json, "m94_generated_batch", result.M94GeneratedBatch, true, 6);
+        Append(json, "generation_batch", result.M94GeneratedBatch ? "M94" : "", true, 6);
+        Append(json, "source_batch_id", result.SourceBatchId, true, 6);
+        Append(json, "source_pipeline", result.SourcePipeline, true, 6);
         AppendStringArray(json, "blockers", result.Blockers, false, 6);
         json.Append("    }");
         json.AppendLine(last ? "" : ",");
@@ -402,6 +471,9 @@ public static class RealifiedAssetGameplayPromotionLedger
             bool playerCameraRealifiedAssetEvidence,
             bool assetSpecificGameplayEventEvidence,
             bool productionPromoted,
+            bool m94GeneratedBatch,
+            string sourceBatchId,
+            string sourcePipeline,
             string[] blockers)
         {
             Spec = spec;
@@ -413,6 +485,9 @@ public static class RealifiedAssetGameplayPromotionLedger
             PlayerCameraRealifiedAssetEvidence = playerCameraRealifiedAssetEvidence;
             AssetSpecificGameplayEventEvidence = assetSpecificGameplayEventEvidence;
             ProductionPromoted = productionPromoted;
+            M94GeneratedBatch = m94GeneratedBatch;
+            SourceBatchId = sourceBatchId;
+            SourcePipeline = sourcePipeline;
             Blockers = blockers;
         }
 
@@ -425,6 +500,9 @@ public static class RealifiedAssetGameplayPromotionLedger
         public readonly bool PlayerCameraRealifiedAssetEvidence;
         public readonly bool AssetSpecificGameplayEventEvidence;
         public readonly bool ProductionPromoted;
+        public readonly bool M94GeneratedBatch;
+        public readonly string SourceBatchId;
+        public readonly string SourcePipeline;
         public readonly string[] Blockers;
     }
 }

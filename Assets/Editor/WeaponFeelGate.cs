@@ -60,6 +60,7 @@ public static class WeaponFeelGate
             UnlockWeapon(gm, HeroWeaponId);
             gm.SelectWeapon(HeroWeaponId);
 
+            Teleport(player, new Vector3(72f, 1.04f, 72f));
             player.ResetView(180f, 0f);
             player.SetCameraMode(TacticalCameraMode.FirstPerson);
             player.SetAds(true);

@@ -232,6 +232,10 @@ This scene is the Unity-side HTML tactical game replica pass. It is intentionall
             ApprovedAmmoLootGlbPath,
             ApprovedHelmetLootGlbPath,
             ApprovedVestLootGlbPath,
+            RealifiedCrateGlbPath,
+            RealifiedContainerGlbPath,
+            RealifiedPlayerGlbPath,
+            RealifiedEnemyGlbPath,
             HtmlPistolGlbPath,
             HtmlShotgunGlbPath,
             HtmlRifleGlbPath,
@@ -749,7 +753,7 @@ This scene is the Unity-side HTML tactical game replica pass. It is intentionall
         for (var i = 0; i < data.Length; i++)
         {
             var container = Box("Container " + (i + 1), new Vector3(data[i].x, 1.62f, data[i].z), new Vector3(7.4f, 3.25f, 2.9f), materials["containerPbr"]);
-            AttachHtmlGlb(container, ApprovedContainerGlbPath, Vector3.zero, Vector3.zero, Vector3.one, true, materials["containerPbr"]);
+            AttachHtmlGlb(container, RealifiedContainerGlbPath, Vector3.zero, Vector3.zero, Vector3.one, true, materials["realifiedContainerPbr"]);
             LootPositions.Add(new Vector3(data[i].x, 3.45f, data[i].z));
         }
     }
@@ -783,12 +787,12 @@ This scene is the Unity-side HTML tactical game replica pass. It is intentionall
     private static void CreateSpawnStagingArea(Dictionary<string, Material> materials)
     {
         var leftContainer = Box("Spawn Staging Left Container", new Vector3(-15.2f, 1.62f, 22.8f), new Vector3(5.8f, 3.1f, 2.7f), materials["containerPbr"]);
-        AttachHtmlGlb(leftContainer, ApprovedContainerGlbPath, Vector3.zero, Vector3.zero, Vector3.one * 0.92f, true, materials["containerPbr"]);
+        AttachHtmlGlb(leftContainer, RealifiedContainerGlbPath, Vector3.zero, Vector3.zero, Vector3.one * 0.92f, true, materials["realifiedContainerPbr"]);
         var rightContainer = Box("Spawn Staging Right Container", new Vector3(15.4f, 1.62f, 20.0f), new Vector3(5.8f, 3.1f, 2.7f), materials["containerPbr"]);
-        AttachHtmlGlb(rightContainer, ApprovedContainerGlbPath, Vector3.zero, new Vector3(0f, 180f, 0f), Vector3.one * 0.92f, true, materials["containerPbr"]);
+        AttachHtmlGlb(rightContainer, RealifiedContainerGlbPath, Vector3.zero, new Vector3(0f, 180f, 0f), Vector3.one * 0.92f, true, materials["realifiedContainerPbr"]);
 
         var approvedSideContainer = Box("Approved Container Staging Prop", new Vector3(24.2f, 1.62f, 24.8f), new Vector3(5.8f, 3.1f, 2.7f), materials["containerPbr"]);
-        AttachHtmlGlb(approvedSideContainer, ApprovedContainerGlbPath, Vector3.zero, new Vector3(0f, -12f, 0f), Vector3.one * 0.92f, true, materials["containerPbr"]);
+        AttachHtmlGlb(approvedSideContainer, RealifiedContainerGlbPath, Vector3.zero, new Vector3(0f, -12f, 0f), Vector3.one * 0.92f, true, materials["realifiedContainerPbr"]);
 
         for (var i = 0; i < 4; i++)
         {
@@ -844,7 +848,7 @@ This scene is the Unity-side HTML tactical game replica pass. It is intentionall
         controller.radius = 0.45f;
         controller.center = new Vector3(0f, 1f, 0f);
         player.AddComponent<TacticalPlayerController>();
-        var visual = AttachHtmlGlb(player, ApprovedPlayerGlbPath, new Vector3(0f, -0.02f, 0f), new Vector3(0f, 180f, 0f), Vector3.one * 0.92f, true);
+        var visual = AttachHtmlGlb(player, RealifiedPlayerGlbPath, new Vector3(0f, -0.02f, 0f), new Vector3(0f, 180f, 0f), Vector3.one * 0.92f, true);
         AddTacticalCharacterDetailKit(visual.transform, false, materials);
         player.AddComponent<TacticalCharacterMotionVisual>().Configure(visual.transform);
         ConfigureCharacterClipVisual(player.gameObject, visual.transform, "player_tactical");
@@ -1152,7 +1156,20 @@ This scene is the Unity-side HTML tactical game replica pass. It is intentionall
     {
         var weapon = new GameObject("FP Weapon - " + weaponId);
         weapon.transform.SetParent(parent, false);
-        var sourceGlb = AttachHtmlGlb(weapon, path, localPosition, new Vector3(0f, 180f, 0f), localScale, false, overrideMaterial);
+        var sourcePosition = localPosition;
+        var sourceScale = localScale;
+        if (weaponId == "rifle")
+        {
+            sourcePosition = new Vector3(0.62f, -0.48f, 1.08f);
+            sourceScale = Vector3.one * 0.080f;
+        }
+        else if (weaponId == "dmr" || weaponId == "shotgun")
+        {
+            sourcePosition = localPosition + new Vector3(0.10f, -0.10f, 0.12f);
+            sourceScale = localScale * 0.62f;
+        }
+
+        var sourceGlb = AttachHtmlGlb(weapon, path, sourcePosition, new Vector3(0f, 180f, 0f), sourceScale, false, overrideMaterial);
         if (sourceGlb != null)
         {
             sourceGlb.name = "FP Gameplay Source GLB - " + weaponId + " - " + sourceGlb.name;
@@ -1165,8 +1182,8 @@ This scene is the Unity-side HTML tactical game replica pass. It is intentionall
         var isPistol = weaponId == "pistol";
         var barrelLength = isPistol ? 0.30f : weaponId == "shotgun" ? 0.64f : 0.58f;
         var rootX = isPistol ? 0.36f : 0.44f;
-        var rootY = isPistol ? -0.49f : -0.52f;
-        var rootZ = isPistol ? 0.84f : 0.96f;
+        var rootY = isPistol ? -0.49f : -0.40f;
+        var rootZ = isPistol ? 0.84f : 0.90f;
         var metal = materials["fpGunMetal"];
         var rubber = materials["fpGripRubber"];
         var glass = materials["fpOpticGlass"];
@@ -1380,7 +1397,7 @@ This scene is the Unity-side HTML tactical game replica pass. It is intentionall
             controller.center = new Vector3(0f, 1f, 0f);
             var tacticalEnemy = enemy.AddComponent<TacticalEnemy>();
             tacticalEnemy.Initialize(manager, playerTransform);
-            var visual = AttachHtmlGlb(enemy, ApprovedEnemyGlbPath, new Vector3(0f, -0.02f, 0f), new Vector3(0f, 180f, 0f), Vector3.one * 0.92f, true);
+            var visual = AttachHtmlGlb(enemy, RealifiedEnemyGlbPath, new Vector3(0f, -0.02f, 0f), new Vector3(0f, 180f, 0f), Vector3.one * 0.92f, true);
             AddTacticalCharacterDetailKit(visual.transform, true, materials);
             enemy.AddComponent<TacticalCharacterMotionVisual>().Configure(visual.transform);
             ConfigureCharacterClipVisual(enemy, visual.transform, "enemy_tactical");
@@ -1400,7 +1417,7 @@ This scene is the Unity-side HTML tactical game replica pass. It is intentionall
         controller.radius = 0.45f;
         controller.center = new Vector3(0f, 1f, 0f);
         template.AddComponent<TacticalEnemy>();
-        var visual = AttachHtmlGlb(template, ApprovedEnemyGlbPath, new Vector3(0f, -0.02f, 0f), new Vector3(0f, 180f, 0f), Vector3.one * 0.92f, true);
+        var visual = AttachHtmlGlb(template, RealifiedEnemyGlbPath, new Vector3(0f, -0.02f, 0f), new Vector3(0f, 180f, 0f), Vector3.one * 0.92f, true);
         AddTacticalCharacterDetailKit(visual.transform, true, materials);
         template.AddComponent<TacticalCharacterMotionVisual>().Configure(visual.transform);
         ConfigureCharacterClipVisual(template, visual.transform, "enemy_tactical");
@@ -1656,8 +1673,8 @@ This scene is the Unity-side HTML tactical game replica pass. It is intentionall
             TacticalLootKind.FirstAid => "models/loot_firstaid_final.glb",
             TacticalLootKind.Medkit => RealifiedMedkitLootGlbPath,
             TacticalLootKind.Revive => "models/loot_revive_final.glb",
-            TacticalLootKind.Vest => ApprovedVestLootGlbPath,
-            TacticalLootKind.Helmet => ApprovedHelmetLootGlbPath,
+            TacticalLootKind.Vest => RealifiedVestLootGlbPath,
+            TacticalLootKind.Helmet => RealifiedHelmetLootGlbPath,
             TacticalLootKind.Weapon when weapon == "pistol" => HtmlPistolGlbPath,
             TacticalLootKind.Weapon when weapon == "shotgun" => HtmlShotgunGlbPath,
             TacticalLootKind.Weapon when weapon == "rifle" => HtmlRifleGlbPath,

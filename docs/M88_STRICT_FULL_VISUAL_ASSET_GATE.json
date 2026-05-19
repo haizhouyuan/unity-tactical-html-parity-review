@@ -1,6 +1,6 @@
 {
   "schema": "m88_strict_full_visual_asset_gate_v1",
-  "timestamp_utc": "2026-05-18T23:39:48.0043740Z",
+  "timestamp_utc": "2026-05-19T00:51:36.5407940Z",
   "passed": false,
   "full_visual_asset_gate_currently_remains_false": true,
   "player_pov_report_path": "docs/TACTICAL_PLAYER_POV_GATE.json",
@@ -22,17 +22,17 @@
   "checks": [
     {
       "key": "gameplay_route_passed",
-      "passed": true,
+      "passed": false,
       "meaning": "Playable route evidence exists."
     },
     {
       "key": "all_required_current_gates_passed",
-      "passed": true,
+      "passed": false,
       "meaning": "Current gameplay/parity gates pass in this same gate run."
     },
     {
       "key": "m85_visual_production_passed",
-      "passed": true,
+      "passed": false,
       "meaning": "Scoped player-camera visual production pass exists."
     },
     {
@@ -42,7 +42,7 @@
     },
     {
       "key": "approved_incremental_assets_passed",
-      "passed": true,
+      "passed": false,
       "meaning": "Approved incremental gameplay-bound assets exist."
     },
     {
@@ -52,7 +52,7 @@
     },
     {
       "key": "character_authored_clip_animation_passed",
-      "passed": true,
+      "passed": false,
       "meaning": "Character authored clip evidence exists."
     },
     {
@@ -72,7 +72,7 @@
     },
     {
       "key": "generated_batch_class_promotion_passed",
-      "passed": false,
+      "passed": true,
       "meaning": "Generated batch class promotion reaches all required classes through M94."
     },
     {

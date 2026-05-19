@@ -1,19 +1,19 @@
 {
   "schema": "realified_import_material_gate_v1",
-  "timestamp_utc": "2026-05-18T17:35:19.2639220Z",
+  "timestamp_utc": "2026-05-19T00:51:13.3802960Z",
   "asset_root": "Assets/HtmlTacticalAssets/RealifiedAssets",
   "asset_root_exists": true,
   "glb_count": 48,
-  "png_count": 149,
-  "mat_count": 17,
-  "meta_count": 223,
+  "png_count": 195,
+  "mat_count": 31,
+  "meta_count": 283,
   "summary": {
     "class_count": 12,
     "classes_with_all_lods": 12,
-    "classes_with_pbr_sidecars": 9,
+    "classes_with_pbr_sidecars": 11,
     "classes_with_imported_lod0_prefab": 12,
     "classes_with_accepted_material_shader": 12,
-    "technical_ready_classes": 9,
+    "technical_ready_classes": 11,
     "import_presence_passed": true,
     "pbr_sidecar_presence_passed": false,
     "material_technical_passed": true,
@@ -32,7 +32,7 @@
       "all_lods_present": true,
       "lod0_imported_prefab": true,
       "external_material_count": 3,
-      "accepted_material_shader_count": 6,
+      "accepted_material_shader_count": 16,
       "has_accepted_material_shader": true,
       "pbr_sidecars": {
         "basecolor": true,
@@ -47,7 +47,7 @@
       "production_promoted": false,
       "glb_paths": ["Assets/HtmlTacticalAssets/RealifiedAssets/hero_rifle_LOD0.glb", "Assets/HtmlTacticalAssets/RealifiedAssets/hero_rifle_LOD1.glb", "Assets/HtmlTacticalAssets/RealifiedAssets/hero_rifle_LOD2.glb"],
       "external_materials": ["Assets/HtmlTacticalAssets/RealifiedAssets/hero_rifle_LOD0_PBR.mat", "Assets/HtmlTacticalAssets/RealifiedAssets/hero_rifle_LOD1_PBR.mat", "Assets/HtmlTacticalAssets/RealifiedAssets/hero_rifle_LOD2_PBR.mat"],
-      "material_shaders": ["hero_rifle_LOD0.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness", "hero_rifle_LOD1.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness", "hero_rifle_LOD2.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness", "hero_rifle_LOD0_PBR.mat:Universal Render Pipeline/Lit", "hero_rifle_LOD1_PBR.mat:Universal Render Pipeline/Lit", "hero_rifle_LOD2_PBR.mat:Universal Render Pipeline/Lit"]
+      "material_shaders": ["hero_rifle_LOD0.glb:M94_rifle_black_polymer:Shader Graphs/glTF-pbrMetallicRoughness", "hero_rifle_LOD0.glb:M94_rifle_dark_blued_metal:Shader Graphs/glTF-pbrMetallicRoughness", "hero_rifle_LOD0.glb:M94_rifle_optic_glass:Shader Graphs/glTF-pbrMetallicRoughness", "hero_rifle_LOD0.glb:M94_rifle_reference_blue_finish:Shader Graphs/glTF-pbrMetallicRoughness", "hero_rifle_LOD0.glb:M94_rifle_worn_edge_brass:Shader Graphs/glTF-pbrMetallicRoughness", "hero_rifle_LOD1.glb:M94_rifle_black_polymer.001:Shader Graphs/glTF-pbrMetallicRoughness", "hero_rifle_LOD1.glb:M94_rifle_dark_blued_metal.001:Shader Graphs/glTF-pbrMetallicRoughness", "hero_rifle_LOD1.glb:M94_rifle_optic_glass.001:Shader Graphs/glTF-pbrMetallicRoughness", "hero_rifle_LOD1.glb:M94_rifle_reference_blue_finish.001:Shader Graphs/glTF-pbrMetallicRoughness", "hero_rifle_LOD2.glb:M94_rifle_black_polymer.002:Shader Graphs/glTF-pbrMetallicRoughness", "hero_rifle_LOD2.glb:M94_rifle_dark_blued_metal.002:Shader Graphs/glTF-pbrMetallicRoughness", "hero_rifle_LOD2.glb:M94_rifle_optic_glass.002:Shader Graphs/glTF-pbrMetallicRoughness", "hero_rifle_LOD2.glb:M94_rifle_reference_blue_finish.002:Shader Graphs/glTF-pbrMetallicRoughness", "hero_rifle_LOD0_PBR.mat:Universal Render Pipeline/Lit", "hero_rifle_LOD1_PBR.mat:Universal Render Pipeline/Lit", "hero_rifle_LOD2_PBR.mat:Universal Render Pipeline/Lit"]
     },
     {
       "category": "weapon",
@@ -139,23 +139,23 @@
       "lod2_present": true,
       "all_lods_present": true,
       "lod0_imported_prefab": true,
-      "external_material_count": 0,
-      "accepted_material_shader_count": 3,
+      "external_material_count": 3,
+      "accepted_material_shader_count": 18,
       "has_accepted_material_shader": true,
       "pbr_sidecars": {
-        "basecolor": false,
-        "normal": false,
-        "roughness": false,
-        "metallic_or_metallic_smoothness": false,
-        "ao_or_orm": false,
-        "complete": false
+        "basecolor": true,
+        "normal": true,
+        "roughness": true,
+        "metallic_or_metallic_smoothness": true,
+        "ao_or_orm": true,
+        "complete": true
       },
-      "technical_import_ready": false,
+      "technical_import_ready": true,
       "semantic_promotion_checked_here": false,
       "production_promoted": false,
       "glb_paths": ["Assets/HtmlTacticalAssets/RealifiedAssets/RS_04_player_tactical_LOD0.glb", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_04_player_tactical_LOD1.glb", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_04_player_tactical_LOD2.glb"],
-      "external_materials": [],
-      "material_shaders": ["RS_04_player_tactical_LOD0.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness", "RS_04_player_tactical_LOD1.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness", "RS_04_player_tactical_LOD2.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness"]
+      "external_materials": ["Assets/HtmlTacticalAssets/RealifiedAssets/RS_04_player_tactical_LOD0_PBR.mat", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_04_player_tactical_LOD1_PBR.mat", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_04_player_tactical_LOD2_PBR.mat"],
+      "material_shaders": ["RS_04_player_tactical_LOD0.glb:M94_black_visor:Shader Graphs/glTF-pbrMetallicRoughness", "RS_04_player_tactical_LOD0.glb:M94_muted_face_shadow:Shader Graphs/glTF-pbrMetallicRoughness", "RS_04_player_tactical_LOD0.glb:M94_plate_carrier:Shader Graphs/glTF-pbrMetallicRoughness", "RS_04_player_tactical_LOD0.glb:M94_player_blue_patch:Shader Graphs/glTF-pbrMetallicRoughness", "RS_04_player_tactical_LOD0.glb:M94_player_uniform:Shader Graphs/glTF-pbrMetallicRoughness", "RS_04_player_tactical_LOD1.glb:M94_black_visor.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_04_player_tactical_LOD1.glb:M94_muted_face_shadow.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_04_player_tactical_LOD1.glb:M94_plate_carrier.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_04_player_tactical_LOD1.glb:M94_player_blue_patch.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_04_player_tactical_LOD1.glb:M94_player_uniform.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_04_player_tactical_LOD2.glb:M94_black_visor.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_04_player_tactical_LOD2.glb:M94_muted_face_shadow.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_04_player_tactical_LOD2.glb:M94_plate_carrier.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_04_player_tactical_LOD2.glb:M94_player_blue_patch.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_04_player_tactical_LOD2.glb:M94_player_uniform.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_04_player_tactical_LOD0_PBR.mat:Universal Render Pipeline/Lit", "RS_04_player_tactical_LOD1_PBR.mat:Universal Render Pipeline/Lit", "RS_04_player_tactical_LOD2_PBR.mat:Universal Render Pipeline/Lit"]
     },
     {
       "category": "character",
@@ -166,23 +166,23 @@
       "lod2_present": true,
       "all_lods_present": true,
       "lod0_imported_prefab": true,
-      "external_material_count": 0,
-      "accepted_material_shader_count": 3,
+      "external_material_count": 3,
+      "accepted_material_shader_count": 18,
       "has_accepted_material_shader": true,
       "pbr_sidecars": {
-        "basecolor": false,
-        "normal": false,
-        "roughness": false,
-        "metallic_or_metallic_smoothness": false,
-        "ao_or_orm": false,
-        "complete": false
+        "basecolor": true,
+        "normal": true,
+        "roughness": true,
+        "metallic_or_metallic_smoothness": true,
+        "ao_or_orm": true,
+        "complete": true
       },
-      "technical_import_ready": false,
+      "technical_import_ready": true,
       "semantic_promotion_checked_here": false,
       "production_promoted": false,
       "glb_paths": ["Assets/HtmlTacticalAssets/RealifiedAssets/RS_05_enemy_tactical_LOD0.glb", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_05_enemy_tactical_LOD1.glb", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_05_enemy_tactical_LOD2.glb"],
-      "external_materials": [],
-      "material_shaders": ["RS_05_enemy_tactical_LOD0.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness", "RS_05_enemy_tactical_LOD1.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness", "RS_05_enemy_tactical_LOD2.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness"]
+      "external_materials": ["Assets/HtmlTacticalAssets/RealifiedAssets/RS_05_enemy_tactical_LOD0_PBR.mat", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_05_enemy_tactical_LOD1_PBR.mat", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_05_enemy_tactical_LOD2_PBR.mat"],
+      "material_shaders": ["RS_05_enemy_tactical_LOD0.glb:M94_black_visor.003:Shader Graphs/glTF-pbrMetallicRoughness", "RS_05_enemy_tactical_LOD0.glb:M94_enemy_red_patch:Shader Graphs/glTF-pbrMetallicRoughness", "RS_05_enemy_tactical_LOD0.glb:M94_enemy_uniform:Shader Graphs/glTF-pbrMetallicRoughness", "RS_05_enemy_tactical_LOD0.glb:M94_muted_face_shadow.003:Shader Graphs/glTF-pbrMetallicRoughness", "RS_05_enemy_tactical_LOD0.glb:M94_plate_carrier.003:Shader Graphs/glTF-pbrMetallicRoughness", "RS_05_enemy_tactical_LOD1.glb:M94_black_visor.004:Shader Graphs/glTF-pbrMetallicRoughness", "RS_05_enemy_tactical_LOD1.glb:M94_enemy_red_patch.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_05_enemy_tactical_LOD1.glb:M94_enemy_uniform.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_05_enemy_tactical_LOD1.glb:M94_muted_face_shadow.004:Shader Graphs/glTF-pbrMetallicRoughness", "RS_05_enemy_tactical_LOD1.glb:M94_plate_carrier.004:Shader Graphs/glTF-pbrMetallicRoughness", "RS_05_enemy_tactical_LOD2.glb:M94_black_visor.005:Shader Graphs/glTF-pbrMetallicRoughness", "RS_05_enemy_tactical_LOD2.glb:M94_enemy_red_patch.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_05_enemy_tactical_LOD2.glb:M94_enemy_uniform.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_05_enemy_tactical_LOD2.glb:M94_muted_face_shadow.005:Shader Graphs/glTF-pbrMetallicRoughness", "RS_05_enemy_tactical_LOD2.glb:M94_plate_carrier.005:Shader Graphs/glTF-pbrMetallicRoughness", "RS_05_enemy_tactical_LOD0_PBR.mat:Universal Render Pipeline/Lit", "RS_05_enemy_tactical_LOD1_PBR.mat:Universal Render Pipeline/Lit", "RS_05_enemy_tactical_LOD2_PBR.mat:Universal Render Pipeline/Lit"]
     },
     {
       "category": "gear",
@@ -193,8 +193,8 @@
       "lod2_present": true,
       "all_lods_present": true,
       "lod0_imported_prefab": true,
-      "external_material_count": 1,
-      "accepted_material_shader_count": 4,
+      "external_material_count": 3,
+      "accepted_material_shader_count": 12,
       "has_accepted_material_shader": true,
       "pbr_sidecars": {
         "basecolor": true,
@@ -208,8 +208,8 @@
       "semantic_promotion_checked_here": false,
       "production_promoted": false,
       "glb_paths": ["Assets/HtmlTacticalAssets/RealifiedAssets/RS_06_gear_helmet_LOD0.glb", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_06_gear_helmet_LOD1.glb", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_06_gear_helmet_LOD2.glb"],
-      "external_materials": ["Assets/HtmlTacticalAssets/RealifiedAssets/RS_06_gear_helmet_LOD0_PBR.mat"],
-      "material_shaders": ["RS_06_gear_helmet_LOD0.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness", "RS_06_gear_helmet_LOD1.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness", "RS_06_gear_helmet_LOD2.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness", "RS_06_gear_helmet_LOD0_PBR.mat:Universal Render Pipeline/Lit"]
+      "external_materials": ["Assets/HtmlTacticalAssets/RealifiedAssets/RS_06_gear_helmet_LOD0_PBR.mat", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_06_gear_helmet_LOD1_PBR.mat", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_06_gear_helmet_LOD2_PBR.mat"],
+      "material_shaders": ["RS_06_gear_helmet_LOD0.glb:M94_helmet_black_rail:Shader Graphs/glTF-pbrMetallicRoughness", "RS_06_gear_helmet_LOD0.glb:M94_helmet_green_black_visor:Shader Graphs/glTF-pbrMetallicRoughness", "RS_06_gear_helmet_LOD0.glb:M94_helmet_shell:Shader Graphs/glTF-pbrMetallicRoughness", "RS_06_gear_helmet_LOD1.glb:M94_helmet_black_rail.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_06_gear_helmet_LOD1.glb:M94_helmet_green_black_visor.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_06_gear_helmet_LOD1.glb:M94_helmet_shell.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_06_gear_helmet_LOD2.glb:M94_helmet_black_rail.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_06_gear_helmet_LOD2.glb:M94_helmet_green_black_visor.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_06_gear_helmet_LOD2.glb:M94_helmet_shell.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_06_gear_helmet_LOD0_PBR.mat:Universal Render Pipeline/Lit", "RS_06_gear_helmet_LOD1_PBR.mat:Universal Render Pipeline/Lit", "RS_06_gear_helmet_LOD2_PBR.mat:Universal Render Pipeline/Lit"]
     },
     {
       "category": "gear",
@@ -220,8 +220,8 @@
       "lod2_present": true,
       "all_lods_present": true,
       "lod0_imported_prefab": true,
-      "external_material_count": 1,
-      "accepted_material_shader_count": 4,
+      "external_material_count": 3,
+      "accepted_material_shader_count": 11,
       "has_accepted_material_shader": true,
       "pbr_sidecars": {
         "basecolor": true,
@@ -235,8 +235,8 @@
       "semantic_promotion_checked_here": false,
       "production_promoted": false,
       "glb_paths": ["Assets/HtmlTacticalAssets/RealifiedAssets/RS_07_gear_vest_LOD0.glb", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_07_gear_vest_LOD1.glb", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_07_gear_vest_LOD2.glb"],
-      "external_materials": ["Assets/HtmlTacticalAssets/RealifiedAssets/RS_07_gear_vest_LOD0_PBR.mat"],
-      "material_shaders": ["RS_07_gear_vest_LOD0.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness", "RS_07_gear_vest_LOD1.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness", "RS_07_gear_vest_LOD2.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness", "RS_07_gear_vest_LOD0_PBR.mat:Universal Render Pipeline/Lit"]
+      "external_materials": ["Assets/HtmlTacticalAssets/RealifiedAssets/RS_07_gear_vest_LOD0_PBR.mat", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_07_gear_vest_LOD1_PBR.mat", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_07_gear_vest_LOD2_PBR.mat"],
+      "material_shaders": ["RS_07_gear_vest_LOD0.glb:M94_vest_buckles:Shader Graphs/glTF-pbrMetallicRoughness", "RS_07_gear_vest_LOD0.glb:M94_vest_fabric:Shader Graphs/glTF-pbrMetallicRoughness", "RS_07_gear_vest_LOD0.glb:M94_vest_plate:Shader Graphs/glTF-pbrMetallicRoughness", "RS_07_gear_vest_LOD1.glb:M94_vest_buckles.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_07_gear_vest_LOD1.glb:M94_vest_fabric.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_07_gear_vest_LOD1.glb:M94_vest_plate.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_07_gear_vest_LOD2.glb:M94_vest_fabric.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_07_gear_vest_LOD2.glb:M94_vest_plate.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_07_gear_vest_LOD0_PBR.mat:Universal Render Pipeline/Lit", "RS_07_gear_vest_LOD1_PBR.mat:Universal Render Pipeline/Lit", "RS_07_gear_vest_LOD2_PBR.mat:Universal Render Pipeline/Lit"]
     },
     {
       "category": "loot",
@@ -290,7 +290,7 @@
       "production_promoted": false,
       "glb_paths": ["Assets/HtmlTacticalAssets/RealifiedAssets/RS_09_loot_medkit_LOD0.glb", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_09_loot_medkit_LOD1.glb", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_09_loot_medkit_LOD2.glb"],
       "external_materials": ["Assets/HtmlTacticalAssets/RealifiedAssets/RS_09_loot_medkit_LOD0_PBR.mat", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_09_loot_medkit_LOD1_PBR.mat", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_09_loot_medkit_LOD2_PBR.mat"],
-      "material_shaders": ["RS_09_loot_medkit_LOD0.glb:M93_medkit_black_strap:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD0.glb:M93_medkit_buckle_metal:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD0.glb:M93_medkit_deep_red_case:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD0.glb:M93_medkit_fabric_dark_red:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD0.glb:M93_medkit_white_cross:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD1.glb:M93_medkit_black_strap.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD1.glb:M93_medkit_buckle_metal.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD1.glb:M93_medkit_deep_red_case.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD1.glb:M93_medkit_fabric_dark_red.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD1.glb:M93_medkit_white_cross.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD2.glb:M93_medkit_black_strap.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD2.glb:M93_medkit_deep_red_case.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD2.glb:M93_medkit_fabric_dark_red.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD2.glb:M93_medkit_white_cross.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD0_PBR.mat:Universal Render Pipeline/Lit", "RS_09_loot_medkit_LOD1_PBR.mat:Universal Render Pipeline/Lit", "RS_09_loot_medkit_LOD2_PBR.mat:Universal Render Pipeline/Lit"]
+      "material_shaders": ["RS_09_loot_medkit_LOD0.glb:M94_medkit_dark_fabric_lid:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD0.glb:M94_medkit_black_straps:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD0.glb:M94_medkit_deep_red_case:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD0.glb:M94_medkit_buckles:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD0.glb:M94_medkit_white_cross:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD1.glb:M94_medkit_black_straps.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD1.glb:M94_medkit_buckles.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD1.glb:M94_medkit_dark_fabric_lid.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD1.glb:M94_medkit_deep_red_case.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD1.glb:M94_medkit_white_cross.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD2.glb:M94_medkit_black_straps.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD2.glb:M94_medkit_dark_fabric_lid.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD2.glb:M94_medkit_deep_red_case.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD2.glb:M94_medkit_white_cross.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_09_loot_medkit_LOD0_PBR.mat:Universal Render Pipeline/Lit", "RS_09_loot_medkit_LOD1_PBR.mat:Universal Render Pipeline/Lit", "RS_09_loot_medkit_LOD2_PBR.mat:Universal Render Pipeline/Lit"]
     },
     {
       "category": "environment_prop",
@@ -301,8 +301,8 @@
       "lod2_present": true,
       "all_lods_present": true,
       "lod0_imported_prefab": true,
-      "external_material_count": 0,
-      "accepted_material_shader_count": 3,
+      "external_material_count": 3,
+      "accepted_material_shader_count": 12,
       "has_accepted_material_shader": true,
       "pbr_sidecars": {
         "basecolor": true,
@@ -316,8 +316,8 @@
       "semantic_promotion_checked_here": false,
       "production_promoted": false,
       "glb_paths": ["Assets/HtmlTacticalAssets/RealifiedAssets/RS_10_prop_container_LOD0.glb", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_10_prop_container_LOD1.glb", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_10_prop_container_LOD2.glb"],
-      "external_materials": [],
-      "material_shaders": ["RS_10_prop_container_LOD0.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness", "RS_10_prop_container_LOD1.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness", "RS_10_prop_container_LOD2.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness"]
+      "external_materials": ["Assets/HtmlTacticalAssets/RealifiedAssets/RS_10_prop_container_LOD0_PBR.mat", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_10_prop_container_LOD1_PBR.mat", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_10_prop_container_LOD2_PBR.mat"],
+      "material_shaders": ["RS_10_prop_container_LOD0.glb:M94_container_dark_ribs:Shader Graphs/glTF-pbrMetallicRoughness", "RS_10_prop_container_LOD0.glb:M94_container_scraped_edges:Shader Graphs/glTF-pbrMetallicRoughness", "RS_10_prop_container_LOD0.glb:M94_container_weathered_blue_body:Shader Graphs/glTF-pbrMetallicRoughness", "RS_10_prop_container_LOD0.glb:M94_container_white_decals:Shader Graphs/glTF-pbrMetallicRoughness", "RS_10_prop_container_LOD1.glb:M94_container_dark_ribs.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_10_prop_container_LOD1.glb:M94_container_weathered_blue_body.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_10_prop_container_LOD1.glb:M94_container_white_decals.001:Shader Graphs/glTF-pbrMetallicRoughness", "RS_10_prop_container_LOD2.glb:M94_container_dark_ribs.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_10_prop_container_LOD2.glb:M94_container_weathered_blue_body.002:Shader Graphs/glTF-pbrMetallicRoughness", "RS_10_prop_container_LOD0_PBR.mat:Universal Render Pipeline/Lit", "RS_10_prop_container_LOD1_PBR.mat:Universal Render Pipeline/Lit", "RS_10_prop_container_LOD2_PBR.mat:Universal Render Pipeline/Lit"]
     },
     {
       "category": "environment_prop",
@@ -328,8 +328,8 @@
       "lod2_present": true,
       "all_lods_present": true,
       "lod0_imported_prefab": true,
-      "external_material_count": 0,
-      "accepted_material_shader_count": 3,
+      "external_material_count": 1,
+      "accepted_material_shader_count": 4,
       "has_accepted_material_shader": true,
       "pbr_sidecars": {
         "basecolor": true,
@@ -343,8 +343,8 @@
       "semantic_promotion_checked_here": false,
       "production_promoted": false,
       "glb_paths": ["Assets/HtmlTacticalAssets/RealifiedAssets/RS_11_prop_crate_LOD0.glb", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_11_prop_crate_LOD1.glb", "Assets/HtmlTacticalAssets/RealifiedAssets/RS_11_prop_crate_LOD2.glb"],
-      "external_materials": [],
-      "material_shaders": ["RS_11_prop_crate_LOD0.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness", "RS_11_prop_crate_LOD1.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness", "RS_11_prop_crate_LOD2.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness"]
+      "external_materials": ["Assets/HtmlTacticalAssets/RealifiedAssets/RS_11_prop_crate_LOD0_PBR.mat"],
+      "material_shaders": ["RS_11_prop_crate_LOD0.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness", "RS_11_prop_crate_LOD1.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness", "RS_11_prop_crate_LOD2.glb:Material_0:Shader Graphs/glTF-pbrMetallicRoughness", "RS_11_prop_crate_LOD0_PBR.mat:Universal Render Pipeline/Lit"]
     }
   ]
 }

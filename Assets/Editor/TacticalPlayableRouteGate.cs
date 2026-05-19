@@ -45,6 +45,12 @@ public static class TacticalPlayableRouteGate
         var realifiedLootClassRouteEvidence = false;
         var realifiedAmmoLootRouteEvidence = false;
         var realifiedMedkitLootRouteEvidence = false;
+        var realifiedHelmetLootRouteEvidence = false;
+        var realifiedVestLootRouteEvidence = false;
+        var realifiedContainerRouteEvidence = false;
+        var realifiedContainerCoverRouteEvidence = false;
+        var realifiedPlayerTacticalRouteEvidence = false;
+        var realifiedEnemyTacticalRouteEvidence = false;
         var enemyAttackMutatedState = false;
         var dynamicSpawnMutatedState = false;
         var ladderMutatedState = false;
@@ -121,6 +127,9 @@ public static class TacticalPlayableRouteGate
 
             Visit(player, camera, follow, new Vector3(0f, 1.04f, 22f), 180f);
             containerVisited = CountNearbyNamed("Container", player.transform.position, 24f) >= 5;
+            realifiedContainerRouteEvidence = CountRenderersUsingMaterial("RealifiedContainerPbrPromoted") >= 1
+                || CountSceneObjectsContainingRenderer("RS_10_prop_container_LOD0") >= 1;
+            realifiedContainerCoverRouteEvidence = containerVisited && realifiedContainerRouteEvidence;
             screenshotCount += CaptureStep(camera, screenshots, "05_container_yard_route", "Visited container yard");
 
             pickupMutatedState = RunPickupStep(gm, player, camera, follow, details, screenshots, ref screenshotCount);
@@ -133,10 +142,20 @@ public static class TacticalPlayableRouteGate
                 screenshots,
                 ref screenshotCount,
                 out realifiedAmmoLootRouteEvidence,
-                out realifiedMedkitLootRouteEvidence);
-            realifiedLootClassRouteEvidence = realifiedAmmoLootRouteEvidence && realifiedMedkitLootRouteEvidence;
+                out realifiedMedkitLootRouteEvidence,
+                out realifiedHelmetLootRouteEvidence,
+                out realifiedVestLootRouteEvidence);
+            realifiedLootClassRouteEvidence = realifiedAmmoLootRouteEvidence
+                && realifiedMedkitLootRouteEvidence
+                && realifiedHelmetLootRouteEvidence
+                && realifiedVestLootRouteEvidence;
             fireMutatedState = RunFireStep(gm, player, camera, follow, details, screenshots, ref screenshotCount);
             enemyAttackMutatedState = RunEnemyAttackStep(gm, player, camera, follow, details, screenshots, ref screenshotCount);
+            realifiedPlayerTacticalRouteEvidence = CountSceneObjectsContainingRenderer("RS_04_player_tactical_LOD0") >= 1
+                && movedFromSpawn
+                && playerCameraEvidence;
+            realifiedEnemyTacticalRouteEvidence = CountSceneObjectsContainingRenderer("RS_05_enemy_tactical_LOD0") >= 1
+                && (fireMutatedState || enemyAttackMutatedState);
             dynamicSpawnMutatedState = RunDynamicSpawnStep(gm, details);
             ladderMutatedState = RunLadderStep(gm, player, camera, follow, details, screenshots, ref screenshotCount);
             healMutatedState = RunHealStep(gm, details);
@@ -190,6 +209,12 @@ public static class TacticalPlayableRouteGate
         Append(json, "realified_loot_class_route_evidence", realifiedLootClassRouteEvidence, true);
         Append(json, "realified_ammo_loot_route_evidence", realifiedAmmoLootRouteEvidence, true);
         Append(json, "realified_medkit_loot_route_evidence", realifiedMedkitLootRouteEvidence, true);
+        Append(json, "realified_helmet_loot_route_evidence", realifiedHelmetLootRouteEvidence, true);
+        Append(json, "realified_vest_loot_route_evidence", realifiedVestLootRouteEvidence, true);
+        Append(json, "realified_container_route_evidence", realifiedContainerRouteEvidence, true);
+        Append(json, "realified_container_cover_route_evidence", realifiedContainerCoverRouteEvidence, true);
+        Append(json, "realified_player_tactical_route_evidence", realifiedPlayerTacticalRouteEvidence, true);
+        Append(json, "realified_enemy_tactical_route_evidence", realifiedEnemyTacticalRouteEvidence, true);
         Append(json, "approved_loot_class_route_evidence", approvedLootClassRouteEvidence, true);
         Append(json, "fire_state_mutation", fireMutatedState, true);
         Append(json, "enemy_ranged_attack_mutation", enemyAttackMutatedState, true);
@@ -259,14 +284,19 @@ public static class TacticalPlayableRouteGate
         StringBuilder screenshots,
         ref int screenshotCount,
         out bool realifiedAmmoLootRouteEvidence,
-        out bool realifiedMedkitLootRouteEvidence)
+        out bool realifiedMedkitLootRouteEvidence,
+        out bool realifiedHelmetLootRouteEvidence,
+        out bool realifiedVestLootRouteEvidence)
     {
         realifiedAmmoLootRouteEvidence = false;
         realifiedMedkitLootRouteEvidence = false;
+        realifiedHelmetLootRouteEvidence = false;
+        realifiedVestLootRouteEvidence = false;
         var requiredKinds = new[]
         {
             TacticalLootKind.Ammo,
             TacticalLootKind.Medkit,
+            TacticalLootKind.Helmet,
             TacticalLootKind.Vest
         };
         var passed = 0;
@@ -291,6 +321,8 @@ public static class TacticalPlayableRouteGate
             {
                 TacticalLootKind.Ammo => HasRendererUsingMaterial(loot.gameObject, "RealifiedAmmoLootPbrPromoted"),
                 TacticalLootKind.Medkit => HasRendererUsingMaterial(loot.gameObject, "RealifiedMedkitLootPbrPromoted"),
+                TacticalLootKind.Helmet => HasRendererUsingMaterial(loot.gameObject, "RealifiedHelmetPbrPromoted"),
+                TacticalLootKind.Vest => HasRendererUsingMaterial(loot.gameObject, "RealifiedVestPbrPromoted"),
                 _ => false
             };
             var lootEvidencePrefix = realifiedLootVisibleBeforePickup ? "realified" : "approved";
@@ -315,6 +347,14 @@ public static class TacticalPlayableRouteGate
             if (kind == TacticalLootKind.Medkit && ok && realifiedLootVisibleBeforePickup)
             {
                 realifiedMedkitLootRouteEvidence = true;
+            }
+            if (kind == TacticalLootKind.Helmet && ok && realifiedLootVisibleBeforePickup)
+            {
+                realifiedHelmetLootRouteEvidence = true;
+            }
+            if (kind == TacticalLootKind.Vest && ok && realifiedLootVisibleBeforePickup)
+            {
+                realifiedVestLootRouteEvidence = true;
             }
 
             details.Append("approvedClass ").Append(kind)

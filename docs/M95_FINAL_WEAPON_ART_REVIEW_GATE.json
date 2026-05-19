@@ -1,6 +1,6 @@
 {
   "schema": "m95_final_weapon_art_review_gate_v1",
-  "timestamp_utc": "2026-05-18T23:39:47.6738710Z",
+  "timestamp_utc": "2026-05-19T00:51:36.2113400Z",
   "passed": false,
   "policy": "Strict final weapon art readiness. M92 feel evidence is necessary but not sufficient; final quality cannot be claimed from renderer counts or contact sheets alone.",
   "weapon_feel_gate_path": "docs/WEAPON_FEEL_GATE.json",

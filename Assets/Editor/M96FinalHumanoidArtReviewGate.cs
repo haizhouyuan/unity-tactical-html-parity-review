@@ -115,7 +115,8 @@ public static class M96FinalHumanoidArtReviewGate
             blockers.Add(characterNote);
         }
 
-        if (Contains(ledger, "\"asset_id\": \"player_tactical\"") && !ContainsAny(blockers, "player_tactical"))
+        if ((!AssetProductionPromoted(ledger, "player_tactical") || !AssetProductionPromoted(ledger, "enemy_tactical"))
+            && !ContainsAny(blockers, "player_tactical"))
         {
             blockers.Add("player_tactical and enemy_tactical generated assets are still blocked in the gameplay promotion ledger.");
         }

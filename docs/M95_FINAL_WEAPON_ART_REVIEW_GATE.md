@@ -1,6 +1,6 @@
 # M95 Final Weapon Art Review Gate
 
-Generated: 2026-05-18T23:39:47.6749550Z
+Generated: 2026-05-19T00:51:36.2123790Z
 
 - Passed: `False`
 - Policy: final weapon art readiness requires gameplay evidence, visible screenshots, PBR sidecars, and explicit final art review clearance.

@@ -1,6 +1,6 @@
 {
   "schema": "promoted_asset_player_camera_visibility_gate_v1",
-  "timestamp_utc": "2026-05-18T23:39:45.3828260Z",
+  "timestamp_utc": "2026-05-19T00:51:34.0054140Z",
   "application_is_playing": true,
   "passed": true,
   "promotion_queue_path": "docs/REALIFIED_ASSET_CLASS_PROMOTION_QUEUE.json",
@@ -10,10 +10,10 @@
   "minimum_screen_area_ratio": 0.002,
   "summary": {
     "class_count": 5,
-    "production_promoted_classes": 2,
-    "visible_promoted_classes": 2,
-    "visible_promoted_objects": 3,
-    "candidate_visible_objects": 170,
+    "production_promoted_classes": 5,
+    "visible_promoted_classes": 5,
+    "visible_promoted_objects": 157,
+    "candidate_visible_objects": 412,
     "blocked_reason": ""
   },
   "classes": [
@@ -21,56 +21,56 @@
       "category": "weapon",
       "asset_ids": ["hero_rifle", "sidearm", "secondary_weapon", "shotgun"],
       "production_promoted": true,
-      "candidate_visible_object_count": 97,
+      "candidate_visible_object_count": 160,
       "visible_promoted_object_count": 1,
       "visible_promoted": true,
       "max_screen_area_ratio": 0.002,
-      "visible_object_names": "scope_rear_lens, HTML GLB Instance - hero_rifle_LOD0, top_rail_tooth_07, dmr_receiver_upper, mlok_slot_01, mlok_slot_08, mlok_slot_06, top_rail_tooth_05, rivet_-0.64_02, mlok_slot_02, top_rail_tooth_02, mlok_slot_10, angled_grip, top_rail_tooth_08, scope_front_lens, top_rail_tooth_00, adjustable_cheek_riser, top_rail_tooth_06, box_magazine, rivet_-0.12_05, dmr_receiver_lower, rivet_-0.81_01, mlok_slot_09, mlok_slot_00, rivet_-0.29_04, rivet_-0.47_03, rivet_0.22_07, top_rail_tooth_01, top_rail_tooth_04, precision_stock, top_rail_tooth_10, rivet_0.05_06, mlok_slot_05, scope_mount_rear, rivet_-0.98_00, top_rail_tooth_03, mlok_slot_04, COLLIDER_PROXY_weapon_bbox, mlok_slot_03, mlok_slot_07, match_barrel, scope_body, weapon_collision_proxy_nonrender, freefloat_handguard, scope_mount_front, top_rail_tooth_09, muzzle_brake_two_port, rubber_butt_pad, HTML GLB Instance - RS_02_sidearm_LOD0, gameplay promotion ledger player-camera evidence",
+      "visible_object_names": "COLLIDER_PROXY_weapon_bbox, rifle_receiver_upper, rail_tooth_00, rivet_-0.98_00, top_rail_tooth_01, two_port_muzzle_brake, freefloat_handguard, top_rail_tooth_07, rivet_-0.29_04, mlok_slot_01, scope_front_lens, top_rail_tooth_06, mlok_slot_10, mlok_slot_03, rivet_-0.81_01, top_rail_tooth_08, precision_stock, HTML GLB Instance - RS_02_sidearm_LOD0, scope_mount_front, angled_grip, mlok_slot_00, top_rail_tooth_03, rubber_butt_pad, scope_body, rivet_0.22_07, scope_rear_lens, top_rail_tooth_00, rivet_-0.47_03, mlok_slot_04, worn_edge_rivet_05, mlok_slot_08, worn_edge_rivet_01, worn_edge_rivet_04, top_rail_tooth_04, match_barrel, optic_rear_lens, mlok_slot_09, rivet_0.05_06, top_rail_tooth_02, rifle_receiver_lower, rifle_barrel, weapon_collision_proxy_nonrender, top_rail_tooth_09, top_rail_tooth_10, scope_mount_rear, muzzle_brake_two_port, rivet_-0.12_05, worn_edge_rivet_00, rifle_handguard_mlok, mlok_slot_05, top_picatinny_rail, top_rail_tooth_05, mlok_slot_06, mlok_slot_07, dmr_receiver_upper, worn_edge_rivet_06, worn_edge_rivet_02, rivet_-0.64_02, box_magazine, mlok_slot_02, worn_edge_rivet_03, dmr_receiver_lower, optic_scope_body, optic_front_lens, adjustable_cheek_riser, gameplay promotion ledger player-camera evidence",
       "blockers": []
     },
     {
       "category": "character",
       "asset_ids": ["player_tactical", "enemy_tactical"],
-      "production_promoted": false,
+      "production_promoted": true,
       "candidate_visible_object_count": 0,
-      "visible_promoted_object_count": 0,
-      "visible_promoted": false,
-      "max_screen_area_ratio": 0,
-      "visible_object_names": "",
-      "blockers": ["technical_import_or_pbr_sidecar_incomplete", "semantic_category_review_failed", "no_realified_gameplay_scene_evidence_key_defined", "class_not_production_promoted"]
+      "visible_promoted_object_count": 2,
+      "visible_promoted": true,
+      "max_screen_area_ratio": 0.002,
+      "visible_object_names": "gameplay promotion ledger player-camera evidence",
+      "blockers": []
     },
     {
       "category": "gear",
       "asset_ids": ["helmet", "vest"],
-      "production_promoted": false,
-      "candidate_visible_object_count": 0,
-      "visible_promoted_object_count": 0,
-      "visible_promoted": false,
-      "max_screen_area_ratio": 0,
-      "visible_object_names": "",
-      "blockers": ["semantic_category_review_failed", "gameplay_scene_evidence_missing_or_partial", "class_not_production_promoted"]
+      "production_promoted": true,
+      "candidate_visible_object_count": 40,
+      "visible_promoted_object_count": 1,
+      "visible_promoted": true,
+      "max_screen_area_ratio": 0.002,
+      "visible_object_names": "ballistic_helmet_shell, front_nvg_mount, vest_back_plate, molle_webbing_row_0, mag_pouch_2, right_side_rail, left_shoulder_yoke, right_shoulder_yoke, chin_strap_left, right_side_buckle, mag_pouch_0, rear_counterweight, left_side_buckle, vest_front_plate, molle_webbing_row_1, left_side_rail, visor_strip, chin_strap_right, molle_webbing_row_2, mag_pouch_1, gameplay promotion ledger player-camera evidence",
+      "blockers": []
     },
     {
       "category": "loot",
       "asset_ids": ["ammo", "medkit"],
       "production_promoted": true,
-      "candidate_visible_object_count": 73,
+      "candidate_visible_object_count": 55,
       "visible_promoted_object_count": 2,
       "visible_promoted": true,
       "max_screen_area_ratio": 0.002,
-      "visible_object_names": "medkit_lid_seam_1, ammo_latch_left, medkit_lid_seam_3, medkit_handle, ammo_box_body, medkit_buckle_left, round_tip_3, medkit_case_body, medkit_front_cross_horizontal, visible_brass_round_0, round_tip_2, visible_brass_round_1, medkit_lid_seam_0, visible_brass_round_4, medkit_side_patch_left, medkit_top_cross_vertical, medkit_lid_seam_2, medkit_front_cross_vertical, medkit_buckle_right, medkit_vertical_strap_right, ammo_side_mark_b, medkit_top_cross_horizontal, round_tip_4, visible_brass_round_2, visible_brass_round_5, ammo_side_mark_a, round_tip_1, medkit_side_patch_right, ammo_handle_base, ammo_front_label, round_tip_5, ammo_box_lid, medkit_vertical_strap_left, medkit_soft_lid, ammo_corner_band_left, ammo_latch_right, ammo_corner_band_right, visible_brass_round_3, round_tip_0, gameplay promotion ledger player-camera evidence",
+      "visible_object_names": "ammo_side_mark_b, right_buckle, ammo_side_mark_a, ammo_front_label, ammo_box_lid, right_vertical_strap, medkit_case_body, round_tip_3, front_white_cross_vertical, front_white_cross_horizontal, medkit_soft_lid, left_vertical_strap, round_tip_4, top_white_cross_vertical, ammo_latch_left, medkit_handle, visible_brass_round_0, ammo_latch_right, ammo_handle_base, left_buckle, visible_brass_round_5, top_white_cross_horizontal, ammo_corner_band_right, visible_brass_round_4, round_tip_1, visible_brass_round_2, visible_brass_round_1, round_tip_5, visible_brass_round_3, round_tip_2, ammo_corner_band_left, round_tip_0, ammo_box_body, gameplay promotion ledger player-camera evidence",
       "blockers": []
     },
     {
       "category": "environment_prop",
       "asset_ids": ["container", "crate"],
-      "production_promoted": false,
-      "candidate_visible_object_count": 0,
-      "visible_promoted_object_count": 0,
-      "visible_promoted": false,
-      "max_screen_area_ratio": 0,
-      "visible_object_names": "",
-      "blockers": ["semantic_category_review_failed", "gameplay_scene_evidence_missing_or_partial", "class_not_production_promoted"]
+      "production_promoted": true,
+      "candidate_visible_object_count": 157,
+      "visible_promoted_object_count": 151,
+      "visible_promoted": true,
+      "max_screen_area_ratio": 1,
+      "visible_object_names": "corrugation_rib_back_3, corrugation_rib_back_0, corrugation_rib_front_8, shipping_container_body, corrugation_rib_front_1, rear_panel, front_double_doors, corrugation_rib_back_8, corrugation_rib_back_6, door_lock_bar_0, corrugation_rib_front_7, corrugation_rib_front_4, corrugation_rib_back_1, door_lock_bar_1, door_lock_bar_2, corrugation_rib_back_5, corrugation_rib_back_2, door_lock_bar_3, corrugation_rib_back_4, container_warning_decal, corrugation_rib_front_5, corrugation_rib_back_7, corrugation_rib_front_0, corrugation_rib_front_2, corrugation_rib_front_3, corrugation_rib_front_6",
+      "blockers": []
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "schema": "weapon_feel_gate_v1",
-  "timestamp_utc": "2026-05-18T23:39:45.8967390Z",
+  "timestamp_utc": "2026-05-19T00:51:34.5211310Z",
   "application_is_playing": true,
   "passed": true,
   "hero_weapon_id": "rifle",
@@ -20,7 +20,7 @@
   "reload_pose_magnitude_observed": true,
   "reload_pose_magnitude_value": 0.181,
   "ads_stability_observed": true,
-  "ads_stability_value": 0.98,
+  "ads_stability_value": 0.979,
   "shot_feedback_event_count": 7,
   "third_person_mount_quality_passed": true,
   "third_person_mount_quality_score": 0.75,
@@ -33,5 +33,5 @@
     { "label": "03_first_person_reload_state", "path": "Assets/Screenshots/WeaponFeel/03_first_person_reload_state.png", "note": "First-person reload state mutation" },
     { "label": "04_third_person_weapon_mount", "path": "Assets/Screenshots/WeaponFeel/04_third_person_weapon_mount.png", "note": "Third-person rifle mount visibility" }
   ],
-  "details": "rayPreview=NPC Enemy 6@1.31:enemy=True|South Compound Wall@3.12:enemy=False|North Compound Wall@129.12:enemy=False; fire mag 30->29 enemyHp 90.0->66.0 muzzle 3->4 casing 3->4 tracer 6->7 sfx 27->29 recoil 0.209; reload mag 29->30 reserve 90->89 events 1 offset 0.154; thirdPerson active=rifle renderers=1 tinted=1; fpRenderers=34 fpSourceRenderers=1 active=rifle hero=True;"
+  "details": "rayPreview=NPC Enemy 9@1.31:enemy=True|South Compound Wall@3.12:enemy=False|North Compound Wall@129.12:enemy=False; fire mag 30->29 enemyHp 90.0->66.0 muzzle 3->4 casing 3->4 tracer 6->7 sfx 28->30 recoil 0.209; reload mag 29->30 reserve 90->89 events 1 offset 0.154; thirdPerson active=rifle renderers=32 tinted=32; fpRenderers=65 fpSourceRenderers=32 active=rifle hero=True;"
 }

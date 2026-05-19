@@ -1,19 +1,19 @@
 # Realified Import Material Gate
 
-Generated: 2026-05-18T17:35:19.2650180Z
+Generated: 2026-05-19T00:51:13.3817140Z
 
 ## Summary
 
 - Asset root exists: `True`
 - GLB files: `48`
-- PNG files: `149`
-- Material files: `17`
-- Meta files: `223`
+- PNG files: `195`
+- Material files: `31`
+- Meta files: `283`
 - Classes with all LODs: `12 / 12`
-- Classes with complete PBR sidecars: `9 / 12`
+- Classes with complete PBR sidecars: `11 / 12`
 - Classes with imported LOD0 prefab: `12 / 12`
 - Classes with accepted material shader: `12 / 12`
-- Technical ready classes: `9 / 12`
+- Technical ready classes: `11 / 12`
 - Import presence passed: `True`
 - PBR sidecar presence passed: `False`
 - Material technical passed: `True`
@@ -29,8 +29,8 @@ This gate checks technical import readiness only. Semantic category promotion an
 | weapon | sidearm | True | True | True | True | True |
 | weapon | secondary_weapon | True | True | True | True | True |
 | weapon | shotgun | True | False | True | True | False |
-| character | player_tactical | True | False | True | True | False |
-| character | enemy_tactical | True | False | True | True | False |
+| character | player_tactical | True | True | True | True | True |
+| character | enemy_tactical | True | True | True | True | True |
 | gear | helmet | True | True | True | True | True |
 | gear | vest | True | True | True | True | True |
 | loot | ammo | True | True | True | True | True |

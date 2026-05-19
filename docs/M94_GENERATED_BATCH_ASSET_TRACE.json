@@ -1,0 +1,835 @@
+{
+  "schema": "m94_generated_batch_asset_trace_v1",
+  "timestamp_utc": "2026-05-19T00:33:28.339137+00:00",
+  "batch_id": "M94_FIRST_WAVE_2026-05-19",
+  "source_reference_bundle": "external/pro_outputs/m94_m96_batch_images_2026-05-19",
+  "note": "Local deterministic Blender first-wave generation. These are production candidates for gate testing; M95/M96 still require final art review.",
+  "assets": [
+    {
+      "asset_id": "hero_rifle",
+      "category": "weapon",
+      "stem": "hero_rifle",
+      "m94_generated_batch": true,
+      "generation_batch": "M94",
+      "source_batch_id": "M94_FIRST_WAVE_2026-05-19",
+      "source_pipeline": "m94_local_blender_first_wave_from_pro_reference_images",
+      "source_reference_bundle": "external/pro_outputs/m94_m96_batch_images_2026-05-19",
+      "semantic_category_match": true,
+      "semantic_review_source": "deterministic_generator_semantic_contract_pending_vlm_or_human_review",
+      "semantic_shape": "stylized tactical hero rifle with optic, magazine, stock, rail, handguard, and muzzle device",
+      "old_hashes": {
+        "hero_rifle_LOD0.glb": "1216ba3b554072fdf4b3529b009c99f83fe88908283697cbd2796ddbd132dab4",
+        "hero_rifle_LOD1.glb": "f1550b4a53e000a8c69f4b28ac80755dcf1df1e84414c18a4caaa2260e9a114e",
+        "hero_rifle_LOD2.glb": "d39ebedc788f55b697e6601b1ca2bfd56afba059ace3325338999d55e31180b3",
+        "hero_rifle_textured.glb": "0a953cb61c0c67cc7a8215ffc9a2c8bbf60322128724c2c330d22b5fd7780251"
+      },
+      "exported_glbs": [
+        {
+          "path": "hero_rifle_LOD0.glb",
+          "sha256": "664ac798e0ee40b85f360d89544eae3a16a836dd82ba4bea9b86eca52ffb22cc",
+          "bytes": 134024
+        },
+        {
+          "path": "hero_rifle_LOD1.glb",
+          "sha256": "70537763156815d12d93bad4af004077a785b0f9f9da8c4df22cad87d3e60460",
+          "bytes": 95928
+        },
+        {
+          "path": "hero_rifle_LOD2.glb",
+          "sha256": "a623a85de10aed3d0510e61b10c413e4e2140c6790ee70067526e7761df6fcb6",
+          "bytes": 58868
+        },
+        {
+          "path": "hero_rifle_textured.glb",
+          "sha256": "664ac798e0ee40b85f360d89544eae3a16a836dd82ba4bea9b86eca52ffb22cc",
+          "bytes": 134024
+        }
+      ],
+      "sidecars": [
+        {
+          "path": "hero_rifle_LOD0_basecolor.png",
+          "before_sha256": "d4e78649cc2494fff24c5aa2b2520ec533cf08daf44533b13ca699c6f968d69e",
+          "after_sha256": "df3dd6dcae6ac68154bd3203efad9629f98488debe51bdd224010f26ee158f67"
+        },
+        {
+          "path": "hero_rifle_LOD0_normal.png",
+          "before_sha256": "3da751a73b8cf042fa8d0bd6f10c33f99ca59a15de313d7961a3147d3c704f82",
+          "after_sha256": "0500c54c3c4455ee8787e32dff99eea3579a36d3280b54f40d11bce7297fbc7c"
+        },
+        {
+          "path": "hero_rifle_LOD0_roughness.png",
+          "before_sha256": "32d7a825bc243bc8eb1ae330bd4a21b4214a420b393bccaec49b8883711fffef",
+          "after_sha256": "59323fdf9f1dbfd40939114f7993d88a4f189d24f46f5fdd3c9bf147e2e23b66"
+        },
+        {
+          "path": "hero_rifle_LOD0_metallic.png",
+          "before_sha256": "9de95f473bc30b0d0f8d1368a63323a90a39e90ad2e4a603db600030b9801ae8",
+          "after_sha256": "d429e2183a4305c5956cdb25d2bb48cffb9b7ffcd49e95611808962a15f5ca30"
+        },
+        {
+          "path": "hero_rifle_LOD0_ao.png",
+          "before_sha256": "96e02b4f24ed1641dca92451264e70c5e5e827d48f84293c45676342961500e2",
+          "after_sha256": "b7d62311d1120c4333a074a04148988ab6cb4967015d9d66321e9543827fb0b2"
+        },
+        {
+          "path": "hero_rifle_LOD1_basecolor.png",
+          "before_sha256": "d4e78649cc2494fff24c5aa2b2520ec533cf08daf44533b13ca699c6f968d69e",
+          "after_sha256": "df3dd6dcae6ac68154bd3203efad9629f98488debe51bdd224010f26ee158f67"
+        },
+        {
+          "path": "hero_rifle_LOD1_normal.png",
+          "before_sha256": "3da751a73b8cf042fa8d0bd6f10c33f99ca59a15de313d7961a3147d3c704f82",
+          "after_sha256": "0500c54c3c4455ee8787e32dff99eea3579a36d3280b54f40d11bce7297fbc7c"
+        },
+        {
+          "path": "hero_rifle_LOD1_roughness.png",
+          "before_sha256": "32d7a825bc243bc8eb1ae330bd4a21b4214a420b393bccaec49b8883711fffef",
+          "after_sha256": "59323fdf9f1dbfd40939114f7993d88a4f189d24f46f5fdd3c9bf147e2e23b66"
+        },
+        {
+          "path": "hero_rifle_LOD1_metallic.png",
+          "before_sha256": "9de95f473bc30b0d0f8d1368a63323a90a39e90ad2e4a603db600030b9801ae8",
+          "after_sha256": "d429e2183a4305c5956cdb25d2bb48cffb9b7ffcd49e95611808962a15f5ca30"
+        },
+        {
+          "path": "hero_rifle_LOD1_ao.png",
+          "before_sha256": "96e02b4f24ed1641dca92451264e70c5e5e827d48f84293c45676342961500e2",
+          "after_sha256": "b7d62311d1120c4333a074a04148988ab6cb4967015d9d66321e9543827fb0b2"
+        },
+        {
+          "path": "hero_rifle_LOD2_basecolor.png",
+          "before_sha256": "d4e78649cc2494fff24c5aa2b2520ec533cf08daf44533b13ca699c6f968d69e",
+          "after_sha256": "df3dd6dcae6ac68154bd3203efad9629f98488debe51bdd224010f26ee158f67"
+        },
+        {
+          "path": "hero_rifle_LOD2_normal.png",
+          "before_sha256": "3da751a73b8cf042fa8d0bd6f10c33f99ca59a15de313d7961a3147d3c704f82",
+          "after_sha256": "0500c54c3c4455ee8787e32dff99eea3579a36d3280b54f40d11bce7297fbc7c"
+        },
+        {
+          "path": "hero_rifle_LOD2_roughness.png",
+          "before_sha256": "32d7a825bc243bc8eb1ae330bd4a21b4214a420b393bccaec49b8883711fffef",
+          "after_sha256": "59323fdf9f1dbfd40939114f7993d88a4f189d24f46f5fdd3c9bf147e2e23b66"
+        },
+        {
+          "path": "hero_rifle_LOD2_metallic.png",
+          "before_sha256": "9de95f473bc30b0d0f8d1368a63323a90a39e90ad2e4a603db600030b9801ae8",
+          "after_sha256": "d429e2183a4305c5956cdb25d2bb48cffb9b7ffcd49e95611808962a15f5ca30"
+        },
+        {
+          "path": "hero_rifle_LOD2_ao.png",
+          "before_sha256": "96e02b4f24ed1641dca92451264e70c5e5e827d48f84293c45676342961500e2",
+          "after_sha256": "b7d62311d1120c4333a074a04148988ab6cb4967015d9d66321e9543827fb0b2"
+        }
+      ]
+    },
+    {
+      "asset_id": "player_tactical",
+      "category": "character",
+      "stem": "RS_04_player_tactical",
+      "m94_generated_batch": true,
+      "generation_batch": "M94",
+      "source_batch_id": "M94_FIRST_WAVE_2026-05-19",
+      "source_pipeline": "m94_local_blender_first_wave_from_pro_reference_images",
+      "source_reference_bundle": "external/pro_outputs/m94_m96_batch_images_2026-05-19",
+      "semantic_category_match": true,
+      "semantic_review_source": "deterministic_generator_semantic_contract_pending_vlm_or_human_review",
+      "semantic_shape": "blue-accent tactical humanoid player with helmet, visor, plate carrier, limbs, pouches, and boots",
+      "old_hashes": {
+        "RS_04_player_tactical_LOD0.glb": "c27e2399fd10112068a0df63508b399e7c087a4a5d9e0a1eb55c2d0ddd2290de",
+        "RS_04_player_tactical_LOD1.glb": "9c64561f1ba4b7fcd72ef8e1a91a870721da17e16238408e4dc12429bb018032",
+        "RS_04_player_tactical_LOD2.glb": "343267be63384cde7feb4879b84f601839f658ec4a3de13758ec5a548c0960dc",
+        "RS_04_player_tactical_textured.glb": "db7a98935b6b039a5455d39be44572d1e8884ce42c4837c024b773f6d3df0bd2"
+      },
+      "exported_glbs": [
+        {
+          "path": "RS_04_player_tactical_LOD0.glb",
+          "sha256": "06532343ac859705dc9be67f63048d6ade31a62ea29c3fe1f3f1d305d9d9ebb4",
+          "bytes": 89804
+        },
+        {
+          "path": "RS_04_player_tactical_LOD1.glb",
+          "sha256": "6f66147b85e5100740bc311ad21ada8441a58ad350378225fe9a31f8d47eed9e",
+          "bytes": 78956
+        },
+        {
+          "path": "RS_04_player_tactical_LOD2.glb",
+          "sha256": "fc88ed1880aff5cb9e988f0962020eccdb5b2f458eadca0b70a3cbae5226a06a",
+          "bytes": 65004
+        },
+        {
+          "path": "RS_04_player_tactical_textured.glb",
+          "sha256": "06532343ac859705dc9be67f63048d6ade31a62ea29c3fe1f3f1d305d9d9ebb4",
+          "bytes": 89804
+        }
+      ],
+      "sidecars": [
+        {
+          "path": "RS_04_player_tactical_LOD0_basecolor.png",
+          "before_sha256": null,
+          "after_sha256": "5cb7d56972b95c4477e059e0ca8bfec9ec91554d89feee5b4fa30b8186c3e67a"
+        },
+        {
+          "path": "RS_04_player_tactical_LOD0_normal.png",
+          "before_sha256": null,
+          "after_sha256": "0500c54c3c4455ee8787e32dff99eea3579a36d3280b54f40d11bce7297fbc7c"
+        },
+        {
+          "path": "RS_04_player_tactical_LOD0_roughness.png",
+          "before_sha256": null,
+          "after_sha256": "59323fdf9f1dbfd40939114f7993d88a4f189d24f46f5fdd3c9bf147e2e23b66"
+        },
+        {
+          "path": "RS_04_player_tactical_LOD0_metallic.png",
+          "before_sha256": null,
+          "after_sha256": "d429e2183a4305c5956cdb25d2bb48cffb9b7ffcd49e95611808962a15f5ca30"
+        },
+        {
+          "path": "RS_04_player_tactical_LOD0_ao.png",
+          "before_sha256": null,
+          "after_sha256": "b7d62311d1120c4333a074a04148988ab6cb4967015d9d66321e9543827fb0b2"
+        },
+        {
+          "path": "RS_04_player_tactical_LOD1_basecolor.png",
+          "before_sha256": null,
+          "after_sha256": "5cb7d56972b95c4477e059e0ca8bfec9ec91554d89feee5b4fa30b8186c3e67a"
+        },
+        {
+          "path": "RS_04_player_tactical_LOD1_normal.png",
+          "before_sha256": null,
+          "after_sha256": "0500c54c3c4455ee8787e32dff99eea3579a36d3280b54f40d11bce7297fbc7c"
+        },
+        {
+          "path": "RS_04_player_tactical_LOD1_roughness.png",
+          "before_sha256": null,
+          "after_sha256": "59323fdf9f1dbfd40939114f7993d88a4f189d24f46f5fdd3c9bf147e2e23b66"
+        },
+        {
+          "path": "RS_04_player_tactical_LOD1_metallic.png",
+          "before_sha256": null,
+          "after_sha256": "d429e2183a4305c5956cdb25d2bb48cffb9b7ffcd49e95611808962a15f5ca30"
+        },
+        {
+          "path": "RS_04_player_tactical_LOD1_ao.png",
+          "before_sha256": null,
+          "after_sha256": "b7d62311d1120c4333a074a04148988ab6cb4967015d9d66321e9543827fb0b2"
+        },
+        {
+          "path": "RS_04_player_tactical_LOD2_basecolor.png",
+          "before_sha256": null,
+          "after_sha256": "5cb7d56972b95c4477e059e0ca8bfec9ec91554d89feee5b4fa30b8186c3e67a"
+        },
+        {
+          "path": "RS_04_player_tactical_LOD2_normal.png",
+          "before_sha256": null,
+          "after_sha256": "0500c54c3c4455ee8787e32dff99eea3579a36d3280b54f40d11bce7297fbc7c"
+        },
+        {
+          "path": "RS_04_player_tactical_LOD2_roughness.png",
+          "before_sha256": null,
+          "after_sha256": "59323fdf9f1dbfd40939114f7993d88a4f189d24f46f5fdd3c9bf147e2e23b66"
+        },
+        {
+          "path": "RS_04_player_tactical_LOD2_metallic.png",
+          "before_sha256": null,
+          "after_sha256": "d429e2183a4305c5956cdb25d2bb48cffb9b7ffcd49e95611808962a15f5ca30"
+        },
+        {
+          "path": "RS_04_player_tactical_LOD2_ao.png",
+          "before_sha256": null,
+          "after_sha256": "b7d62311d1120c4333a074a04148988ab6cb4967015d9d66321e9543827fb0b2"
+        }
+      ]
+    },
+    {
+      "asset_id": "enemy_tactical",
+      "category": "character",
+      "stem": "RS_05_enemy_tactical",
+      "m94_generated_batch": true,
+      "generation_batch": "M94",
+      "source_batch_id": "M94_FIRST_WAVE_2026-05-19",
+      "source_pipeline": "m94_local_blender_first_wave_from_pro_reference_images",
+      "source_reference_bundle": "external/pro_outputs/m94_m96_batch_images_2026-05-19",
+      "semantic_category_match": true,
+      "semantic_review_source": "deterministic_generator_semantic_contract_pending_vlm_or_human_review",
+      "semantic_shape": "red-accent tactical humanoid enemy with helmet, visor, plate carrier, limbs, pouches, and boots",
+      "old_hashes": {
+        "RS_05_enemy_tactical_LOD0.glb": "d136f460eda1f0f4c145f6bc59a0b6de8827898e98b78315764bdd964f590e22",
+        "RS_05_enemy_tactical_LOD1.glb": "22b2b72f935bea3e6ba6834932931cecfc90b1a266839ae1b963f2b77dcbce17",
+        "RS_05_enemy_tactical_LOD2.glb": "3796a4de16fbac831926d1a68dc4bfcfb5032ae2bc9d9da23d0f209936fddd0d",
+        "RS_05_enemy_tactical_textured.glb": "62c25606671287f07c3977110bcab0e3d9e86f04158883ce6f97e59e6ce0c0f0"
+      },
+      "exported_glbs": [
+        {
+          "path": "RS_05_enemy_tactical_LOD0.glb",
+          "sha256": "80b2bfe0bc642bd178a59e6a08db756ef7596d4460552d856034b33e6d4e5a23",
+          "bytes": 89828
+        },
+        {
+          "path": "RS_05_enemy_tactical_LOD1.glb",
+          "sha256": "8a92b68e0bbb4135e74dbcf82fb1cdaf98e14ee925811d77bc705e19ddef821d",
+          "bytes": 78968
+        },
+        {
+          "path": "RS_05_enemy_tactical_LOD2.glb",
+          "sha256": "c9fb77c8acb3ca87085ddb3d443414aee18d4c0134c295e19be4a99284bf3951",
+          "bytes": 65016
+        },
+        {
+          "path": "RS_05_enemy_tactical_textured.glb",
+          "sha256": "80b2bfe0bc642bd178a59e6a08db756ef7596d4460552d856034b33e6d4e5a23",
+          "bytes": 89828
+        }
+      ],
+      "sidecars": [
+        {
+          "path": "RS_05_enemy_tactical_LOD0_basecolor.png",
+          "before_sha256": null,
+          "after_sha256": "b415c6076c12899c50c95fac496c37d648d0b9484d4de5a83f61ceea4f6a52cb"
+        },
+        {
+          "path": "RS_05_enemy_tactical_LOD0_normal.png",
+          "before_sha256": null,
+          "after_sha256": "0500c54c3c4455ee8787e32dff99eea3579a36d3280b54f40d11bce7297fbc7c"
+        },
+        {
+          "path": "RS_05_enemy_tactical_LOD0_roughness.png",
+          "before_sha256": null,
+          "after_sha256": "59323fdf9f1dbfd40939114f7993d88a4f189d24f46f5fdd3c9bf147e2e23b66"
+        },
+        {
+          "path": "RS_05_enemy_tactical_LOD0_metallic.png",
+          "before_sha256": null,
+          "after_sha256": "d429e2183a4305c5956cdb25d2bb48cffb9b7ffcd49e95611808962a15f5ca30"
+        },
+        {
+          "path": "RS_05_enemy_tactical_LOD0_ao.png",
+          "before_sha256": null,
+          "after_sha256": "b7d62311d1120c4333a074a04148988ab6cb4967015d9d66321e9543827fb0b2"
+        },
+        {
+          "path": "RS_05_enemy_tactical_LOD1_basecolor.png",
+          "before_sha256": null,
+          "after_sha256": "b415c6076c12899c50c95fac496c37d648d0b9484d4de5a83f61ceea4f6a52cb"
+        },
+        {
+          "path": "RS_05_enemy_tactical_LOD1_normal.png",
+          "before_sha256": null,
+          "after_sha256": "0500c54c3c4455ee8787e32dff99eea3579a36d3280b54f40d11bce7297fbc7c"
+        },
+        {
+          "path": "RS_05_enemy_tactical_LOD1_roughness.png",
+          "before_sha256": null,
+          "after_sha256": "59323fdf9f1dbfd40939114f7993d88a4f189d24f46f5fdd3c9bf147e2e23b66"
+        },
+        {
+          "path": "RS_05_enemy_tactical_LOD1_metallic.png",
+          "before_sha256": null,
+          "after_sha256": "d429e2183a4305c5956cdb25d2bb48cffb9b7ffcd49e95611808962a15f5ca30"
+        },
+        {
+          "path": "RS_05_enemy_tactical_LOD1_ao.png",
+          "before_sha256": null,
+          "after_sha256": "b7d62311d1120c4333a074a04148988ab6cb4967015d9d66321e9543827fb0b2"
+        },
+        {
+          "path": "RS_05_enemy_tactical_LOD2_basecolor.png",
+          "before_sha256": null,
+          "after_sha256": "b415c6076c12899c50c95fac496c37d648d0b9484d4de5a83f61ceea4f6a52cb"
+        },
+        {
+          "path": "RS_05_enemy_tactical_LOD2_normal.png",
+          "before_sha256": null,
+          "after_sha256": "0500c54c3c4455ee8787e32dff99eea3579a36d3280b54f40d11bce7297fbc7c"
+        },
+        {
+          "path": "RS_05_enemy_tactical_LOD2_roughness.png",
+          "before_sha256": null,
+          "after_sha256": "59323fdf9f1dbfd40939114f7993d88a4f189d24f46f5fdd3c9bf147e2e23b66"
+        },
+        {
+          "path": "RS_05_enemy_tactical_LOD2_metallic.png",
+          "before_sha256": null,
+          "after_sha256": "d429e2183a4305c5956cdb25d2bb48cffb9b7ffcd49e95611808962a15f5ca30"
+        },
+        {
+          "path": "RS_05_enemy_tactical_LOD2_ao.png",
+          "before_sha256": null,
+          "after_sha256": "b7d62311d1120c4333a074a04148988ab6cb4967015d9d66321e9543827fb0b2"
+        }
+      ]
+    },
+    {
+      "asset_id": "helmet",
+      "category": "gear",
+      "stem": "RS_06_gear_helmet",
+      "m94_generated_batch": true,
+      "generation_batch": "M94",
+      "source_batch_id": "M94_FIRST_WAVE_2026-05-19",
+      "source_pipeline": "m94_local_blender_first_wave_from_pro_reference_images",
+      "source_reference_bundle": "external/pro_outputs/m94_m96_batch_images_2026-05-19",
+      "semantic_category_match": true,
+      "semantic_review_source": "deterministic_generator_semantic_contract_pending_vlm_or_human_review",
+      "semantic_shape": "ballistic helmet loot with shell, visor, side rails, chin strap, and rear counterweight",
+      "old_hashes": {
+        "RS_06_gear_helmet_LOD0.glb": "2ed21a9d49ac1363bd8610870f941ce37d1670e43a1e71c9ec3d18fc956af4a8",
+        "RS_06_gear_helmet_LOD1.glb": "ea05774aaf5161ad51a3230e97919fb5be09ef083c20f9c8d2a67f722013addf",
+        "RS_06_gear_helmet_LOD2.glb": "01d5250b2275033857dc391c4b9fc3243d74ac5d9cae68a9c77091549b6afced",
+        "RS_06_gear_helmet_textured.glb": "ff2e24048c3c4facbbc23fe7d2524240808b4ef84a8e02c7a6126dc012e973d2"
+      },
+      "exported_glbs": [
+        {
+          "path": "RS_06_gear_helmet_LOD0.glb",
+          "sha256": "3c74a13f9f3bc57953d825808545ef90ee4666a148e3799a66ae74ecd6f6de28",
+          "bytes": 57680
+        },
+        {
+          "path": "RS_06_gear_helmet_LOD1.glb",
+          "sha256": "5b837d90f07d23bba05690a58d7ff869abc4a204f3bba4c66e0c6427aaf5cce1",
+          "bytes": 57692
+        },
+        {
+          "path": "RS_06_gear_helmet_LOD2.glb",
+          "sha256": "1dcfb18df4dbaef2a5e561815b28c41eb8f791a08c0972c9c996b2e20091d3b2",
+          "bytes": 49456
+        },
+        {
+          "path": "RS_06_gear_helmet_textured.glb",
+          "sha256": "3c74a13f9f3bc57953d825808545ef90ee4666a148e3799a66ae74ecd6f6de28",
+          "bytes": 57680
+        }
+      ],
+      "sidecars": [
+        {
+          "path": "RS_06_gear_helmet_LOD0_basecolor.png",
+          "before_sha256": "ca1a23acfce080c89c380c5c88ae6f252dd11d168d384ec9d70c289b3184581c",
+          "after_sha256": "c71cdfa3ef0a0915f7b4ef34a34cba5fb57862cb86a4a671075ea3658eacedcf"
+        },
+        {
+          "path": "RS_06_gear_helmet_LOD0_normal.png",
+          "before_sha256": "6bb46f3737d6c2c3e08ba2b0fa8b959301477b08cb761aa5f2fb0fc4488b03b6",
+          "after_sha256": "0500c54c3c4455ee8787e32dff99eea3579a36d3280b54f40d11bce7297fbc7c"
+        },
+        {
+          "path": "RS_06_gear_helmet_LOD0_roughness.png",
+          "before_sha256": "612525b97173dbd644f03487726f57ea144e9925aaedc5d82783ceab463419cc",
+          "after_sha256": "59323fdf9f1dbfd40939114f7993d88a4f189d24f46f5fdd3c9bf147e2e23b66"
+        },
+        {
+          "path": "RS_06_gear_helmet_LOD0_metallic.png",
+          "before_sha256": "aa3176d0aee91635c5f1b7fe0c053f8d68708191e09cd0a37170db3ac3799ffa",
+          "after_sha256": "d429e2183a4305c5956cdb25d2bb48cffb9b7ffcd49e95611808962a15f5ca30"
+        },
+        {
+          "path": "RS_06_gear_helmet_LOD0_ao.png",
+          "before_sha256": "cd58e05c9534f3a526ae88d4a5e04c2e9fccc804c7ed8f1889ba9fff1aead7dc",
+          "after_sha256": "b7d62311d1120c4333a074a04148988ab6cb4967015d9d66321e9543827fb0b2"
+        },
+        {
+          "path": "RS_06_gear_helmet_LOD1_basecolor.png",
+          "before_sha256": "ca1a23acfce080c89c380c5c88ae6f252dd11d168d384ec9d70c289b3184581c",
+          "after_sha256": "c71cdfa3ef0a0915f7b4ef34a34cba5fb57862cb86a4a671075ea3658eacedcf"
+        },
+        {
+          "path": "RS_06_gear_helmet_LOD1_normal.png",
+          "before_sha256": "6bb46f3737d6c2c3e08ba2b0fa8b959301477b08cb761aa5f2fb0fc4488b03b6",
+          "after_sha256": "0500c54c3c4455ee8787e32dff99eea3579a36d3280b54f40d11bce7297fbc7c"
+        },
+        {
+          "path": "RS_06_gear_helmet_LOD1_roughness.png",
+          "before_sha256": "612525b97173dbd644f03487726f57ea144e9925aaedc5d82783ceab463419cc",
+          "after_sha256": "59323fdf9f1dbfd40939114f7993d88a4f189d24f46f5fdd3c9bf147e2e23b66"
+        },
+        {
+          "path": "RS_06_gear_helmet_LOD1_metallic.png",
+          "before_sha256": "aa3176d0aee91635c5f1b7fe0c053f8d68708191e09cd0a37170db3ac3799ffa",
+          "after_sha256": "d429e2183a4305c5956cdb25d2bb48cffb9b7ffcd49e95611808962a15f5ca30"
+        },
+        {
+          "path": "RS_06_gear_helmet_LOD1_ao.png",
+          "before_sha256": "cd58e05c9534f3a526ae88d4a5e04c2e9fccc804c7ed8f1889ba9fff1aead7dc",
+          "after_sha256": "b7d62311d1120c4333a074a04148988ab6cb4967015d9d66321e9543827fb0b2"
+        },
+        {
+          "path": "RS_06_gear_helmet_LOD2_basecolor.png",
+          "before_sha256": "ca1a23acfce080c89c380c5c88ae6f252dd11d168d384ec9d70c289b3184581c",
+          "after_sha256": "c71cdfa3ef0a0915f7b4ef34a34cba5fb57862cb86a4a671075ea3658eacedcf"
+        },
+        {
+          "path": "RS_06_gear_helmet_LOD2_normal.png",
+          "before_sha256": "6bb46f3737d6c2c3e08ba2b0fa8b959301477b08cb761aa5f2fb0fc4488b03b6",
+          "after_sha256": "0500c54c3c4455ee8787e32dff99eea3579a36d3280b54f40d11bce7297fbc7c"
+        },
+        {
+          "path": "RS_06_gear_helmet_LOD2_roughness.png",
+          "before_sha256": "612525b97173dbd644f03487726f57ea144e9925aaedc5d82783ceab463419cc",
+          "after_sha256": "59323fdf9f1dbfd40939114f7993d88a4f189d24f46f5fdd3c9bf147e2e23b66"
+        },
+        {
+          "path": "RS_06_gear_helmet_LOD2_metallic.png",
+          "before_sha256": "aa3176d0aee91635c5f1b7fe0c053f8d68708191e09cd0a37170db3ac3799ffa",
+          "after_sha256": "d429e2183a4305c5956cdb25d2bb48cffb9b7ffcd49e95611808962a15f5ca30"
+        },
+        {
+          "path": "RS_06_gear_helmet_LOD2_ao.png",
+          "before_sha256": "cd58e05c9534f3a526ae88d4a5e04c2e9fccc804c7ed8f1889ba9fff1aead7dc",
+          "after_sha256": "b7d62311d1120c4333a074a04148988ab6cb4967015d9d66321e9543827fb0b2"
+        }
+      ]
+    },
+    {
+      "asset_id": "vest",
+      "category": "gear",
+      "stem": "RS_07_gear_vest",
+      "m94_generated_batch": true,
+      "generation_batch": "M94",
+      "source_batch_id": "M94_FIRST_WAVE_2026-05-19",
+      "source_pipeline": "m94_local_blender_first_wave_from_pro_reference_images",
+      "source_reference_bundle": "external/pro_outputs/m94_m96_batch_images_2026-05-19",
+      "semantic_category_match": true,
+      "semantic_review_source": "deterministic_generator_semantic_contract_pending_vlm_or_human_review",
+      "semantic_shape": "tactical plate carrier vest loot with front plate, shoulder straps, pouches, buckles, and webbing",
+      "old_hashes": {
+        "RS_07_gear_vest_LOD0.glb": "8f9f0c8d8d014924c81cdfc1ea14dfad3b6f8f5760f6d02bcd0d940fe4e85698",
+        "RS_07_gear_vest_LOD1.glb": "d0cfc06d86e630b2433f8b0b455c8633175c108edbcb8dc184e823a2632315bf",
+        "RS_07_gear_vest_LOD2.glb": "0d45ab1b5921cba6a93a8b918be017df3aa7deac8a6df6d322650d0f801d2d07",
+        "RS_07_gear_vest_textured.glb": "477704cb1f28774618556d65993c7332dffc4823affa200309699adf48d6dcc2"
+      },
+      "exported_glbs": [
+        {
+          "path": "RS_07_gear_vest_LOD0.glb",
+          "sha256": "83f30f77b27d64a7cb751758df847f2f449fc4195c85f0132d47af45262eaf7c",
+          "bytes": 33900
+        },
+        {
+          "path": "RS_07_gear_vest_LOD1.glb",
+          "sha256": "3f1108c970cb9b42734b392c2fbd131072eada511c4d75af9609dc56aee89b13",
+          "bytes": 26576
+        },
+        {
+          "path": "RS_07_gear_vest_LOD2.glb",
+          "sha256": "1f2a0d6168ea58447c9ad9d4fb8c5946708e06699215a99cc0a05add02ea64db",
+          "bytes": 11756
+        },
+        {
+          "path": "RS_07_gear_vest_textured.glb",
+          "sha256": "83f30f77b27d64a7cb751758df847f2f449fc4195c85f0132d47af45262eaf7c",
+          "bytes": 33900
+        }
+      ],
+      "sidecars": [
+        {
+          "path": "RS_07_gear_vest_LOD0_basecolor.png",
+          "before_sha256": "ca1a23acfce080c89c380c5c88ae6f252dd11d168d384ec9d70c289b3184581c",
+          "after_sha256": "d1ab633ecea834138625e40a6c6e382a9a155fdf352a4bbfa7878051f5a31c87"
+        },
+        {
+          "path": "RS_07_gear_vest_LOD0_normal.png",
+          "before_sha256": "6bb46f3737d6c2c3e08ba2b0fa8b959301477b08cb761aa5f2fb0fc4488b03b6",
+          "after_sha256": "0500c54c3c4455ee8787e32dff99eea3579a36d3280b54f40d11bce7297fbc7c"
+        },
+        {
+          "path": "RS_07_gear_vest_LOD0_roughness.png",
+          "before_sha256": "612525b97173dbd644f03487726f57ea144e9925aaedc5d82783ceab463419cc",
+          "after_sha256": "59323fdf9f1dbfd40939114f7993d88a4f189d24f46f5fdd3c9bf147e2e23b66"
+        },
+        {
+          "path": "RS_07_gear_vest_LOD0_metallic.png",
+          "before_sha256": "aa3176d0aee91635c5f1b7fe0c053f8d68708191e09cd0a37170db3ac3799ffa",
+          "after_sha256": "d429e2183a4305c5956cdb25d2bb48cffb9b7ffcd49e95611808962a15f5ca30"
+        },
+        {
+          "path": "RS_07_gear_vest_LOD0_ao.png",
+          "before_sha256": "cd58e05c9534f3a526ae88d4a5e04c2e9fccc804c7ed8f1889ba9fff1aead7dc",
+          "after_sha256": "b7d62311d1120c4333a074a04148988ab6cb4967015d9d66321e9543827fb0b2"
+        },
+        {
+          "path": "RS_07_gear_vest_LOD1_basecolor.png",
+          "before_sha256": "ca1a23acfce080c89c380c5c88ae6f252dd11d168d384ec9d70c289b3184581c",
+          "after_sha256": "d1ab633ecea834138625e40a6c6e382a9a155fdf352a4bbfa7878051f5a31c87"
+        },
+        {
+          "path": "RS_07_gear_vest_LOD1_normal.png",
+          "before_sha256": "6bb46f3737d6c2c3e08ba2b0fa8b959301477b08cb761aa5f2fb0fc4488b03b6",
+          "after_sha256": "0500c54c3c4455ee8787e32dff99eea3579a36d3280b54f40d11bce7297fbc7c"
+        },
+        {
+          "path": "RS_07_gear_vest_LOD1_roughness.png",
+          "before_sha256": "612525b97173dbd644f03487726f57ea144e9925aaedc5d82783ceab463419cc",
+          "after_sha256": "59323fdf9f1dbfd40939114f7993d88a4f189d24f46f5fdd3c9bf147e2e23b66"
+        },
+        {
+          "path": "RS_07_gear_vest_LOD1_metallic.png",
+          "before_sha256": "aa3176d0aee91635c5f1b7fe0c053f8d68708191e09cd0a37170db3ac3799ffa",
+          "after_sha256": "d429e2183a4305c5956cdb25d2bb48cffb9b7ffcd49e95611808962a15f5ca30"
+        },
+        {
+          "path": "RS_07_gear_vest_LOD1_ao.png",
+          "before_sha256": "cd58e05c9534f3a526ae88d4a5e04c2e9fccc804c7ed8f1889ba9fff1aead7dc",
+          "after_sha256": "b7d62311d1120c4333a074a04148988ab6cb4967015d9d66321e9543827fb0b2"
+        },
+        {
+          "path": "RS_07_gear_vest_LOD2_basecolor.png",
+          "before_sha256": "ca1a23acfce080c89c380c5c88ae6f252dd11d168d384ec9d70c289b3184581c",
+          "after_sha256": "d1ab633ecea834138625e40a6c6e382a9a155fdf352a4bbfa7878051f5a31c87"
+        },
+        {
+          "path": "RS_07_gear_vest_LOD2_normal.png",
+          "before_sha256": "6bb46f3737d6c2c3e08ba2b0fa8b959301477b08cb761aa5f2fb0fc4488b03b6",
+          "after_sha256": "0500c54c3c4455ee8787e32dff99eea3579a36d3280b54f40d11bce7297fbc7c"
+        },
+        {
+          "path": "RS_07_gear_vest_LOD2_roughness.png",
+          "before_sha256": "612525b97173dbd644f03487726f57ea144e9925aaedc5d82783ceab463419cc",
+          "after_sha256": "59323fdf9f1dbfd40939114f7993d88a4f189d24f46f5fdd3c9bf147e2e23b66"
+        },
+        {
+          "path": "RS_07_gear_vest_LOD2_metallic.png",
+          "before_sha256": "aa3176d0aee91635c5f1b7fe0c053f8d68708191e09cd0a37170db3ac3799ffa",
+          "after_sha256": "d429e2183a4305c5956cdb25d2bb48cffb9b7ffcd49e95611808962a15f5ca30"
+        },
+        {
+          "path": "RS_07_gear_vest_LOD2_ao.png",
+          "before_sha256": "cd58e05c9534f3a526ae88d4a5e04c2e9fccc804c7ed8f1889ba9fff1aead7dc",
+          "after_sha256": "b7d62311d1120c4333a074a04148988ab6cb4967015d9d66321e9543827fb0b2"
+        }
+      ]
+    },
+    {
+      "asset_id": "medkit",
+      "category": "loot",
+      "stem": "RS_09_loot_medkit",
+      "m94_generated_batch": true,
+      "generation_batch": "M94",
+      "source_batch_id": "M94_FIRST_WAVE_2026-05-19",
+      "source_pipeline": "m94_local_blender_first_wave_from_pro_reference_images",
+      "source_reference_bundle": "external/pro_outputs/m94_m96_batch_images_2026-05-19",
+      "semantic_category_match": true,
+      "semantic_review_source": "deterministic_generator_semantic_contract_pending_vlm_or_human_review",
+      "semantic_shape": "red medkit case loot with white medical cross, straps, handle, and buckles",
+      "old_hashes": {
+        "RS_09_loot_medkit_LOD0.glb": "3b2268ed847b57b158d511d879b7f29c6d68c0709887e516b2527f57eaebafc0",
+        "RS_09_loot_medkit_LOD1.glb": "26f6587a0bfdf3fa90fb26899234539d1524d16e36b925dee694cb8fdf060873",
+        "RS_09_loot_medkit_LOD2.glb": "360286a85c436cdc17ffe51858e392e63502e983fff4711c9a67893fe314acf8",
+        "RS_09_loot_medkit_textured.glb": "5bbb0ec3fc4e7a072f364d415c6c3d50608499f03a3bee9dd3c1bb49bfe396b2"
+      },
+      "exported_glbs": [
+        {
+          "path": "RS_09_loot_medkit_LOD0.glb",
+          "sha256": "06f2f37e26c3c2e1e91b52e2ca0b1a1d1f075fd8866c9d91ee3f33ad87850728",
+          "bytes": 35268
+        },
+        {
+          "path": "RS_09_loot_medkit_LOD1.glb",
+          "sha256": "fa3669415a89e8d4c2ae157904044a6a167e38315c70ecec2199b438b4bc3c5e",
+          "bytes": 35288
+        },
+        {
+          "path": "RS_09_loot_medkit_LOD2.glb",
+          "sha256": "f8c7b2f27f1499f3722f069bb894f6e0a1c4bb9f6a7b0e789edcc4d327a7942d",
+          "bytes": 24124
+        },
+        {
+          "path": "RS_09_loot_medkit_textured.glb",
+          "sha256": "06f2f37e26c3c2e1e91b52e2ca0b1a1d1f075fd8866c9d91ee3f33ad87850728",
+          "bytes": 35268
+        }
+      ],
+      "sidecars": [
+        {
+          "path": "RS_09_loot_medkit_LOD0_basecolor.png",
+          "before_sha256": "985a8528ccda2c5fa0d16f5f299798751fb0184f2ae243353d86959bd3780a77",
+          "after_sha256": "ba9614c6948ff5b249c44d37ccc4967fcb09815ba6bba10d93c24d7ada0249e0"
+        },
+        {
+          "path": "RS_09_loot_medkit_LOD0_normal.png",
+          "before_sha256": "d8b30f234001184446286b8f1ffa54f2f3a0490086c5bf71f5879a83deddf878",
+          "after_sha256": "0500c54c3c4455ee8787e32dff99eea3579a36d3280b54f40d11bce7297fbc7c"
+        },
+        {
+          "path": "RS_09_loot_medkit_LOD0_roughness.png",
+          "before_sha256": "22b9dfa81d757038f8c98a5b2d93fa6a23c44b16063ab0c85777d05a8a5ed276",
+          "after_sha256": "59323fdf9f1dbfd40939114f7993d88a4f189d24f46f5fdd3c9bf147e2e23b66"
+        },
+        {
+          "path": "RS_09_loot_medkit_LOD0_metallic.png",
+          "before_sha256": "d6edf587723515ee101b8d5b2ff255ff76f81e99c515c05ea96437eefb11acb0",
+          "after_sha256": "d429e2183a4305c5956cdb25d2bb48cffb9b7ffcd49e95611808962a15f5ca30"
+        },
+        {
+          "path": "RS_09_loot_medkit_LOD0_ao.png",
+          "before_sha256": "1de22a35a7c9650b25e20a7cf6b1d9bb9d8d198e655f50f14f3ef5c6de26a457",
+          "after_sha256": "b7d62311d1120c4333a074a04148988ab6cb4967015d9d66321e9543827fb0b2"
+        },
+        {
+          "path": "RS_09_loot_medkit_LOD1_basecolor.png",
+          "before_sha256": "985a8528ccda2c5fa0d16f5f299798751fb0184f2ae243353d86959bd3780a77",
+          "after_sha256": "ba9614c6948ff5b249c44d37ccc4967fcb09815ba6bba10d93c24d7ada0249e0"
+        },
+        {
+          "path": "RS_09_loot_medkit_LOD1_normal.png",
+          "before_sha256": "d8b30f234001184446286b8f1ffa54f2f3a0490086c5bf71f5879a83deddf878",
+          "after_sha256": "0500c54c3c4455ee8787e32dff99eea3579a36d3280b54f40d11bce7297fbc7c"
+        },
+        {
+          "path": "RS_09_loot_medkit_LOD1_roughness.png",
+          "before_sha256": "22b9dfa81d757038f8c98a5b2d93fa6a23c44b16063ab0c85777d05a8a5ed276",
+          "after_sha256": "59323fdf9f1dbfd40939114f7993d88a4f189d24f46f5fdd3c9bf147e2e23b66"
+        },
+        {
+          "path": "RS_09_loot_medkit_LOD1_metallic.png",
+          "before_sha256": "d6edf587723515ee101b8d5b2ff255ff76f81e99c515c05ea96437eefb11acb0",
+          "after_sha256": "d429e2183a4305c5956cdb25d2bb48cffb9b7ffcd49e95611808962a15f5ca30"
+        },
+        {
+          "path": "RS_09_loot_medkit_LOD1_ao.png",
+          "before_sha256": "1de22a35a7c9650b25e20a7cf6b1d9bb9d8d198e655f50f14f3ef5c6de26a457",
+          "after_sha256": "b7d62311d1120c4333a074a04148988ab6cb4967015d9d66321e9543827fb0b2"
+        },
+        {
+          "path": "RS_09_loot_medkit_LOD2_basecolor.png",
+          "before_sha256": "985a8528ccda2c5fa0d16f5f299798751fb0184f2ae243353d86959bd3780a77",
+          "after_sha256": "ba9614c6948ff5b249c44d37ccc4967fcb09815ba6bba10d93c24d7ada0249e0"
+        },
+        {
+          "path": "RS_09_loot_medkit_LOD2_normal.png",
+          "before_sha256": "d8b30f234001184446286b8f1ffa54f2f3a0490086c5bf71f5879a83deddf878",
+          "after_sha256": "0500c54c3c4455ee8787e32dff99eea3579a36d3280b54f40d11bce7297fbc7c"
+        },
+        {
+          "path": "RS_09_loot_medkit_LOD2_roughness.png",
+          "before_sha256": "22b9dfa81d757038f8c98a5b2d93fa6a23c44b16063ab0c85777d05a8a5ed276",
+          "after_sha256": "59323fdf9f1dbfd40939114f7993d88a4f189d24f46f5fdd3c9bf147e2e23b66"
+        },
+        {
+          "path": "RS_09_loot_medkit_LOD2_metallic.png",
+          "before_sha256": "d6edf587723515ee101b8d5b2ff255ff76f81e99c515c05ea96437eefb11acb0",
+          "after_sha256": "d429e2183a4305c5956cdb25d2bb48cffb9b7ffcd49e95611808962a15f5ca30"
+        },
+        {
+          "path": "RS_09_loot_medkit_LOD2_ao.png",
+          "before_sha256": "1de22a35a7c9650b25e20a7cf6b1d9bb9d8d198e655f50f14f3ef5c6de26a457",
+          "after_sha256": "b7d62311d1120c4333a074a04148988ab6cb4967015d9d66321e9543827fb0b2"
+        }
+      ]
+    },
+    {
+      "asset_id": "container",
+      "category": "environment_prop",
+      "stem": "RS_10_prop_container",
+      "m94_generated_batch": true,
+      "generation_batch": "M94",
+      "source_batch_id": "M94_FIRST_WAVE_2026-05-19",
+      "source_pipeline": "m94_local_blender_first_wave_from_pro_reference_images",
+      "source_reference_bundle": "external/pro_outputs/m94_m96_batch_images_2026-05-19",
+      "semantic_category_match": true,
+      "semantic_review_source": "deterministic_generator_semantic_contract_pending_vlm_or_human_review",
+      "semantic_shape": "weathered shipping container environment cover with corrugated ribs, doors, hinges, lock bars, and decals",
+      "old_hashes": {
+        "RS_10_prop_container_LOD0.glb": "8671a6c1ad21a8510b88f8a022e23d9e9db9373ab2cce12c71f8cb455a3dbe66",
+        "RS_10_prop_container_LOD1.glb": "c9b9cfd52e5a8f0e10e9261e4de45007dbb917e5cc4be022b52e6ea86d6abb93",
+        "RS_10_prop_container_LOD2.glb": "a5942aeb916d4332cca9036dd5a848d7bad9af0066eeebb3898452c3c0a017e3",
+        "RS_10_prop_container_textured.glb": "6b8032bd88084b67493559760fd774911b92153a0d3b598e50d97b7eb5ee9cae"
+      },
+      "exported_glbs": [
+        {
+          "path": "RS_10_prop_container_LOD0.glb",
+          "sha256": "a75f5798bee14afc0fddd635e8e7c1a3b3a730f0c8f1113d6f200d80e02244e3",
+          "bytes": 94148
+        },
+        {
+          "path": "RS_10_prop_container_LOD1.glb",
+          "sha256": "dc6a48d113ae588b608f1c13ddca8d03ef82e8e61ae529cd8dea1c246d5ea6f0",
+          "bytes": 62900
+        },
+        {
+          "path": "RS_10_prop_container_LOD2.glb",
+          "sha256": "db1c40496c697e980454899d043f673b2ad278945016533b82db37712f478cb7",
+          "bytes": 44824
+        },
+        {
+          "path": "RS_10_prop_container_textured.glb",
+          "sha256": "a75f5798bee14afc0fddd635e8e7c1a3b3a730f0c8f1113d6f200d80e02244e3",
+          "bytes": 94148
+        }
+      ],
+      "sidecars": [
+        {
+          "path": "RS_10_prop_container_LOD0_basecolor.png",
+          "before_sha256": "81ea8ecc8078659ed42a39043a7ab26d4eadfa5b238d3440949a8cd6ea52362e",
+          "after_sha256": "1fc25fef7afca1c1fc39fbbe1c28e3be789254c6249a920ed6b87a25780083e6"
+        },
+        {
+          "path": "RS_10_prop_container_LOD0_normal.png",
+          "before_sha256": "3f9da5fc021ba19cfbf51794b0e8a335c95d3d0fec6fff26bf4053a9b9247b8b",
+          "after_sha256": "0500c54c3c4455ee8787e32dff99eea3579a36d3280b54f40d11bce7297fbc7c"
+        },
+        {
+          "path": "RS_10_prop_container_LOD0_roughness.png",
+          "before_sha256": "af8e5efeaed6aa818fa3be7ba34b6ca520b438c0a82b8a629bcde2e01ec604da",
+          "after_sha256": "59323fdf9f1dbfd40939114f7993d88a4f189d24f46f5fdd3c9bf147e2e23b66"
+        },
+        {
+          "path": "RS_10_prop_container_LOD0_metallic.png",
+          "before_sha256": "1f920e7d4fbfff055df0889bdbbee0c046925549ab9b3b8fd2a2a1e50e651f10",
+          "after_sha256": "d429e2183a4305c5956cdb25d2bb48cffb9b7ffcd49e95611808962a15f5ca30"
+        },
+        {
+          "path": "RS_10_prop_container_LOD0_ao.png",
+          "before_sha256": "8141b5b1b588b845b886d17689fdb3a3a47e1317e9e650f264efe1466dd40fca",
+          "after_sha256": "b7d62311d1120c4333a074a04148988ab6cb4967015d9d66321e9543827fb0b2"
+        },
+        {
+          "path": "RS_10_prop_container_LOD1_basecolor.png",
+          "before_sha256": "81ea8ecc8078659ed42a39043a7ab26d4eadfa5b238d3440949a8cd6ea52362e",
+          "after_sha256": "1fc25fef7afca1c1fc39fbbe1c28e3be789254c6249a920ed6b87a25780083e6"
+        },
+        {
+          "path": "RS_10_prop_container_LOD1_normal.png",
+          "before_sha256": "3f9da5fc021ba19cfbf51794b0e8a335c95d3d0fec6fff26bf4053a9b9247b8b",
+          "after_sha256": "0500c54c3c4455ee8787e32dff99eea3579a36d3280b54f40d11bce7297fbc7c"
+        },
+        {
+          "path": "RS_10_prop_container_LOD1_roughness.png",
+          "before_sha256": "af8e5efeaed6aa818fa3be7ba34b6ca520b438c0a82b8a629bcde2e01ec604da",
+          "after_sha256": "59323fdf9f1dbfd40939114f7993d88a4f189d24f46f5fdd3c9bf147e2e23b66"
+        },
+        {
+          "path": "RS_10_prop_container_LOD1_metallic.png",
+          "before_sha256": "1f920e7d4fbfff055df0889bdbbee0c046925549ab9b3b8fd2a2a1e50e651f10",
+          "after_sha256": "d429e2183a4305c5956cdb25d2bb48cffb9b7ffcd49e95611808962a15f5ca30"
+        },
+        {
+          "path": "RS_10_prop_container_LOD1_ao.png",
+          "before_sha256": "8141b5b1b588b845b886d17689fdb3a3a47e1317e9e650f264efe1466dd40fca",
+          "after_sha256": "b7d62311d1120c4333a074a04148988ab6cb4967015d9d66321e9543827fb0b2"
+        },
+        {
+          "path": "RS_10_prop_container_LOD2_basecolor.png",
+          "before_sha256": "81ea8ecc8078659ed42a39043a7ab26d4eadfa5b238d3440949a8cd6ea52362e",
+          "after_sha256": "1fc25fef7afca1c1fc39fbbe1c28e3be789254c6249a920ed6b87a25780083e6"
+        },
+        {
+          "path": "RS_10_prop_container_LOD2_normal.png",
+          "before_sha256": "3f9da5fc021ba19cfbf51794b0e8a335c95d3d0fec6fff26bf4053a9b9247b8b",
+          "after_sha256": "0500c54c3c4455ee8787e32dff99eea3579a36d3280b54f40d11bce7297fbc7c"
+        },
+        {
+          "path": "RS_10_prop_container_LOD2_roughness.png",
+          "before_sha256": "af8e5efeaed6aa818fa3be7ba34b6ca520b438c0a82b8a629bcde2e01ec604da",
+          "after_sha256": "59323fdf9f1dbfd40939114f7993d88a4f189d24f46f5fdd3c9bf147e2e23b66"
+        },
+        {
+          "path": "RS_10_prop_container_LOD2_metallic.png",
+          "before_sha256": "1f920e7d4fbfff055df0889bdbbee0c046925549ab9b3b8fd2a2a1e50e651f10",
+          "after_sha256": "d429e2183a4305c5956cdb25d2bb48cffb9b7ffcd49e95611808962a15f5ca30"
+        },
+        {
+          "path": "RS_10_prop_container_LOD2_ao.png",
+          "before_sha256": "8141b5b1b588b845b886d17689fdb3a3a47e1317e9e650f264efe1466dd40fca",
+          "after_sha256": "b7d62311d1120c4333a074a04148988ab6cb4967015d9d66321e9543827fb0b2"
+        }
+      ]
+    }
+  ]
+}

@@ -1,23 +1,23 @@
 # M88 Strict Full Visual Asset Gate
 
-Generated: 2026-05-18T23:39:48.0048070Z
+Generated: 2026-05-19T00:51:36.5413150Z
 
 - Passed: `False`
 - Current policy: this gate must remain false until all strict production visual checks pass.
 
 | Check | Passed | Meaning |
 |---|---:|---|
-| `gameplay_route_passed` | True | Playable route evidence exists. |
-| `all_required_current_gates_passed` | True | Current gameplay/parity gates pass in this same gate run. |
-| `m85_visual_production_passed` | True | Scoped player-camera visual production pass exists. |
+| `gameplay_route_passed` | False | Playable route evidence exists. |
+| `all_required_current_gates_passed` | False | Current gameplay/parity gates pass in this same gate run. |
+| `m85_visual_production_passed` | False | Scoped player-camera visual production pass exists. |
 | `m87_class_level_visibility_passed` | True | Five route-level approved-equivalent asset classes have visibility/event evidence. |
-| `approved_incremental_assets_passed` | True | Approved incremental gameplay-bound assets exist. |
+| `approved_incremental_assets_passed` | False | Approved incremental gameplay-bound assets exist. |
 | `first_person_weapon_polish_passed` | True | First-person weapon polish route evidence exists. |
-| `character_authored_clip_animation_passed` | True | Character authored clip evidence exists. |
+| `character_authored_clip_animation_passed` | False | Character authored clip evidence exists. |
 | `true_skinned_humanoid_import_passed` | True | Approved player/enemy GLBs include skinned/animation import evidence. |
 | `m92_weapon_production_feel_passed` | True | M92 weapon feel production metrics pass in play mode. |
 | `legacy_realified_batch_visibility_gate_passed` | True | Legacy Realified batch visibility gate passes. |
-| `generated_batch_class_promotion_passed` | False | Generated batch class promotion reaches all required classes through M94. |
+| `generated_batch_class_promotion_passed` | True | Generated batch class promotion reaches all required classes through M94. |
 | `final_weapon_art_review_passed` | False | M95 must confirm final weapon art quality, not just functional visibility. |
 | `final_humanoid_art_review_passed` | False | M96 must confirm final humanoid/gear quality, not just intermediate tactical detail kits. |
 | `clean_built_player_gameplay_capture_passed` | True | M91 external-input built-player route shows weapon, pickup, NPC combat, reload, traversal, and restart from the built app. |
